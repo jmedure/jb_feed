@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Merch Post",
+        "kind": "merch",
+        "link": "https://notion.so"
+    },
+    {
+        "title": "Merch Post",
+        "kind": "merch",
+        "link": "https://notion.so"
+    },
+    {
+        "title": "Merch Post",
+        "kind": "merch",
+        "link": "https://notion.so"
+    },
+    {
+        "title": "Journal Post",
+        "kind": "journal",
+        "link": "https://notion.so"
+    },
+    {
+        "title": "Video Post",
+        "link": "https://www.youtube.com/watch?v=NHr1HduGz08",
+        "kind": "video",
+        "description": "Fancy description",
+        "embedid": "NHr1HduGz08"
+    }
+]
+            
