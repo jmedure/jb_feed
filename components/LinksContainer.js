@@ -2,12 +2,15 @@ import Link from "next/link"
 import styles from "../styles/LinksContainer.module.css"
 
 export default function LinksContainer() {
+
+    var spotify = process.env.SPOTIFY_ARTIST_PAGE
+
     return (
         <div className={styles.linksContainer}>
             <div className={styles.links}>
-                <Link href="process.env.SPOTIFY_LINK" className={styles.mainNavLink}>
-                    <a>Spotify</a>
-                </Link>
+                
+                    <a href="%process.env.SPOTIFY_ARTIST_PAGE%">Spotify</a>
+                
                 <Link href="process.env.APPLEMUSIC_LINK" className={styles.mainNavLink}>
                     <a>Apple Music</a>
                 </Link>
