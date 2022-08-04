@@ -1,5 +1,19 @@
-.mainNav {
+/* .mainNav {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-}   
+}    */
+
+/* .mainNav a{
+    border: solid black 1px;
+    border-radius: 2rem;
+    padding: .1rem .5rem;
+    width: 80px;
+    text-align: center;
+    background-color: white;
+} */
+
+/* .mainNav a:hover a:active{
+    background-color: black;
+    color: white;
+} */

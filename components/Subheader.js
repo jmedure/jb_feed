@@ -4,16 +4,17 @@ import styles from '../styles/Subheader.module.css'
 
 function Subheader() {
     return (
-        <div className={styles.subheader}>
+        <div className="py-0 mt-0 text-base mx-auto text-left">
             <Typewriter
                 options={{
                     strings: [
                         'probably cooking something', 
-                        'UP TO NO GOOD',
-                        'PURSUING MASTERY',
-                        'MAKING SOME TUNES',
-                        'READING A BOOK',
-                        'DRINKING SOME COLD, COLD, COLD BREW'
+                        'up to no good',
+                        'pursuing mastery',
+                        'making some tunes',
+                        'reading a book',
+                        'drinking some cold, cold, cold brew',
+                        'going outside'
                         ],
                     autoStart: true,
                     loop: true,

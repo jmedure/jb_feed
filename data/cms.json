@@ -1,0 +1,59 @@
+[
+    {
+        "title": "JB and Ash Max LIVE in NYC",
+        "kind": "video",
+        "link": "https://www.youtube.com/watch?v=gvDZIf0BqL0",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "gvDZIf0BqL0"
+    },
+    {
+        "title": "\"Where do we go from here?\", out now!",
+        "kind": "music",
+        "link": "/songs/hard-of-hearing",
+        "published": "false",
+        "image": "/2.gif",
+        "spotify": "https://spotify.com",
+        "apple": "https://applemusic.com",
+        "youtube": "https://youtube.com",
+        "tidal": "https://tidal.com",
+        "soundcloud": "https://soundcloud.com",
+        "amazon": "https://amazonmusic.com"
+    },
+    {
+        "title": "Just Cookin Vol.1 - making samples ~(Remembering Tomorrow)~",
+        "link": "https://www.youtube.com/watch?v=eDlB01vRrrM",
+        "kind": "video",
+        "description": " ",
+        "youtubeEmbed": "eDlB01vRrrM",
+        "published": "true"
+    },
+    {
+        "title": "Merch Post",
+        "kind": "merch",
+        "image": "/fg/fgMain.svg",
+        "link": "https://notion.so",
+        "published": "true"
+    },
+    {
+        "title": "Merch Post",
+        "kind": "merch",
+        "link": "https://notion.so",
+        "published": "false"
+    },
+    {
+        "title": "Journal Post",
+        "kind": "journal",
+        "link": "https://notion.so",
+        "published": "true"
+    },
+    {
+        "title": "Video Post",
+        "link": "https://www.youtube.com/watch?v=NHr1HduGz08",
+        "kind": "video",
+        "description": "Fancy description",
+        "youtubeEmbed": "NHr1HduGz08",
+        "published": "true"
+    }
+]
+            

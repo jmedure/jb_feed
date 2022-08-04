@@ -5,7 +5,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: ['neue-haas-unica', 'sans'],
+        serif: ['merriweather', 'serif'],
+        grotesk: ['neue-haas-grotesk-display', 'sans'],
+        text: ['neue-haas-grotesk-text', 'sans'],
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
