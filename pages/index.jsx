@@ -26,7 +26,7 @@ export default function Home( ) {
     return (
       <main className=''>
         <JBHeader/>
-          <div className="container ">
+          <div className="container">
             <h2 className="text-[7.8rem] sm:text-[12rem] leading-none pb-2">All</h2>
           </div>
         <MainNav/>
