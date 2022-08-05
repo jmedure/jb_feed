@@ -14,10 +14,6 @@ body {
   font-weight: 300;
 }
 
-.material-icons {
-  font-size: 0px;
-}
-
 a {
   color: inherit;
   text-decoration: underline;
