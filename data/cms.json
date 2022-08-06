@@ -38,6 +38,13 @@
     {
         "title": "Merch Post",
         "kind": "merch",
+        "image": "/1.gif",
+        "link": "https://notion.so",
+        "published": "true"
+    },
+    {
+        "title": "Merch Post",
+        "kind": "merch",
         "link": "https://notion.so",
         "published": "false"
     },
