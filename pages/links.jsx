@@ -80,13 +80,13 @@ export default function Links( props ) {
                 </div>
                 <h2 className="py-2 text-lg">Site</h2>
                 <div className="flex flex-row w-full flex-wrap divide-y divide-black/70 mb-12 divide-solid border-solid border-black border">
-                    <LinkCardI iconType="rotate" href="/free-game" src="/fg/fgIcon.svg" label="Free Game!" mui="east" />
+                    <LinkCardI iconType="rotate" href="/free-game" src="/fg/FGIcon.svg" label="Free Game!" mui="east" />
                     <LinkCardI href="/meditations-of-a-rockstar" src="/icons/Rockstar.png" label="Meditations of a Rockstar" mui="east"/>
-                    <LinkCardI href="/songs" src="/icons/songs.svg" label="All Songs" mui="east"/>
+                    <LinkCardI href="/songs" src="/icons/Songs.svg" label="All Songs" mui="east"/>
                     {/* <LinkCardI href="https://google.com" src="/icons/songs.svg" label="Books" mui="east"/>
                     <LinkCardI href="https://google.com" src="/fg/fgIcon.svg" label="Recipes" mui="east"/> */}
                     <LinkCardI href="/archive" src="/icons/Archive.svg" label=" Archive" mui="east"/>
-                    <LinkCardI href="/misx" src="/icons/extras.svg" label="More" mui="east"/>
+                    <LinkCardI href="/misx" src="/icons/Extras.svg" label="More" mui="east"/>
                 </div>
             </div>
             <Footer />

@@ -31,7 +31,7 @@
     {
         "title": "Merch Post",
         "kind": "merch",
-        "image": "/fg/fgMain.svg",
+        "image": "/fg/FGMain.svg",
         "link": "https://notion.so",
         "published": "true"
     },
