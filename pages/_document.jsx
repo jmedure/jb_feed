@@ -11,6 +11,10 @@ class MyDocument extends Document {
             <link rel="shortcut icon" type="image/png" href="logo.png" />
             <meta name="robots" content="index, follow" />
             <link rel="stylesheet" href="https://use.typekit.net/wzt4vsj.css" />
+            <link rel="preload" href="/fonts/cardinalfruit-italic.otf" as="font" type="font/otf" crossOrigin="anonymous"/>
+            <link rel="preload" href="/fonts/cardinalfruit-regular.otf" as="font" type="font/otf" crossOrigin="anonymous"/>
+            <link rel="preload" href="/fonts/PPNeueMontreal-Book.otf" as="font" type="font/otf" crossOrigin="anonymous"/>
+            <link rel="preload" href="/fonts/PPNeueMontreal-Italic.otf" as="font" type="font/otf" crossOrigin="anonymous"/>
         </Head>
         <body>
           <Main />

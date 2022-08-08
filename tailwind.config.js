@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -11,6 +14,8 @@ module.exports = {
         serif: ['merriweather', 'serif'],
         grotesk: ['neue-haas-grotesk-display', 'sans'],
         text: ['neue-haas-grotesk-text', 'sans'],
+        fruit: ["CardinalFruit", ...defaultTheme.fontFamily.serif],
+        mont: ["NeueMontreal", ...defaultTheme.fontFamily.sans],
       },
     },
   },

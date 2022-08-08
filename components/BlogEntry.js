@@ -17,7 +17,7 @@ export default function BlogEntry( props ) {
     
     return(
         <Link href={`/meditations-of-a-rockstar/${slug}`} key={index} passHref>
-            <div className='p-4 blogEntry flex space-x-8 align-top cursor-pointer font-serif tracking-normal hover:bg-neutral-100 relative'>
+            <div className='p-4 blogEntry flex space-x-8 align-top cursor-pointer font-fruit tracking-normal hover:bg-neutral-100 relative'>
                 <div className="relative w-48 h-32 m-h-full border-solid border-neutral-300 border">
                     <Image 
                         src={src}
@@ -32,8 +32,8 @@ export default function BlogEntry( props ) {
                 </div>
                 <div className="flex-col col-span-full flex justify-between flex-1">      
                     <div className='flex-grow'>
-                        <h1 className="text-2xl font-sans font-medium tracking-tighter leading-tight mb-1">{title}</h1>
-                        <p className="text-neutral-600 text-base font-sans font-normal tracking-tight">{description}</p>
+                        <h1 className="text-4xl font-fruit italic tracking-tight leading-tight mb-1">{title}</h1>
+                        <p className="text-neutral-600 text-base font-mont tracking-normal">{description}</p>
                         {/* <span className="material-icons text-med border-2 py-1 px-2 text-neutral-400 border-neutral-200 border-solid hover:border-solid  hover:text-neutral-500 hover:border-2 hover:border-neutral-500 rounded-sm transition-all ">ios_share</span> */}
                     </div>
                     <div className="text-neutral-500 flex font-sans justify-between">

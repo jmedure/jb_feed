@@ -14,18 +14,27 @@ export default function Blog( { posts } ) {
           </Head>
           
           <div className=''>
-             <MHeader/>
-             <div className='container font-serif'>
+            
+             {/* <MHeader/> */}
+             <div className=' font-serif'>
 
-              <div className='font-sans font-medium text-7xl p-16 justify-center text-center tracking-tighter'>
-                <h1>tomorrow is <i className='font-serif text-[5.4rem]'>not</i> guranteed</h1>
+              <div className='font-fruit pt-56 justify-center text-center container'>
+                <h1 className='text-8xl tracking-tighter'>Meditations of a <i className='tracking-tight'>Rockstar</i></h1>
+                <p className=' font-sans text-2xl tracking-tighter'>by Jacob&#39;s Blue</p>
+                <div className='py-24'>
+                  <span className='material-icons'>keyboard_arrow_down_sharp</span>
+                </div>
               </div>
+              
 
               <h3 className='text-3xl mb-4 tracking-tight'></h3>
 
               <div className='container py-8'>
+                <div className='font-fruit tracking-tight py-4 border-b border-solid'>
+                  <h2 className='text-4xl italic'>Entries <sup className='text-lg text-neutral-400'>({posts.length})</sup></h2>
+                </div>
                   {posts.map((frontMatter, index) => {
-                  
+                    
                     return (
                         <BlogEntry 
                             slug={frontMatter.slug} 
