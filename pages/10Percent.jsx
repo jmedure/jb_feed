@@ -20,6 +20,7 @@ export default function tenPercent( ) {
               <ul>
                   <li className='list-disc list-inside'><Link href="https://effectivealtruism.org">Effective Altruism</Link></li>
                   <li className='list-disc list-inside'><Link href="https://teamtrees.org">Team Trees</Link></li>
+                  <span className='material-icons text-9xl'>north</span>
               </ul>
             </div>
           </div>

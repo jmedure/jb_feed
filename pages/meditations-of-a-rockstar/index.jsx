@@ -18,10 +18,10 @@ export default function Blog( { posts } ) {
              {/* <MHeader/> */}
              <div className=' font-serif'>
 
-              <div className='font-fruit pt-56 justify-center text-center container'>
+              <div className='font-fruit pt-56 items-center text-center container'>
                 <h1 className='text-8xl tracking-tighter'>Meditations of a <i className='tracking-tight'>Rockstar</i></h1>
                 <p className=' font-sans text-2xl tracking-tighter'>by Jacob&#39;s Blue</p>
-                <div className='py-24'>
+                <div className='items-center text-center justify-center'>
                   <span className='material-icons'>keyboard_arrow_down_sharp</span>
                 </div>
               </div>

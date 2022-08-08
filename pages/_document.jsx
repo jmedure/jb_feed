@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en-us">
         <Head>
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
             <meta charSet="utf-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <link rel="shortcut icon" type="image/png" href="logo.png" />
@@ -15,6 +14,7 @@ class MyDocument extends Document {
             <link rel="preload" href="/fonts/cardinalfruit-regular.otf" as="font" type="font/otf" crossOrigin="anonymous"/>
             <link rel="preload" href="/fonts/PPNeueMontreal-Book.otf" as="font" type="font/otf" crossOrigin="anonymous"/>
             <link rel="preload" href="/fonts/PPNeueMontreal-Italic.otf" as="font" type="font/otf" crossOrigin="anonymous"/>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         </Head>
         <body>
           <Main />
