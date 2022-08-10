@@ -15,7 +15,7 @@ export default function LinkCard(props){
                                 {/* <FontAwesomeIcon icon={props.fai} className="text-3xl"/> */}
                             </div>
                             <div className="flex space-x-3 items-center">
-                                <FontAwesomeIcon icon={props.fai} className="w-8 h-full align-middle justify-center text-2xl"/>
+                                <FontAwesomeIcon icon={props.fai} className="w-8 align-middle justify-center text-2xl"/>
                                 <p>{props.label}</p>
                             </div>
                         </div>
