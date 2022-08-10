@@ -4,7 +4,7 @@ export default function Tag(props) {
 
     if(props.type == "new") {
         return (
-            <div className="-left-8 -top-7 md:-top-6 -rotate-12 absolute bg-lime-300 px-4 pb-1 md:pb-2 align-middle rounded-full font-light text-6xl md:text-8xl z-20 flex space-x-2 border-2 border-solid border-black ">
+            <div className="-left-8 -top-7 md:-top-6 -rotate-12 absolute bg-lime-300 px-4 pb-2 md:pb-2 align-middle rounded-full font-light text-6xl md:text-8xl z-20 flex space-x-2 border-2 border-solid border-black ">
                 <p className="font-serif tracking-tighter italic">new</p>
             </div>
         )

@@ -51,9 +51,9 @@ export const Post = ({ post }) => {
   
   return (
     <a href={link} className="group no-underline">
-      <div className="p-4 mb-6 w-full hover:bg-neutral-100 border border-solid border-black">
+      <div className="p-4 mb-6 w-full hover:bg-neutral-100 border border-solid border-black rounded-2xl">
       { image ?
-        <div className='w-full mb-4 relative h-full overflow-hidden aspect-square border border-solid border-black sm:aspect-video'>
+        <div className='w-full mb-4 relative h-full overflow-hidden aspect-square border rounded-xl border-solid border-black sm:aspect-video'>
             <Image 
               src={image}
               alt="random"
@@ -67,7 +67,7 @@ export const Post = ({ post }) => {
             null
           }
         { youtubeEmbed ?
-        <div className='w-full mb-4 relative h-full border border-solid border-black overflow-hidden sm:aspect-video'>
+        <div className='w-full mb-4 relative h-full border border-solid aspect-square rounded-xl border-black overflow-hidden sm:aspect-video'>
             <YoutubeEmbed
               embedId={youtubeEmbed}
             />
