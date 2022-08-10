@@ -22,9 +22,9 @@ function Subscribe() {
   }
 
   return (
-    <div className=''>
-      <form onSubmit={subscribe} className="group before:gray-400 after:gray-900">
-        <div className='flex w-full border-b border-solid border-gray-400 justify-between focus:border-gray-900  after:-["*"] after:border-gray-900 items-baseline'>
+    <div className='font-mont'>
+      <form onSubmit={subscribe} className="group before:text-neutral-400 after:text-black">
+        <div className='flex w-full border-b border-solid border-neutral-400 justify-between focus:border-neutral-900  after:-["*"] after:border-neutral-900 items-center'>
           <div className="flex flex-auto">
             <input
               required
@@ -34,7 +34,7 @@ function Subscribe() {
               placeholder="subscribe for updates"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex w-full focus:focus-none active:none focus:outline-none focus:ring-sky-500"
+              className="flex w-full focus:focus-none active:none focus:outline-none outline-offset-4  py-2 placeholder:text-neutral-400"
             />
           </div>
           <div className="flex">
@@ -42,10 +42,11 @@ function Subscribe() {
               disabled={state === 'Loading'}
               type="submit"
               onClick={subscribe}
-              className="hover:bg-neutral-200 py-2 px-3  transition-all transition-500ms  before:content-[''] before:gray-200"
+              className="hover:bg-neutral-100 relative py-2 px-3 rounded-full  transition-all transition-500ms  before:content-[''] before:bg-neutral-200"
               >
                 {/* Subscribe */}
-                <span className="material-icons text-xl">east</span>
+                {/* <span className="material-icons text-xl">east</span> */}
+                <p className='font-mont capitalize'>subscribe</p>
             </button>
           </div>
         </div>

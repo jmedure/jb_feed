@@ -30,7 +30,7 @@ export default function Home( ) {
             <h2 className="font-medium text-[7.8rem] sm:text-[12rem] leading-none pb-2 tracking-tight">All</h2>
           </div>
         <MainNav/>
-        <div className='my-8 space-y-4 container'>
+        <div className='mb-8 mt-2 space-y-4 container'>
         { data.map(function (post, index) {
             if( post.published == "true")
             return <Post key={index} post={post}/>

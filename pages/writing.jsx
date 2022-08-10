@@ -28,7 +28,7 @@ export default function Home( ) {
             <h2 className="text-[7.8rem] sm:text-[12rem] leading-none pb-2">Writing</h2>
           </div>
         <MainNav/>
-        <div className=' container my-8 space-y-4'>
+        <div className=' container mb-8 mt-2 space-y-4'>
         
         { data.filter(function (posts) {
             return posts.kind === "journal";

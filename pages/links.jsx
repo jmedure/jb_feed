@@ -10,7 +10,6 @@ import {
   faSpotify,
   faSoundcloud,
   faDeezer,
-  faAmazon,
   faNapster,
   faTwitch,
   faPatreon,
@@ -61,14 +60,22 @@ export default function Links(props) {
 
         <FeaturedLinkCard
           tag="new"
-          type="song"
-          icon={faYoutube}
+          type="music"
+          alt="where do we go from here cover"
           label="Where do we go from here?"
           description=""
           image="/1.gif"
-          href="/meditations-of-a-rockstar"
+          href="/songs"
         />
-        {/* <FeaturedLinkCard tag="" type="video" icon={faYoutube} label="youtube" description="New song out now" image="/1.gif" href="/meditations-of-a-rockstar" /> */}
+        {/* <FeaturedLinkCard
+          tag="new"
+          type="video"
+          icon={faYoutube}
+          label="youtube"
+          description="New song out now"
+          image="/1.gif"
+          href="/meditations-of-a-rockstar"
+        /> */}
         <h2 className="py-2 text-lg">Streaming</h2>
         <div className="flex flex-row w-full flex-wrap divide-y divide-black/70 divide-solid border-solid border-black border ">
           <LinkCard
@@ -224,19 +231,19 @@ export default function Links(props) {
         </div>
         <h2 className="py-2 text-lg">Site</h2>
         <div className="flex flex-row w-full flex-wrap divide-y divide-black/70 mb-12 divide-solid border-solid border-black border">
-          <LinkCardI
+          {/* <LinkCardI
             iconType="rotate"
             href="/free-game"
             src="/fg/FGIcon.svg"
             label="Free Game!"
             mui="east"
-          />
-          <LinkCardI
+          /> */}
+          {/* <LinkCardI
             href="/meditations-of-a-rockstar"
             src="/icons/Rockstar.png"
             label="Meditations of a Rockstar"
             mui="east"
-          />
+          /> */}
           <LinkCardI
             href="/songs"
             src="/icons/Songs.svg"
@@ -251,12 +258,12 @@ export default function Links(props) {
             label=" Archive"
             mui="east"
           />
-          <LinkCardI
-            href="/misx"
+          {/* <LinkCardI
+            href="/misc"
             src="/icons/Extras.svg"
             label="More"
             mui="east"
-          />
+          /> */}
         </div>
       </div>
       <Footer />
