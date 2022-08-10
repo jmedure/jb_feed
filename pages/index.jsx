@@ -27,7 +27,7 @@ export default function Home( ) {
       <main className=''>
         <JBHeader/>
           <div className="container">
-            <h2 className="text-[7.8rem] sm:text-[12rem] leading-none pb-2">All</h2>
+            <h2 className="font-medium text-[7.8rem] sm:text-[12rem] leading-none pb-2 tracking-tight">All</h2>
           </div>
         <MainNav/>
         <div className='my-8 space-y-4 container'>
