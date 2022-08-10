@@ -51,7 +51,7 @@ export const Post = ({ post }) => {
   
   return (
     <a href={link} className="group no-underline">
-      <div className="p-4 mb-6 w-full hover:bg-neutral-100 border border-solid border-black rounded-2xl">
+      <div className="p-4 mb-6 w-full hover:bg-white/50 bg-white/20 backdrop-blur-sm border-black border border-solid rounded-2xl text-black">
       { image ?
         <div className='w-full mb-4 relative h-full overflow-hidden aspect-square border rounded-xl border-solid border-black sm:aspect-video'>
             <Image 
@@ -81,7 +81,7 @@ export const Post = ({ post }) => {
         </div>
 
         { description ?
-          <p className="text-neutral-800 truncate sm:text-2xl text-base md:text-3xl md:tracking-tight lg:text-4xl sm:py-4 md:py-6 lg:py-6 py-2">{ description }</p>
+          <p className="truncate sm:text-2xl text-base md:text-3xl md:tracking-tight lg:text-4xl sm:py-4 md:py-6 lg:py-6 py-2">{ description }</p>
           :
           null
         }

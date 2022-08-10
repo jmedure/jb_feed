@@ -1,52 +1,58 @@
 /* eslint-disable react/no-unescaped-entities */
-import Head from 'next/head'
-import Image from 'next/image'
-import JBHeader from '../components/JBHeader'
-import { Post } from '../components/Post'
-import useSWR from 'swr'
-import MainNav from '../components/MainNav'
-import Footer from '../components/Footer'
+import Head from 'next/head';
+import Image from 'next/image';
+import JBHeader from '../components/JBHeader';
+import { Post } from '../components/Post';
+import useSWR from 'swr';
+import MainNav from '../components/MainNav';
+import Footer from '../components/Footer';
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function Home( ) {
-  
-  const { data, error } = useSWR('/api/posts', fetcher)
+export default function Home() {
+  const { data, error } = useSWR('/api/posts', fetcher);
 
   const main = () => {
     if (error) {
-      return (<main>error: failed to load</main>)
+      return <main>error: failed to load</main>;
     }
     if (!data) {
-      return (<main>loading...</main>)
+      return <main>loading...</main>;
     }
     // let allPosts = data.filter(post,index)
     return (
-      <main className=''>
-        <JBHeader/>
-          <div className="container ">
-            <h2 className="text-[7.8rem] sm:text-[12rem] leading-none pb-2">Video</h2>
+      <main className="">
+        <div className="bg-cover home bg-scroll bg-center mt-0">
+          <div className="bg-gradient-to-t from-white">
+            <JBHeader />
+            <div className="container ">
+              <h2 className="text-[7.8rem] sm:text-[12rem] text-white leading-none pb-2">
+                Video
+              </h2>
+            </div>
+            <MainNav />
+            <div className="container mb-8 mt-2 w-full">
+              {data
+                .filter(function (posts) {
+                  return posts.kind === 'video';
+                })
+                .map(function (post, index) {
+                  return <Post key={index} post={post} />;
+                })}
+            </div>
+            <Footer />
           </div>
-        <MainNav/>
-        <div className='container mb-8 mt-2 w-full'>
-        
-        { data.filter(function (posts) {
-            return posts.kind === "video";
-        }).map(function (post, index) {
-            return <Post key={index} post={post}/>
-          })}
         </div>
-      <Footer />
       </main>
-    )
-  }
+    );
+  };
 
   return (
     <>
       <Head>
-	      <title>Jacob's Blue</title>
+        <title>Jacob's Blue</title>
       </Head>
       {main()}
     </>
-  )
+  );
 }

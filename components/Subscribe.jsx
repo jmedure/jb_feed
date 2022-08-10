@@ -31,10 +31,10 @@ function Subscribe() {
               id="email-input"
               name="email"
               type="email"
-              placeholder="subscribe for updates"
+              placeholder="Subscribe for updates"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex w-full focus:focus-none active:none focus:outline-none outline-offset-4  py-2 placeholder:text-neutral-400"
+              className="flex w-full focus:focus-none active:none bg-transparent focus:outline-none outline-offset-4 py-2 placeholder:text-neutral-400"
             />
           </div>
           <div className="flex">
@@ -42,7 +42,7 @@ function Subscribe() {
               disabled={state === 'Loading'}
               type="submit"
               onClick={subscribe}
-              className="hover:bg-neutral-100 relative py-2 px-3 rounded-full  transition-all transition-500ms  before:content-[''] before:bg-neutral-200"
+              className="py-2 px-3 rounded-full transition-all transition-500ms before:content-[''] before:bg-neutral-200"
               >
                 {/* Subscribe */}
                 {/* <span className="material-icons text-xl">east</span> */}

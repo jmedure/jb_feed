@@ -8,7 +8,7 @@ export default function LinkCardI(props) {
 if (props.iconType == "rotate"){  
     return(
         <Link passHref href={props.href} className="hover:cursor-pointer">
-            <div className="py-3 pl-3 pr-4 w-full flex-grow text-2xl items-center flex group hover:cursor-pointer hover:bg-neutral-100 justify-between">
+            <div className="py-3 pl-3 pr-4 w-full flex-grow text-2xl items-center flex group hover:cursor-pointer bg-white/20 backdrop-blur hover:bg-white/50 justify-between">
                 <div className="flex space-x-2 items-center">
                     <div className="relative rotate w-10 h-10 align-middle justify-center text-2xl">
                         <Image
@@ -29,7 +29,7 @@ if (props.iconType == "rotate"){
 
     return(
         <Link passHref href={props.href} className="hover:cursor-pointer">
-                    <div className="py-3 pl-3 pr-4 w-full flex-grow text-2xl items-center flex group hover:cursor-pointer hover:bg-neutral-100 justify-between">
+                    <div className="py-3 pl-3 pr-4 w-full flex-grow text-2xl items-center flex group hover:cursor-pointer bg-white/20 backdrop-blur hover:bg-white/50 justify-between">
                     
                         <div className="flex space-x-2 items-center">
                                 <div className="relative w-10 h-10  align-middle justify-center text-2xl">

@@ -15,10 +15,10 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #7e7e7e;
   text-decoration: underline;
-  text-underline-offset: 1px;
-  text-decoration-color: #e7e7e7;
+  text-underline-offset: 2px;
+  text-decoration-color: #7e7e7e;
   transition: .1s;
 }
 
@@ -34,7 +34,7 @@ a .dark {
   transition: .1s;
 }
 
-a:hover, a:active {
+a .dark:hover, a.dark:active {
   text-decoration-color: white;
 }
 
@@ -67,11 +67,6 @@ a:hover, a:active {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
 }
-
-/* 
-.blogEntry {
-  h
-} */
 
 .display{
   /* text-transform:; */
@@ -130,6 +125,9 @@ a:hover, a:active {
   text-decoration: none;
 }
 
+.home {
+  background-image: url('/clouds.gif');
+}
 
 .bc{
   display: flex;
@@ -217,8 +215,8 @@ a:hover, a:active {
 
 @media (min-width: 1024px){
   .container{
-    /* max-width: 872px; */
-    max-width: 95%;
+    max-width: 872px;
+    /* max-width: 95%; */
   }
 }
 
