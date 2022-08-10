@@ -22,7 +22,7 @@ export default function Blog( { posts } ) {
 
               <h1 className='text-4xl mt-4 pt-4 tracking-tight'>All Songs</h1>
 
-              <div className='my-4 divide-y border-black border-solid border-t divide-black'>
+              <div className='my-4 divide-y border-black border-solid border-t divide-neutral-300'>
                   {posts.map((frontMatter, index) => {
                     if ((frontMatter.published=="true") && (frontMatter.type != "album" )){
                     return (

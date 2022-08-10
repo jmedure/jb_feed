@@ -10,7 +10,7 @@ export default function JBHeader() {
 
 
     return (
-        <div className="pt-4 pb-2 lg:my-2 w-full bg-white/90 backdrop-blur-sm z-40 sticky top-0">
+        <div className="pt-4 pb-2 w-full text-white backdrop-blur-sm z-40 sticky top-0">
             {/* <div className="container"> */}
             {/* <LinksContainer/> */}
             {/* <MainNav/> */}

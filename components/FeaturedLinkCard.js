@@ -4,39 +4,44 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Tag from './Tag';
 import BubbleLink from './BubbleLink';
+import YoutubeEmbed from './YoutubeEmbed';
 
 export default function FeaturedLinkCard(props) {
   if (props.type == 'video') {
     return (
       <Link passHref href={props.href} className="hover:cursor-pointer">
-        <div className="space-y-4 card border border-solid border-black p-4 hover:cursor-pointer hover:bg-neutral-100 rounded-2xl">
-          <div className="flex flex-row items-baseline w-full justify-between relative">
+        <div className="space-y-2 md:space-y-8 group card border border-solid border-black p-4 bg-white/20 backdrop-blur hover:cursor-pointer hover:bg-white/50 rounded-2xl hover:drop-shadow-2xl">
+          <div className="flex flex-row items-baseline w-full justify-between relative pb-2 md:pb-0">
             <Tag type={props.tag} />
             <p className="">new</p>
             <p className="py-0 px-2 sm:text-xl sm:mt-3 border border-black rounded-full items-center align-middle align-items-center md:text-2xl md:tracking-tight capitalize">
               {props.type}
             </p>
           </div>
-          <div className="w-full border border-solid border-black relative h-full overflow-hidden aspect-video mb-4">
-            <Image
-              src={props.image}
-              alt="random"
-              // width={500}
-              // height={500}
-              layout="fill"
-              objectFit="cover"
-              placeholder="blur"
-              blurDataURL="https://jacobs.blue"
-            />
+          <div className="flex w-full flex-col sm:flex-col jusitfy-between space-y-3 sm:space-y-4 space-x-0 sm:space-x-0 md:space-x-8 lg:space-x-10 items-center">
+            <div className="flex lg:w-full w-full border border-solid border-black rounded-xl relative h-full lg:mr-auto overflow-clip lg:basis-1/2 aspect-square md:aspect-video">
+              <YoutubeEmbed embedId={props.youtubeEmbed} />
+            </div>
+            <div className="flex-col w-full basis-1/2 text-left space-y-0 font-mont">
+              <p className="text-neutral-600 text-sm lg:text-lg lg:tracking-tight"></p>
+              <h2 className="text-3xl sm:text-5xl md:text-7xl md:pb-4 lg:text-8xl lg:pb-4 py-2 leading-none tracking-tighter">
+                {props.label}
+              </h2>
+              <p className="text-xl">{props.description}</p>
+            </div>
           </div>
-          <div className="flex w-full flex-row jusitfy-between">
-            <div className="flex flex-col flex-grow basis-1/2 justify-items-start font-mont">
-              {/* <FontAwesomeIcon icon={props.icon} className=" left-0"/> */}
-              <h2>{props.label}</h2>
-              <p className="p">{props.description}</p>
+          <div className="flex flex-row justify-between items-end pt-2 md:pt-0 lg:pt-0">
+            <div className="flex-grow flex-auto ">
+              <div className="flex items-center justify-start justify-items-center flex-wrap">
+                <BubbleLink
+                  href={props.href}
+                  label="watch now"
+                  mui="north_east"
+                />
+              </div>
             </div>
 
-            <span className="material-icons text-right text-8xl basis-1/2">
+            <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
               north_east
             </span>
           </div>
@@ -47,7 +52,7 @@ export default function FeaturedLinkCard(props) {
   if (props.type == 'music') {
     return (
       <Link passHref href={props.href} className="hover:cursor-pointer">
-        <div className="space-y-2 md:space-y-8 group card border border-solid border-black p-4 bg-white hover:cursor-pointer hover:bg-neutral-100 rounded-2xl drop-shadow-lg ">
+        <div className="space-y-2 md:space-y-8 group card border border-solid border-black p-4 bg-white/20 backdrop-blur hover:cursor-pointer hover:bg-white/50 rounded-2xl hover:drop-shadow-2xl">
           <div className="flex flex-row items-baseline w-full justify-between relative pb-2">
             <Tag type={props.tag} />
             <p className="">new</p>

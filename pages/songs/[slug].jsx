@@ -56,7 +56,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       <div className="bg-neutral-900 text-white relative">
         <div className="bg-cover lg:bg-cover bg-scroll bg-center not-prose flex-block " style={{backgroundImage: `url(${frontmatter.artwork})`}}>
             <div className="bg-gradient-to-t from-neutral-900">
-              <div className="container pt-10 pb-8 my-10">
+              <div className="container pt-10 pb-8">
                 <div className="flex">
                   <Link href='./'>
                     <div className="flex cursor-pointer mb-10 py-1 bg-black/20 rounded-full backdrop-blur-sm pl-2 pr-3 hover:bg-black/50 items-center">
