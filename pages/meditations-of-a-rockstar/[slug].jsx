@@ -24,12 +24,12 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         
       </Head>
       {/* <JBHeader/> */}
-      <div className="container-blog prose-lg proseprose:neutral prose-headings:tracking-tighter prose-headings:font-sans prose-headings:font-medium py-20">
+      <div className="container-blog prose-lg proseprose:neutral prose-headings:tracking-tighter prose-headings:font-serif prose-headings:font-medium py-20">
         <div className="not-prose flex-block font-sans border-b border-solid py-4 border-neutral-300">
             <div className="">
               {/* <Breadcrumbs useDefaultStyle omitRootLabel containerClassName="breadcrumbs" activeItemClassName="bread-crumb" /> */}
               <Button href="./" type="left" copy=" back" icon="west"/>
-              <h1 className="text-5xl font-semibold font-sans tracking-tighter mb-4 mt-20">{frontmatter.title}</h1>
+              <h1 className="text-6xl font-fruit tracking-tight mb-4 mt-20">{frontmatter.title}</h1>
               <p className="text-2xl tracking-wide text-neutral-600">{frontmatter.description}</p>
             </div>
             <div className="flex justify-betwee items-center tracking-wide text-neutral-500">
