@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 
 function SubheaderLinks() {
     return (
-        <div className="text-xl font-mont uppercase align-middle z-20 p-1 text-white text-center justify-center tracking-tight w-full basis-1/2 flex flex-wrap">
+        <div className="text-lg sm:text-xl font-mont uppercase align-middle z-20 p-1 text-white text-center justify-center tracking-tight w-full basis-1/2 flex flex-wrap">
             <Typewriter
                 options={{
                     strings: [

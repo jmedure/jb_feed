@@ -266,8 +266,9 @@ export default function Links(props) {
             mui="east"
           /> */}
             </div>
+            <Footer />
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </main>

@@ -44,6 +44,11 @@ a .dark:hover, a.dark:active {
   margin: 0px auto;
 }
 
+.container-fg{
+  margin: 0px auto;
+  max-width: 95%;
+}
+
 .container-blog{
   /* max-width: 872px; */
 
@@ -211,12 +216,19 @@ a .dark:hover, a.dark:active {
   .container{
     max-width: 95%;
   }
+  .container-fg{
+    max-width: 95%;
+  }
 }
 
 @media (min-width: 1024px){
   .container{
     max-width: 872px;
     /* max-width: 95%; */
+  }
+  .container-fg{
+    /* max-width: 872px; */
+    max-width: 95%;
   }
 }
 

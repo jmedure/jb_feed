@@ -21,17 +21,17 @@ export default function Home() {
     }
     // let allPosts = data.filter(post,index)
     return (
-      <main className="">
-        <div className="bg-cover home bg-scroll bg-center mt-0">
-          <div className="bg-gradient-to-t from-white">
+      <main className="container">
+        {/* <div className="bg-cover home bg-scroll bg-center mt-0">
+          <div className="bg-gradient-to-t from-white"> */}
             <JBHeader />
-            <div className="container ">
+            {/* <div className="container ">
               <h2 className="text-[7.8rem] sm:text-[12rem] text-white leading-none pb-2">
                 Writing
               </h2>
-            </div>
+            </div> */}
             <MainNav />
-            <div className=" container mb-8 mt-2 space-y-4">
+            <div className="mb-8 mt-2 space-y-4">
               {data
                 .filter(function (posts) {
                   return posts.kind === 'journal';
@@ -41,8 +41,8 @@ export default function Home() {
                 })}
             </div>
             <Footer />
-          </div>
-        </div>
+          {/* </div>
+        </div> */}
       </main>
     );
   };
