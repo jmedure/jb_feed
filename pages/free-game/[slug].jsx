@@ -13,7 +13,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import JBHeader from "../../components/MHeader"
 import Breadcrumbs from "nextjs-breadcrumbs"
 import Button from "../../components/Button"
-import BlogEntry from "../../components/fgEntry"
+import FgEntry from "../../components/FgEntry"
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   
@@ -58,7 +58,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               />
         </div> 
         <div className="content">
-          <MDXRemote {...source} components={{ Image, Button, BlogEntry }} />
+          <MDXRemote {...source} components={{ Image, Button, FgEntry }} />
         </div>
       </div>
     </React.Fragment>
