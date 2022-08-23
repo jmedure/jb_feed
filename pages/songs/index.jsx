@@ -15,10 +15,10 @@ export default function Blog( { posts } ) {
               <title>Songs | Jacob&#39;s Blue</title>
           </Head>
           
-          <div className=''>
+          <div className='container-fg'>
           <JBHeader/>
              
-             <div className='container'>
+             <div className=''>
 
               <h1 className='text-4xl mt-4 pt-4 tracking-tight'>All Songs</h1>
 
@@ -78,8 +78,9 @@ export default function Blog( { posts } ) {
                   </div>
               </div>
             </div>
+            <Footer /> 
         </div>
-      <Footer />            
+                 
       </React.Fragment>
       
     )

@@ -44,7 +44,7 @@ export default function AlbumCard( props ) {
     return(
         <Link href={`/songs/${slug}`} key={index} passHref>
             <div className='flex snap-start w-full flex-col space-y-4 align-top cursor-pointer tracking-normal '>
-                <div className="relative border-solid border border-black aspect-square">
+                <div className="relative  rounded-xl overflow-hidden aspect-square">
                     <Image 
                         src={src}
                         alt={alt}

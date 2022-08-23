@@ -9,11 +9,11 @@ export default function Footer(props) {
 
 
     return (
-        <div className="container my-12 pb-24 border-black border-solid border-t">
-            <div className="sub-text pt-4 flex w-full justify-between items-center">
-                <h1 className="text-4xl font-fruit tracking-tighter italic">Jacob&#39;s Blue</h1>
+        <div className="my-12 pb-24 border-black border-solid border-t">
+            {/* <div className="sub-text pt-4 flex w-full justify-between items-center">
+                {/* <h1 className="text-4xl font-fruit tracking-tighter italic">Jacob&#39;s Blue</h1> */}
                 {/* <p className="text-lg uppercase text-neutral-400 justify-end">join my cult</p> */}
-            </div>
+            {/* </div> */} 
             <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 pt-4 items-stretch ">
                 <div className="flex flex-col flex-grow alignx-top justify-items-start">
                     <Button href="/" type="null" icon="north" copy="Home" />

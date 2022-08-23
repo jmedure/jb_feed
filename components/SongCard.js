@@ -45,7 +45,7 @@ export default function SongCard( props ) {
     return(
         <Link href={`/songs/${slug}`} key={index} passHref>
             <div className='items-center py-4 w-full flex space-x-4 align-top cursor-pointer tracking-normal group '>
-                <div className="relative h-full w-16  aspect-square rounded-xl overflow-hidden group-hover:drop-shadow-lg transition-all">
+                <div className="relative h-full w-16 aspect-square rounded-xl overflow-hidden group-hover:drop-shadow-lg transition-all">
                     <Image 
                         src={src}
                         alt={alt}

@@ -67,7 +67,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                 </div>
 
                 <div className="flex items-center h-full w-full">
-                  <div className="relative invisible hidden sm:flex sm:visible sm:w-80 md:w-96 h-full aspect-square border border-solid border-black">
+                  <div className="relative invisible rounded-xl drop-shadow-2xl overflow-hidden hidden sm:flex sm:visible sm:w-80 md:w-96 h-full aspect-square ">
                       <Image 
                         src={frontmatter.artwork}
                         alt={frontmatter.alt}
@@ -116,12 +116,9 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                           <StreamLink href={frontmatter.links[0]} label="Spotify" />
                           <StreamLink href={frontmatter.links[1]} label="Apple" />
                           <StreamLink href={frontmatter.links[2]} label="Youtube" />
-                          <StreamLink href={frontmatter.links[5]} label="Amazon" />
-                          <StreamLink href={frontmatter.links[3]} label="Tidal" />
-                          <StreamLink href={frontmatter.links[4]} label="Soundcloud" />
-                          <StreamLink href={frontmatter.links[5]} label="Audiomack" />
-                          <StreamLink href={frontmatter.links[5]} label="Deezer" />
-                          <StreamLink href={frontmatter.links[5]} label="Napster" />
+                          <StreamLink href={frontmatter.links[3]} label="Amazon" />
+                          <StreamLink href={frontmatter.links[4]} label="Tidal" />
+                          <StreamLink href={frontmatter.links[5]} label="Even More" />
                         </div>
 
             </div>
