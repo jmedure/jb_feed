@@ -44,8 +44,8 @@ export default function SongCard( props ) {
     
     return(
         <Link href={`/songs/${slug}`} key={index} passHref>
-            <div className='items-center py-4 w-full flex space-x-4 align-top cursor-pointer tracking-normal group '>
-                <div className="relative h-full w-16 aspect-square rounded-xl overflow-hidden group-hover:drop-shadow-lg transition-all">
+            <div className='items-center font-mont p-4 w-full lg:flex-col flex space-x-4 lg:space-x-0 align-top cursor-pointer tracking-normal group hover:bg-blue-200 bg-blue-50 rounded-xl lg:rounded-2xl lg:space-y-4'>
+                <div className="relative h-full w-20 sm:w-24 lg:w-full aspect-square rounded-xl overflow-hidden transition-all">
                     <Image 
                         src={src}
                         alt={alt}
@@ -55,21 +55,20 @@ export default function SongCard( props ) {
                         blurDataURL='https://jacobs.blue'
                         />
                 </div>
-                <div className="flex-col col-span-full flex justify-between flex-1">      
-                    <div className='flex-grow'>
-                        <h1 className="text-2xl font-sans font-medium tracking-tighter leading-tight mb-1">{title}</h1>
-                    </div>
-                        <div className="flex space-x-1 flex-row align-middle">
+                <div className="flex flex-row items-center lg:items-end w-full lg:space-x-2">
+                    <div className="flex flex-col lg:flex-grow flex-grow lg:h-24">      
+                        <h1 className="text-xl flex-1 md:text-3xl font-medium tracking-tighter leading-tight mb-1">{title}</h1>
+                        <div className="flex space-x-1 lg:space-x-0 flex-row lg:flex-col align-middle">
                             { album ? 
-                                <p>{album} -</p>
+                                <p >{album} -</p>
                                 : null
                             }
-                            <p className="text-neutral-500">{dayjs(date).format("YYYY")}</p>
-                        </div>
-                    
-                </div>
-                <div className="flex-col flex flex-shrink h-full items-center">
-                    <span className="material-icons text-3xl">east</span>
+                            <p className="text-neutral-500 pr-4">{dayjs(date).format("YYYY")}</p>
+                         </div>
+                    </div>
+                    <div className="flex-col flex flex-shrink items-center lg:items-end">
+                        <span className="material-icons text-3xl">east</span>
+                    </div>
                 </div>
             </div>
         </Link>

@@ -22,7 +22,7 @@ export default function Home() {
     }
     // let allPosts = data.filter(post,index)
     return (
-      <main className="container">
+      <main className="container-fg">
         {/* <div className="bg-cover home bg-scroll bg-center mt-0">
           <div className="bg-gradient-to-t from-white"> */}
           <JBHeader />
@@ -32,7 +32,7 @@ export default function Home() {
               </h2>
             </div> */}
             <MainNav />
-            <div className="mb-8 mt-2 space-y-4">
+            <div className="flex mb-8 lg:mb-0 mt-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
               {data
                 .filter(function (posts) {
                   return posts.kind === 'music';
