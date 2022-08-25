@@ -9,17 +9,18 @@ export default function Footer(props) {
 
 
     return (
-        <div className="my-12 pb-24 border-black border-solid border-t">
+        <div className="mb-4 font-mont border-blue-200 border-solid border rounded-3xl lg:rounded-[3em] ">
+            <div className="p-4 lg:p-6">
             {/* <div className="sub-text pt-4 flex w-full justify-between items-center">
                 {/* <h1 className="text-4xl font-fruit tracking-tighter italic">Jacob&#39;s Blue</h1> */}
                 {/* <p className="text-lg uppercase text-neutral-400 justify-end">join my cult</p> */}
             {/* </div> */} 
-            <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 pt-4 items-stretch ">
+            <div className="flex flex-col space-y-6 md:flex-row md:space-y-0  items-stretch ">
                 <div className="flex flex-col flex-grow alignx-top justify-items-start">
                     <Button href="/" type="null" icon="north" copy="Home" />
                     {/* <Button href="/meditations-of-a-rockstar" type="null" icon="east" copy="M.O.A.R." /> */}
                     <Button href="/songs" type="null" icon="east" copy="Songs" />
-                    <Button href="/links" type="null" icon="east" copy="All Links" />
+                    <Button href="/links" type="null" icon="east" copy="Links" />
                     <Button href="/blog" type="null" icon="north_east " copy="EPK" />
                     {/* <Button href="/misc" type="null" icon="east" copy="Extras" /> */}
                     {/* <Button href="/shorterm-vs-longterm-fulfillment" type="both" icon="east" copy="Books" />
@@ -35,6 +36,7 @@ export default function Footer(props) {
                     <Button href={siteMetaData.instagram} type="null" icon="north_east" copy="instagram" passHref={true} target="_blank"/>
                     <Button href={siteMetaData.github} type="null" icon="north_east" copy="github" passHref={true} target="_blank"/>
                     <Button href={siteMetaData.patreon} type="null" icon="north_east" copy="patreon" passHref={true} target="_blank"/>
+                    <Button href="/links" type="null" icon="east" copy="All links" />
                 </div>
                 {/* <div className="flex flex-grow flex-col align-top justify-items-start">
                     <Button href="/free-game" type="null" icon="east" copy="Free Game" />
@@ -52,7 +54,7 @@ export default function Footer(props) {
                             </div>
                         </Link> */}
                         <Link href={siteMetaData.discord}>
-                            <div className="flex items-center py-2 cursor-pointer hover:bg-black hover:text-white md:py-2 border-black border border-solid text-black justify-center rounded-full flex-nowrap space-x-2">
+                            <div className="flex items-center py-4 md:py-3 cursor-pointer hover:bg-black hover:text-white  border-black border border-solid text-black justify-center rounded-full flex-nowrap space-x-2">
                                 <p>Join my cult</p>
                                 <FontAwesomeIcon icon={faDiscord}/>
                                 {/* <p>Join my cult</p> */}
@@ -61,7 +63,8 @@ export default function Footer(props) {
                     </div>
                 </div> 
             </div>
-            <div className="sub-text pt-16 flex w-full justify-between items-center">
+            </div>
+            <div className="sub-text lg:p-6 p-4 lg:mt-8 flex w-full justify-between items-center border-blue-200 border-t border-solid">
                 <p className="text-xs text-gray-700">This is a <Link href="/10Percent">10% project</Link>.</p>
                 <p className="text-xs text-neutral-400 justify-end">from Jacob&#39;s Blue. 2022-Forever ®</p>
             </div>

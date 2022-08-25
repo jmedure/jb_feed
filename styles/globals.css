@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  color: #7e7e7e;
+  /* color: #7e7e7e; */
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: #7e7e7e;
@@ -30,7 +30,7 @@ a .dark {
   text-decoration: solid;
   text-decoration: underline;
   text-underline-offset: 1px;
-  text-decoration-color: #a9a9a9;
+  /* text-decoration-color: #a9a9a9; */
   transition: .1s;
 }
 
@@ -228,7 +228,7 @@ a .dark:hover, a.dark:active {
   }
   .container-fg{
     /* max-width: 872px; */
-    max-width: 95%;
+    max-width: 98%;
   }
 }
 

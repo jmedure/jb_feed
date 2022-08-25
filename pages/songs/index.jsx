@@ -18,11 +18,13 @@ export default function Blog( { posts } ) {
           <div className='container-fg'>
           <JBHeader/>
              
-             <div className=''>
+             <div className='mb-12'>
+              <div className='mt-14 mb-20'>
+                <h1 className='text-5xl font-mont tracking-tight'>Songs</h1>
+                {/* <p className='text-xl pt-2'>Lyrics, credits, and more.</p> */}
+              </div>
 
-              <h1 className='text-4xl mt-4 pt-4 tracking-tight'>All Songs</h1>
-
-              <div className='my-4 divide-y border-black border-solid border-t divide-neutral-300'>
+              <div className='my-8 space-y-4 lg:space-y-0 lg:rounded-[3em] lg:gap-y-4 lg:grid lg:grid-flow-row md:grid-cols-2  lg:grid-cols-4 gap-x-8'>
                   {posts.map((frontMatter, index) => {
                     if ((frontMatter.published=="true") && (frontMatter.type != "album" )){
                     return (
@@ -45,7 +47,7 @@ export default function Blog( { posts } ) {
                       )
                     }})}
               </div>
-              <div className='my-4'>
+              {/* <div className='my-4'>
                 <div className='flex justify-between items-center'>
                   <h3 className='text-2xl my-2 pt-2 tracking-tight'>Albums</h3>
                   <div className='flex items-center space-x-2'>
@@ -76,7 +78,7 @@ export default function Blog( { posts } ) {
                       )
                     }})}
                   </div>
-              </div>
+              </div> */}
             </div>
             <Footer /> 
         </div>

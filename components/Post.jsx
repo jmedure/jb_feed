@@ -42,7 +42,7 @@ export const Post = ({ post }) => {
                   </div> 
              </div>
 
-            <span className="invisible hidden sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">east</span>
+             <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">east</span>
           </div>
   )
     }
@@ -50,10 +50,10 @@ export const Post = ({ post }) => {
   
   
   return (
-    <a href={link} className="group no-underline">
-      <div className="p-4 mb-6 w-full hover:bg-neutral-100 bg-white/20 backdrop-blur-sm border-black border border-solid rounded-2xl text-black">
+    <a href={link} className="group no-underline font-mont w-full">
+      <div className="lg:p-6 p-4 mb-6 w-full hover:bg-blue-200 bg-blue-50 rounded-3xl lg:rounded-[4em] text-black">
       { image ?
-        <div className='w-full mb-4 relative h-full overflow-hidden aspect-square border rounded-xl border-solid border-black sm:aspect-video'>
+        <div className='w-full mb-4 relative h-full overflow-hidden aspect-square rounded-3xl lg:rounded-[3rem] sm:aspect-video'>
             <Image 
               src={image}
               alt="random"
@@ -67,7 +67,7 @@ export const Post = ({ post }) => {
             null
           }
         { youtubeEmbed ?
-        <div className='w-full mb-4 relative h-full border border-solid aspect-square rounded-xl border-black overflow-hidden sm:aspect-video'>
+        <div className='w-full mb-4 relative h-full  aspect-square rounded-3xl lg:rounded-[3rem] overflow-hidden sm:aspect-video'>
             <YoutubeEmbed
               embedId={youtubeEmbed}
             />
