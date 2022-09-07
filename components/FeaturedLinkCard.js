@@ -11,20 +11,20 @@ export default function FeaturedLinkCard(props) {
     return (
       <Link passHref href={props.href} className="hover:cursor-pointer">
         <div className="space-y-2 md:space-y-8 group card border border-solid border-black p-4 bg-white/20 backdrop-blur hover:cursor-pointer hover:bg-white/50 rounded-2xl hover:drop-shadow-2xl">
-          <div className="flex flex-row items-baseline w-full justify-between relative pb-2 md:pb-0">
+          <div className="flex flex-row items-baseline w-full justify-between relative  md:pb-0">
             <Tag type={props.tag} />
             <p className="">new</p>
             <p className="py-0 px-2 sm:text-xl sm:mt-3 border border-black rounded-full items-center align-middle align-items-center md:text-2xl md:tracking-tight capitalize">
               {props.type}
             </p>
           </div>
-          <div className="flex w-full flex-col sm:flex-col jusitfy-between space-y-3 sm:space-y-4 space-x-0 sm:space-x-0 md:space-x-8 lg:space-x-10 items-center">
+          <div className="flex w-full flex-col sm:flex-col jusitfy-between  sm:space-y-4 space-x-0  items-center">
             <div className="flex lg:w-full w-full border border-solid border-black rounded-xl relative h-full lg:mr-auto overflow-clip lg:basis-1/2 aspect-square md:aspect-video">
               <YoutubeEmbed embedId={props.youtubeEmbed} />
             </div>
             <div className="flex-col w-full basis-1/2 text-left space-y-0 font-mont">
-              <p className="text-neutral-600 text-sm lg:text-lg lg:tracking-tight"></p>
-              <h2 className="text-3xl sm:text-5xl md:text-7xl md:pb-4 lg:text-8xl lg:pb-4 py-2 leading-none tracking-tighter">
+              {/* <p className="text-neutral-600 text-sm lg:text-lg lg:tracking-tight">test</p> */}
+              <h2 className="text-3xl sm:text-5xl md:text-7xl md:pb-4 lg:text-7xl lg:pb-4 py-2 leading-none tracking-tighter">
                 {props.label}
               </h2>
               <p className="text-xl">{props.description}</p>

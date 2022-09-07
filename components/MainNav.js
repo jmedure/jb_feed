@@ -49,7 +49,7 @@ export default function MainNav() {
               </a>
             </Link>
           </li>
-          <li className="">
+          {/* <li className="">
             <Link href="/writing" className="">
             <a
                 className={`hover:bg-pink-400 hover:ring-1 ring-offset-2 hover:border-pink-600 hover:text-pink-700 hover:drop-shadow-xl border-neutral-400 text-neutral-400 px-3 py-1 border border-solid rounded-full no-underline ${
@@ -61,7 +61,7 @@ export default function MainNav() {
                 Writing
               </a>
             </Link>
-          </li>
+          </li> */}
           {/* <li className="">
                     <Link href="/shop" className="">
                         <a className={`hover:bg-lime-400 px-4 py-1 border border-solid border-black rounded-full decoration-transparent no-underline ${router.pathname == "/shop" ? "bg-lime-400 " : "bg-white"}`}>Shop</a>

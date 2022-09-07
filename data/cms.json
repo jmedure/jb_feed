@@ -1,5 +1,13 @@
 [
     {
+        "title": "Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set (7 Unreleased Songs)",
+        "kind": "video",
+        "link": "https://www.youtube.com/watch?v=j0VNVoFz3c0",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "j0VNVoFz3c0"
+    },
+    {
         "title": "JB and Ash Max LIVE in NYC",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=gvDZIf0BqL0",
@@ -11,7 +19,7 @@
         "title": "\"Where do we go from here?\", out now!",
         "kind": "music",
         "link": "/songs/hard-of-hearing",
-        "published": "true",
+        "published": "",
         "image": "/1.gif",
         "spotify": "https://spotify.com",
         "apple": "https://applemusic.com",
@@ -29,18 +37,11 @@
         "published": "true"
     },
     {
-        "title": "Merch Post",
+        "title": "New Merch out now",
         "kind": "merch",
-        "image": "/fg/FGMain.svg",
-        "link": "https://notion.so",
-        "published": "true"
-    },
-    {
-        "title": "Merch Post",
-        "kind": "merch",
-        "image": "/1.gif",
-        "link": "https://notion.so",
-        "published": "true"
+        "image": "https://cdn.shopify.com/s/files/1/0584/3848/4134/products/Blue1.jpg?v=1638881013",
+        "link": "https://shopify.com",
+        "published": "false"
     },
     {
         "title": "Merch Post",
@@ -49,10 +50,12 @@
         "published": "false"
     },
     {
-        "title": "Journal Post",
-        "kind": "journal",
-        "link": "https://notion.so",
-        "published": "true"
+        "title": "Tori and Excellence",
+        "kind": "writing",
+        "description": "How might we be excellent in an age of crippling mediocrity",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/ItsukushimaTorii7379.jpg",
+        "link": "/meditations-of-a-rockstar",
+        "published": "false"
     },
     {
         "title": "Video Post",
@@ -60,7 +63,7 @@
         "kind": "video",
         "description": "Fancy description",
         "youtubeEmbed": "NHr1HduGz08",
-        "published": "true"
+        "published": "false"
     }
 ]
             
