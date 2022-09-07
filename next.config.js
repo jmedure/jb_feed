@@ -6,6 +6,8 @@ module.exports = {
     domains: [
                 'login.lyricallemonade.com',
                 'notion.com',
+                'upload.wikimedia.org',
+                'cdn.shopify.com'
               
   ],
   },

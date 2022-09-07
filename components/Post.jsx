@@ -16,7 +16,7 @@ export const Post = ({ post }) => {
         <div className="flex mt-4 flex-row justify-between items-end lg:pt-0">
           <div className="flex-grow flex-auto ">
               <div className="flex items-center justify-start justify-items-center flex-wrap">
-                  <BubbleLink href={link} label="visit" mui="north_east"/>
+                  <BubbleLink href={link} label="watch now" mui="north_east"/>
               </div> 
          </div>
 
@@ -24,8 +24,18 @@ export const Post = ({ post }) => {
       </div>
     )
     }
-    if (kind === "journal") {
-      return (<p className="border p-2 ">journal</p>)
+    if (kind === "writing") {
+      return (
+        <div className="flex mt-4 flex-row justify-between items-end lg:pt-0">
+              <div className="flex-grow flex-auto ">
+                  <div className="flex items-center justify-start justify-items-center flex-wrap">
+                      <BubbleLink href={link} label="read now" mui="east"/>
+                  </div> 
+             </div>
+
+             <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">east</span>
+          </div>
+      )
     }
     if (kind === "music") {
       return (
@@ -38,7 +48,7 @@ export const Post = ({ post }) => {
                       <BubbleLink href={soundcloud} label="soundcloud" mui="north_east"/>
                       <BubbleLink href={amazon} label="amazon" mui="north_east"/>
                       <BubbleLink href={tidal} label="tidal" mui="north_east"/>
-                      <BubbleLink href={link} label="more..." mui=""/>
+                      <BubbleLink href={link} label="more" mui="east"/>
                   </div> 
              </div>
 
@@ -46,6 +56,19 @@ export const Post = ({ post }) => {
           </div>
   )
     }
+      if (kind === "merch") {
+        return (
+          <div className="flex mt-4 flex-row justify-between items-end lg:pt-0">
+            <div className="flex-grow flex-auto ">
+                <div className="flex items-center justify-start justify-items-center flex-wrap">
+                    <BubbleLink href={link} label="Peep the merch" mui="north_east"/>
+                </div> 
+          </div>
+
+          <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">north_east</span>
+        </div>
+      )
+      }
     };
   
   

@@ -34,7 +34,7 @@ function Subscribe() {
               placeholder="Subscribe for updates"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex w-full focus:focus-none active:none bg-transparent focus:outline-none outline-offset-4 py-2 placeholder:text-neutral-400"
+              className="flex w-full focus:focus-none active:none bg-transparent outline-offset-4 py-2 placeholder:text-neutral-400"
             />
           </div>
           <div className="flex">
@@ -51,7 +51,7 @@ function Subscribe() {
           </div>
         </div>
         {state === 'Error' && (
-          <p className="error-state">{errorMsg}</p>
+          <p className="error-stat text-red-500">{errorMsg}</p>
         )}
         {state === 'Success' && (
           <p className='success-state'>Thanks for subscribing &#128153; I&#39;ll let you know the next time I put something into the world.</p>

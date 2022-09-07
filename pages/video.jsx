@@ -34,7 +34,7 @@ export default function Home() {
             <div className="flex mb-8 lg:mb-0 mt-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
               {data
                 .filter(function (posts) {
-                  return posts.kind === 'video';
+                  return posts.kind === 'video' && posts.published == 'true';
                 })
                 .map(function (post, index) {
                   return <Post key={index} post={post} />;

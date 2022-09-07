@@ -43,7 +43,7 @@ export default function Links(props) {
           </div>
 
           <div className="container">
-            <div className="flex-col bg-inherit pt-6 pb-16 align-middle justify-center w-full space-y-4">
+            <div className="flex-col bg-inherit pt-6 pb-16 align-middle justify-center w-full space-y-4 ">
               <div className="border-white border-2 rounded-full mx-auto relative w-12 h-12 p-12">
                 <Image
                   alt="blue gradient"
@@ -72,13 +72,13 @@ export default function Links(props) {
             <FeaturedLinkCard
               tag="new"
               type="video"
-              label="JB and Ash Max LIVE in NYC"
+              label="Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set"
               description=" "
-              youtubeEmbed="gvDZIf0BqL0"
-              href="https://www.youtube.com/watch?v=gvDZIf0BqL0"
+              youtubeEmbed="j0VNVoFz3c0"
+              href="https://www.youtube.com/watch?v=j0VNVoFz3c0"
             />
             <h2 className="py-2 text-lg">Streaming</h2>
-            <div className="flex flex-row w-full flex-wrap divide-y divide-black/70 divide-solid border-solid border-black border ">
+            <div className="flex flex-row w-full flex-wrap rounded-2xl overflow-hidden divide-y divide-black border-black divide-solid border-solid  border ">
               <LinkCard
                 href="https://open.spotify.com/album/3nAER17uMf2QOuJwSCIOJB?si=hS-He9BwRomfBTJPv9FKww"
                 fai={faSpotify}
@@ -86,7 +86,7 @@ export default function Links(props) {
                 mui="north_east"
               />
               <LinkCard
-                href="https://music.apple.com/us/artist/jacobs-blue/1440563913"
+                href="https://music.apple.com/us/artist/jacobs-black/1440563913"
                 fai={faApple}
                 label="Apple Music"
                 mui="north_east"
@@ -104,7 +104,7 @@ export default function Links(props) {
                 mui="north_east"
               />
               <LinkCardI
-                href="https://music.amazon.com/artists/B07K1J4GQP/jacob's-blue"
+                href="https://music.amazon.com/artists/B07K1J4GQP/jacob's-black"
                 src="/icons/Amazon.svg"
                 label="Amazon"
                 mui="north_east"
@@ -116,7 +116,7 @@ export default function Links(props) {
                 mui="north_east"
               />
               <LinkCardI
-                href="https://audiomack.com/jacobs-blue"
+                href="https://audiomack.com/jacobs-black"
                 src="/icons/Audiomack.svg"
                 label="Audiomack"
                 mui="north_east"
@@ -135,7 +135,7 @@ export default function Links(props) {
               />
             </div>
             <h2 className="py-2 text-lg">Socials</h2>
-            <div className="flex flex-row w-full flex-wrap divide-y divide-black/70 divide-solid border-solid border-black border">
+            <div className="flex flex-row w-full flex-wrap divide-y rounded-2xl overflow-hidden divide-black border-black divide-solid border-solid border">
               <LinkCard
                 href="https://www.youtube.com/channel/UCbEu4Cmh_e78gHDez9yQ5pA"
                 fai={faYoutube}
@@ -204,9 +204,9 @@ export default function Links(props) {
               />
             </div>
             <h2 className="py-2 text-lg">Extras</h2>
-            <div className="flex flex-row w-full flex-wrap divide-y divide-black/70 divide-solid border-solid border-black border">
+            <div className="flex flex-row w-full flex-wrap divide-y rounded-2xl overflow-hidden divide-black border-black divide-solid border-solid  border">
               <LinkCardI
-                href="https://genius.com/artists/Jacobs-blue"
+                href="https://genius.com/artists/Jacobs-black"
                 src="/icons/Genius.svg"
                 label="Genius"
                 mui="north_east"
@@ -218,7 +218,7 @@ export default function Links(props) {
                 mui="north_east"
               />
               <LinkCardI
-                href="https://www.lyricallemonade.com/p/born-in-the-sunset-thoughts-to-oasis-jacobs-blue"
+                href="https://www.lyricallemonade.com/p/born-in-the-sunset-thoughts-to-oasis-jacobs-black"
                 src="/icons/lyricalLemonade.svg"
                 label="Press"
                 mui="north_east"
@@ -231,7 +231,7 @@ export default function Links(props) {
               />
             </div>
             <h2 className="py-2 text-lg">Site</h2>
-            <div className="flex flex-row w-full flex-wrap divide-y divide-black/70 mb-12 divide-solid border-solid border-black border">
+            <div className="flex flex-row w-full flex-wrap divide-y rounded-2xl overflow-hidden divide-black  border-black mb-12 divide-solid border-solid  border">
               {/* <LinkCardI
             iconType="rotate"
             href="/free-game"
