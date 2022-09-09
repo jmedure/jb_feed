@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
+// import Script from 'next/script'
 
 class MyDocument extends Document {
   render() {
@@ -20,10 +20,10 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <Script
+          {/* <Script
             src="https://scripts.simpleanalyticscdn.com/latest.js"
             strategy="afterInteractive"
-          />
+          /> */}
         </body>
       </Html>
     )
