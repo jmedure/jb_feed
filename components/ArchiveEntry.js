@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function ArchiveEntry(props) {
     
     return(
-        <a href={props.href}>
-            <div className="cursor-pointer group p-2 md:p-4 bg-white hover:bg-neutral-200 border border-black border-solid flex-col w-full">
-                <div className="relative flex w-full  aspect-video border border-black border-solid">
+        <a href={props.href} className="group no-underline font-mont w-full">
+            <div className="lg:p-6 p-4 mb-6 w-full hover:bg-blue-200 bg-blue-50 rounded-2xl text-black">
+                <div className="w-full mb-4 relative h-full overflow-hidden aspect-square rounded-2xl sm:aspect-video">
                     <Image
                         src={props.src}
                         alt={props.alt}

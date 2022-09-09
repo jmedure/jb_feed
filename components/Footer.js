@@ -21,8 +21,8 @@ export default function Footer(props) {
                     {/* <Button href="/meditations-of-a-rockstar" type="null" icon="east" copy="M.O.A.R." /> */}
                     <Button href="/songs" type="null" icon="east" copy="Songs" />
                     <Button href="/links" type="null" icon="east" copy="Links" />
-                    <Button href="/blog" type="null" icon="north_east " copy="EPK" />
-                    {/* <Button href="/misc" type="null" icon="east" copy="Extras" /> */}
+                    <Button href="https://freegame.notion.site/Jacob-s-Blue-Press-Kit-79b4480312224328954dea767579cd5a" type="null" icon="north_east " copy="EPK" />
+                    <Button href="/archive" type="null" icon="east" copy="Archive" />
                     {/* <Button href="/shorterm-vs-longterm-fulfillment" type="both" icon="east" copy="Books" />
                     <Button href="/shorterm-vs-longterm-fulfillment" type="both" icon="east" copy="Recipes" />
                     <Button href="/shorterm-vs-longterm-fulfillment" type="both" icon="east" copy="More" /> */}

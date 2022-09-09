@@ -2,7 +2,7 @@
     {
         "title": "Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set (7 Unreleased Songs)",
         "kind": "video",
-        "link": "https://www.youtube.com/watch?v=j0VNVoFz3c0",
+        "link": "   ",
         "published": "true",
         "description": " ",
         "youtubeEmbed": "j0VNVoFz3c0"
@@ -64,6 +64,20 @@
         "description": "Fancy description",
         "youtubeEmbed": "NHr1HduGz08",
         "published": "false"
+    },
+    {
+        "title": "My debut album, Born in the Sunset: Thoughts to Oaisis",
+        "kind": "music",
+        "link": "/songs/born-in-the-sunset-thoughts-to-oasis",
+        "published": "true",
+        "image": "https://notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faa8782a2-7db7-447e-adee-8bfa273e5607%2FBITSCover1-scaled_(1).jpeg?table=block&id=8e18b7a8-a3d1-4371-b3c5-ee544cf9567c&spaceId=2afffdaa-a1f9-48fc-8af5-a4f4e2aaefbf&width=2000&userId=eb892e74-d964-49ba-9ea8-d5261359b5e6&cache=v2",
+        "spotify": "https://open.spotify.com/album/3nAER17uMf2QOuJwSCIOJB?si=hS-He9BwRomfBTJPv9FKww&nd=1",
+        "apple": "https://music.apple.com/us/album/born-in-the-sunset-thoughts-to-oasis/1546646373",
+        "youtube": "https://www.youtube.com/watch?v=Ewko6noMLCU&list=OLAK5uy_nryvazk8OLLzaongCwezLMDuJ4lvK4mec",
+        "tidal": "https://listen.tidal.com/album/167571026",
+        "soundcloud": "https://soundcloud.com/jacobsblue/sets/born-in-the-sunset-thoughts-to-oasis",
+        "amazon": "https://music.amazon.com/albums/B08RGD1X5Q",
+        "site archive": "https://web.archive.org/web/20220730230234/https://jacobs.blue/"
     }
 ]
             
