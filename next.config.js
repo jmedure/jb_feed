@@ -5,7 +5,7 @@ module.exports = {
   images: {
     domains: [
                 'login.lyricallemonade.com',
-                'notion.com',
+                'notion.so',
                 'upload.wikimedia.org',
                 'cdn.shopify.com'
               
