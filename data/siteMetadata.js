@@ -1,3 +1,5 @@
+
+
 const siteMetadata = {
     siteUrl: "https://jacobs.blue",
     siteLogo: "/logo.png",

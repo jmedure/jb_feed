@@ -24,7 +24,7 @@ function Subscribe() {
   return (
     <div className='font-mont'>
       <form onSubmit={subscribe} className="group before:text-neutral-400 after:text-black">
-        <div className='flex w-full border-b border-solid border-neutral-400 justify-between focus:border-neutral-900  after:-["*"] after:border-neutral-900 items-center'>
+        <div className='flex w-full border-b py-1 border-off border-solid border-neutral-400 justify-between focus:border-neutral-900  after:-["*"] after:border-neutral-900 items-center'>
           <div className="flex flex-auto">
             <input
               required
@@ -42,7 +42,7 @@ function Subscribe() {
               disabled={state === 'Loading'}
               type="submit"
               onClick={subscribe}
-              className="py-2 px-3 rounded-full transition-all transition-500ms before:content-[''] before:bg-neutral-200"
+              className="py-2  px-3 rounded-full transition-all transition-500ms before:content-[''] before:bg-neutral-200 hover:bg-blue-50 hover:text-blue-700"
               >
                 {/* Subscribe */}
                 {/* <span className="material-icons text-xl">east</span> */}

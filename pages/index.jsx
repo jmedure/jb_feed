@@ -24,18 +24,11 @@ export default function Home() {
     // let allPosts = data.filter(post,index)
     return (
       <main className="container-fg">
-        {/* <div className="bg-cover home bg-scroll bg-center mt-0">
-          <div className="bg-gradient-to-t from-white"> */}
           <div className='bg-white/90 backdrop-blur-sm z-40 sticky top-0'>
             <JBHeader />
             <MainNav />
           </div>
-            {/* <div className="container">
-              <h2 className="text-[7.8rem] sm:text-2xl leading-none pb-2 tracking-tight">
-                All things Jacob&#39;s Blue, forever.
-              </h2>
-            </div> */}
-            <div className="flex mb-8 lg:mb-0 mt-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
+            <div className="flex my-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
               {data.map(function (post, index) {
                 if (post.published == 'true')
                   return <Post key={index} post={post} />;

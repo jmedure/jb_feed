@@ -15,7 +15,6 @@ body {
 }
 
 a {
-  /* color: #7e7e7e; */
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: #7e7e7e;
@@ -50,10 +49,7 @@ a .dark:hover, a.dark:active {
 }
 
 .container-blog{
-  /* max-width: 872px; */
-
-  max-width: 640px;
-  /* display: block; */
+  max-width: 90%;
   margin: 0px auto;
 }
 
@@ -218,6 +214,10 @@ a .dark:hover, a.dark:active {
   }
   .container-fg{
     max-width: 95%;
+  }
+  .container-blog{
+    max-width: 95%;
+    width: 640px;
   }
 }
 
