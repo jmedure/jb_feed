@@ -15,7 +15,7 @@ export default function BlogEntry(props) {
   // const lastEdited = props.lastEdited
 
   return (
-    <Link href={`/meditations-of-a-rockstar/${slug}`} key={index} passHref>
+    <Link href={`/meditations/${slug}`} key={index} passHref>
       {/* <div className='py-4 blogEntry flex space-x-8 align-top cursor-pointer tracking-normal relative'> */}
       {/* <div className="relative w-40 aspect-square border-solid border-neutral-300 border">
                     <Image 
@@ -48,7 +48,7 @@ export default function BlogEntry(props) {
                 </div>
             </div> */}
       <div className="group flex-row py-4 w-full flex justify-between align-top cursor-pointer tracking-normal relative items-center">
-          <h1 className="text-[2.5em] font-fruit italic tracking-tight md:not-italic leading-tight group-hover:italic">
+          <h1 className="text-[2.5em] font-fruit uppercase tracking-tighter font-bold md:not-italic leading-tight group-hover:italic">
             {title}
           </h1>
         <span className="material-icons text-4xl">east</span>

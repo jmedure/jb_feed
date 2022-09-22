@@ -13,7 +13,6 @@ export default function Archive(){
             </Head>
         <main className="container-fg">
         <JBHeader/>
-            
             <div className='mb-12'>
               <div className='mt-14 mb-20'>
                 <h1 className='text-5xl font-mont tracking-tight'>Archive</h1>

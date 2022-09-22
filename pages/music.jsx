@@ -32,7 +32,7 @@ export default function Home() {
               </h2>
             </div> */}
             <MainNav />
-            <div className="flex mb-8 lg:mb-0 mt-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
+            <div className="flex my-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
               {data
                 .filter(function (posts) {
                   return posts.kind === 'music' && posts.published == 'true';

@@ -9,7 +9,7 @@ export default function Button( props ) {
 
         return (
             <Link href={props.href}>
-                <div className="flex cursor-pointer text-neutral-500 hover:text-black hover:underline items-center capitalize">
+                <div className="flex mr-auto cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize">
                     <div className="">{props.copy}</div>
                     <span className="material-icons text-xs">{props.icon}</span>
                 </div>
@@ -21,7 +21,7 @@ export default function Button( props ) {
         
         return (
             <Link href={props.href}>
-                <div className="flex cursor-pointer text-neutral-500 hover:text-gray-900 hover:underline  items-center capitalize">
+                <div className="flex mr-auto cursor-pointer border text-neutral-500 hover:text-gray-900 hover:underline items-center capitalize">
                     <span className="material-icons text-xs">{props.icon}</span>
                     <div className="">{props.copy}</div>
                 </div>
@@ -33,7 +33,7 @@ export default function Button( props ) {
         
         return (
             <Link href={props.href}>
-                <div className="flex cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize">
+                <div className="flex mr-auto cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize">
                     <div className="">{props.copy}</div>
                 </div>
             </Link>
