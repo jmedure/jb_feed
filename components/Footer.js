@@ -9,7 +9,7 @@ export default function Footer(props) {
 
 
     return (
-        <div className="mb-4 font-mont border-blue-200 border-solid border rounded-3xl lg:rounded-[3em] ">
+        <div className="mb-4 font-mont border-blue-200 border-solid border rounded-3xl lg:rounded-[3em]">
             <div className="p-4 lg:p-6">
             {/* <div className="sub-text pt-4 flex w-full justify-between items-center">
                 {/* <h1 className="text-4xl font-fruit tracking-tighter italic">Jacob&#39;s Blue</h1> */}

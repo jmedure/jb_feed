@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import { getAllArticles } from '../../src/utils/mdx_med';
-import MHeader from '../../components/MHeader';
-import BlogEntry from '../../components/BlogEntry';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import BlogEntryJournal from '../../components/BlogEntryJournal';
+import Image from 'next/image';
 
 export default function Blog({ posts }) {
   return (
@@ -13,56 +13,54 @@ export default function Blog({ posts }) {
         <title>Meditations of a Rockstar | Jacob&#39;s Blue</title>
       </Head>
 
-      <div className="container-fg">
-        <div className="flex align-middle justify-center mt-16 md:mt-8 rotate-2 transition-all hover:rotate-0 hover:text-blue-500">
-          <Link href="/">
-            <div className="flex flex-row items-center space-x-2 mx-auto align-middle cursor-pointer">
-              <span className="material-icons text-base">west</span>
-              <p className="uppercase font-mont font-medium tracking-tight">
-                Back to home
-              </p>
+      <div className="container">
+        <div className="flex sticky top-0 p-4 bg-white align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
+          <Link href="/" passHref>
+            <div className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer">
+              <div className="border-white border-2 rounded-full relative p-5 cursor-pointer">
+                <Image
+                  alt="blue gradient"
+                  src="/logo.png"
+                  objectFit="cover"
+                  layout="fill"
+                />
+              </div>
             </div>
           </Link>
         </div>
         <div className="">
-          <div className="font-fruit py-20 md:py-28 items-center text-center ">
-            <h1 className="text-8xl tracking-tighter sm:text-[8em] md:text-[12em] lg:text-[14em]">
-              Meditations of a <i>Rockstar</i>
-            </h1>
-            <p className="uppercase font-mont text-xl font-medium tracking-tight py-4">
-              from <Link href="/"><a className='hover:text-blue-500 hover:decoration-blue-500'>Jacob&#39;s Blue</a></Link>
-            </p>
-            {/* <div className='items-center text-center justify-center'>
-                  <span className='material-icons text-base py-12'>south</span>
-              </div> */}
-          </div>
-
-          {/* <h3 className='text-3xl mb-4 tracking-tight'></h3> */}
-
-          <div className="py-12 divide-y divide-neutral-400">
-            <div className="font-mont text-sm font-medium tracking-tight py-2 flex items-center justify-between">
-              <h2 className="uppercase ">Entries </h2>
-              <sup className=" text-neutral-400 font-thin">({posts.length})</sup>
+          <div className="py-24 md:py-48 h-full">
+            <div className="font-mono font-light text-sm tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
+              <div className="w-full space-y-6 md:space-y-8 justify-between">
+                {posts.map((frontMatter, index) => {
+                  if (frontMatter.isPublished == 'true') {
+                    return (
+                      <BlogEntryJournal
+                        slug={frontMatter.slug}
+                        key={index}
+                        passHref
+                        src={frontMatter.image}
+                        alt={frontMatter.alt}
+                        title={frontMatter.title}
+                        description={frontMatter.description}
+                        date={frontMatter.date}
+                        lastEdited={frontMatter.lastEdited}
+                        readingTime={frontMatter.readingTime}
+                        isPublished={frontMatter.isPublished}
+                      />
+                    );
+                  }
+                })}
+              </div>
             </div>
-            {posts.map((frontMatter, index) => {
-              return (
-                <BlogEntry
-                  slug={frontMatter.slug}
-                  key={index}
-                  passHref
-                  src={frontMatter.image}
-                  alt={frontMatter.alt}
-                  title={frontMatter.title}
-                  description={frontMatter.description}
-                  date={frontMatter.date}
-                  lastEdited={frontMatter.lastEdited}
-                  readingTime={frontMatter.readingTime}
-                />
-              );
-            })}
           </div>
         </div>
-        <Footer />
+      </div>
+      <div className="flex text-neutral-500 bg-white text-xs mx-auto space-x-2 w-full align-middle justify-center sticky bottom-0 font-mono p-4">
+        <p>Meditations of a Rockstar by</p>
+        <Link href="/">
+          <a>Jacob&#39;s Blue</a>
+        </Link>
       </div>
     </React.Fragment>
   );

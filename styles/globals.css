@@ -19,24 +19,29 @@ a {
   text-underline-offset: 2px;
   text-decoration-color: #7e7e7e;
   transition: .1s;
+  color:#7e7e7e
 }
 
 a:hover, a:active {
   text-decoration-color: #000;
+  color: #000;
 }
 
-a .dark {
+a.dark {
   text-decoration: solid;
   text-decoration: underline;
   text-underline-offset: 1px;
+  color: #a7a7a7;
+  text-decoration-color: #a7a7a760;
   /* text-decoration-color: #a9a9a9; */
   transition: .1s;
+  cursor: pointer;
 }
 
-a .dark:hover, a.dark:active {
+a.dark:hover, a.dark:active {
+  color:white;
   text-decoration-color: white;
 }
-
 
 .container{
   max-width: 95%;
@@ -230,6 +235,9 @@ a .dark:hover, a.dark:active {
     /* max-width: 872px; */
     max-width: 98%;
   }
+  /* .container-blog{
+    margin:0 24px auto;
+  } */
 }
 
 @media (min-width: 1280px){

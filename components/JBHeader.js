@@ -4,14 +4,20 @@ import Image from "next/image"
 import LinksContainer from "./LinksContainer"
 import Link from "next/link"
 import Subheader from "./Subheader"
-// import { Main } from "next/document"
+import useScrollDirection2 from "../src/utils/useScrollDirection2"
 
 export default function JBHeader() {
 
+    const scrollDirection = useScrollDirection2;
 
     return (
-        <div className="pt-4 pb-2 w-full text-black ">
-            <div className=" text-base flex justify-between w-full items-center grid-cols-3">
+        <div style={{
+            // transform: `translateY(${scrollDirection === 'down' ? 0 : '100%'})`,
+            // transform: `translateY(${scrollDirection === 'down' ? 0 : '10px'})`
+          }}
+        className="py-4 w-full text-black">
+            <div 
+            className="text-base flex justify-between w-full items-center grid-cols-3 ">
                 <div className="col-span-1 ">
                     <Link href="/"><h1 className="pb-0 group tracking-tight cursor-pointer transition-colors text-xl leading-none">Jacob&#39;s <strong className="group-hover:text-sky-600 ">Blue</strong></h1></Link>
                     <Subheader/>
