@@ -5,7 +5,7 @@ export default function MainNav() {
   const router = useRouter();
 
   return (
-    <div className="pb-2 align-items-center text-center">
+    <div className="pb-2 align-items-center text-center ">
       <div className="py-2 flex w-full space-x-4 items-center text-base">
         {/* <p className="flex-grow flex uppercase">Filters</p> */}
         

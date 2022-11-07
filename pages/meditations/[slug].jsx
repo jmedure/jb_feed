@@ -8,27 +8,30 @@ import rehypeHighlight from "rehype-highlight"
 import rehypeCodeTitles from "rehype-code-titles"
 import { serialize } from "next-mdx-remote/serialize"
 import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_med'
-// import "highlight.js/styles/atom-one-dark-reasonable.css"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import MHeader from "../../components/MHeader"
-import Breadcrumbs from "nextjs-breadcrumbs"
 import Button from "../../components/Button"
 import BlogEntry from "../../components/BlogEntry"
-import HeadSeo from "../../components/HeadSEO"
+// import HeadSeo from "../../components/HeadSEO"
+import MHeaderRound from "../../components/MHeaderRound"
+import OneBlank from "../../components/OneBlank";
+import BlogSEO from "../../components/BlogSEO"
+import YoutubeEmbed from "../../components/YoutubeEmbed"
+
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
+  const youtube = frontmatter.youtube;
   const description = frontmatter.description;
   return (
     <React.Fragment>
-      <HeadSeo
-        title={(frontmatter.title) + "| Meditations by Jacob&#39;s Blue"}
+      <BlogSEO
+        title={(frontmatter.title) + "| Meditations by Jacob's Blue"}
         description={frontmatter.description}
         canonical={frontmatter.slug}
         image={frontmatter.image}
       />
-      <MHeader/>
-      <div className="container-blog my-6 md:py-8 mb-16 selection:bg-orange-100  ">
+      <MHeaderRound title={frontmatter.title} rt={frontmatter.readingTime}/>
+      <div className=" mb-16 selection:bg-yellow-200 scroll-smooth ">
         <div className="not-prose flex-block space-y-6">
         { image ?    
           <div className="relative w-full aspect-square sm:aspect-video mb-8">
@@ -44,23 +47,32 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             :
           null
           }
-            <div className="space-y-6">
+        { youtube ?    
+          <div className="lg:w-[80%] my-8 container-blog relative h-full aspect-square rounded-3xl overflow-hidden sm:aspect-video">
+                <YoutubeEmbed
+                embedId={frontmatter.youtube}
+                />
+          </div>
+            :
+          null
+          }
+            <div className="pb-1 sm:pb-3">
                 
-              <h1 className="font-fruit text-5xl md:text-8xl font-bold uppercase tracking-tighter">{frontmatter.title}</h1>
+              <h1 className="py-6 md:py-8 lg:py-8 tracking-tighter font-fruit text-7xl leading-[.9] md:text-[8em] max-w-[90%] md:max-w-95% lg:text-[10em] xl:text-[14em] w-[640px] lg:max-w-full overflow-visible lg:w-full mx-auto lg:text-center ">{frontmatter.title}</h1>
               {/* { description ? 
                 <p className="text-2xl font-sans tracking-wide text-neutral-600">{frontmatter.description}</p>
                 :
                 null
               } */}
-              <div className="flex  md:flex md:flex-nowrap items-center uppercase space-x-4 text-xs text-neutral-500 font-mono not-prose md:space-y-0 ">
+              <div className="flex container-blog md:flex md:flex-nowrap items-center space-x-4 text-[12px] md:text-sm  text-neutral-500 font-mono not-prose md:space-y-0 ">
                   {/* <p className="">---</p> */}
-                  <p className="items-center px-3 py-1 text-left flex-nowrap border-solid border rounded-full text-black uppercase border-black">{frontmatter.readingTime}</p>
-                  <p className="px-3 py-1 rounded-full bg-neutral-200/70 border border-solid border-neutral-200 text-neutral-600">Last edited {dayjs(frontmatter.lastEdited).format("MMM D, YYYY")}</p>
+                  <p className="items-center px-3 py-1 text-left flex-nowrap border-solid border rounded-full text-neutral-900 border-neutral-900">{frontmatter.readingTime}</p>
+                  <p className="px-3 py-1 rounded-full border border-solid border-neutral-500 text-neutral-500">Last edited {dayjs(frontmatter.lastEdited).format("MMM D, YYYY")}</p>
                 </div>
             </div>
         </div>
-        <article className="content prose-p:font-mono md:prose-base prose-base prose:lead-loose prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400  hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose-blockquote:text-xl prose-blockquote:tracking-tight prose-blockquote:font-fruit prose:tracking-tight prose-a:blue-500  prose:neutral prose-headings:tracking-tighter prose-headings:font-mono prose-headings:uppercase prose-blockquote:border-l-2 prose-blockquote:border-neutral-300 prose-blockquote:pl-6  prose-blockquote:leading-normal">
-          <MDXRemote {...source} components={{ Image, Button, BlogEntry }} />
+        <article className="content prose-p:tracking-tight container-blog prose-p:font-bask prose-base lg:prose-lg prose-lead:leading-loose prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose-blockquote:text-2xl prose-blockquote:leading-relaxed prose-blockquote:tracking-tight prose-blockquote:font-fruit prose:tracking-tighter prose-a:blue-500 prose:neutral prose-headings:tracking-tighter prose-headings:font-mono prose-headings:uppercase prose-blockquote:border-l-2 prose-blockquote:border-neutral-300 prose-blockquote:pl-6 prose-ul:list-disc prose-ul:font-bask prose-ul:decoration-neutral-300">
+          <MDXRemote {...source} components={{ Image, Button, BlogEntry, OneBlank }} />
         </article>
       </div>
     </React.Fragment>

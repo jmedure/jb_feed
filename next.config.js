@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-
   images: {
     domains: [
                 'login.lyricallemonade.com',
                 'notion.so',
                 'upload.wikimedia.org',
-                'cdn.shopify.com'
+                'cdn.shopify.com',
+                'is2-ssl.mzstatic.com'
               
-  ],
+    ],
   },
 
   webpack: (config) => {

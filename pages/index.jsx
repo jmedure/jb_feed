@@ -11,6 +11,7 @@ import siteMetadata from '../data/siteMetadata';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
+
 export default function Home() {
   const { data, error } = useSWR('/api/posts', fetcher);
 
@@ -19,12 +20,12 @@ export default function Home() {
       return <main>error: failed to load</main>;
     }
     if (!data) {
-      return <main>loading...</main>;
+      return <main className='container-fg text-xl py-20'>loading...</main>;
     }
     // let allPosts = data.filter(post,index)
     return (
       <main className="container-fg">
-          <div className='bg-white/90 backdrop-blur-sm z-40 sticky top-0'>
+          <div className='flex-wrap bg-white/90 backdrop-blur-sm z-40 sticky top-0'>
             <JBHeader />
             <MainNav />
           </div>
@@ -34,7 +35,9 @@ export default function Home() {
                   return <Post key={index} post={post} />;
               })}
             </div>
+            
             <Footer />
+            
           {/* </div>
         </div> */}
       </main>

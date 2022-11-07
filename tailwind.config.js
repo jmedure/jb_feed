@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         display: ['neue-haas-unica', 'sans'],
         serif: ['merriweather', 'serif'],
+        bask: ['Libre Baskerville', 'serif'],
         grotesk: ['neue-haas-grotesk-display', 'sans'],
         text: ['neue-haas-grotesk-text', 'sans'],
         fruit: ["CardinalFruit", ...defaultTheme.fontFamily.serif],

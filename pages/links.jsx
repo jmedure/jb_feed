@@ -60,23 +60,29 @@ export default function Links(props) {
               </div>
             </div>
 
-            {/* <FeaturedLinkCard
+            <FeaturedLinkCard
               tag="new"
               type="music"
               alt="where do we go from here cover"
-              label="Where do we go from here?"
+              label="Maybe I give up"
               description=""
-              image="/1.gif"
-              href="/songs"
-            /> */}
-            <FeaturedLinkCard
+              image="/maybeIGiveUp.jpg"
+              href="/songs/maybe-i-give-up"
+              spotfy="https://open.spotify.com/album/3uVdTPnjj6XZOIOdsDOVbj"
+              apple="https://music.apple.com/us/album/maybe-i-give-up-single/1650241425"
+              youtube="https://www.youtube.com/watch?v=-YRv-ewXaTE&list=OLAK5uy_nBVFxCpmNUZ9FDGh-P2F5COn150QxsRak"
+              soundcloud="https://soundcloud.com/jacobsblue/maybe-i-give-up?si=7add3e54c5c444d38812e0e241a7e118&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+              amazon="https://music.amazon.com/albums/B0BJFKV3W5?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zkIb3EAjrNLNEyxy7fNXVMajQ&trackAsin=B0BJFLQKK8"
+              tidal="https://tidal.com/browse/album/254556437"
+            />
+            {/* <FeaturedLinkCard
               tag="new"
               type="video"
               label="Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set"
               description=" "
               youtubeEmbed="j0VNVoFz3c0"
               href="https://www.youtube.com/watch?v=j0VNVoFz3c0"
-            />
+            /> */}
             <h2 className="py-2 text-lg">Streaming</h2>
             <div className="flex flex-row w-full flex-wrap rounded-2xl overflow-hidden divide-y divide-black border-black divide-solid border-solid  border ">
               <LinkCard

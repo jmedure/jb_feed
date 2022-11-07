@@ -1,5 +1,18 @@
 [
     {
+        "title": "Maybe I give up.",
+        "kind": "music",
+        "link": "/songs/maybe-i-give-up",
+        "published": "true",
+        "image": "/maybeIGiveUp.jpg",
+        "spotify": "https://open.spotify.com/album/3uVdTPnjj6XZOIOdsDOVbj",
+        "apple": "https://music.apple.com/us/album/maybe-i-give-up-single/1650241425",
+        "youtube": "https://www.youtube.com/watch?v=-YRv-ewXaTE&list=OLAK5uy_nBVFxCpmNUZ9FDGh-P2F5COn150QxsRak",
+        "tidal": "https://tidal.com/browse/album/254556437",
+        "soundcloud": "https://soundcloud.com/jacobsblue/maybe-i-give-up?si=7add3e54c5c444d38812e0e241a7e118&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+        "amazon": "https://music.amazon.com/albums/B0BJFKV3W5?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zkIb3EAjrNLNEyxy7fNXVMajQ&trackAsin=B0BJFLQKK8"
+    },
+    {
         "title": "Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set (7 Unreleased Songs)",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=j0VNVoFz3c0&t=1s",
