@@ -25,10 +25,10 @@ export default function BlogPost({ post: { source, frontmatter } }) {
   return (
     <React.Fragment>
       <BlogSEO
-        title={(frontmatter.title) + "| Meditations by Jacob's Blue"}
+        title={(frontmatter.title) + " | Meditations of a Rockstar by Jacob's Blue"}
         description={frontmatter.description}
         canonical={frontmatter.slug}
-        image={frontmatter.image}
+        image={frontmatter.thumbnail}
       />
       <MHeaderRound title={frontmatter.title} rt={frontmatter.readingTime}/>
       <div className=" mb-16 selection:bg-yellow-200 scroll-smooth ">
