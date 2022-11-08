@@ -8,6 +8,7 @@ import MainNav from '../components/MainNav';
 import Footer from '../components/Footer';
 import HeadSeo from '../components/HeadSEO';
 import siteMetadata from '../data/siteMetadata';
+import BlogSEO from '../components/BlogSEO';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -46,11 +47,11 @@ export default function Home() {
 
   return (
     <>
-      <HeadSeo
-        title="Jacob's Blue | Home"
+      <BlogSEO
+        title={"Jacob's Blue | All"}
         description="Pursuing mastery in music...probably cooking something."
+        image="/siteThumb.png"
         canonical="/index"
-        image="logo.png"
       />
       {main()}
     </>

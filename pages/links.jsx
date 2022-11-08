@@ -24,9 +24,17 @@ import SubheaderLinks from '../components/SubheaderLinks';
 import Image from 'next/image';
 import LinkCardI from '../components/LinkCardI';
 import Footer from '../components/Footer';
+import React from 'react';
+import BlogSEO from '../components/BlogSEO';
 
 export default function Links(props) {
   return (
+    <React.Fragment>
+      <BlogSEO
+        title={"All links" + " from Jacob's Blue"}
+        description="Where you can find any link ever attributed haha"
+        image="/siteThumb.png"
+      />
     <main className="mt-0">
       <div className="bg-cover home bg-scroll bg-center flex-block mt-0">
         <div className="bg-gradient-to-t from-white">
@@ -278,5 +286,6 @@ export default function Links(props) {
         </div>
       </div>
     </main>
+    </React.Fragment>
   );
 }

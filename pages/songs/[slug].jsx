@@ -13,6 +13,8 @@ import Button from "../../components/Button"
 import Link from "next/link"
 import StreamLink from "../../components/StreamLink"
 import MoreLinkBlog from "../../components/MoreLinkBlog"
+import BlogSEO from "../../components/BlogSEO"
+
 
 export default function BlogPost({ post: { source, frontmatter } }) {
  
@@ -49,10 +51,15 @@ export default function BlogPost({ post: { source, frontmatter } }) {
 
   return (
     <React.Fragment>
-      <Head>
+      {/* <Head>
         <title>{frontmatter.title} by Jacob&#39;s Blue</title>
-      </Head> 
-
+      </Head>  */}
+      <BlogSEO
+        title={(frontmatter.title) + " by Jacob's Blue"}
+        description="Lyrics, credits, and all streaming links"
+        canonical={frontmatter.slug}
+        image={frontmatter.artwork}
+      />
       <div className="bg-neutral-900 text-white relative">
         <div className="bg-cover lg:bg-cover bg-scroll bg-center not-prose flex-block " style={{backgroundImage: `url(${frontmatter.artwork})`}}>
             <div className="bg-gradient-to-t from-neutral-900">
