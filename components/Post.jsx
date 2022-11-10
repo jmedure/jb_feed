@@ -74,7 +74,7 @@ export const Post = ({ post }) => {
   
   return (
     <a href={link} className="group no-underline font-mont w-full">
-      <div className="sm:p-6 p-4 mb-6 w-full hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all">
+      <div className="sm:p-6 p-4 mb-6 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all">
       { image ?
         <div className='w-full mb-4 relative h-full overflow-hidden aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] sm:aspect-video'>
             <Image 

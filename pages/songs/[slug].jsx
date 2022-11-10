@@ -25,25 +25,25 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         <div className="py-8 flex flex-col">
          <p className="flex flex-center items-center px-2 justify-start mr-auto py-1 my-2 text-xs uppercase border border-solid border-white rounded-full">{frontmatter.type}</p>
          <h1 className="text-5xl font-medium md:text-6xl tracking-tighter">{frontmatter.title}</h1>
-         <p className="text-xl md:py-2 py-2">by {frontmatter.artist}</p>
+         <p className="text-xl md:py-4 py-2">by {frontmatter.artist}</p>
         </div>
       )
     }
     if (frontmatter.type == "song"){
     return(
-      <div className="py-8 flex flex-col">
+      <div className="py-8 flex flex-col ">
          <p className="flex flex-center px-2 items-center justify-start mr-auto py-1 my-2 text-xs uppercase border border-solid border-white rounded-full">{frontmatter.type}</p>
          <h1 className="text-5xl md:text-6xl font-medium tracking-tighter">{frontmatter.title}</h1>
-         <p className="text-xl md:py-2">by {frontmatter.artist}</p>
+         <p className="text-xl md:py-4 py-2">by {frontmatter.artist}</p>
          <p className="text-neutral-300 pt-2">Track {frontmatter.track} from <Link href={`/songs/${frontmatter.albumLink}`}><a className="dark">{frontmatter.album}</a></Link></p>
         </div>
     )}
     else {
       return(
-      <div className="py-8 flex flex-col">
+      <div className="py-8 flex flex-col space-y-2">
          <p className="flex flex-center px-2 items-center justify-start mr-auto py-1 my-2 text-xs uppercase border border-solid border-white rounded-full">{frontmatter.type}</p>
          <h1 className="text-5xl md:text-6xl font-medium tracking-tighter">{frontmatter.title}</h1>
-         <p className="text-xl md:py-2">by {frontmatter.artist}</p>
+         <p className="text-xl md:py-4 py-2">by {frontmatter.artist}</p>
         </div>
     )}
   }
@@ -85,23 +85,23 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                       />
                   </div>
                   
-                  <div className="flex-col flex-1 h-full justify-between flex-block sm:ml-8">
+                  <div className="flex-col flex-1 h-full justify-between pr-4 flex-block sm:ml-8">
                   { songType() } 
                     
                     
                         {/* <div className="flex py-6 items-center cursor-pointer">
                                 <p>Track {frontmatter.track} from {frontmatter.album}</p>
                         </div> */}
-                    <div className="flex space-x-12">
-                      <div>
+                    <div className="flex space-x-auto justify-between columns-3">
+                      <div className="">
                         <h3 className="text-xs text-neutral-300 font-medium uppercase">Released</h3>
                         <p className="pt-1">{dayjs(frontmatter.released).format("MMM D, YYYY")}</p>
                       </div>
-                      <div>
+                      <div className="">
                         <h3 className="text-xs text-neutral-300 font-medium uppercase">Written</h3>
                         <p className="pt-1">{frontmatter.written}</p>
                       </div>
-                      <div>
+                      <div className="">
                         <h3 className="text-xs text-neutral-300 font-medium uppercase">Produced</h3>
                         <p className="pt-1">{frontmatter.produced}</p>
                       </div>

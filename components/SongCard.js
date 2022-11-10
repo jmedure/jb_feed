@@ -21,7 +21,7 @@ export default function SongCard( props ) {
     // const lastEdited = props.lastEdited
 
     const songType = () => {
-        if (description == " ") {
+        if (description == "") {
             return(
                 <div>
                     <Link href={`/songs/${albumLink}`}>
@@ -44,7 +44,7 @@ export default function SongCard( props ) {
     
     return(
         <Link href={`/songs/${slug}`} key={index} passHref>
-            <div className='items-center font-mont p-4 w-full lg:flex-col flex space-x-4 lg:space-x-0 align-top cursor-pointer tracking-normal group hover:bg-blue-200 bg-blue-50 rounded-xl lg:rounded-2xl lg:space-y-4'>
+            <div className='items-center font-mont p-4 w-full lg:flex-col flex space-x-4 lg:space-x-0 align-top cursor-pointer tracking-normal group sm:hover:bg-blue-200  bg-blue-50 rounded-xl lg:rounded-2xl lg:space-y-4 transition-all'>
                 <div className="relative h-full w-20 sm:w-24 lg:w-full aspect-square rounded-xl overflow-hidden transition-all">
                     <Image 
                         src={src}
@@ -60,11 +60,11 @@ export default function SongCard( props ) {
                         <h1 className="text-xl flex-1 md:text-3xl font-medium tracking-tighter leading-tight mb-1">{title}</h1>
                         <div className="flex space-x-1 lg:space-x-0 flex-row lg:flex-col align-middle">
                             { album ? 
-                                <p >{album} -</p>
+                                <p className="hidden xl:block">{album}</p>
                                 : null
                             }
                             <p className="text-neutral-500 pr-4">{dayjs(date).format("YYYY")}</p>
-                         </div>
+                        </div>
                     </div>
                     <div className="flex-col flex flex-shrink items-center lg:items-end">
                         <span className="material-icons text-3xl">east</span>
