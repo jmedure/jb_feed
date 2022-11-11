@@ -11,6 +11,7 @@ const YoutubeEmbed = ({ embedId }) => (
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
       allowFullScreen
       title="Embedded youtube"
+      loading="lazy"
     />
   </div>
 );

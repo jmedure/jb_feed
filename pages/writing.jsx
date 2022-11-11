@@ -22,15 +22,10 @@ export default function Home() {
     // let allPosts = data.filter(post,index)
     return (
       <main className="container-fg">
-        {/* <div className="bg-cover home bg-scroll bg-center mt-0">
-          <div className="bg-gradient-to-t from-white"> */}
+          <div className='flex-wrap bg-white/90 backdrop-blur-sm z-40 sticky top-0'>
             <JBHeader />
-            {/* <div className="container ">
-              <h2 className="text-[7.8rem] sm:text-[12rem] text-white leading-none pb-2">
-                Writing
-              </h2>
-            </div> */}
             <MainNav />
+          </div>
             <div className="flex my-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
               {data.filter(function (posts) {
                   return posts.kind === 'writing' && posts.published == 'true';

@@ -53,19 +53,20 @@ export default function MainNav() {
             </Link>
             <p className='group-hover:visible invisible py-1 px-3 absolute bg-slate-900 z-40 text-white mt-2 drop-shadow-lg rounded-lg'>Filter by <i>Video</i> results</p>
           </li>
-          {/* <li className="">
+          <li className="group transition-all">
             <Link href="/writing" className="">
             <a
-                className={`hover:bg-pink-400 hover:ring-1 ring-offset-2 hover:border-pink-600 hover:text-pink-700 hover:drop-shadow-xl border-neutral-400 text-neutral-400 px-3 py-1 border border-solid rounded-full no-underline ${
+                className={`hover:bg-pink-200 hover:ring-1 ring-offset-2 hover:border-pink-600 hover:text-pink-800 hover:drop-shadow-xl border-neutral-400 text-neutral-400 px-3 py-1 border border-solid rounded-full no-underline ${
                   router.pathname == '/writing'
-                    ? 'border-solid border ring-1 border-x-pink-600 border-y-pink-600 text-pink-700 bg-pink-400 drop-shadow-xl'
+                    ? 'border-solid border ring-1 border-x-pink-600 border-y-pink-600 text-pink-800 bg-pink-300 drop-shadow-xl'
                     : ''
                 }`}
               >
                 Writing
               </a>
             </Link>
-          </li> */}
+            <p className='group-hover:visible invisible py-1 px-3 absolute bg-slate-900 z-40 text-white mt-2 drop-shadow-lg rounded-lg'>Filter by <i>Writing</i> results</p>
+          </li>
           {/* <li className="">
                     <Link href="/shop" className="">
                         <a className={`hover:bg-lime-400 px-4 py-1 border border-solid border-blue-700 rounded-full decoration-transparent no-underline ${router.pathname == "/shop" ? "bg-lime-400 " : "bg-white"}`}>Shop</a>

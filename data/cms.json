@@ -13,6 +13,14 @@
         "amazon": "https://music.amazon.com/albums/B0BJFKV3W5?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zkIb3EAjrNLNEyxy7fNXVMajQ&trackAsin=B0BJFLQKK8"
     },
     {
+        "title": "Maybe I give up.",
+        "kind": "writing",
+        "description": "",
+        "image": "/miguThumb.png",
+        "link": "/meditations/maybe-i-give-up",
+        "published": "true"
+    },
+    {
         "title": "Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set (7 Unreleased Songs)",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=j0VNVoFz3c0&t=1s",
@@ -60,14 +68,6 @@
         "title": "Merch Post",
         "kind": "merch",
         "link": "https://notion.so",
-        "published": "false"
-    },
-    {
-        "title": "Tori and Excellence",
-        "kind": "writing",
-        "description": "How might we be excellent in an age of crippling mediocrity",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/ItsukushimaTorii7379.jpg",
-        "link": "/meditations-of-a-rockstar",
         "published": "false"
     },
     {
