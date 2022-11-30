@@ -7,7 +7,8 @@ module.exports = {
                 'notion.so',
                 'upload.wikimedia.org',
                 'cdn.shopify.com',
-                'is2-ssl.mzstatic.com'
+                'is2-ssl.mzstatic.com',
+                'https://images.unsplash.com'
               
     ],
   },

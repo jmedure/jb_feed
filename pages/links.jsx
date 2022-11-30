@@ -74,7 +74,7 @@ export default function Links(props) {
               alt="where do we go from here cover"
               label="Maybe I give up"
               description=""
-              image="/maybeIGiveUp.jpg"
+              image="/migu.jpg"
               href="/songs/maybe-i-give-up"
               spotfy="https://open.spotify.com/album/3uVdTPnjj6XZOIOdsDOVbj"
               apple="https://music.apple.com/us/album/maybe-i-give-up-single/1650241425"

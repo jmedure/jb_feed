@@ -83,7 +83,7 @@ export const Post = ({ post }) => {
               layout="fill"
               objectFit="cover"
               placeholder="blur"
-              blurDataURL='https://jacobs.blue'
+              blurDataURL='https://images.unsplash.com/photo-1631200472313-ad91fd825080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2375&q=80'
             />
             </div>
             :
