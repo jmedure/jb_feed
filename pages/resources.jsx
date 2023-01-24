@@ -30,7 +30,7 @@ export default function Resources() {
               imgAlt="ableton live logo"
               imgURL="/icons/Ableton.svg"
               title="My vocal template"
-              tag="Ableton • 2022"
+              tag="Ableton • Jan 24, 2022"
             />
             <Resource
               href="/"
@@ -44,7 +44,7 @@ export default function Resources() {
 
         <div className="space-y-5">
           <h2 className="font-mont text-neutral-500 text-base font-medium tracking-tight">
-            Templates
+            Samples
           </h2>
           <div className="rscCONT space-y-2">
             <Resource
@@ -73,7 +73,7 @@ export default function Resources() {
         <div className="space-y-5">
           <div className="flex w-full space-x-2 p-3 bg-[#EB5354]/10 shadow-[#EB5354] rounded-xl items-start justify-between sm:hover:cursor-pointer sm:hover:bg-[#EB5354]/20 transition-all duration-150">
             <div className="flex-block sm:flex space-y-4 sm:space-y-0 sm:items-center sm:space-x-4 items-start">
-              <div className="flex items-start rounded-lg">
+              <div className="flex items-center rounded-lg">
                 <div className="flex p-8 relative">
                   <Image
                     alt="patreon logo"
@@ -87,9 +87,8 @@ export default function Resources() {
                 <p className="text-xl md:text-xl font-medium">
                   Enjoying this page?
                 </p>
-                <p className="text-base md:text-base sm:w-[90%] text-neutral-700">
-                  Consider joining my Patreon where I share more resources like
-                  these, stems and sessions for all my songs + much more.
+                <p className="text-base md:text-base  text-neutral-700">
+                  Consider joining my Patreon for <i>even more</i>.
                 </p>
               </div>
             </div>
