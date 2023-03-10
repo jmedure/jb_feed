@@ -1,5 +1,74 @@
 [
     {
+        "title": "Give and take",
+        "kind": "music",
+        "link": "/songs/give-and-take",
+        "published": "true",
+        "image": "/gat.jpg",
+        "spotify": "https://open.spotify.com/album/5MYgZeMu69v9StCqweAlep?si=2Vl6cKCdTO66VP8ehpFG7Q",
+        "apple": "https://music.apple.com/us/album/give-and-take/1673782943?i=1673782945",
+        "youtube": "https://www.youtube.com/watch?v=UVi66iTeqw4&list=OLAK5uy_kFue7wQ8gEXis1qV7uEAn8suRh9TNFuOI",
+        "tidal": "https://tidal.com/browse/track/278318697",
+        "soundcloud": "https://soundcloud.com/jacobsblue/give-and-take?si=79ba80e5012f403d9c030b558ebbed76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+        "amazon": "https://music.amazon.com/albums/B0BWKBP2XY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_W2MpLCvxqZR2NEeRhTJEi6HWh"
+    },
+    {
+        "title": "behind the music - how i made a vintage sample",
+        "kind": "video",
+        "link": "https://youtu.be/wbJSOnEigMQ",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "wbJSOnEigMQ"
+    },
+    {
+        "title": "just cookin ep 8 - chasing simplicity",
+        "kind": "video",
+        "link": "https://youtu.be/yWMF0aC3mFI",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "yWMF0aC3mFI"
+    },
+    {
+        "title": "just cookin ep 7 - making beats like monte",
+        "kind": "video",
+        "link": "https://youtu.be/2WHYBQrnuTs",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "2WHYBQrnuTs"
+    },
+    {
+        "title": "just cookin ep 6 - early monrning beats for breakfast",
+        "kind": "video",
+        "link": "https://youtu.be/0X_vcC91GSM",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "0X_vcC91GSM"
+    },
+    {
+        "title": "just cookin ep 5 - making a a late night song sketch",
+        "kind": "video",
+        "link": "https://youtu.be/0CvMTZifjSs",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "0CvMTZifjSs"
+    },
+    {
+        "title": "just cookin ep 4 - a cold night in brooklyn",
+        "kind": "video",
+        "link": "https://youtu.be/aJxFFgiqT08",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "aJxFFgiqT08"
+    },
+    {
+        "title": "just cookin ep 3 - making a sample before work",
+        "kind": "video",
+        "link": "https://youtu.be/8Pu-aEPAKgg",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "8Pu-aEPAKgg"
+    },
+    {
         "title": "Maybe I give up.",
         "kind": "music",
         "link": "/songs/maybe-i-give-up",
