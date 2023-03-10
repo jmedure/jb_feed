@@ -12,7 +12,6 @@ import BlogSEO from '../components/BlogSEO';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-
 export default function Home() {
   const { data, error } = useSWR('/api/posts', fetcher);
 
@@ -21,25 +20,25 @@ export default function Home() {
       return <main>error: failed to load</main>;
     }
     if (!data) {
-      return <main className='container-fg text-xl py-20'>loading...</main>;
+      return <main className="container-fg text-xl py-20">loading...</main>;
     }
     // let allPosts = data.filter(post,index)
     return (
       <main className="container-fg">
-          <div className='flex-wrap bg-white/90 backdrop-blur-sm z-40 sticky top-0'>
-            <JBHeader />
-            <MainNav />
-          </div>
-            <div className="flex my-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
-              {data.map(function (post, index) {
-                if (post.published == 'true')
-                  return <Post key={index} post={post} />;
-              })}
-            </div>
-            
-            <Footer />
-            
-          {/* </div>
+        <div className="flex-wrap bg-white/90 backdrop-blur-sm z-40 sticky top-0">
+          <JBHeader />
+          <MainNav />
+        </div>
+        <div className="flex my-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
+          {data.map(function (post, index) {
+            if (post.published == 'true')
+              return <Post key={index} post={post} />;
+          })}
+        </div>
+
+        <Footer />
+
+        {/* </div>
         </div> */}
       </main>
     );
@@ -48,7 +47,9 @@ export default function Home() {
   return (
     <>
       <BlogSEO
-        title={"Jacob's Blue | All"}
+        title={
+          "Jacob's Blue | All things artist, songwriter and producer Jacob's Blue"
+        }
         description="Pursuing mastery in music...probably cooking something."
         image="/siteThumb.png"
         canonical="/index"
