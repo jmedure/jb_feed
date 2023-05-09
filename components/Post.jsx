@@ -5,6 +5,7 @@ import Image from 'next/image';
 import YoutubeEmbed from './YoutubeEmbed';
 import { data } from 'autoprefixer';
 import BubbleLink from './BubbleLink';
+import { motion } from 'framer-motion';
 
 export const Post = ({ post }) => {
   const {
@@ -25,7 +26,11 @@ export const Post = ({ post }) => {
   const extras = () => {
     if (kind === 'video') {
       return (
-        <div className="flex mt-4 flex-row justify-between items-end lg:pt-0">
+        <div
+          className="flex mt-4 flex-row justify-between items-end lg:pt-0"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
           <div className="flex-grow flex-auto ">
             <div className="flex items-center justify-start justify-items-center flex-wrap">
               <BubbleLink href={link} label="watch now" mui="north_east" />
@@ -97,7 +102,12 @@ export const Post = ({ post }) => {
 
   return (
     <a href={link} className="group no-underline font-mont w-full">
-      <div className="sm:p-6 p-4 mb-6 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all">
+      <motion.div
+        initial={{ opacity: 0, y: '10%' }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ type: 'spring', stiffness: 100 }}
+        className="sm:p-6 p-4 mb-6 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all"
+      >
         {image ? (
           <div className="w-full mb-4 relative h-full overflow-hidden aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] sm:aspect-video">
             <Image
@@ -130,7 +140,7 @@ export const Post = ({ post }) => {
           </p>
         ) : null}
         {extras()}
-      </div>
+      </motion.div>
     </a>
   );
 };
