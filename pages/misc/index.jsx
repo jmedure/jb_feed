@@ -22,7 +22,7 @@ export default function Blog( { posts } ) {
               <h1><i className='font-serif text-3xl'>misc</i> pages</h1>
             </div> */}
             <div className="flex sticky top-0 p-4 bg-white align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
-            <Link href="/" passHref>
+            <Link href="/" passHref legacyBehavior>
           <div className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer">
             <div className="border-white border-2 rounded-full relative p-5 cursor-pointer">
               <Image

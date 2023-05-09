@@ -41,7 +41,7 @@ export default function Links(props) {
           <div className="py-4 w-full backdrop-blur-sm z-40 sticky top-0 mt-0 text-white">
             <div className="w-full container flex justify-between items-center mt-0">
               <h1 className="text-xl flex">Links</h1>
-              <Link href="/" passHref>
+              <Link href="/" passHref legacyBehavior>
                 <div className="flex py-2 space-x-1 hover:italic hover:font-light items-center cursor-pointer">
                   <p>to main website</p>
                   <span className="material-icons text-sm">east</span>

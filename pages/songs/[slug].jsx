@@ -30,14 +30,14 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       )
     }
     if (frontmatter.type == "song"){
-    return(
+    return (
       <div className="py-8 flex flex-col ">
          <p className="flex flex-center px-2 items-center justify-start mr-auto py-1 my-2 text-xs uppercase border border-solid border-white rounded-full">{frontmatter.type}</p>
          <h1 className="text-5xl md:text-6xl font-medium tracking-tighter">{frontmatter.title}</h1>
          <p className="text-xl md:py-4 py-2">by {frontmatter.artist}</p>
-         <p className="text-neutral-300 pt-2">Track {frontmatter.track} from <Link href={`/songs/${frontmatter.albumLink}`}><a className="dark">{frontmatter.album}</a></Link></p>
+         <p className="text-neutral-300 pt-2">Track {frontmatter.track} from <Link href={`/songs/${frontmatter.albumLink}`} className="dark">{frontmatter.album}</Link></p>
         </div>
-    )}
+    );}
     else {
       return(
       <div className="py-8 flex flex-col space-y-2">
@@ -65,7 +65,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             <div className="bg-gradient-to-t from-neutral-900">
               <div className="container pt-10 pb-8">
                 <div className="flex">
-                  <Link href='./'>
+                  <Link href='./' legacyBehavior>
                     <div className="flex cursor-pointer mb-10 py-1 bg-black/20 rounded-full backdrop-blur-sm pl-2 pr-3 hover:bg-black/50 items-center">
                         <span className="material-icons text-xs">west</span>
                         <div className=""> all songs</div>

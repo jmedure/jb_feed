@@ -16,7 +16,7 @@ export default function freeGame({ posts }) {
 
       <div className="container-fg">
         <div className="flex w-full py-4 justify-between items-center">
-        <Link href="/">
+        <Link href="/" legacyBehavior>
             <div className="flex flex-col items-left cursor-pointer justify-start">
               <p className="uppercase font-mont text-xl font-medium tracking-tight">
                 Free Game 
@@ -25,7 +25,7 @@ export default function freeGame({ posts }) {
             </div>
           </Link>
           
-          <Link href="/free-game">
+          <Link href="/free-game" legacyBehavior>
             <div className="flex rotate h-16 w-16 relative cursor-pointer">
                 <Image
                   src="/fg/FGMain.svg"
@@ -37,7 +37,7 @@ export default function freeGame({ posts }) {
                   }} />
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <div className="flex flex-row items-center space-x-2 cursor-pointer justify-end">
               <span className="material-icons text-base">west</span>
               <p className="uppercase font-mont font-medium tracking-tight">
