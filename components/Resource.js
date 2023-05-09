@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Resources(props) {
   return (
-    <Link href={props.href} className="">
+    <Link href={props.href} className="" legacyBehavior>
       <div className="flex w-full p-3 bg-neutral-50 rounded-xl items-center justify-between sm:hover:cursor-pointer sm:hover:bg-neutral-100 transition-all duration-150">
         <div className="flex space-x-4 items-center">
           <div className="p-2 flex items-center rounded-lg bg-neutral-200/60 ">

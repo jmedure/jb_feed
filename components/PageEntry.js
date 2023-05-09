@@ -15,8 +15,8 @@ export default function PageEntry( props ) {
     const readingTime = props.readingTime
     // const lastEdited = props.lastEdited
     
-    return(
-        <Link href={`/misc/${slug}`} key={index} passHref>
+    return (
+        <Link href={`/misc/${slug}`} key={index} passHref legacyBehavior>
             <div className="flex group p-6 space-x-4 bg-white flex-row w-full items-center justify-between cursor-pointer tracking-normal border border-solid border-neutral-300 rounded-md hover:relative transition-all duration-200 hover:border-black hover:drop-shadow-lg">
                 <h1 className="text-xl font-serif tracking-tight font-light md:not-italic  leading-tight">
                     {title}
@@ -29,5 +29,5 @@ export default function PageEntry( props ) {
                 </div>
             </div>
         </Link>
-    )
+    );
 }

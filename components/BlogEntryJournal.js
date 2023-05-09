@@ -15,7 +15,7 @@ export default function BlogEntryJournal(props) {
   // const lastEdited = props.lastEdited
 
   return (
-    <Link href={`/meditations/${slug}`} key={index} passHref>
+    <Link href={`/meditations/${slug}`} key={index} passHref legacyBehavior>
       <div className="flex group p-6 space-x-4 bg-white flex-row w-full items-center justify-between cursor-pointer tracking-normal border border-solid border-neutral-300 rounded-md hover:relative transition-all duration-200 hover:border-black hover:drop-shadow-lg">
           <h1 className="text-3xl sm:text-4xl font-fruit tracking-tighter font-light md:not-italic  leading-tight">
             {title}

@@ -35,7 +35,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
          <p className="flex flex-center px-2 items-center justify-start mr-auto py-1 my-2 text-xs uppercase border border-solid border-white rounded-full">{frontmatter.type}</p>
          <h1 className="text-5xl md:text-6xl font-medium tracking-tighter">{frontmatter.title}</h1>
          <p className="text-xl md:py-4 py-2">by {frontmatter.artist}</p>
-         <p className="text-neutral-300 pt-2">Track {frontmatter.track} from <Link href={`/songs/${frontmatter.albumLink}`} className="dark">{frontmatter.album}</Link></p>
+         <p className="text-neutral-300 pt-2">Track {frontmatter.track} from <Link href={`/songs/${frontmatter.albumLink}`} className="dark" legacyBehavior>{frontmatter.album}</Link></p>
         </div>
     );}
     else {

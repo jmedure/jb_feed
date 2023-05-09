@@ -53,7 +53,7 @@ export default function Footer(props) {
                                 <p>Invite me to your discord</p>
                             </div>
                         </Link> */}
-                        <Link href={siteMetaData.discord}>
+                        <Link href={siteMetaData.discord} legacyBehavior>
                             <div className="flex items-center transition-all py-4 md:py-3 cursor-pointer hover:bg-black hover:text-white  border-black border border-solid text-black justify-center rounded-full flex-nowrap space-x-2">
                                 <p>Join my cult</p>
                                 <FontAwesomeIcon icon={faDiscord}/>
@@ -70,5 +70,5 @@ export default function Footer(props) {
             </div>
 
         </div>
-    )
+    );
 }

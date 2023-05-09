@@ -49,12 +49,12 @@ export default function LinksContainer() {
                     <a>Instagram</a>
                 </Link> */}
             </div>
-            <Link href="/links">
+            <Link href="/links" legacyBehavior>
                 <div className="group decoration-neutral-500  cursor-pointer flex items-center px-4 align-middle text-white bg-black rounded-full py-2">
                     <p className="">All links</p>
                     <span className="material-icons text-sm">east</span>
                 </div>
             </Link>
-        </div> 
-    )
+        </div>
+    );
 }

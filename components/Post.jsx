@@ -103,8 +103,8 @@ export const Post = ({ post }) => {
   return (
     <a href={link} className="group no-underline font-mont w-full">
       <motion.div
-        initial={{ opacity: 0, y: '10%' }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}
         className="sm:p-6 p-4 mb-6 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all"
       >
