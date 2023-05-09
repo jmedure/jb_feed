@@ -4,7 +4,7 @@ import { getAllPages } from '../../src/utils/mdx_misc'
 import MHeader from '../../components/MHeader'
 import PageEntry from '../../components/PageEntry'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 export default function Blog( { posts } ) {
 
