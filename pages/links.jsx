@@ -21,7 +21,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import SubheaderLinks from '../components/SubheaderLinks';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import LinkCardI from '../components/LinkCardI';
 import Footer from '../components/Footer';
 import React from 'react';
@@ -56,9 +56,11 @@ export default function Links(props) {
                 <Image
                   alt="blue gradient"
                   src="/logo.png"
-                  objectFit="cover"
-                  layout="fill"
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover"
+                  }} />
               </div>
               <div>
                 <h1 className="flex text-white tracking-tighter font-fruit font-medium text-8xl italic justify-center w-full align-middle">

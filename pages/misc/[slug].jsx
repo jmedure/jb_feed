@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
 import React from "react"
 import Head from "next/head"
-import Image from "next/legacy/image"
+import Image from "next/image"
 import rehypeSlug from "rehype-slug"
 import { MDXRemote } from "next-mdx-remote"
 import rehypeHighlight from "rehype-highlight"

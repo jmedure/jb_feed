@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Resource from '/components/Resource.js';
 
 export default function Resources() {
@@ -12,9 +12,11 @@ export default function Resources() {
               <Image
                 alt="blue gradient"
                 src="/logo.png"
-                objectFit="cover"
-                layout="fill"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
           </div>
         </Link>
@@ -78,9 +80,11 @@ export default function Resources() {
                   <Image
                     alt="patreon logo"
                     src="/icons/patreon.svg"
-                    objectFit="cover"
-                    layout="fill"
-                  />
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "cover"
+                    }} />
                 </div>
               </div>
               <div className="flex-block font-mont w-full space-y-1 sm:space-y-0 leading-4">

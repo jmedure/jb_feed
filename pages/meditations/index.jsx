@@ -4,7 +4,7 @@ import { getAllArticles } from '../../src/utils/mdx_med';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 import BlogEntryJournal from '../../components/BlogEntryJournal';
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function Blog({ posts }) {
   return (
@@ -21,9 +21,11 @@ export default function Blog({ posts }) {
                 <Image
                   alt="blue gradient"
                   src="/logo.png"
-                  objectFit="cover"
-                  layout="fill"
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover"
+                  }} />
               </div>
             </div>
           </Link>

@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
 import React from "react"
 import Head from "next/head"
-import Image from "next/legacy/image"
+import Image from "next/image"
 import rehypeSlug from "rehype-slug"
 import { MDXRemote } from "next-mdx-remote"
 import rehypeHighlight from "rehype-highlight"
@@ -75,14 +75,16 @@ export default function BlogPost({ post: { source, frontmatter } }) {
 
                 <div className="flex items-center h-full w-full">
                   <div className="relative invisible rounded-xl drop-shadow-2xl overflow-hidden hidden sm:flex sm:visible sm:w-80 md:w-96 h-full aspect-square ">
-                      <Image 
+                      <Image
                         src={frontmatter.artwork}
                         alt={frontmatter.alt}
-                        layout="fill"
-                        objectFit="cover"
                         placeholder="blur"
                         blurDataURL='https://jacobs.blue'
-                      />
+                        fill
+                        sizes="100vw"
+                        style={{
+                          objectFit: "cover"
+                        }} />
                   </div>
                   
                   <div className="flex-col flex-1 h-full justify-between pr-4 flex-block sm:ml-8">

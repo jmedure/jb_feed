@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faDiscord,
@@ -33,9 +33,11 @@ export default function linkfree() {
               <Image
                 alt="blue gradient"
                 src="/logo.png"
-                objectFit="cover"
-                layout="fill"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
             <h1 className="font-medium">Linkfree</h1>
           </div>
@@ -93,9 +95,11 @@ export default function linkfree() {
               <Image
                 alt="blue gradient"
                 src="/logo.png"
-                objectFit="cover"
-                layout="fill"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
             <h1 className="font-medium">Artist Name</h1>
           </div>
@@ -108,9 +112,11 @@ export default function linkfree() {
                 <Image
                   alt="blue gradient"
                   src="/logo.png"
-                  objectFit="cover"
-                  layout="fill"
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover"
+                  }} />
               </div>
               <div>
                 <h1 className="flex text-white tracking-tighter font-fruit font-medium text-8xl italic justify-center w-full align-middle">

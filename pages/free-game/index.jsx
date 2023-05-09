@@ -5,7 +5,7 @@ import MHeader from '../../components/MHeader';
 import FgEntry from '../../components/FgEntry';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function freeGame({ posts }) {
   return (
@@ -28,11 +28,13 @@ export default function freeGame({ posts }) {
           <Link href="/free-game">
             <div className="flex rotate h-16 w-16 relative cursor-pointer">
                 <Image
-                src="/fg/FGMain.svg"
-                alt="free game logo"
-                objectFit="contain"
-                layout="fill"
-                />
+                  src="/fg/FGMain.svg"
+                  alt="free game logo"
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "contain"
+                  }} />
             </div>
           </Link>
           <Link href="/">
