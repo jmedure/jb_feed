@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Resource from '/components/Resource.js';
 
 export default function Resources() {

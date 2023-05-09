@@ -21,7 +21,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import SubheaderLinks from '../components/SubheaderLinks';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import LinkCardI from '../components/LinkCardI';
 import Footer from '../components/Footer';
 import React from 'react';

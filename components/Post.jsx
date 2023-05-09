@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import YoutubeEmbed from './YoutubeEmbed';
 import { data } from 'autoprefixer';
 import BubbleLink from './BubbleLink';

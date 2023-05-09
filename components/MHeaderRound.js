@@ -2,7 +2,7 @@ import React , {useState, useEffect, useCallback} from "react"
 import Link from "next/link"
 import { useScrollDirection } from "../src/utils/useScrollDirection"
 import useReadingProgress from "../src/utils/useReadingProgress";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function MHeaderRound(props) {
 

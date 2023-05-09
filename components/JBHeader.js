@@ -1,6 +1,6 @@
 import React from "react"
 import MainNav from "./MainNav"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import LinksContainer from "./LinksContainer"
 import Link from "next/link"
 import Subheader from "./Subheader"

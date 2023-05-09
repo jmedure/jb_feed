@@ -5,7 +5,7 @@ import MHeader from '../../components/MHeader';
 import FgEntry from '../../components/FgEntry';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function freeGame({ posts }) {
   return (

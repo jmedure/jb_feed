@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import Tag from './Tag';
 import BubbleLink from './BubbleLink';
