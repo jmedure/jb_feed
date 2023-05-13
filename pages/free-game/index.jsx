@@ -5,7 +5,7 @@ import MHeader from '../../components/MHeader';
 import FgEntry from '../../components/FgEntry';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 export default function freeGame({ posts }) {
   return (
@@ -16,26 +16,28 @@ export default function freeGame({ posts }) {
 
       <div className="container-fg">
         <div className="flex w-full py-4 justify-between items-center">
-        <Link href="/">
+          <Link href="/" legacyBehavior>
             <div className="flex flex-col items-left cursor-pointer justify-start">
               <p className="uppercase font-mont text-xl font-medium tracking-tight">
-                Free Game 
+                Free Game
               </p>
-              <p className='uppercase text-sm font-mont font-medium tracking-tight'>by Jacob&#39;s Blue</p>
+              <p className="uppercase text-sm font-mont font-medium tracking-tight">
+                by Jacob&#39;s Blue
+              </p>
             </div>
           </Link>
-          
-          <Link href="/free-game">
+
+          <Link href="/free-game" legacyBehavior>
             <div className="flex rotate h-16 w-16 relative cursor-pointer">
-                <Image
-                src="/fg/FGMain.svg"
+              <Image
+                src="/logo.png"
                 alt="free game logo"
-                objectFit="contain"
                 layout="fill"
-                />
+                sizes="100vw"
+              />
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <div className="flex flex-row items-center space-x-2 cursor-pointer justify-end">
               <span className="material-icons text-base">west</span>
               <p className="uppercase font-mont font-medium tracking-tight">
@@ -43,14 +45,17 @@ export default function freeGame({ posts }) {
               </p>
             </div>
           </Link>
-          
         </div>
-        
+
         <div className="">
-          
           <div className="font-mont py-24 items-center text-left">
             <p className="text-6xl md:text-[10em] tracking-tight leading-none w-full font-fruit">
-              I created <strong className='font-medium font-mont uppercase'>free game</strong> to share everything I&#39;ve ever learned as an artist with anyone else sharing my dream.
+              I created{' '}
+              <strong className="font-medium font-mont uppercase">
+                free game
+              </strong>{' '}
+              to share everything I&#39;ve ever learned as an artist with anyone
+              else sharing my dream.
             </p>
             {/* <div className='items-center text-center justify-center'>
                   <span className='material-icons text-base py-12'>south</span>
@@ -61,7 +66,7 @@ export default function freeGame({ posts }) {
 
           <div className="py-8">
             <div className="font-mont text-base font-medium tracking-tight py-2 flex items-center justify-between">
-              <h2 className="uppercase ">ideas  </h2>
+              <h2 className="uppercase ">ideas </h2>
               {/* <sup className=" text-neutral-400">({posts.length})</sup> */}
             </div>
             {posts.map((frontMatter, index) => {

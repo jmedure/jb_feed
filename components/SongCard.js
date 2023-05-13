@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import dayjs from "dayjs";
 
 export default function SongCard( props ) {
@@ -22,9 +22,9 @@ export default function SongCard( props ) {
 
     const songType = () => {
         if (description == "") {
-            return(
+            return (
                 <div>
-                    <Link href={`/songs/${albumLink}`}>
+                    <Link href={`/songs/${albumLink}`} legacyBehavior>
                         <div className="flex items-center">
                             <a className="decoration-black text-base">
                                 <p>Track {trackNumber} from {album}</p>
@@ -32,7 +32,7 @@ export default function SongCard( props ) {
                         </div>
                     </Link>
                 </div>
-            )}
+            );}
         else {
             return(
             <div>
@@ -42,8 +42,8 @@ export default function SongCard( props ) {
             
     }   
     
-    return(
-        <Link href={`/songs/${slug}`} key={index} passHref>
+    return (
+        <Link href={`/songs/${slug}`} key={index} passHref legacyBehavior>
             <div className='items-center font-mont p-4 w-full lg:flex-col flex space-x-4 lg:space-x-0 align-top cursor-pointer tracking-normal group sm:hover:bg-blue-200  bg-blue-50 rounded-xl lg:rounded-2xl lg:space-y-4 transition-all'>
                 <div className="relative h-full w-20 sm:w-24 lg:w-full aspect-square rounded-xl overflow-hidden transition-all">
                     <Image 
@@ -72,6 +72,5 @@ export default function SongCard( props ) {
                 </div>
             </div>
         </Link>
-
-    )
+    );
 }

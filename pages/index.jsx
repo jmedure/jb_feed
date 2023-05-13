@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import JBHeader from '../components/JBHeader';
 import { Post } from '../components/Post';
 import useSWR from 'swr';

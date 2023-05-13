@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faDiscord,
@@ -33,9 +33,11 @@ export default function linkfree() {
               <Image
                 alt="blue gradient"
                 src="/logo.png"
-                objectFit="cover"
-                layout="fill"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
             <h1 className="font-medium">Linkfree</h1>
           </div>
@@ -50,14 +52,14 @@ export default function linkfree() {
             linktree clone made using <a className="dark">Next.js</a>, styled
             with <a className="dark">Tailwind UI</a>, hosted on{' '}
             <a className="dark">Vercel</a> and tracked with privacy centric
-            analytics tool, <a className="dark">Simple Analytics</a>. The very same linktree clone <Link href="/links" className='color-[#7DE0FF]'><a className='dark'>I use</a></Link> on my site.
+            analytics tool, <a className="dark">Simple Analytics</a>. The very same linktree clone <Link href="/links" className='color-[#7DE0FF]'>I use</Link> on my site.
           </p>
           <p className="text-xs text-neutral-400">
             Disclaimer: If you choose to sign up and pay for any of the paid tier services I will claim affiliate revenue on some of these links. I only will ever recommend products actually like and use.
           </p>
           <p className="text-xl">
             There are definitely some hurdles to getting started with this current
-            version so I put together a brief <Link href="/how-to" className='dark'><a className='dark'>how-to</a></Link> covering the aforementioned services and generally how to make this yours.
+            version so I put together a brief <Link href="/how-to" className='dark'>how-to</Link> covering the aforementioned services and generally how to make this yours.
          </p>
          <p className='text-xl'>
             You can start by cloning or downloading my github repo.
@@ -93,9 +95,11 @@ export default function linkfree() {
               <Image
                 alt="blue gradient"
                 src="/logo.png"
-                objectFit="cover"
-                layout="fill"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover"
+                }} />
             </div>
             <h1 className="font-medium">Artist Name</h1>
           </div>
@@ -108,9 +112,11 @@ export default function linkfree() {
                 <Image
                   alt="blue gradient"
                   src="/logo.png"
-                  objectFit="cover"
-                  layout="fill"
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover"
+                  }} />
               </div>
               <div>
                 <h1 className="flex text-white tracking-tighter font-fruit font-medium text-8xl italic justify-center w-full align-middle">
@@ -177,9 +183,9 @@ export default function linkfree() {
           id="footer"
           className="items-center flex flex-row text-xs font-mono space-x-8 py-12"
         >
-          <Link href="/how-to"><a className='dark'>How-to</a></Link>
-          <p className=''>by <Link href="/"><a className='dark'>Jacobs blue</a></Link></p>
-          <Link href="/"><a className='dark'>Traffic on this site</a></Link>
+          <Link href="/how-to" className='dark'>How-to</Link>
+          <p className=''>by <Link href="/" className='dark'>Jacobs blue</Link></p>
+          <Link href="/" className='dark'>Traffic on this site</Link>
         </div>
       </main>
     </div>

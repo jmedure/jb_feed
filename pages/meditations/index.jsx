@@ -4,7 +4,7 @@ import { getAllArticles } from '../../src/utils/mdx_med';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 import BlogEntryJournal from '../../components/BlogEntryJournal';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 export default function Blog({ posts }) {
   return (
@@ -15,13 +15,13 @@ export default function Blog({ posts }) {
 
       <div className="container">
         <div className="flex sticky top-0 p-4 bg-white align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
-          <Link href="/" passHref>
+          <Link href="/" passHref legacyBehavior>
             <div className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer">
               <div className="border-white border-2 rounded-full relative p-5 cursor-pointer">
                 <Image
                   alt="blue gradient"
                   src="/logo.png"
-                  objectFit="cover"
+                  sizes="100vw"
                   layout="fill"
                 />
               </div>
@@ -58,9 +58,7 @@ export default function Blog({ posts }) {
       </div>
       <div className="flex text-neutral-500 bg-white text-xs mx-auto space-x-2 w-full align-middle justify-center sticky bottom-0 font-mono p-4">
         <p>Meditations of a Rockstar by</p>
-        <Link href="/">
-          <a>Jacob&#39;s Blue</a>
-        </Link>
+        <Link href="/">Jacob&#39;s Blue</Link>
       </div>
     </React.Fragment>
   );

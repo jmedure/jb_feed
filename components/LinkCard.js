@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function LinkCard(props) {
   return (
-    <Link passHref href={props.href} className="hover:cursor-pointer">
+    <Link
+      passHref
+      href={props.href}
+      className="hover:cursor-pointer"
+      legacyBehavior>
       <div className="py-4 pl-4 pr-4 w-full flex-grow text-2xl overflow-auto flex group hover:cursor-pointer bg-white/20 backdrop-blur hover:bg-white/90 justify-between">
         <div className="flex items-center">
           <div className="">

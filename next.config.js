@@ -3,13 +3,13 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: [
-                'login.lyricallemonade.com',
-                'notion.so',
-                'upload.wikimedia.org',
-                'cdn.shopify.com',
-                'is2-ssl.mzstatic.com',
-                'https://images.unsplash.com'
-              
+      'login.lyricallemonade.com',
+      'notion.so',
+      'file.notion.so',
+      'upload.wikimedia.org',
+      'cdn.shopify.com',
+      'is2-ssl.mzstatic.com',
+      'https://images.unsplash.com',
     ],
   },
 
@@ -17,7 +17,7 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve.alias,
       'react/jsx-runtime.js': require.resolve('react/jsx-runtime'),
-    }
+    };
 
     config.resolve = {
       ...config.resolve,
@@ -29,8 +29,8 @@ module.exports = {
         // 'builtin-modules': false,
         // worker_threads: false,
       },
-    }
+    };
 
-    return config
+    return config;
   },
-}
+};

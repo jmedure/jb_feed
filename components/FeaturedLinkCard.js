@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import Tag from './Tag';
 import BubbleLink from './BubbleLink';
@@ -51,7 +51,7 @@ export default function FeaturedLinkCard( props ) {
   // }
   if (props.type == 'music') {
     return (
-      <Link passHref href={props.href}>
+      <Link passHref href={props.href} legacyBehavior>
         <div className="space-y-2 cursor-pointer md:space-y-8 group card border border-solid border-black p-4 bg-white/20 backdrop-blur hover:cursor-pointer hover:bg-white/50 rounded-2xl hover:drop-shadow-2xl">
           <div className="flex flex-row items-baseline w-full justify-between relative pb-2">
             <Tag type={props.tag} />

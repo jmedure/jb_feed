@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import dayjs from "dayjs";
 
 export default function AlbumCard( props ) {
@@ -21,9 +21,9 @@ export default function AlbumCard( props ) {
 
     const songType = () => {
         if (description == " ") {
-            return(
+            return (
                 <div>
-                    <Link href={`/songs/${albumLink}`}>
+                    <Link href={`/songs/${albumLink}`} legacyBehavior>
                         <div className="flex items-center">
                             <a className="decoration-black text-base">
                                 <p>Track {trackNumber} from {album}</p>
@@ -31,7 +31,7 @@ export default function AlbumCard( props ) {
                         </div>
                     </Link>
                 </div>
-            )}
+            );}
         else {
             return(
             <div>
@@ -41,8 +41,8 @@ export default function AlbumCard( props ) {
             
     }   
     
-    return(
-        <Link href={`/songs/${slug}`} key={index} passHref>
+    return (
+        <Link href={`/songs/${slug}`} key={index} passHref legacyBehavior>
             <div className='flex snap-start w-full flex-col space-y-4 align-top cursor-pointer tracking-normal '>
                 <div className="relative rounded-xl overflow-hidden aspect-square">
                     <Image 
@@ -65,6 +65,5 @@ export default function AlbumCard( props ) {
                 </div>
             </div>
         </Link>
-
-    )
+    );
 }
