@@ -4,7 +4,7 @@ import { getAllArticles } from '../../src/utils/mdx_med';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 import BlogEntryJournal from '../../components/BlogEntryJournal';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 export default function Blog({ posts }) {
   return (
@@ -21,11 +21,9 @@ export default function Blog({ posts }) {
                 <Image
                   alt="blue gradient"
                   src="/logo.png"
-                  fill
                   sizes="100vw"
-                  style={{
-                    objectFit: "cover"
-                  }} />
+                  layout="fill"
+                />
               </div>
             </div>
           </Link>
@@ -60,9 +58,7 @@ export default function Blog({ posts }) {
       </div>
       <div className="flex text-neutral-500 bg-white text-xs mx-auto space-x-2 w-full align-middle justify-center sticky bottom-0 font-mono p-4">
         <p>Meditations of a Rockstar by</p>
-        <Link href="/">
-          Jacob&#39;s Blue
-        </Link>
+        <Link href="/">Jacob&#39;s Blue</Link>
       </div>
     </React.Fragment>
   );
