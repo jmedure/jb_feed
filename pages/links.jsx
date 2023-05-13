@@ -56,10 +56,8 @@ export default function Links(props) {
                   <Image
                     alt="blue gradient"
                     src="/logo.png"
-                    fill
                     sizes="100vw"
                     layout="fill"
-                    fill="true"
                   />
                 </div>
                 <div>
