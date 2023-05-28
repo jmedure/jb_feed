@@ -22,7 +22,7 @@ export default function Blog({ posts }) {
             {/* <p className='text-xl pt-2'>Lyrics, credits, and more.</p> */}
           </div>
 
-          <div className="my-8 space-y-4 lg:space-y-0 lg:rounded-[3em] lg:gap-y-4 lg:grid lg:grid-flow-row md:grid-cols-2  lg:grid-cols-4 gap-x-8">
+          <div className="my-8 space-y-2 md:space-y-4 lg:space-y-2 lg:rounded-[3em] lg:gap-y-4 lg:grid lg:grid-flow-row md:grid-cols-2  lg:grid-cols-4 gap-x-4">
             {posts.map((frontMatter, index) => {
               if (
                 frontMatter.published == 'true' &&

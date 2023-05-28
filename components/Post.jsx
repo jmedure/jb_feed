@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import YoutubeEmbed from './YoutubeEmbed';
 import { data } from 'autoprefixer';
 import BubbleLink from './BubbleLink';
@@ -100,13 +100,21 @@ export const Post = ({ post }) => {
     }
   };
 
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
   return (
     <a href={link} className="group no-underline font-mont w-full">
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        variants={item}
+        initial="hidden"
+        animate="show"
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className="sm:p-6 p-4 mb-6 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all"
+        className="sm:p-6 border-2 border-solid border-blue-100 p-4 mb-6 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all"
       >
         {image ? (
           <div className="w-full mb-4 relative h-full overflow-hidden aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] sm:aspect-video">

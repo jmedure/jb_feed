@@ -164,14 +164,14 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             />
           </div>
         </div>
-        {/* <div className="flex container justify-center sticky z-30 bottom-8 drop-shadow-lg pt-12">
+        <div className="flex container justify-center sticky z-30 bottom-8 drop-shadow-lg pt-12">
           <iframe
             className="h-20 w-full backdrop-blur-sm border border-black border-solid overflow-clip rounded-xl "
             src={`https://open.spotify.com/embed/${frontmatter.spotifyEmbed}?utm_source=generator&theme=1`}
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           ></iframe>
-        </div> */}
+        </div>
       </div>
     </React.Fragment>
   );
