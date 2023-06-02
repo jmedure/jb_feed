@@ -6,6 +6,7 @@ import YoutubeEmbed from './YoutubeEmbed';
 import { data } from 'autoprefixer';
 import BubbleLink from './BubbleLink';
 import { motion } from 'framer-motion';
+import PrimaryButton from './PrimaryButton';
 
 export const Post = ({ post }) => {
   const {
@@ -114,10 +115,10 @@ export const Post = ({ post }) => {
         // initial={{ opacity: 0 }}
         // whileInView={{ opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className="sm:p-6 border-2 border-solid border-blue-100 p-4 mb-6 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all"
+        className="sm:p-3 border-2 border-solid border-blue-100 p-2 mb-4 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[2em] md:rounded-[3em] text-black transition-all"
       >
         {image ? (
-          <div className="w-full mb-4 relative h-full overflow-hidden aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] sm:aspect-video">
+          <div className="w-full mb-4 border-2 border-solid border-blue-100 relative h-full overflow-clip aspect-square rounded-[1.8em] sm:rounded-[2.5em] md:rounded-[2.7em] sm:aspect-video">
             <Image
               src={image}
               alt="random"
@@ -148,6 +149,7 @@ export const Post = ({ post }) => {
           </p>
         ) : null}
         {extras()}
+        <PrimaryButton />
       </motion.div>
     </a>
   );

@@ -10,6 +10,25 @@ import HeadSeo from '../components/HeadSEO';
 import siteMetadata from '../data/siteMetadata';
 import BlogSEO from '../components/BlogSEO';
 import { motion } from 'framer-motion';
+import {
+  faDiscord,
+  faYoutube,
+  faApple,
+  faInstagram,
+  faTwitter,
+  faTiktok,
+  faSpotify,
+  faSoundcloud,
+  faDeezer,
+  faNapster,
+  faTwitch,
+  faPatreon,
+  faFigma,
+  faGithub,
+  faBehance,
+  faDribbble,
+  faMedium,
+} from '@fortawesome/free-brands-svg-icons';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -85,7 +104,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           transition={{ staggerChildren: 0.5 }}
           animate={{ opacity: 1 }}
-          className="flex my-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8"
+          className="flex my-2 flex-col lg:gap-y-2 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-4"
         >
           {data.map(function (post, index) {
             if (post.published == 'true')
