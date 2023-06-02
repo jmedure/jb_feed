@@ -1,8 +1,10 @@
 [
     {
         "title": "Give and take - single",
+        "date": "March 2023",
         "kind": "music",
         "link": "/songs/give-and-take",
+        "cta": "Visit song page",
         "published": "true",
         "image": "/gat.jpg",
         "spotify": "https://open.spotify.com/album/5MYgZeMu69v9StCqweAlep?si=2Vl6cKCdTO66VP8ehpFG7Q",
@@ -10,7 +12,8 @@
         "youtube": "https://www.youtube.com/watch?v=UVi66iTeqw4&list=OLAK5uy_kFue7wQ8gEXis1qV7uEAn8suRh9TNFuOI",
         "tidal": "https://tidal.com/browse/track/278318697",
         "soundcloud": "https://soundcloud.com/jacobsblue/give-and-take?si=79ba80e5012f403d9c030b558ebbed76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-        "amazon": "https://music.amazon.com/albums/B0BWKBP2XY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_W2MpLCvxqZR2NEeRhTJEi6HWh"
+        "amazon": "https://music.amazon.com/albums/B0BWKBP2XY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_W2MpLCvxqZR2NEeRhTJEi6HWh",
+        "audiomack": "https://audiomack.com/jacobs-blue/song/give-and-take"
     },
     {
         "title": "behind the music - how i made a vintage sample",

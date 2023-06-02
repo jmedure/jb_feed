@@ -5,13 +5,11 @@ import siteMetadata from '../data/siteMetadata';
 
 export default function PrimaryButton(props) {
   return (
-    <Link href={siteMetadata.discord} legacyBehavior>
-      <div className="flex items-center transition-all py-4 md:py-3 cursor-pointer hover:bg-black hover:text-white  border-black border border-solid text-black justify-center rounded-full flex-nowrap space-x-2">
-        <p>test copy</p>
-        {/* <FontAwesomeIcon icon={faDiscord} /> */}
-        {/* <p>Join my cult</p> */}
-        <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-xl">
-          east
+    <Link href={props.href} legacyBehavior>
+      <div className="flex items-center w-full py-4 md:py-3 cursor-pointer bg-white/50 group-hover:bg-white text-black/70 group-hover:text-black border-black/10 border border-solid justify-center rounded-[24px] flex-nowrap space-x-1 text-2xl md:text-3xl transition-all">
+        <p>{props.label}</p>
+        <span className="sm:flex group-hover:translate-x-1 transition items-center sm:not-hidden material-icons text-3xl text-right">
+          {props.mui}
         </span>
       </div>
     </Link>
