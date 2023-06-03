@@ -53,50 +53,21 @@ export const Post = ({ post }) => {
   const extras = () => {
     if (kind === 'video') {
       return (
-        <div
-          className="flex mt-4 flex-row justify-between items-end lg:pt-0"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-        >
-          <div className="flex-grow flex-auto ">
-            <div className="flex items-center justify-start justify-items-center flex-wrap">
-              <BubbleLink href={link} label="watch now" mui="north_east" />
-            </div>
-          </div>
-
-          <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
-            north_east
-          </span>
+        <div className="flex mt-4 flex-col justify-between items-end lg:pt-0">
+          <PrimaryButton href={link} label={cta} mui="north_east" />
         </div>
       );
     }
     if (kind === 'writing') {
       return (
         <div className="flex mt-4 flex-row justify-between items-end lg:pt-0">
-          <div className="flex-grow flex-auto ">
-            <div className="flex items-center justify-start justify-items-center flex-wrap">
-              <BubbleLink href={link} label="read now" mui="east" />
-            </div>
-          </div>
-
-          <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
-            east
-          </span>
+          <PrimaryButton href={link} label={cta} mui="east" />
         </div>
       );
     }
     if (kind === 'music') {
       return (
         <div className="flex mt-4 flex-col justify-between items-end lg:pt-0">
-          {/* <div className="flex items-center justify-start justify-items-center flex-wrap">
-            <BubbleLink href={spotify} label="spotify" mui="north_east" />
-            <BubbleLink href={apple} label="apple" mui="north_east" />
-            <BubbleLink href={youtube} label="youtube" mui="north_east" />
-            <BubbleLink href={soundcloud} label="soundcloud" mui="north_east" />
-            <BubbleLink href={amazon} label="amazon" mui="north_east" />
-            <BubbleLink href={tidal} label="tidal" mui="north_east" />
-            <BubbleLink href={link} label="more" mui="east" />
-          </div> */}
           <PrimaryButton href={link} label={cta} mui="east" />
         </div>
       );
@@ -109,10 +80,6 @@ export const Post = ({ post }) => {
               <BubbleLink href={link} label="Peep the merch" mui="north_east" />
             </div>
           </div>
-
-          <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
-            north_east
-          </span>
         </div>
       );
     }
@@ -131,14 +98,12 @@ export const Post = ({ post }) => {
         variants={item}
         initial="hidden"
         animate="show"
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className="p-2 group border border-solid border-black/10 space-y-2 mb-4 w-full sm:hover:bg-neutral-100 bg-neutral-100 rounded-[2em] md:rounded-[32px] text-black transition-all"
+        className="p-2 group border border-solid border-black/10 sm:hover:border-black/20 duration-200 space-y-2 mb-4 w-full sm:hover:bg-neutral-50 bg-neutral-100 rounded-[2em] md:rounded-[32px] text-black transition-all"
       >
         {image ? (
-          <div className="w-full border border-solid transition-all border-black/50 relative h-full overflow-hidden aspect-square rounded-[1.8em] sm:rounded-[2.5em] md:rounded-[32px] sm:aspect-video">
-            <div className="group-hover:scale-[1.05] relative h-full transition-all duration-500">
+          <div className="w-full border border-solid transition-all border-black/10 relative h-full overflow-hidden aspect-square rounded-[1.8em] sm:rounded-[2.5em] md:rounded-[32px] sm:aspect-video ">
+            <div className="sm:group-hover:scale-[1.05] relative h-full transition-all duration-500">
               <Image
                 src={image}
                 alt="random"
@@ -150,18 +115,19 @@ export const Post = ({ post }) => {
             </div>
           </div>
         ) : null}
-        {youtubeEmbed ? (
+
+        {/* {youtubeEmbed ? (
           <div className="w-full mb-4 relative h-full  aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] overflow-hidden sm:aspect-video">
             <YoutubeEmbed embedId={youtubeEmbed} />
           </div>
-        ) : null}
+        ) : null} */}
 
         <div className="flex flex-col bg-neutral-200 rounded-[30px] overflow-hidden">
           <div className="flex justify-between items-start sm:items-center sm:space-x-4 p-4 sm:space-y-0 gap-y-2 flex-col-reverse sm:flex-row">
-            <h2 className="text-2xl sm:text-4xl leading-none tracking-tight sm:tracking-tighter">
+            <h2 className="text-4xl leading-none tracking-tight sm:tracking-tighter">
               {title}
             </h2>
-            <div className="flex space-x-2 text-lg capitalize">
+            <div className="flex space-x-2 text-lg capitalize text-black/60">
               <p className="">{kind}</p>
               {date ? (
                 <div className="flex space-x-2 ">
@@ -171,9 +137,14 @@ export const Post = ({ post }) => {
               ) : null}
               {/* <RelativeDate date={date} /> */}
             </div>
+            {/* {description ? (
+              <p className="truncate sm:text-2xl text-base md:text-3xl md:tracking-tight lg:text-4xl sm:py-4 md:py-6 lg:py-6 py-2">
+                {description}
+              </p>
+            ) : null} */}
           </div>
           {spotify ? (
-            <div className="flex items-center justify-start scroll-x pl-2 space-x-2 pb-2 overflow-x-auto no-scrollbar justify-items-center">
+            <div className="flex items-center justify-start scroll-x pl-2 space-x-1 sm:space-x-2 pb-2 overflow-x-auto no-scrollbar justify-items-center">
               <BubbleLink href={spotify} label="spotify" icon={faSpotify} />
               <BubbleLink href={apple} label="apple music" icon={faApple} />
               <BubbleLink href={youtube} label="youtube" icon={faYoutube} />
@@ -198,12 +169,6 @@ export const Post = ({ post }) => {
             </div>
           ) : null}
         </div>
-
-        {description ? (
-          <p className="truncate sm:text-2xl text-base md:text-3xl md:tracking-tight lg:text-4xl sm:py-4 md:py-6 lg:py-6 py-2">
-            {description}
-          </p>
-        ) : null}
         {extras()}
       </motion.div>
     </a>

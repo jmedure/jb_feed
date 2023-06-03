@@ -1,11 +1,11 @@
 [
     {
+        "published": "true",
         "title": "Give and take - single",
         "date": "March 2023",
         "kind": "music",
         "link": "/songs/give-and-take",
         "cta": "Visit song page",
-        "published": "true",
         "image": "/gat.jpg",
         "spotify": "https://open.spotify.com/album/5MYgZeMu69v9StCqweAlep?si=2Vl6cKCdTO66VP8ehpFG7Q",
         "apple": "https://music.apple.com/us/album/give-and-take/1673782943?i=1673782945",
@@ -16,12 +16,14 @@
         "audiomack": "https://audiomack.com/jacobs-blue/song/give-and-take"
     },
     {
+        "published": "true",
         "title": "behind the music - how i made a vintage sample",
         "kind": "video",
         "link": "https://youtu.be/wbJSOnEigMQ",
-        "published": "true",
         "description": " ",
-        "youtubeEmbed": "wbJSOnEigMQ"
+        "youtubeEmbed": "wbJSOnEigMQ",
+        "image": "/gat.jpg",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep 8 - chasing simplicity",
@@ -68,14 +70,15 @@
         "kind": "video",
         "link": "https://youtu.be/8Pu-aEPAKgg",
         "published": "true",
-        "description": " ",
+        "description": " hello fredasfsdjhj asdfkjh",
         "youtubeEmbed": "8Pu-aEPAKgg"
     },
     {
-        "title": "Maybe I give up.",
+        "published": "true",
+        "title": "Maybe I give up - Single",
         "kind": "music",
         "link": "/songs/maybe-i-give-up",
-        "published": "true",
+        "date": "Nov 2022",
         "image": "/migu.jpg",
         "spotify": "https://open.spotify.com/album/3uVdTPnjj6XZOIOdsDOVbj",
         "apple": "https://music.apple.com/us/album/maybe-i-give-up-single/1650241425",
@@ -85,12 +88,14 @@
         "amazon": "https://music.amazon.com/albums/B0BJFKV3W5?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zkIb3EAjrNLNEyxy7fNXVMajQ&trackAsin=B0BJFLQKK8"
     },
     {
+        "published": "true",
         "title": "Maybe I give up.",
         "kind": "writing",
-        "description": "",
+        "date": "Nov 2022",
+        "description": "An essay about creativity.",
+        "cta": "Read now",
         "image": "/miguThumb.png",
-        "link": "/meditations/maybe-i-give-up",
-        "published": "true"
+        "link": "/meditations/maybe-i-give-up"
     },
     {
         "title": "Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set (7 Unreleased Songs)",
@@ -155,7 +160,6 @@
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=s6UFctjY1e0",
         "published": "true",
-        "description": " ",
         "youtubeEmbed": "s6UFctjY1e0"
     },
     {
