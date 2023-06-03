@@ -18,59 +18,70 @@
     {
         "published": "true",
         "title": "behind the music - how i made a vintage sample",
+        "date": "March 2023",
         "kind": "video",
         "link": "https://youtu.be/wbJSOnEigMQ",
         "description": " ",
         "youtubeEmbed": "wbJSOnEigMQ",
-        "image": "/gat.jpg",
         "cta": "Watch now"
     },
     {
         "title": "just cookin ep 8 - chasing simplicity",
+        "date": "Feb 2023",
         "kind": "video",
         "link": "https://youtu.be/yWMF0aC3mFI",
         "published": "true",
         "description": " ",
+        "cta": "Watch now",
         "youtubeEmbed": "yWMF0aC3mFI"
     },
     {
         "title": "just cookin ep 7 - making beats like monte",
+        "date": "Feb 2023",
         "kind": "video",
         "link": "https://youtu.be/2WHYBQrnuTs",
         "published": "true",
-        "description": " ",
+        "description": "",
+        "cta": "Watch now",
         "youtubeEmbed": "2WHYBQrnuTs"
     },
     {
         "title": "just cookin ep 6 - early morning beats for breakfast",
+        "date": "Feb 2023",
         "kind": "video",
         "link": "https://youtu.be/0X_vcC91GSM",
         "published": "true",
         "description": " ",
+        "cta": "Watch now",
         "youtubeEmbed": "0X_vcC91GSM"
     },
     {
         "title": "just cookin ep 5 - making a a late night song sketch",
+        "date": "Feb 2023",
         "kind": "video",
         "link": "https://youtu.be/0CvMTZifjSs",
         "published": "true",
         "description": " ",
+        "cta": "Watch now",
         "youtubeEmbed": "0CvMTZifjSs"
     },
     {
         "title": "just cookin ep 4 - a cold night in brooklyn",
+        "date": "Jan 2023",
         "kind": "video",
         "link": "https://youtu.be/aJxFFgiqT08",
         "published": "true",
-        "description": " ",
+        "description": "",
+        "cta": "Watch now",
         "youtubeEmbed": "aJxFFgiqT08"
     },
     {
         "title": "just cookin ep 3 - making a sample before work",
+        "date": "Jan 2023",
         "kind": "video",
         "link": "https://youtu.be/8Pu-aEPAKgg",
         "published": "true",
-        "description": " hello fredasfsdjhj asdfkjh",
+        "cta": "Watch now",
         "youtubeEmbed": "8Pu-aEPAKgg"
     },
     {
@@ -79,6 +90,7 @@
         "kind": "music",
         "link": "/songs/maybe-i-give-up",
         "date": "Nov 2022",
+        "cta": "Visit song page",
         "image": "/migu.jpg",
         "spotify": "https://open.spotify.com/album/3uVdTPnjj6XZOIOdsDOVbj",
         "apple": "https://music.apple.com/us/album/maybe-i-give-up-single/1650241425",
@@ -92,47 +104,39 @@
         "title": "Maybe I give up.",
         "kind": "writing",
         "date": "Nov 2022",
-        "description": "An essay about creativity.",
         "cta": "Read now",
         "image": "/miguThumb.png",
         "link": "/meditations/maybe-i-give-up"
     },
     {
         "title": "Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set (7 Unreleased Songs)",
+        "date": "Aug 2022",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=j0VNVoFz3c0&t=1s",
         "published": "true",
-        "description": " ",
+        "description": "",
+        "cta": "Watch now",
         "youtubeEmbed": "j0VNVoFz3c0"
     },
     {
         "title": "JB and Ash Max LIVE in NYC",
+        "date": "July 2023",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=gvDZIf0BqL0",
         "published": "true",
-        "description": " ",
+        "description": "",
+        "cta": "Watch now",
         "youtubeEmbed": "gvDZIf0BqL0"
     },
     {
-        "title": "\"Where do we go from here?\", out now!",
-        "kind": "music",
-        "link": "/songs/hard-of-hearing",
-        "published": "",
-        "image": "/1.gif",
-        "spotify": "https://spotify.com",
-        "apple": "https://applemusic.com",
-        "youtube": "https://youtube.com",
-        "tidal": "https://tidal.com",
-        "soundcloud": "https://soundcloud.com",
-        "amazon": "https://amazonmusic.com"
-    },
-    {
         "title": "Just Cookin Vol.1 - making samples ~(Remembering Tomorrow)~",
+        "date": "Jan 2022",
         "link": "https://www.youtube.com/watch?v=eDlB01vRrrM",
         "kind": "video",
         "description": " ",
         "youtubeEmbed": "eDlB01vRrrM",
-        "published": "true"
+        "published": "true",
+        "cta": "Watch now"
     },
     {
         "title": "New Merch out now",
@@ -157,16 +161,20 @@
     },
     {
         "title": "DO IT AGAIN. - Born in the Sunset: Thoughts to Oasis Visual Performance",
+        "date": "March 2021",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=s6UFctjY1e0",
         "published": "true",
+        "cta": "Watch now",
         "youtubeEmbed": "s6UFctjY1e0"
     },
     {
-        "title": "My debut album, Born in the Sunset: Thoughts to Oaisis",
+        "title": "My debut album, Born in the Sunset: Thoughts to Oasis",
         "kind": "music",
         "link": "/songs/born-in-the-sunset-thoughts-to-oasis",
+        "date": "Jan 2021",
         "published": "true",
+        "cta": "Visit song page",
         "image": "https://notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faa8782a2-7db7-447e-adee-8bfa273e5607%2FBITSCover1-scaled_(1).jpeg?table=block&id=8e18b7a8-a3d1-4371-b3c5-ee544cf9567c&spaceId=2afffdaa-a1f9-48fc-8af5-a4f4e2aaefbf&width=2000&userId=eb892e74-d964-49ba-9ea8-d5261359b5e6&cache=v2",
         "spotify": "https://open.spotify.com/album/3nAER17uMf2QOuJwSCIOJB?si=hS-He9BwRomfBTJPv9FKww&nd=1",
         "apple": "https://music.apple.com/us/album/born-in-the-sunset-thoughts-to-oasis/1546646373",

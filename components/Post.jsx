@@ -116,23 +116,23 @@ export const Post = ({ post }) => {
           </div>
         ) : null}
 
-        {/* {youtubeEmbed ? (
-          <div className="w-full mb-4 relative h-full  aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] overflow-hidden sm:aspect-video">
+        {youtubeEmbed ? (
+          <div className="w-full mb-2 relative h-full  aspect-square rounded-[1.8em] sm:rounded-[2.5em] md:rounded-[32px] overflow-hidden sm:aspect-video">
             <YoutubeEmbed embedId={youtubeEmbed} />
           </div>
-        ) : null} */}
+        ) : null}
 
         <div className="flex flex-col bg-neutral-200 rounded-[30px] overflow-hidden">
-          <div className="flex justify-between items-start sm:items-center sm:space-x-4 p-4 sm:space-y-0 gap-y-2 flex-col-reverse sm:flex-row">
+          <div className="flex justify-between items-start sm:space-x-4 p-4 sm:space-y-0 gap-y-2 flex-col-reverse sm:flex-row">
             <h2 className="text-4xl leading-none tracking-tight sm:tracking-tighter">
               {title}
             </h2>
-            <div className="flex space-x-2 text-lg capitalize text-black/60">
+            <div className="flex space-x-2 text-lg capitalize text-black/60 sm:pt-1">
               <p className="">{kind}</p>
               {date ? (
                 <div className="flex space-x-2 ">
                   <p className="">•</p>
-                  <p className="">{date}</p>
+                  <p className=" whitespace-nowrap">{date}</p>
                 </div>
               ) : null}
               {/* <RelativeDate date={date} /> */}
