@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple, faSpotify } from '@fortawesome/free-brands-svg-icons';
 import BlogSEO from '../components/BlogSEO';
+import Head from 'next/head';
 
 export default function Bsides() {
   const [launchTime, setLaunchTime] = useState(false);
@@ -43,7 +44,7 @@ export default function Bsides() {
 
   return (
     <>
-      <head>
+      <Head>
         <BlogSEO
           title={
             "Born in the Sunset: Thoughts to Oasis (B-SIDES) by Jacob's Blue coming June 23, 2023"
@@ -52,7 +53,7 @@ export default function Bsides() {
           image="cover-art/bsides.jpg"
           canonical="/index"
         />
-      </head>
+      </Head>
       <div className="container bsides">
         <div className="flex sticky z-10 top-0 p-4 align-middle justify-center mt-16 md:mt-8 transition-all sm:hover:text-blue-500">
           <Link href="/" passHref legacyBehavior>
@@ -124,12 +125,12 @@ export default function Bsides() {
                     href="https://music.apple.com/us/album/born-in-the-sunset-thoughts-to-oasis-b-sides-ep/1690630303"
                     className="no-underline"
                   >
-                    <div className="border-2 border-solid text-black border-neutral-900 items-center rounded-full bg-white sm:hover:bg-neutral-900 sm:hover:border-neutral-900 sm:hover:text-white px-8 py-4 flex space-x-1 transiton-all uppercase duration-200">
+                    <div className="hidden border-2 border-solid text-black border-neutral-900 items-center rounded-full bg-white sm:hover:bg-neutral-900 sm:hover:border-neutral-900 sm:hover:text-white px-8 py-4 sm:flex space-x-1 transiton-all uppercase duration-200">
                       <FontAwesomeIcon
                         icon={faApple}
                         className="w-8 align-middle justify-center text-2xl"
                       />
-                      <p className=" whitespace-nowrap">
+                      <p className="whitespace-nowrap">
                         Pre-save on Apple Music
                       </p>
                     </div>
