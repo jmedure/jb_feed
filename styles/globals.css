@@ -243,3 +243,10 @@ a.dark:hover, a.dark:active {
 @media (min-width: 1280px){
   
 }
+
+
+/* Explicit styles */
+
+content{
+  background-color:red;
+}
