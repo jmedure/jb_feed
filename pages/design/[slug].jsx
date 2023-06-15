@@ -1,6 +1,5 @@
 import dayjs from 'dayjs';
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import rehypeSlug from 'rehype-slug';
 import { MDXRemote } from 'next-mdx-remote';
@@ -11,7 +10,6 @@ import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_med';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import Button from '../../components/Button';
 import BlogEntry from '../../components/BlogEntry';
-// import HeadSeo from "../../components/HeadSEO"
 import MHeaderRound from '../../components/MHeaderRound';
 import OneBlank from '../../components/OneBlank';
 import BlogSEO from '../../components/BlogSEO';
@@ -25,7 +23,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
     <React.Fragment>
       <BlogSEO
         title={frontmatter.title + " from /design by Jacob's Blue"}
-        description={frontmatter.description}
+        description={description}
         canonical={frontmatter.slug}
         image={frontmatter.thumbnail}
       />
@@ -41,7 +39,6 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                 blurDataURL="https://jacobs.blue"
                 fill
                 sizes="100vw"
-                cover
               />
             </div>
           ) : null}

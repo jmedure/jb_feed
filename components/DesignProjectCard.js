@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import dayjs from 'dayjs';
+import { color } from 'framer-motion';
 
 export default function DesignProjectCard(props) {
   const slug = props.slug;
@@ -12,14 +13,30 @@ export default function DesignProjectCard(props) {
   const description = props.description;
   const date = props.date;
   const readingTime = props.readingTime;
-  const color = props.color;
-  // const lastEdited = props.lastEdited
+
+  const colors = ['bg-blue-400', 'bg-blue-600', 'bg-blue-100', 'bg-blue-200'];
+
+  function randomColor() {
+    let i = Math.floor(Math.random() * 2);
+    const color = colors[i];
+
+    console.log(color);
+  }
 
   return (
-    <Link href={`/design/${slug}`} key={index} passHref legacyBehavior>
-      <div className="font-mont flex group p-4 space-x-4 bg-white tracking-normal flex-row w-full items-center justify-between cursor-pointer rounded-3xl hover:relative transition-all duration-200 text-base hover:bg-neutral-100 text-neutral-800">
-        <div className="flex space-x-3 items-center">
-          <div className={`${color} rounded-xl w-14 h-14`}></div>
+    // <motion.li className="w-full space-y-2 justify-between">
+    <Link href={`/design/${slug}`} passHref legacyBehavior>
+      <div
+        className="font-mont flex group p-4 space-x-4 bg-white tracking-normal
+          flex-row w-full items-center justify-between cursor-pointer
+          rounded-3xl hover:relative transition-all duration-200 text-base
+          hover:bg-neutral-100 text-neutral-800"
+      >
+        <div className="flex space-x-4 items-center">
+          <div
+            onLoadStart={randomColor()}
+            className={`${props.color} bg-gray-50 border border-solid rounded-xl w-14 h-14`}
+          ></div>
           <div className="flex-col space-y-1">
             <p className="font-normal text-lg text-black tracking-tight md:not-italic  leading-tight">
               {title}
@@ -32,5 +49,6 @@ export default function DesignProjectCard(props) {
         </div>
       </div>
     </Link>
+    // </motion.li>
   );
 }

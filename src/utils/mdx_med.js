@@ -38,6 +38,7 @@ export async function getArticleFromSlug(slug) {
       alt: data.alt,
       date: data.date,
       lastEdited: data.lastEdited,
+      // color: data.color,
       readingTime: readingTime(source).text,
       ...data,
     },
