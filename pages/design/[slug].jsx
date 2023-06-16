@@ -6,7 +6,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeCodeTitles from 'rehype-code-titles';
 import { serialize } from 'next-mdx-remote/serialize';
-import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_med';
+import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_design';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import Button from '../../components/Button';
 import BlogEntry from '../../components/BlogEntry';
@@ -42,11 +42,11 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               />
             </div>
           ) : null}
-          {youtube ? (
+          {/* {youtube ? (
             <div className="lg:w-[80%] my-8 container-blog relative h-full aspect-square rounded-3xl overflow-hidden sm:aspect-video">
               <YoutubeEmbed embedId={frontmatter.youtube} />
             </div>
-          ) : null}
+          ) : null} */}
           <div className="pb-1 sm:pb-3">
             <h1 className="py-6 md:py-8 lg:py-8 tracking-tighter font-fruit text-7xl leading-[.9] md:text-[8em] max-w-[90%] md:max-w-95% lg:text-[10em] xl:text-[14em] w-[640px] lg:max-w-full overflow-visible lg:w-full mx-auto lg:text-center ">
               {frontmatter.title}
@@ -68,6 +68,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             </div>
           </div>
         </div>
+
         <article className="content prose-p:tracking-tight container-blog prose-p:font-bask prose-base lg:prose-lg prose-lead:leading-loose prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose-blockquote:text-2xl prose-blockquote:leading-relaxed prose-blockquote:tracking-tight prose-blockquote:font-fruit prose:tracking-tighter prose-a:blue-500 prose:neutral prose-headings:tracking-tighter prose-headings:font-mono prose-headings:uppercase prose-blockquote:border-l-2 prose-blockquote:border-neutral-300 prose-blockquote:pl-6 prose-ul:list-disc prose-ul:font-bask prose-ul:decoration-neutral-300">
           <MDXRemote
             {...source}

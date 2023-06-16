@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { getAllArticles } from '../../src/utils/mdx_design';
-import Footer from '../../components/Footer';
+// import Footer from '../../components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import DesignProjectCard from '../../components/DesignProjectCard';
@@ -32,7 +32,7 @@ export default function Blog({ posts }) {
         <title>/design by Jacob&#39;s Blue</title>
       </Head>
 
-      <div className="container">
+      <div className="container-blog">
         <div className="flex sticky top-0 p-4 bg-white align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
           <Link href="/" passHref legacyBehavior>
             <div className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer">
@@ -45,7 +45,7 @@ export default function Blog({ posts }) {
         <div className="">
           <div className="py-24 md:py-48 h-full">
             <div className="font-mono font-light text-sm tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
-              <ul className="w-full space-y-2 justify-between">
+              <ul className="w-full space-y-2 justify-between ">
                 {posts.map((frontMatter, index) => {
                   if (frontMatter.isPublished == 'true') {
                     return (
@@ -54,8 +54,8 @@ export default function Blog({ posts }) {
                         animate={{ opacity: 1, translateY: 0 }}
                         transition={{
                           when: 'afterChildren',
-                          delay: index * 0.3,
-                          duration: 0.3,
+                          delay: index * 0.1,
+                          duration: 0.2,
                           type: 'tween',
                           // staggerChildren: 1,
                           ease: 'linear',
@@ -74,7 +74,8 @@ export default function Blog({ posts }) {
                           lastEdited={frontMatter.lastEdited}
                           readingTime={frontMatter.readingTime}
                           isPublished={frontMatter.isPublished}
-                          color={frontMatter.color}
+                          // color={frontMatter.color}
+                          tile={frontMatter.tile}
                         />
                       </motion.li>
                     );
@@ -86,7 +87,7 @@ export default function Blog({ posts }) {
         </div>
       </div>
       <div className="flex text-neutral-500 bg-white text-xs mx-auto space-x-2 w-full align-middle justify-center sticky bottom-0 font-mono p-4">
-        <p>Meditations of a Rockstar by</p>
+        <p>by</p>
         <Link href="/">Jacob&#39;s Blue</Link>
       </div>
     </React.Fragment>

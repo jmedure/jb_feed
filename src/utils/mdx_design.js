@@ -39,7 +39,8 @@ export async function getArticleFromSlug(slug) {
       date: data.date,
       lastEdited: data.lastEdited,
       readingTime: readingTime(source).text,
-      color: data.color,
+      // color: data.color,
+      tile: data.tile,
       ...data,
     },
   };
