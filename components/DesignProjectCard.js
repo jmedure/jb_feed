@@ -44,23 +44,23 @@ export default function DesignProjectCard(props) {
             className={`${color} bg-inherit border border-solid rounded-xl w-14 h-14`}
           ></div> */}
           <Image
-            className="rounded-xl w-14 h-14 relative"
+            className="rounded-xl w-12 h-12 relative"
             src={tile}
             placeholder="/1.png"
             alt="cover"
             fill="true"
           />
           <div className="flex-col space-y-1">
-            <p className="font-normal text-lg sm:hover:text-black text-black tracking-tight md:not-italic  leading-tight">
+            <p className="font-normal text-base sm:hover:text-black text-black tracking-tight md:not-italic  leading-tight">
               {title}
             </p>
-            <p className="leading-tight text-lg sm:group-hover:text-black">
+            <p className="leading-tight text-base sm:group-hover:text-black">
               {description}
             </p>
           </div>
         </div>
-        <div className="space-x-8 flex-grow w-24 justify-end text-right flex-nowrap">
-          <p>{dayjs(date).format('MMM YY')}</p>
+        <div className="space-x-8 text-neutral-500 flex-grow w-24 justify-end text-right flex-nowrap">
+          <p className="text-sm">{dayjs(date).format('MMM YY')}</p>
         </div>
       </div>
     </Link>

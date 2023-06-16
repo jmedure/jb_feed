@@ -57,14 +57,12 @@ export default function Blog({ posts }) {
                           delay: index * 0.1,
                           duration: 0.2,
                           type: 'tween',
-                          // staggerChildren: 1,
                           ease: 'linear',
                         }}
                         key={index}
                       >
                         <DesignProjectCard
                           slug={frontMatter.slug}
-                          // key={index}
                           passHref
                           src={frontMatter.image}
                           alt={frontMatter.alt}
@@ -74,7 +72,6 @@ export default function Blog({ posts }) {
                           lastEdited={frontMatter.lastEdited}
                           readingTime={frontMatter.readingTime}
                           isPublished={frontMatter.isPublished}
-                          // color={frontMatter.color}
                           tile={frontMatter.tile}
                         />
                       </motion.li>
