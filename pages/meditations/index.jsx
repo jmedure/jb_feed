@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { getAllArticles } from '../../src/utils/mdx_med';
-import Footer from '../../components/Footer';
+// import Footer from '../../components/Footer';
 import Link from 'next/link';
 import BlogEntryJournal from '../../components/BlogEntryJournal';
 import Image from 'next/legacy/image';
