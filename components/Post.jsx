@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import YoutubeEmbed from './YoutubeEmbed';
 import { data } from 'autoprefixer';
 import BubbleLink from './BubbleLink';
@@ -120,11 +120,11 @@ export const Post = ({ post }) => {
           <div className="w-full mb-4 relative h-full overflow-hidden aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] sm:aspect-video">
             <Image
               src={image}
-              alt="random"
-              layout="fill"
+              alt="alt"
+              fill
               objectFit="cover"
-              placeholder="blur"
-              blurDataURL="https://images.unsplash.com/photo-1631200472313-ad91fd825080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2375&q=80"
+              // placeholder="blur"
+              // blurDataURL="https://images.unsplash.com/photo-1631200472313-ad91fd825080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2375&q=80"
             />
           </div>
         ) : null}

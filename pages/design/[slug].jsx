@@ -3,8 +3,9 @@ import React from 'react';
 import Image from 'next/image';
 import rehypeSlug from 'rehype-slug';
 import { MDXRemote } from 'next-mdx-remote';
-import rehypeHighlight from 'rehype-highlight';
+// import rehypeHighlight from 'rehype-highlight';
 import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism-plus';
 import { serialize } from 'next-mdx-remote/serialize';
 import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_design';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -67,8 +68,8 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               <YoutubeEmbed embedId={frontmatter.youtube} />
             </div>
           ) : null} */}
-          <div className="flex-col space-y-1">
-            <h1 className="font-mont text-base tracking-normal font-normal capitalize">
+          <div className="flex-col space-y-2 ">
+            <h1 className="font-mont text-base tracking-normal font-normal ">
               {frontmatter.title}
             </h1>
             <div className="flex space-x-1 text-sm font-mont text-neutral-400">
@@ -79,7 +80,38 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                 {dayjs(frontmatter.lastEdited).format('MMM D, YYYY')}
               </p>
             </div>
+
+            {/* {frontmatter.productionLink && frontmatter.repoLink ? (
+              <div className="flex flex-col space-y-2 text-sm font-mont text-neutral-400 py-1">
+                <div className="flex space-x-2 text-sm font-mont font-light text-neutral-400 items-center">
+                  <Link
+                    href={frontmatter.productionLink}
+                    className="flex items-center text-blue-500 bg-blue-50 border-blue-100 border hover:bg-blue-100 no-underline px-2 py-[.5px] transition-colors rounded-full"
+                  >
+                    Production
+                    <span className="material-icons text-sm">north_east</span>
+                  </Link>
+                  <Link
+                    href={frontmatter.repoLink}
+                    className="flex items-center text-blue-500 bg-blue-50 border-blue-100 border hover:bg-blue-100 no-underline px-2 py-[.5px] transition-colors rounded-full"
+                  >
+                    Github Repo
+                    <span className="material-icons text-sm">north_east</span>
+                  </Link>
+                </div> */}
+            {/* <div className="flex space-x-8 text-sm font-mont text-neutral-400">
+                  <Link
+                    href={frontmatter.repoLink}
+                    className="text-blue-400 decoration-blue-100 hover:decoration-blue-400 underline-offset-2 transition-colors rounded-full"
+                  >
+                    Repo
+                    <span className="material-icons text-xs">north_east</span>
+                  </Link>
+                </div> */}
+            {/* </div>
+            ) : null} */}
           </div>
+
           {/* <div className="flex md:flex md:flex-nowrap items-center space-x-4 text-[12px] md:text-sm  text-neutral-500 font-mono not-prose md:space-y-0 ">
             <p className="items-center px-3 py-1 text-left flex-nowrap border-solid border rounded-full text-neutral-900 border-neutral-900">
               {frontmatter.readingTime}
@@ -90,7 +122,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           </div> */}
         </div>
 
-        <article className="content pb-16 container-blog prose-base prose-p:tracking-normal prose-img:my-0 prose-p:font-mont prose-neutral prose-p:font-ultralight font-text text-base text-neutral-800 prose-lead:leading-snug prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose-blockquote:text-2xl prose-blockquote:leading-relaxed prose-blockquote:tracking-normal prose-blockquote:font-fruit prose:tracking-normal tracking prose-a:blue-500 prose:neutral prose-headings:tracking-tight prose-headings:text-base  prose-headings:font-normal prose-headings:font-mont prose-blockquote:border-l-2 prose-blockquote:border-neutral-300 prose-blockquote:pl-6 prose-ul:list-disc prose-ul:font-mont prose-ul:decoration-neutral-300">
+        <article className="content pb-16 prose-img:pt-8 container-blog prose-base prose-p:tracking-normal prose-p:font-mont prose-neutral prose-p:font-ultralight font-text text-base text-neutral-800 prose-lead:leading-snug prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose-blockquote:text-2xl prose-blockquote:leading-loose prose-blockquote:tracking-normal prose-blockquote:font-fruit prose:tracking-normal tracking prose-a:blue-500 prose:neutral prose-headings:tracking-tight prose-headings:py-2 prose-headings:text-base prose-headings:font-normal prose-headings:font-mont prose-blockquote:border-l-2 prose-blockquote:border-neutral-300 prose-blockquote:pl-6 prose-ul:list-disc prose-ul:font-mont prose-ul:decoration-neutral-300 ">
           <MDXRemote
             {...source}
             components={{ Image, Button, BlogEntry, OneBlank }}
@@ -117,8 +149,9 @@ export async function getStaticProps({ params }) {
           },
           { behaviour: 'wrap' },
         ],
-        rehypeHighlight,
+        // rehypeHighlight,
         rehypeCodeTitles,
+        rehypePrism,
       ],
     },
   });

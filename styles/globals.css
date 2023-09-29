@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './syntax-highlighting.css';
 
 * {
   box-sizing: border-box;
@@ -55,7 +56,7 @@ a.dark:hover, a.dark:active {
 
 .container-blog{
   max-width: 90%;
-  margin: 0px auto;
+  /* margin: 0px; */
 }
 
 .credit{
@@ -222,7 +223,7 @@ a.dark:hover, a.dark:active {
   }
   .container-blog{
     max-width: 95%;
-    width: 640px;
+    width: 624px;
   }
 }
 

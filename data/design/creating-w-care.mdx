@@ -1,0 +1,131 @@
+---
+date: '2023-08-14'
+lastEdited: '2023-08-14'
+title: 'Dynamic favicon based on theme-change'
+description: 'Creating with care'
+thumbnail: '/design/cwc.gif'
+tags: []
+image: '/1.gif'
+youtube: ''
+alt: 'gif'
+isPublished: 'true'
+tile: '/design/1.png'
+productionLink: 'https://createwcare.com'
+productionLabel: 'live site'
+repoLink: 'https://github.com/jmedure/cwc'
+---
+
+<div className="relative w-full not-prose pt-24 rounded-2xl border bg-gray-400 overflow-clip aspect-square sm:aspect-video">
+
+    <Image
+      src="/design/cwcbig.gif"
+      alt="Image"
+      placeholder="blur"
+      blurDataURL="https://jacobs.blue"
+      style={{ objectFit: 'cover' }}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      fill
+      />
+
+</div>
+
+Up until this point I had never used themes on a site. So when I was starting my [latest idea](https://createwcare.com) I wanted to take the opportunity to not only use light and dark modes but inlist multiple themes.
+
+Since the entire site is static this wasn't going to be too hard. Thanks to Paco Coursey's [next-themes](https://github.com/pacocoursey/next-themes) it was even easier than expected.
+
+Beyond following Paco's basic implementation guide I defined my additional themes in css and built a button that increments through the themes using some basic js.
+
+```css:global.css
+:root {
+  background-color: white;
+  color: black;
+}
+
+[data-theme='dark'] {
+  background-color: #121212;
+  color: white;
+}
+
+[data-theme='orange'] {
+  background-color: #ff630c;
+  color: #fdff99;
+}
+
+[data-theme='red'] {
+  background-color: #d21c1c;
+  color: #edffcf;
+}
+
+[data-theme='blue'] {
+  background-color: #1c4fd2;
+  color: #ccff00;
+}
+
+[data-theme='green'] {
+  background-color: #1f2b14;
+  color: #ccff00;
+}
+
+[data-theme='purple'] {
+  background-color: #22216c;
+  color: #ff630c;
+}
+
+[data-theme='brown'] {
+  background-color: #a8e5ff;
+  color: #402f2b;
+}
+```
+
+I listed each theme in a small array, then used the button to increment through the array and set the theme to the next theme in the array.
+
+```jsx:ThemeChanger.jsx
+<button
+  className="p-4 sm:p-3 rounded-full bg-white/05 backdrop-invert brightness-150"
+  id="change"
+  value={theme}
+  onClick={(e) => {
+    const index = themes.indexOf(theme);
+    const next = themes[(index + 1) % themes.length];
+    setTheme(next);
+    console.log(next);
+  }}
+></button>;
+```
+
+## Taking it a bit further
+
+At this point I was stoked but in order to take it up a notch the idea came to me to set the favicon to the corresponding theme color each time the theme for the site changed. I had seen transitioning favicons done before but never looked under the hood to undertstand how it works and I'd never seen it done with so many themes.
+
+Upon initial research I found [this article](https://dev.to/eddysims/create-a-themed-favicon-for-color-modes-2ok1) by Eddie Sims. Although I didn't use any of his work it was helpful for my initial approach.
+
+Full disclosure I have no idea how good or bad this from a "what you're supposed to do" perspective but it does work as intended.
+
+First I had to make and export each respective favicon and make sure it matched semantically with the themes in the themes array.
+
+From there I just used the <code className="flex-row items-center bg-neutral-100 text-neutral-700 text-sm rounded-lg px-1">theme</code> object to as part of the favicon soure, so that each time the site theme chnaged, the favicon name also changes.
+
+```jsx:ThemeChanger.jsx
+  return (
+    <>
+      <Head>
+        <title>CREATE WITH CARE</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="Create with Care" key="title" />
+        <link rel="icon" href={`/favicon-${theme}-32.png`} />
+      </Head>
+      <button
+        className="p-4 sm:p-3 rounded-full bg-white/05 backdrop-invert brightness-150"
+        id="change"
+        value={theme}
+        onClick={(e) => {
+          const index = themes.indexOf(theme);
+          const next = themes[(index + 1) % themes.length];
+          setTheme(next);
+          console.log(next);
+        }}
+      ></button>
+    </>
+  );
+```

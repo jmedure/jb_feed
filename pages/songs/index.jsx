@@ -49,38 +49,42 @@ export default function Blog({ posts }) {
               }
             })}
           </div>
-          {/* <div className='my-4'>
-                <div className='flex justify-between items-center'>
-                  <h3 className='text-2xl my-2 pt-2 tracking-tight'>Albums</h3>
-                  <div className='flex items-center space-x-2'>
-                    <span className='material-icons'>chevron_left</span>
-                    <span className='material-icons'>chevron_right</span>
-                  </div>
-                </div>
-                  <div className='flex border-t border-solid border-black py-4 overflow-x-auto scroll-m-6 snap-x snap-mandatory space-x-4'>
-                  {posts.map((frontMatter, index) => {
-                    if ((frontMatter.published=="true") && (frontMatter.type == "album")){
-                    return (
-                        <AlbumCard
-                            slug={frontMatter.slug} 
-                            type={frontMatter.type}
-                            key={index}
-                            passHref 
-                            src={frontMatter.artwork} 
-                            alt={frontMatter.alt} 
-                            title={frontMatter.title} 
-                            album={frontMatter.album} 
-                            released={frontMatter.released} 
-                            readingTime={frontMatter.readingTime}
-                            albumLink={frontMatter.albumLink}
-                            description={frontMatter.description}
-                            trackNumber={frontMatter.track}
-                            spotifyEmbed={frontMatter.spotifyEmbed}
-                        />
-                      )
-                    }})}
-                  </div>
-              </div> */}
+          <div className="my-4">
+            <div className="flex justify-between items-center">
+              <h3 className="text-2xl my-2 pt-2 tracking-tight">Albums</h3>
+              <div className="flex items-center space-x-2">
+                <span className="material-icons">chevron_left</span>
+                <span className="material-icons">chevron_right</span>
+              </div>
+            </div>
+            <div className="flex border-t border-solid border-black py-4 overflow-x-auto scroll-m-6 snap-x snap-mandatory space-x-4">
+              {posts.map((frontMatter, index) => {
+                if (
+                  frontMatter.published == 'true' &&
+                  frontMatter.type == 'album'
+                ) {
+                  return (
+                    <AlbumCard
+                      slug={frontMatter.slug}
+                      type={frontMatter.type}
+                      key={index}
+                      passHref
+                      src={frontMatter.artwork}
+                      alt={frontMatter.alt}
+                      title={frontMatter.title}
+                      album={frontMatter.album}
+                      released={frontMatter.released}
+                      readingTime={frontMatter.readingTime}
+                      albumLink={frontMatter.albumLink}
+                      description={frontMatter.description}
+                      trackNumber={frontMatter.track}
+                      spotifyEmbed={frontMatter.spotifyEmbed}
+                    />
+                  );
+                }
+              })}
+            </div>
+          </div>
         </div>
         <Footer />
       </div>

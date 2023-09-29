@@ -1,0 +1,130 @@
+/**
+ * Dracula Theme originally by Zeno Rocha [@zenorocha]
+ * https://draculatheme.com/
+ *
+ * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ */
+
+.rehype-code-title {
+    font-family: monospace;
+    font-size: 12px;
+    padding: .5em 0px;
+    margin: 0px;
+    color: #00000080
+}
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+     color: #00000090;
+     font-size: 13px;
+     background: none;
+     text-align: left;
+     white-space: pre;
+     word-spacing: normal;
+     word-break: normal;
+     word-wrap: normal;
+     line-height: 1.5;
+     -moz-tab-size: 4;
+     -o-tab-size: 4;
+     tab-size: 4;
+     -webkit-hyphens: none;
+     -moz-hyphens: none;
+     -ms-hyphens: none;
+     hyphens: none;
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+     padding: 1.5em 1.5em;
+     margin: .5em 0;
+     overflow: auto;
+     border-radius: 1em;
+     border: 1px solid #eef7ff;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+     background: #fafcff;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+     padding: .1em;
+     border-radius: .3em;
+     white-space: normal;
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+     color: #6272a4;
+ }
+ 
+ .token.punctuation {
+     color: #00000040;
+ }
+ 
+ .namespace {
+     opacity: .7;
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+     color: #33a0ff;
+ }
+ 
+ .token.boolean,
+ .token.number {
+     color: #bd93f9;
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+     color: #0a7aea;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable {
+     color: #c0c0c0;
+ }
+ 
+ .token.atrule,
+ .token.attr-value,
+ .token.function,
+ .token.class-name {
+     color: #63b9ff;
+ }
+ 
+ .token.keyword {
+     color: #0072b8;
+ }
+ 
+ .token.regex,
+ .token.important {
+     color: #ffb86c;
+ }
+ 
+ .token.important,
+ .token.bold {
+     font-weight: bold;
+ }
+ 
+ .token.italic {
+     font-style: italic;
+ }
+ 
+ .token.entity {
+     cursor: help;
+ }

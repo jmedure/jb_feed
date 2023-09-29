@@ -6,7 +6,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
-// import 'nextjs-breadcrumbs/dist/index.css';
+import 'nextjs-breadcrumbs/dist/index.css';
 
 function MyApp({ Component, pageProps }) {
   return (

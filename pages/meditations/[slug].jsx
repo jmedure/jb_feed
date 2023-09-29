@@ -1,81 +1,124 @@
-import dayjs from "dayjs"
-import React from "react"
-import Head from "next/head"
-import Image from "next/legacy/image"
-import rehypeSlug from "rehype-slug"
-import { MDXRemote } from "next-mdx-remote"
-import rehypeHighlight from "rehype-highlight"
-import rehypeCodeTitles from "rehype-code-titles"
-import { serialize } from "next-mdx-remote/serialize"
-import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_med'
-import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import Button from "../../components/Button"
-import BlogEntry from "../../components/BlogEntry"
+import dayjs from 'dayjs';
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/legacy/image';
+import rehypeSlug from 'rehype-slug';
+import { MDXRemote } from 'next-mdx-remote';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeCodeTitles from 'rehype-code-titles';
+import { serialize } from 'next-mdx-remote/serialize';
+import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_med';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import Button from '../../components/Button';
+import BlogEntry from '../../components/BlogEntry';
 // import HeadSeo from "../../components/HeadSEO"
-import MHeaderRound from "../../components/MHeaderRound"
-import OneBlank from "../../components/OneBlank";
-import BlogSEO from "../../components/BlogSEO"
-import YoutubeEmbed from "../../components/YoutubeEmbed"
-
+import MHeaderRound from '../../components/MHeaderRound';
+import OneBlank from '../../components/OneBlank';
+import BlogSEO from '../../components/BlogSEO';
+import YoutubeEmbed from '../../components/YoutubeEmbed';
+import Link from 'next/link';
+import Breadcrumbs from 'nextjs-breadcrumbs';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
   const youtube = frontmatter.youtube;
   const description = frontmatter.description;
+  const toc = frontmatter.toc;
+  const slug = frontmatter.slug;
+
   return (
     <React.Fragment>
       <BlogSEO
-        title={(frontmatter.title) + " | Meditations of a Rockstar by Jacob's Blue"}
+        title={
+          frontmatter.title + " | Meditations of a Rockstar by Jacob's Blue"
+        }
         description={frontmatter.description}
         canonical={frontmatter.slug}
         image={frontmatter.thumbnail}
       />
-      <MHeaderRound title={frontmatter.title} rt={frontmatter.readingTime}/>
-      <div className=" mb-16 selection:bg-yellow-200 scroll-smooth ">
-        <div className="not-prose flex-block space-y-6">
-        { image ?    
-          <div className="relative w-full aspect-square sm:aspect-video mb-8">
-                <Image
-                  src={frontmatter.image}
-                  alt={frontmatter.alt}
-                  // placeholder="blur"
-                  blurDataURL='https://jacobs.blue'
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: "cover"
-                  }} />
-          </div>
-            :
-          null
-          }
-        { youtube ?    
-          <div className="lg:w-[80%] my-8 container-blog relative h-full aspect-square rounded-3xl overflow-hidden sm:aspect-video">
-                <YoutubeEmbed
-                embedId={frontmatter.youtube}
-                />
-          </div>
-            :
-          null
-          }
-            <div className="pb-1 sm:pb-3">
-                
-              <h1 className="py-6 md:py-8 lg:py-8 tracking-tighter font-fruit text-7xl leading-[.9] md:text-[8em] max-w-[90%] md:max-w-95% lg:text-[10em] xl:text-[14em] w-[640px] lg:max-w-full overflow-visible lg:w-full mx-auto lg:text-center ">{frontmatter.title}</h1>
-              {/* { description ? 
-                <p className="text-2xl font-sans tracking-wide text-neutral-600">{frontmatter.description}</p>
-                :
-                null
-              } */}
-              <div className="flex container-blog md:flex md:flex-nowrap items-center space-x-4 text-[12px] md:text-sm  text-neutral-500 font-mono not-prose md:space-y-0 ">
-                  {/* <p className="">---</p> */}
-                  <p className="items-center px-3 py-1 text-left flex-nowrap border-solid border rounded-full text-neutral-900 border-neutral-900">{frontmatter.readingTime}</p>
-                  <p className="px-3 py-1 rounded-full border border-solid border-neutral-500 text-neutral-500">Last edited {dayjs(frontmatter.lastEdited).format("MMM D, YYYY")}</p>
-                </div>
-            </div>
+      {/* <MHeaderRound title={frontmatter.title} rt={frontmatter.readingTime} /> */}
+      <div className="flex flex-col">
+        <div className="p-8 flex-row w-full z-20">
+          <Breadcrumbs useDefaultStyle rootLabel="Home" />
+          <Link
+            href="/meditations"
+            className="flex w-36 group no-underline items-center space-x-1 transition-all"
+          >
+            <span className="flex justify-end w-5 text-base material-icons group-hover:-translate-x-1 transition-all">
+              arrow_west
+            </span>
+            <p className="text-lg">All entries</p>
+          </Link>
         </div>
-        <article className="content prose-p:tracking-tight container-blog prose-p:font-bask prose-base lg:prose-lg prose-lead:leading-loose prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose-blockquote:text-2xl prose-blockquote:leading-relaxed prose-blockquote:tracking-tight prose-blockquote:font-fruit prose:tracking-tighter prose-a:blue-500 prose:neutral prose-headings:tracking-tighter prose-headings:font-mono prose-headings:uppercase prose-blockquote:border-l-2 prose-blockquote:border-neutral-300 prose-blockquote:pl-6 prose-ul:list-disc prose-ul:font-bask prose-ul:decoration-neutral-300">
-          <MDXRemote {...source} components={{ Image, Button, BlogEntry, OneBlank }} />
-        </article>
+        <div className="w-full fixed left-0 top-0 p-8 z-10  bg-gradient-to-t from-white/0 backdrop-blur-[1px] to-white"></div>
+        <div className="flex my-24 mx-12 space-x-6 scroll-smooth">
+          <div className="flex w-60">
+            <div className="fixed">
+              <div className="flex flex-col w-full pt-1">
+                {toc.map((heading, index) => {
+                  const clean = heading.replace(/-/g, ' ');
+                  return (
+                    <Link
+                      href={slug + '#' + heading}
+                      key={index}
+                      className="text-base py-1 no-underline capitalize text-neutral-400 scroll-smooth hover:text-neutral-800 transition-all"
+                    >
+                      {clean}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className=" selection:bg-yellow-200 scroll-smooth">
+            <div className="not-prose flex-block space-y-2">
+              {image ? (
+                <div className="relative w-full aspect-square sm:aspect-video my-8">
+                  <Image
+                    src={frontmatter.image}
+                    alt={frontmatter.alt}
+                    // placeholder="blur"
+                    blurDataURL="https://jacobs.blue"
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: 'cover',
+                    }}
+                  />
+                </div>
+              ) : null}
+              {youtube ? (
+                <div className="lg:w-[80%] my-8 container-blog relative h-full aspect-square rounded-3xl overflow-hidden sm:aspect-video">
+                  <YoutubeEmbed embedId={frontmatter.youtube} />
+                </div>
+              ) : null}
+              <div className="font-mont space-y-2">
+                <h1 className="tracking-tight  font-medium text-2xl container-blog ">
+                  {frontmatter.title}
+                </h1>
+                {description ? (
+                  <p className="text-2xl text-black/50">
+                    {frontmatter.description}
+                  </p>
+                ) : null}
+                <div className="flex container-blog md:flex md:flex-nowrap items-center text-base pt-1 space-x-4 text-neutral-700 font-mont md:space-y-0 ">
+                  <p className="">
+                    {dayjs(frontmatter.published).format('MMM YYYY')}
+                  </p>
+                  {/* <p className="text-left flex-nowrap">
+                    {frontmatter.readingTime}
+                  </p> */}
+                </div>
+              </div>
+            </div>
+            <article className="content prose-headings:no-underline prose-headings:text-neutral-700 scroll-smooth prose-p:tracking-tight container-blog prose-p:font-mont prose-2xl leading-normal prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose:tracking-tighter prose-a:blue-500 prose:neutral prose-headings:tracking-tighter prose-headings:font-mont prose-headings:prose-2xl prose-headings:font-normal prose-ul:list-disc prose-ul:leading-tight prose-ul:text-2xl prose-ul:decoration-neutral-300 prose-p:text-neutral-700">
+              <MDXRemote
+                {...source}
+                components={{ Image, Button, BlogEntry, OneBlank }}
+              />
+            </article>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );
@@ -93,9 +136,9 @@ export async function getStaticProps({ params }) {
         [
           rehypeAutolinkHeadings,
           {
-            properties: { className: ["anchor"] },
+            properties: { className: ['anchor'] },
           },
-          { behaviour: "wrap" },
+          { behaviour: 'wrap' },
         ],
         rehypeHighlight,
         rehypeCodeTitles,

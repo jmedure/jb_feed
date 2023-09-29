@@ -1,5 +1,42 @@
 [
     {
+        "title": "Born in the Sunset: Thoughts to Oasis - B-SIDES",
+        "kind": "music",
+        "link": "/songs/b-sides",
+        "published": "true",
+        "image": "/cover-art/bsides.jpg",
+        "spotify": "https://open.spotify.com/album/5MYgZeMu69v9StCqweAlep?si=2Vl6cKCdTO66VP8ehpFG7Q",
+        "apple": "https://music.apple.com/us/album/give-and-take/1673782943?i=1673782945",
+        "youtube": "https://www.youtube.com/watch?v=UVi66iTeqw4&list=OLAK5uy_kFue7wQ8gEXis1qV7uEAn8suRh9TNFuOI",
+        "tidal": "https://tidal.com/browse/track/278318697",
+        "soundcloud": "https://soundcloud.com/jacobsblue/give-and-take?si=79ba80e5012f403d9c030b558ebbed76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+        "amazon": "https://music.amazon.com/albums/B0BWKBP2XY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_W2MpLCvxqZR2NEeRhTJEi6HWh"
+    },
+    {
+        "title": "B-SIDES IS COMING SOON!!!",
+        "kind": "video",
+        "link": "https://www.youtube.com/watch?v=FZkZtbpiDNU",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "FZkZtbpiDNU"
+    },
+    {
+        "title": "just cookin ep. 10 - making guitar samples",
+        "kind": "video",
+        "link": "https://www.youtube.com/watch?v=jVNScqPRDFY",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "jVNScqPRDFY"
+    },
+    {
+        "title": "just cookin ep. 9 - cookin up an absolute vibe",
+        "kind": "video",
+        "link": "https://www.youtube.com/watch?v=MySVm0fwVfY&t=93s",
+        "published": "true",
+        "description": " ",
+        "youtubeEmbed": "MySVm0fwVfY"
+    },
+    {
         "title": "Give and take - single",
         "kind": "music",
         "link": "/songs/give-and-take",
