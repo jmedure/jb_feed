@@ -19,6 +19,7 @@ export default function JBHeader() {
   }, []);
 
   console.log(visitors.pageviews);
+
   return (
     <div
       style={
@@ -32,10 +33,10 @@ export default function JBHeader() {
       <div className="text-base flex justify-between w-full items-center grid-cols-3 ">
         <div className="col-span-1 ">
           <Link href="/" legacyBehavior>
-            <h1 className="pb-0 group tracking-tight cursor-pointer transition-colors text-xl leading-none">
-              Jacob&#39;s{' '}
-              <strong className="group-hover:text-sky-600 ">Blue</strong>
-            </h1>
+            <div className="flex items-center cursor-pointer group transition-colors text-xl space-x-1 ">
+              <h1 className="pb-0 tracking-tight leading-none">Jacob&#39;s</h1>
+              <p className="group-hover:text-sky-600">Blue</p>
+            </div>
           </Link>
           <Subheader />
         </div>

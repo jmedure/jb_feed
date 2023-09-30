@@ -11,11 +11,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 300;
 }
 
-a {
+/* a {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: #7e7e7e;
@@ -34,7 +32,6 @@ a.dark {
   text-underline-offset: 1px;
   color: #a7a7a7;
   text-decoration-color: #a7a7a760;
-  /* text-decoration-color: #a9a9a9; */
   transition: .1s;
   cursor: pointer;
 }
@@ -42,7 +39,7 @@ a.dark {
 a.dark:hover, a.dark:active {
   color:white;
   text-decoration-color: white;
-}
+} */
 
 .container{
   max-width: 95%;
@@ -56,7 +53,7 @@ a.dark:hover, a.dark:active {
 
 .container-blog{
   max-width: 90%;
-  /* margin: 0px; */
+  margin: 0px auto;
 }
 
 .credit{
@@ -85,7 +82,7 @@ a.dark:hover, a.dark:active {
   font-family: neue;
 }
 
-.breadcrumbs{
+/* .breadcrumbs{
   display: flex;
   font: bolder;
   justify-content: space-between;
@@ -111,7 +108,7 @@ a.dark:hover, a.dark:active {
   transform: none;
   cursor: inherit;
   color: #9e9e9e;
-}
+} */
 
 
 .bread-crumb a:active {

@@ -1,6 +1,5 @@
 import dayjs from 'dayjs';
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/legacy/image';
 import rehypeSlug from 'rehype-slug';
 import { MDXRemote } from 'next-mdx-remote';
@@ -11,13 +10,11 @@ import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_med';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import Button from '../../components/Button';
 import BlogEntry from '../../components/BlogEntry';
-// import HeadSeo from "../../components/HeadSEO"
-import MHeaderRound from '../../components/MHeaderRound';
 import OneBlank from '../../components/OneBlank';
 import BlogSEO from '../../components/BlogSEO';
 import YoutubeEmbed from '../../components/YoutubeEmbed';
 import Link from 'next/link';
-import Breadcrumbs from 'nextjs-breadcrumbs';
+import Breadcrumbs from '@marketsystems/nextjs13-appdir-breadcrumbs';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -38,9 +35,16 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       />
       {/* <MHeaderRound title={frontmatter.title} rt={frontmatter.readingTime} /> */}
       <div className="flex flex-col">
-        <div className="p-8 flex-row w-full z-20">
-          <Breadcrumbs useDefaultStyle rootLabel="Home" />
-          <Link
+        <div className="p-8 flex-row w-full z-20 fixed">
+          <Breadcrumbs
+            rootLabel="Home"
+            // replaceCharacterList={[{ from: '-', to: '  ' }]}
+            transformLabel={(label) => label + ' / ' + ' '}
+            listClassName="flex space-x-1 capitalize"
+            activeItemClassName="text-black"
+            inactiveItemClassName="text-black/50 hover:decoration-black hover:text-black transition-all"
+          />
+          {/* <Link
             href="/meditations"
             className="flex w-36 group no-underline items-center space-x-1 transition-all"
           >
@@ -48,36 +52,38 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               arrow_west
             </span>
             <p className="text-lg">All entries</p>
-          </Link>
+          </Link> */}
         </div>
-        <div className="w-full fixed left-0 top-0 p-8 z-10  bg-gradient-to-t from-white/0 backdrop-blur-[1px] to-white"></div>
-        <div className="flex my-24 mx-12 space-x-6 scroll-smooth">
-          <div className="flex w-60">
-            <div className="fixed">
-              <div className="flex flex-col w-full pt-1">
-                {toc.map((heading, index) => {
-                  const clean = heading.replace(/-/g, ' ');
-                  return (
-                    <Link
-                      href={slug + '#' + heading}
-                      key={index}
-                      className="text-base py-1 no-underline capitalize text-neutral-400 scroll-smooth hover:text-neutral-800 transition-all"
-                    >
-                      {clean}
-                    </Link>
-                  );
-                })}
+        <div className="w-full fixed left-0 top-0 p-12 z-10 bg-gradient-to-t from-white/0 backdrop-blur-[1px] to-white"></div>
+        <div className="flex my-48 mx-8">
+          {toc.length ? (
+            <div className="flex w-60 pr-6">
+              <div className="fixed">
+                <div className="flex flex-col w-full no-underline">
+                  {toc.map((heading, index) => {
+                    const clean = heading.replace(/-/g, ' ');
+                    return (
+                      <Link
+                        href={slug + '#' + heading}
+                        key={index}
+                        className="text-base py-1 no-underline capitalize text-neutral-400 hover:text-neutral-800 transition-all"
+                      >
+                        {clean}
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" selection:bg-yellow-200 scroll-smooth">
+          ) : null}
+          <div className="selection:bg-yellow-200 scroll-smooth">
             <div className="not-prose flex-block space-y-2">
               {image ? (
                 <div className="relative w-full aspect-square sm:aspect-video my-8">
                   <Image
                     src={frontmatter.image}
                     alt={frontmatter.alt}
-                    // placeholder="blur"
+                    placeholder="blur"
                     blurDataURL="https://jacobs.blue"
                     fill
                     sizes="100vw"
@@ -111,7 +117,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                 </div>
               </div>
             </div>
-            <article className="content prose-headings:no-underline prose-headings:text-neutral-700 scroll-smooth prose-p:tracking-tight container-blog prose-p:font-mont prose-2xl leading-normal prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose:tracking-tighter prose-a:blue-500 prose:neutral prose-headings:tracking-tighter prose-headings:font-mont prose-headings:prose-2xl prose-headings:font-normal prose-ul:list-disc prose-ul:leading-tight prose-ul:text-2xl prose-ul:decoration-neutral-300 prose-p:text-neutral-700">
+            <article className="content prose-headings:no-underline prose-headings:text-neutral-700 scroll-smooth prose-p:tracking-tight container-blog prose-p:font-mont prose-2xl leading-snug prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose:tracking-tighter prose-a:blue-500 prose:neutral prose-headings:tracking-tighter prose-headings:font-mont prose-headings:prose-2xl prose-headings:font-normal prose-neutral prose-ul:list-disc prose-ul:leading-tight prose-ul:text-2xl prose-ul:decoration-neutral-300 prose-p:text-neutral-700">
               <MDXRemote
                 {...source}
                 components={{ Image, Button, BlogEntry, OneBlank }}

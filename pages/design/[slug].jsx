@@ -42,7 +42,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           <Link
             href="/design"
             className="flex p-2 align-middle justify-center relative -bottom-16 -left-[480px]  no-underline group items-center space-x-1 transition-all"
-          >
+            legacyBehavior>
             <span className="material-icons text-base group-hover:-translate-x-1 transition-all">
               arrow_west
             </span>
