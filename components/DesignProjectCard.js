@@ -29,20 +29,10 @@ export default function DesignProjectCard(props) {
     <Link
       href={`/design/${slug}`}
       key={index}
-      passHref
-      legacyBehavior
-      // onClick={randomColor()}
+      passHref // onClick={randomColor()}
     >
-      <div
-        className="font-mont flex group p-4 space-x-4 bg-white tracking-normal
-          flex-row w-full items-center justify-between cursor-pointer
-          rounded-3xl hover:relative transition-all duration-200 text-base
-           text-neutral-800  hover:bg-neutral-50"
-      >
+      <div className="font-mont flex group p-4 space-x-4 bg-white tracking-normal flex-row w-full items-center justify-between cursor-pointer rounded-3xl hover:relative transition-all duration-200 text-base text-neutral-800  hover:bg-neutral-50">
         <div className="flex space-x-4 items-center">
-          {/* <div
-            className={`${color} bg-inherit border border-solid rounded-xl w-14 h-14`}
-          ></div> */}
           <Image
             className="rounded-xl w-12 h-12 relative"
             src={tile}

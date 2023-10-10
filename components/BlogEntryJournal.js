@@ -16,11 +16,11 @@ export default function BlogEntryJournal(props) {
 
   return (
     <Link href={`/meditations/${slug}`} key={index} passHref legacyBehavior>
-      <div className="flex group p-6 space-x-4 bg-white flex-row w-full items-center justify-between cursor-pointer tracking-normal border border-solid border-neutral-300 rounded-md hover:relative transition-all duration-200 hover:border-black hover:drop-shadow-lg">
-        <h1 className="text-3xl sm:text-4xl font-fruit tracking-tighter font-light md:not-italic  leading-tight">
+      <div className="flex group p-6 space-x-4 bg-white flex-row w-full items-center justify-between cursor-pointer tracking-normal border border-solid border-neutral-300 rounded-xl hover:relative transition-all duration-200 hover:border-black hover:drop-shadow-lg">
+        <h1 className="text-xl font-mont tracking-tight font-light md:not-italic  leading-tight">
           {title}
         </h1>
-        <div className="space-x-8 font-mono flex-grow w-24 justify-end text-right flex-nowrap text-sm">
+        <div className="space-x-8 font-mont text-neutral-500 flex-grow w-24 justify-end text-right flex-nowrap text-sm">
           {/* <p>J. Medure</p> */}
           <p>{dayjs(date).format('MMM YY')}</p>
         </div>

@@ -33,8 +33,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         canonical={frontmatter.slug}
         image={frontmatter.thumbnail}
       />
-      {/* <MHeaderRound title={frontmatter.title} rt={frontmatter.readingTime} /> */}
-      <div className="flex flex-col">
+      <div className="flex flex-col w-full mx-auto">
         <div className="p-8 flex-row w-full z-20 fixed">
           <Breadcrumbs
             rootLabel="Home"
@@ -54,11 +53,31 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             <p className="text-lg">All entries</p>
           </Link> */}
         </div>
-        <div className="w-full fixed left-0 top-0 p-12 z-10 bg-gradient-to-t from-white/0 backdrop-blur-[1px] to-white"></div>
-        <div className="flex my-48 mx-8">
+
+        <div className="w-full fixed left-0 top-0 p-11 z-10 bg-gradient-to-t from-white/0 backdrop-blur-[1px] to-white"></div>
+        <div className="flex w-full px-4 sm:px-8 mt-24 mb-12 space-x-4 max-w-7xl mx-auto">
+          {/* {youtube ? (
+            <div className="flex-grow w-full h-full hover:drop-shadow-lg overflow-hidden aspect-video">
+              <YoutubeEmbed embedId={frontmatter.youtube} />
+            </div>
+          ) : null} */}
+          {image ? (
+            <div className="relative w-full flex aspect-video">
+              <Image
+                src={frontmatter.image}
+                alt={frontmatter.alt}
+                placeholder="blur"
+                blurDataURL="https://jacobs.blue"
+                objectFit="cover"
+                layout="fill"
+              />
+            </div>
+          ) : null}
+        </div>
+        <div className="max-w-7xl mx-auto">
           {toc.length ? (
-            <div className="flex w-60 pr-6">
-              <div className="fixed">
+            <div className="sticky w-24 m-8 top-24 ">
+              <div className="-left-80 absolute flex flex-col">
                 <div className="flex flex-col w-full no-underline">
                   {toc.map((heading, index) => {
                     const clean = heading.replace(/-/g, ' ');
@@ -76,48 +95,28 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               </div>
             </div>
           ) : null}
-          <div className="selection:bg-yellow-200 scroll-smooth">
-            <div className="not-prose flex-block space-y-2">
-              {image ? (
-                <div className="relative w-full aspect-square sm:aspect-video my-8">
-                  <Image
-                    src={frontmatter.image}
-                    alt={frontmatter.alt}
-                    placeholder="blur"
-                    blurDataURL="https://jacobs.blue"
-                    fill
-                    sizes="100vw"
-                    style={{
-                      objectFit: 'cover',
-                    }}
-                  />
-                </div>
-              ) : null}
-              {youtube ? (
-                <div className="lg:w-[80%] my-8 container-blog relative h-full aspect-square rounded-3xl overflow-hidden sm:aspect-video">
-                  <YoutubeEmbed embedId={frontmatter.youtube} />
-                </div>
-              ) : null}
-              <div className="font-mont space-y-2">
-                <h1 className="tracking-tight  font-medium text-2xl container-blog ">
+          <div className="selection:bg-yellow-200 scroll-smooth max-w-[640px] mb-80 mx-auto">
+            <div className="not-prose flex-block flex space-y-2 pb-8">
+              <div className="font-jb space-y-2">
+                <h1 className="tracking-tight  font-medium text-2xl ">
                   {frontmatter.title}
                 </h1>
-                {description ? (
+                {/* {description ? (
                   <p className="text-2xl text-black/50">
                     {frontmatter.description}
                   </p>
-                ) : null}
-                <div className="flex container-blog md:flex md:flex-nowrap items-center text-base pt-1 space-x-4 text-neutral-700 font-mont md:space-y-0 ">
-                  <p className="">
-                    {dayjs(frontmatter.published).format('MMM YYYY')}
+                ) : null} */}
+                <div className="flex md:flex md:flex-nowrap items-center text-base pt-1 space-x-4 text-neutral-500 font-jb tracking-tight md:space-y-0 ">
+                  <p className="text-left flex-nowrap">
+                    ( {frontmatter.readingTime} )
                   </p>
-                  {/* <p className="text-left flex-nowrap">
-                    {frontmatter.readingTime}
-                  </p> */}
+                  <p className="">
+                    Published {dayjs(frontmatter.date).format('DD.MM.YY')}
+                  </p>
                 </div>
               </div>
             </div>
-            <article className="content prose-headings:no-underline prose-headings:text-neutral-700 scroll-smooth prose-p:tracking-tight container-blog prose-p:font-mont prose-2xl leading-snug prose-a:text-blue-400 prose-a:underline-offset-2 prose-a:decoration-blue-400 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose:tracking-tighter prose-a:blue-500 prose:neutral prose-headings:tracking-tighter prose-headings:font-mont prose-headings:prose-2xl prose-headings:font-normal prose-neutral prose-ul:list-disc prose-ul:leading-tight prose-ul:text-2xl prose-ul:decoration-neutral-300 prose-p:text-neutral-700">
+            <article className="content w-full prose-headings:no-underline prose-headings:text-black prose-headings:font-medium scroll-smooth prose-p:tracking-tight c prose-p:font-jb prose-2xl leading-snug prose-a:text-blue-400 prose-a:font-thin prose-a:decoration-blue-100 hover:prose-a:decoration-blue-500 prose-a:transition-all prose-a:duration-100 hover:prose-a:bg-blue-50 hover:prose-a:text-blue-500 prose-a:underline prose-a:underline-offset-2 prose prose:tracking-tighter prose-a:blue-500 prose:neutral prose-blockquote:font-fruit prose-headings:tracking-tight prose-headings:font-jb prose-headings:prose-2xl  prose-neutral prose-ul:list-disc prose-ul:leading-tight prose-ul:text-2xl prose-ul:decoration-neutral-300 prose-p:text-neutral-700">
               <MDXRemote
                 {...source}
                 components={{ Image, Button, BlogEntry, OneBlank }}
