@@ -11,10 +11,10 @@ import { getSlug, getArticleFromSlug } from '../../src/utils/mdx_design';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import Button from '../../components/Button';
 import BlogEntry from '../../components/BlogEntry';
-import MHeaderRound from '../../components/MHeaderRound';
+// import MHeaderRound from '../../components/MHeaderRound';
 import OneBlank from '../../components/OneBlank';
 import BlogSEO from '../../components/BlogSEO';
-import YoutubeEmbed from '../../components/YoutubeEmbed';
+// import YoutubeEmbed from '../../components/YoutubeEmbed';
 import Link from 'next/link';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
@@ -32,7 +32,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       {/* <MHeaderRound title={frontmatter.title} rt={frontmatter.readingTime} /> */}
       <div className="selection:bg-yellow-200 scroll-smooth ">
         <div className="flex sticky top-0 p-8 z-40  bg-gradient-to-t from-white/0 backdrop-blur-[1px] to-white align-middle justify-center transition-all hover:text-blue-500">
-          <Link href="/" passHref>
+          <Link href="/" passHref legacyBehavior>
             <div className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer">
               {/* <div className="border-white border-2 rounded-full relative p-5 cursor-pointer">
                 <Image alt="blue gradient" src="/logo.png" sizes="100" fill />
@@ -42,7 +42,6 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           <Link
             href="/design"
             className="flex p-2 align-middle justify-center relative -bottom-16 -left-[480px]  no-underline group items-center space-x-1 transition-all"
-            legacyBehavior
           >
             <span className="material-icons text-base group-hover:-translate-x-1 transition-all">
               arrow_west

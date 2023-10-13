@@ -31,7 +31,7 @@ export default function Blog({ posts }) {
         <div className="">
           <div className="py-24 md:py-32 h-full">
             <div className="font-mono font-light text-sm tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
-              <div className="w-full space-y-2">
+              <div className="w-full space-y-6">
                 {posts.map((frontMatter, index) => {
                   if (frontMatter.isPublished == 'true') {
                     return (

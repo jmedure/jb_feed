@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MainNav from './MainNav';
 import Link from 'next/link';
 import Subheader from './Subheader';
+import LiveVisitors from './LiveVistors';
 
 export default function JBHeader() {
   const [visitors, setVisitors] = useState([]);
@@ -18,7 +19,7 @@ export default function JBHeader() {
     getData();
   }, []);
 
-  console.log(visitors.pageviews);
+  // console.log(visitors.pageviews);
 
   return (
     <div
@@ -30,7 +31,7 @@ export default function JBHeader() {
       }
       className="py-4 w-full text-black"
     >
-      <div className="text-base flex justify-between w-full items-center grid-cols-3 ">
+      <div className="text-base font-normal font-jbd flex justify-between w-full items-center grid-cols-3 ">
         <div className="col-span-1 ">
           <Link href="/" legacyBehavior>
             <div className="flex items-center cursor-pointer group transition-colors text-xl space-x-1 ">
@@ -41,19 +42,9 @@ export default function JBHeader() {
           <Subheader />
         </div>
         <div className="col-span-1">
-          {/* <Link href="/links" legacyBehavior>
-            <div className="flex items-center text-base space-x-1 hover:italic hover:font-light cursor-pointer">
-              <p className="">all links</p>
-              <span className="material-icons text-sm">east</span>
-            </div>
-          </Link> */}
-          {/* {visitors.map((visitor) => {
-            return (
-              <> */}
-          <div className="items-center flex space-x-2">
-            <div className="p-1 rounded-full animate-pulse duration-1000 bg-blue-800"></div>
-            <p>{visitors.pageviews} Live visitors </p>
-          </div>
+          <Link href="#footer" className="underline">
+            Explore
+          </Link>
           {/* </>
             );
           })} */}
