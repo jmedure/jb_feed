@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import JBHeader from '../components/JBHeader';
 import { Post } from '../components/Post';
 import useSWR from 'swr';
@@ -23,22 +23,22 @@ export default function Home() {
     // let allPosts = data.filter(post,index)
     return (
       <main className="container-fg">
-          <div className='flex-wrap bg-white/90 backdrop-blur-sm z-40 sticky top-0'>
-            <JBHeader />
-            <MainNav />
-          </div>
-            <div className="flex my-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
-              {data
-                .filter(function (posts) {
-                  return posts.kind === 'music' && posts.published == 'true';
-                })
-                .map(function (post, index) {
-                  return <Post key={index} post={post} />;
-                })}
-            </div>
-            {/* (frontMatter.published=="true") && */}
-            <Footer />
-          {/* </div>
+        <div className="flex-wrap bg-white/90 backdrop-blur-sm z-40 sticky top-0">
+          <JBHeader />
+          <MainNav />
+        </div>
+        <div className="columns-1 sm:columns-2 lg:columns-3 row-auto gap-4 pt-2 pb-8">
+          {data
+            .filter(function (posts) {
+              return posts.kind === 'music' && posts.published == 'true';
+            })
+            .map(function (post, index) {
+              return <Post key={index} post={post} />;
+            })}
+        </div>
+        {/* (frontMatter.published=="true") && */}
+        <Footer />
+        {/* </div>
         </div> */}
       </main>
     );

@@ -8,20 +8,7 @@ import BubbleLink from './BubbleLink';
 import { motion } from 'framer-motion';
 
 export const Post = ({ post }) => {
-  const {
-    title,
-    link,
-    kind,
-    description,
-    image,
-    youtubeEmbed,
-    youtube,
-    soundcloud,
-    spotify,
-    apple,
-    amazon,
-    tidal,
-  } = post;
+  const { title, link, kind, date, cta, image, youtubeEmbed } = post;
 
   const extras = () => {
     if (kind === 'video') {
@@ -37,9 +24,9 @@ export const Post = ({ post }) => {
             </div>
           </div>
 
-          <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
+          {/* <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
             north_east
-          </span>
+          </span> */}
         </div>
       );
     }
@@ -52,9 +39,9 @@ export const Post = ({ post }) => {
             </div>
           </div>
 
-          <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
+          {/* <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
             east
-          </span>
+          </span> */}
         </div>
       );
     }
@@ -62,7 +49,7 @@ export const Post = ({ post }) => {
       return (
         <div className="flex mt-4 flex-row justify-between items-end lg:pt-0">
           <div className="flex-grow flex-auto ">
-            <div className="flex items-center justify-start justify-items-center flex-wrap">
+            {/* <div className="flex items-center justify-start justify-items-center flex-wrap">
               <BubbleLink href={spotify} label="spotify" mui="north_east" />
               <BubbleLink href={apple} label="apple" mui="north_east" />
               <BubbleLink href={youtube} label="youtube" mui="north_east" />
@@ -74,12 +61,12 @@ export const Post = ({ post }) => {
               <BubbleLink href={amazon} label="amazon" mui="north_east" />
               <BubbleLink href={tidal} label="tidal" mui="north_east" />
               <BubbleLink href={link} label="more" mui="east" />
-            </div>
+            </div> */}
           </div>
 
-          <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
+          {/* <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
             east
-          </span>
+          </span> */}
         </div>
       );
     }
@@ -92,9 +79,9 @@ export const Post = ({ post }) => {
             </div>
           </div>
 
-          <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
+          {/* <span className="sm:flex group-hover:visible sm:not-hidden material-icons text-right text-7xl md:text-8xl lg:text-9xl">
             north_east
-          </span>
+          </span> */}
         </div>
       );
     }
@@ -106,7 +93,10 @@ export const Post = ({ post }) => {
   };
 
   return (
-    <a href={link} className="group no-underline font-mont w-full">
+    <a
+      href={link}
+      className="flex-block flex-wrap group no-underline font-jbd font-normal h-min"
+    >
       <motion.div
         variants={item}
         initial="hidden"
@@ -114,10 +104,10 @@ export const Post = ({ post }) => {
         // initial={{ opacity: 0 }}
         // whileInView={{ opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className="sm:p-6 border-2 border-solid border-blue-100 p-4 mb-6 w-full sm:hover:bg-blue-200 bg-blue-50 rounded-[3em] md:rounded-[4em] text-black transition-all"
+        className="break-inside-avoid p-3 space-y-4 border-2 border-solid border-blue-100 outline-blue-500 sm:hover:outline hover:outline-2  sm:hover:bg-blue-200 mb-4 bg-blue-50 rounded-xl text-black transition-all"
       >
         {image ? (
-          <div className="w-full mb-4 relative h-full overflow-hidden aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] sm:aspect-video">
+          <div className="w-full mb-4 relative h-full overflow-hidden aspect-square rounded-lg ">
             <Image
               src={image}
               alt="alt"
@@ -129,25 +119,16 @@ export const Post = ({ post }) => {
           </div>
         ) : null}
         {youtubeEmbed ? (
-          <div className="w-full mb-4 relative h-full  aspect-square rounded-[2.8em] sm:rounded-[2.5em] md:rounded-[3.5em] overflow-hidden sm:aspect-video">
+          <div className="w-full mb-4 relative h-full aspect-square rounded-xl overflow-hidden sm:aspect-video">
             <YoutubeEmbed embedId={youtubeEmbed} />
           </div>
         ) : null}
-        <div className="flex justify-between items-start space-x-4">
-          <h2 className="text-2xl sm:text-5xl leading-none tracking-tight sm:tracking-tighter">
-            {title}
-          </h2>
-          <p className="py-0 px-2 sm:text-xl sm:mt-3 border border-black rounded-full items-center align-middle align-items-center md:text-2xl md:tracking-tight capitalize">
-            {kind}
-          </p>
+        <div className="flex justify-between items-center space-x-4">
+          <h2 className="text-2xl leading-none tracking-tight">{title}</h2>
+          <p className="text-black/50 font-jbd capitalize text-lg">{kind}</p>
         </div>
-
-        {description ? (
-          <p className="truncate sm:text-2xl text-base md:text-3xl md:tracking-tight lg:text-4xl sm:py-4 md:py-6 lg:py-6 py-2">
-            {description}
-          </p>
-        ) : null}
-        {extras()}
+        {/* {extras()} */}
+        {cta ? <BubbleLink href={link} label={cta} mui="north_east" /> : null}
       </motion.div>
     </a>
   );

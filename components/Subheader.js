@@ -1,27 +1,30 @@
 import React from 'react';
-import Typewriter from "typewriter-effect";
-import styles from '../styles/Subheader.module.css'
+import Typewriter from 'typewriter-effect';
+import styles from '../styles/Subheader.module.css';
 
 function Subheader() {
-    return (
-        <div className="py-0 mt-0 text-base mx-auto text-left">
-            <Typewriter
-                options={{
-                    strings: [
-                        'probably cooking something', 
-                        'up to no good',
-                        'pursuing mastery',
-                        'making some tunes',
-                        'reading a book',
-                        'drinking some cold, cold, cold brew',
-                        'going outside'
-                        ],
-                    autoStart: true,
-                    loop: true,
-                    }}
-                    />
-            </div>
-        )
+  return (
+    <div className="-m-1 font-jbd text-xl text-neutral-600 w-[400px] tracking-tight text-left">
+      <Typewriter
+        options={{
+          strings: [
+            'pursuing mastery',
+            'making some tunes',
+            'probably cooking something',
+            'loving on my little family',
+            'reading a book',
+            'sharing my work',
+            'rewriting for clarity',
+            'going outside',
+            'training for my first marathon',
+            'drinking some cold, cold, cold brew',
+          ],
+          autoStart: true,
+          loop: true,
+        }}
+      />
+    </div>
+  );
 }
 
 export default Subheader;

@@ -25,7 +25,7 @@ export default function Home() {
           <JBHeader />
           <MainNav />
         </div>
-        <div className="flex my-2 flex-col lg:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-2 gap-x-8">
+        <div className="columns-1 sm:columns-2 lg:columns-3 row-auto gap-4 pt-2 pb-8">
           {data
             .filter(function (posts) {
               return posts.kind === 'writing' && posts.published == 'true';

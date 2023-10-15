@@ -10,7 +10,7 @@ import LiveVisitors from './LiveVistors';
 export default function Footer(props) {
   return (
     <div id="footer">
-      <div className="mb-4 font-mont border-blue-200 border-solid border rounded-3xl lg:rounded-[3em]">
+      <div className="mb-4 font-jbd font-normal border-blue-200 border-solid border rounded-xl">
         <div className="p-4 lg:p-6">
           {/* <div className="sub-text pt-4 flex w-full justify-between items-center">
                 {/* <h1 className="text-4xl font-fruit tracking-tighter italic">Jacob&#39;s Blue</h1> */}
@@ -176,11 +176,11 @@ export default function Footer(props) {
           </p> */}
         </div>
       </div>
-      <div className="flex p-8 justify-center align-middle space-x-4">
+      <div className="flex py-8 justify-center items-center align-middle space-x-4">
         <a href="https://createwcare.com">
           <svg
-            width="98"
-            height="40"
+            width="80"
+            height="32"
             viewBox="0 0 1082 439"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -219,8 +219,8 @@ export default function Footer(props) {
         </a>
         <Link href="/journal/10-percent">
           <svg
-            width="36"
-            height="36"
+            width="32"
+            height="32"
             viewBox="0 0 36 36"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
