@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head';
 import Image from 'next/legacy/image';
-import JBHeader from '../components/JBHeader';
+import MainHeader from '../components/MainHeader';
 import { Post } from '../components/Post';
 import useSWR from 'swr';
 import MainNav from '../components/MainNav';
@@ -23,8 +23,8 @@ export default function Home() {
     return (
       <main className="container-fg">
         <div className="flex-wrap bg-white/90 backdrop-blur-sm z-40 sticky top-0">
-          <JBHeader />
-          <MainNav />
+          <MainHeader />
+          {/* <MainNav /> */}
         </div>
         <div className="columns-1 sm:columns-2 lg:columns-3 row-auto gap-4 pt-2 pb-8">
           {data

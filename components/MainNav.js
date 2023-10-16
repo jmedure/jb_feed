@@ -54,7 +54,7 @@ export default function MainNav() {
               href="/video"
               className={`sm:hover:bg-orange-200 sm:hover:text-orange-800 text-neutral-400 px-3 py-1 rounded-full no-underline ${
                 router.pathname == '/video'
-                  ? ' -solid   ring-1  -x-orange-600  -y-orange-600 text-orange-800 bg-orange-300  -xl'
+                  ? 'text-orange-800 bg-orange-300'
                   : ''
               }`}
             >

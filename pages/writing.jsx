@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head';
-import JBHeader from '../components/JBHeader';
+import JBHeader from '../components/MainHeader';
 import { Post } from '../components/Post';
 import useSWR from 'swr';
 import MainNav from '../components/MainNav';

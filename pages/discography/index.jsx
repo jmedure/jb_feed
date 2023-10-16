@@ -4,13 +4,13 @@ import { getAllArticles } from '../../src/utils/mdx_songs';
 import SongCard from '../../components/SongCard';
 import Footer from '../../components/Footer';
 import AlbumCard from '../../components/AlbumCard';
-import JBHeader from '../../components/JBHeader';
+import JBHeader from '../../components/MainHeader';
 
 export default function Blog({ posts }) {
   return (
     <React.Fragment>
       <Head>
-        <title>Songs | Jacob&#39;s Blue</title>
+        <title>Jacob&#39;s Blue | Discography</title>
       </Head>
 
       <div className="container-fg">
@@ -18,7 +18,7 @@ export default function Blog({ posts }) {
 
         <div className="mb-12">
           <div className="mt-14 mb-20">
-            <h1 className="text-5xl font-mont tracking-tight">Songs</h1>
+            <h1 className="text-5xl font-mont tracking-tight">Discography</h1>
             {/* <p className='text-xl pt-2'>Lyrics, credits, and more.</p> */}
           </div>
 

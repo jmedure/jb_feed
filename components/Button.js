@@ -1,52 +1,51 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
-export default function Button( props ) {
-    
-    const propType = props.type;
-    
-    if (propType == "right") {
+export default function Button(props) {
+  const propType = props.type;
 
-        return (
-            <Link href={props.href} legacyBehavior>
-                <div className="flex mr-auto cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize">
-                    <div className="">{props.copy}</div>
-                    <span className="material-icons text-xs">{props.icon}</span>
-                </div>
-            </Link>
-        );
-    }
-
-    if (propType == "left") {
-        
-        return (
-            <Link href={props.href} legacyBehavior>
-                <div className="flex mr-auto cursor-pointer border text-neutral-500 hover:text-gray-900 hover:underline items-center capitalize">
-                    <span className="material-icons text-xs">{props.icon}</span>
-                    <div className="">{props.copy}</div>
-                </div>
-            </Link>
-        );
-    }
-
-    if (propType == "null") {
-        
-        return (
-            <Link href={props.href} legacyBehavior>
-                <div className="flex mr-auto cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize">
-                    <div className="">{props.copy}</div>
-                </div>
-            </Link>
-        );
-    }
-
+  if (propType == 'right') {
     return (
-        <Link href={props.href} legacyBehavior>
-            <div className="flex cursor-pointer text-neutral-500 hover:text-gray-900 items-center capitalize">
-                <span className="material-icons text-base">subdirectory_arrow_right</span>
-                <div>{props.copy}</div>
-                <span className="material-icons text-xs">{props.icon}</span>
-            </div>    
-        </Link>
+      <a
+        href={props.href}
+        className="flex mr-auto cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize"
+      >
+        <div className="">{props.copy}</div>
+        <span className="material-icons text-xs">{props.icon}</span>
+      </a>
     );
+  }
+
+  if (propType == 'left') {
+    return (
+      <Link href={props.href} legacyBehavior>
+        <div className="flex mr-auto cursor-pointer border text-neutral-500 hover:text-gray-900 hover:underline items-center capitalize">
+          <span className="material-icons text-xs">{props.icon}</span>
+          <div className="">{props.copy}</div>
+        </div>
+      </Link>
+    );
+  }
+
+  if (propType == 'null') {
+    return (
+      <Link href={props.href} legacyBehavior>
+        <div className="flex mr-auto cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize">
+          <div className="">{props.copy}</div>
+        </div>
+      </Link>
+    );
+  }
+
+  return (
+    <Link href={props.href} legacyBehavior>
+      <div className="flex cursor-pointer text-neutral-500 hover:text-gray-900 items-center capitalize">
+        <span className="material-icons text-base">
+          subdirectory_arrow_right
+        </span>
+        <div>{props.copy}</div>
+        <span className="material-icons text-xs">{props.icon}</span>
+      </div>
+    </Link>
+  );
 }

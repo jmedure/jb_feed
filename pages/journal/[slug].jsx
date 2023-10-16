@@ -35,12 +35,25 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         image={frontmatter.thumbnail}
       />
       <div className="flex flex-col w-full mx-auto">
-        <div className="flex pt-8 px-8 pb-6 flex-row w-full z-20">
+        <div className="flex pt-8 px-8 pb-6 flex-row w-full z-20 items-center space-x-1">
+          <Link
+            href="/"
+            passHref
+            className="flex items-center hover:drop-shadow-lg border-white border-2 rounded-full transition-all duration-200 cursor-pointer"
+          >
+            <Image
+              alt="blue gradient"
+              src="/logo.png"
+              width={32}
+              height={32}
+              priority
+            />
+          </Link>
           <Breadcrumbs
-            rootLabel="Home"
             // replaceCharacterList={[{ from: '-', to: '  ' }]}
-            transformLabel={(label) => label + ' / ' + ' '}
-            listClassName="flex space-x-1 capitalize font-jbd font-medium tracking-tight"
+            omitRootLabel
+            transformLabel={(label) => ' / ' + label + ' '}
+            listClassName="flex space-x-1 capitalize font-jbd font-normal tracking-tight"
             activeItemClassName="text-black"
             inactiveItemClassName="text-black/50 hover:decoration-black hover:text-black transition-all"
           />

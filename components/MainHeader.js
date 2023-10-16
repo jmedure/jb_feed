@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Subheader from './Subheader';
 import { motion } from 'framer-motion';
 
-export default function JBHeader() {
+export default function MainHeader() {
   return (
     <div
       style={
@@ -12,7 +12,7 @@ export default function JBHeader() {
           // transform: `translateY(${scrollDirection === 'down' ? 0 : '10px'})`
         }
       }
-      className="py-2 w-full"
+      className="container-fg py-2 w-full"
     >
       <div className="text-xl font-normal font-jbd flex justify-between w-full items-center ">
         <div className="flex items-center space-x-1 w-auto">
@@ -34,9 +34,9 @@ export default function JBHeader() {
           </Link> */}
         <Link href="#footer" className="">
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            transition={{ ease: 'linear', duration: 1 }}
-            className="fill-black p-2 rounded-full bg-black/5  hover:bg-black/10 transition-all border border-black/20 hover:drop-shadow"
+            whileHover={{ scale: 1.1 }}
+            transition={{ ease: 'linear', duration: 0.01 }}
+            className="fill-black p-2 rounded-full bg-black/5  hover:bg-white transition-all border border-black/20 hover:drop-shadow"
           >
             <svg
               width="24"

@@ -9,103 +9,178 @@ import LiveVisitors from './LiveVistors';
 
 export default function Footer(props) {
   return (
-    <div id="footer">
-      <div className="mb-4 font-jbd font-normal border-blue-200 border-solid border rounded-xl">
-        <div className="p-4 lg:p-6">
+    <div id="footer" className="container-fg">
+      <div className="mb-4 font-jbd text-lg font-normal tracking-tight border-blue-200 border-solid border rounded-xl">
+        <div className="p-4 lg:p-4">
           {/* <div className="sub-text pt-4 flex w-full justify-between items-center">
                 {/* <h1 className="text-4xl font-fruit tracking-tighter italic">Jacob&#39;s Blue</h1> */}
           {/* <p className="text-lg uppercase text-neutral-400 justify-end">join my cult</p> */}
           {/* </div> */}
           <div className="flex flex-col space-y-6 md:flex-row md:space-y-0  items-stretch ">
-            <div className="flex flex-col flex-grow align-top justify-items-start">
-              <Button href="/" type="null" icon="north" copy="Home" />
-              <Button
-                href="/journal"
-                type="null"
-                icon="east"
-                copy="Meditations"
-              />
-              <Button href="/songs" type="null" icon="east" copy="Songs" />
-              <Button href="/links" type="null" icon="east" copy="Links" />
-              <Button
-                href="https://freegame.notion.site/Jacob-s-Blue-Press-Kit-79b4480312224328954dea767579cd5a"
-                type="right"
-                icon="north_east "
-                copy="Press"
-              />
-              <Button href="/archive" type="null" icon="east" copy="Archive" />
-              {/* <Button href="/shorterm-vs-longterm-fulfillment" type="both" icon="east" copy="Books" />
-                    <Button href="/shorterm-vs-longterm-fulfillment" type="both" icon="east" copy="Recipes" />
-                    <Button href="/shorterm-vs-longterm-fulfillment" type="both" icon="east" copy="More" /> */}
+            <div className="flex flex-col space-y-2 flex-grow align-top justify-items-start">
+              <p className="text-black/50 text-sm tracking-normal">
+                Navigation
+              </p>
+              <div className="">
+                <Button href="/" type="null" icon="north" copy="Home" />
+                <Button
+                  href="/discography"
+                  type="null"
+                  icon="east"
+                  copy="Discography"
+                />
+                <Button
+                  href="/archive"
+                  type="null"
+                  icon="east"
+                  copy="Archive"
+                />
+                <Button
+                  href="/personal-bests"
+                  type="null"
+                  icon="east"
+                  copy="Pesonal Bests"
+                />
+                <Button
+                  href="/thank-you"
+                  type="null"
+                  icon="east"
+                  copy="Thank you"
+                />
+                <Button
+                  href="https://freegame.notion.site/Jacob-s-Blue-Press-Kit-79b4480312224328954dea767579cd5a"
+                  type="right"
+                  icon="north_east "
+                  copy="Press"
+                />
+              </div>
             </div>
-            <div className="flex flex-col flex-grow align-top justify-items-start">
-              <Button
-                href={siteMetaData.spotify}
-                type="right"
-                icon="north_east"
-                copy="spotify"
-                passHref={true}
-                target="_blank"
-              />
-              <Button
-                href={siteMetaData.apple}
-                type="right"
-                icon="north_east"
-                copy="apple music"
-                passHref={true}
-                target="_blank"
-              />
-              <Button
-                href={siteMetaData.youtube}
-                type="right"
-                icon="north_east"
-                copy="youtube"
-                passHref={true}
-                target="_blank"
-              />
-              <Button
-                href={siteMetaData.twitter}
-                type="right"
-                icon="north_east"
-                copy="twitter"
-                passHref={true}
-                target="_blank"
-              />
-              <Button
-                href={siteMetaData.soundcloud}
-                type="right"
-                icon="north_east"
-                copy="soundcloud"
-                passHref={true}
-                target="_blank"
-              />
-              <Button
-                href={siteMetaData.instagram}
-                type="right"
-                icon="north_east"
-                copy="instagram"
-                passHref={true}
-                target="_blank"
-              />
-              <Button
-                href={siteMetaData.github}
-                type="right"
-                icon="north_east"
-                copy="github"
-                passHref={true}
-                target="_blank"
-              />
-              <Button
-                href={siteMetaData.patreon}
-                type="right"
-                icon="north_east"
-                copy="patreon"
-                passHref={true}
-                target="_blank"
-              />
-              <Button href="/links" type="null" icon="east" copy="All links" />
+            <div className="flex flex-col flex-grow space-y-2 align-top justify-items-start">
+              <p className="text-black/50 text-sm tracking-normal">Writing</p>
+              <div>
+                <Button
+                  href="/journal"
+                  type="null"
+                  icon="north_east"
+                  copy="Journal"
+                />
+                <Button
+                  href="/designs"
+                  type="null"
+                  icon="north_east"
+                  copy="design"
+                />
+              </div>
             </div>
-            <div className="flex flex-grow flex-col align-top justify-items-start">
+            <div className="flex flex-col flex-grow space-y-2 align-top justify-items-start">
+              <p className="text-black/50 text-sm tracking-normal">Music</p>
+              <div>
+                <Button
+                  href={siteMetaData.spotify}
+                  type="right"
+                  icon="north_east"
+                  copy="spotify"
+                  passHref={true}
+                  target="_blank"
+                />
+                <Button
+                  href={siteMetaData.apple}
+                  type="right"
+                  icon="north_east"
+                  copy="apple music"
+                  passHref={true}
+                  target="_blank"
+                />
+                <Button
+                  href={siteMetaData.tidal}
+                  type="right"
+                  icon="north_east"
+                  copy="tidal"
+                  passHref={true}
+                  target="_blank"
+                />
+                <Button
+                  href={siteMetaData.youtube}
+                  type="right"
+                  icon="north_east"
+                  copy="youtube"
+                  passHref={true}
+                  target="_blank"
+                />
+                <Button
+                  href={siteMetaData.soundcloud}
+                  type="right"
+                  icon="north_east"
+                  copy="soundcloud"
+                  passHref={true}
+                  target="_blank"
+                />
+                <Button
+                  href={siteMetaData.instagram}
+                  type="right"
+                  icon="north_east"
+                  copy="instagram"
+                  passHref={true}
+                  target="_blank"
+                />
+                <Button
+                  href={siteMetaData.patreon}
+                  type="right"
+                  icon="north_east"
+                  copy="patreon"
+                  passHref={true}
+                  target="_blank"
+                />
+                <Button
+                  href="/links"
+                  type="null"
+                  icon="east"
+                  copy="All links"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col space-y-2 flex-grow align-top justify-items-start">
+              <p className="text-black/50 text-sm tracking-normal">Work</p>
+              <div className="">
+                <Button
+                  href="https://read.cv/jacobs_blue"
+                  type="right"
+                  icon="north_east"
+                  copy="Read.cv"
+                />
+                <Button
+                  href="https://read.cv/jacobs_blue"
+                  type="right"
+                  icon="north_east"
+                  copy="Figma"
+                />
+                <Button
+                  href="https://read.cv/jacobs_blue"
+                  type="right"
+                  icon="north_east"
+                  copy="Github"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col space-y-2 flex-grow align-top justify-items-start">
+              <p className="text-black/50 text-sm tracking-normal">Projects</p>
+              <div className="">
+                <Button
+                  href="https://read.cv/jacobs_blue"
+                  type="right"
+                  icon="north_east"
+                  copy="Song Seeds"
+                />
+                <Button
+                  href="https://createwcare.com"
+                  type="right"
+                  icon="north_east"
+                  copy="Create W/ Care"
+                />
+              </div>
+            </div>
+
+            {/* <div className="flex flex-grow flex-col align-top justify-items-start">
               <Button
                 href="/free-game"
                 type="null"
@@ -130,7 +205,7 @@ export default function Footer(props) {
                 icon="east"
                 copy="Get started in music 101"
               />
-            </div>
+            </div> */}
             <div className="flex flex-grow flex-col align-top space-y-8 justify-between">
               <Subscribe />
               <div className="flex flex-col space-y-1">
@@ -166,21 +241,21 @@ export default function Footer(props) {
             </div>
           </div>
         </div>
-        <div className="sub-text lg:p-6 p-4 lg:mt-3 mt-4 flex w-full justify-between items-center border-blue-200 border-t border-solid">
-          <p className="text-xs text-gray-700">
-            This is a <Link href="/10Percent">10% project</Link>.
-          </p>
+        <div className="p-4 lg:mt-3 mt-4 flex w-full justify-between items-center border-blue-200 border-t border-solid">
+          <Link
+            href="/journal/about-jacobs-blue"
+            className="text-base tracking-tight text-gray-500 underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
+          >
+            About jacobs.blue
+          </Link>
           <LiveVisitors />
-          {/* <p className="text-xs text-neutral-400 justify-end">
-            from Jacob&#39;s Blue. 2022-Forever ®
-          </p> */}
         </div>
       </div>
       <div className="flex py-8 justify-center items-center align-middle space-x-4">
         <a href="https://createwcare.com">
           <svg
-            width="80"
-            height="32"
+            width="98.7"
+            height="40"
             viewBox="0 0 1082 439"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -219,8 +294,8 @@ export default function Footer(props) {
         </a>
         <Link href="/journal/10-percent">
           <svg
-            width="32"
-            height="32"
+            width="40"
+            height="40"
             viewBox="0 0 36 36"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -263,6 +338,42 @@ export default function Footer(props) {
             />
           </svg>
         </Link>
+      </div>
+      <div className="flex flex-col mx-auto w-full pb-8 justify-center items-center align-middle space-y-2 text-neutral-400 text-sm font-jbd font-normal">
+        <p>
+          Powered by{' '}
+          <a
+            href="https://nextjs.org"
+            className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
+          >
+            Next.js
+          </a>
+          ,{' '}
+          <a
+            href="https://tailwindcss.com"
+            className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
+          >
+            Tailwind CSS
+          </a>
+          , +{' '}
+          <a
+            href="https://simpleanalytics.com/jacobs.blue"
+            className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
+          >
+            Simple Analytics
+          </a>
+          .
+        </p>
+        <p>
+          Font: JB Sans Display via{' '}
+          <a
+            href="https://universalsans.com/#v2.0.0.50.25.40.50.1111111111111111111.01.01.450"
+            className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
+          >
+            Universal Sans
+          </a>
+        </p>
+        <p className="">Jacob&#39;s Blue. Copyright ® 2022 - ∞</p>
       </div>
     </div>
   );
