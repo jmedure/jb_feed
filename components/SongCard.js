@@ -23,7 +23,7 @@ export default function SongCard(props) {
     if (description == '') {
       return (
         <div>
-          <Link href={`/songs/${albumLink}`} legacyBehavior>
+          <Link href={`/discography/${albumLink}`} legacyBehavior>
             <div className="flex items-center">
               <a className="decoration-black text-base">
                 <p>
@@ -44,9 +44,9 @@ export default function SongCard(props) {
   };
 
   return (
-    <Link href={`/songs/${slug}`} key={index} passHref legacyBehavior>
-      <div className="items-center border-2 border-solid border-blue-100 font-mont p-2 md:p-4 w-full lg:flex-col flex space-x-4 lg:space-x-0 align-top cursor-pointer tracking-normal group sm:hover:bg-blue-200 bg-blue-50 rounded-2xl lg:rounded-3xl lg:space-y-4 transition-all">
-        <div className="relative h-full w-20 sm:w-24 lg:w-full aspect-square rounded-xl md:rounded-3xl border-2 border-solid border-blue-100 overflow-hidden transition-all">
+    <Link href={`/discography/${slug}`} key={index} passHref legacyBehavior>
+      <div className="items-center ring-1 overflow-clip ring-white sm:hover:ring-blue-500 border-2 border-solid border-blue-100 p-2 w-full sm:flex-col flex space-x-4 sm:space-x-0 align-top cursor-pointer tracking-normal group sm:hover:bg-blue-200 bg-blue-50 rounded-xl sm:space-y-2 transition-all">
+        <div className="relative aspect-square min-w-24 w-24 sm:w-full rounded-lg border border-solid border-blue-100 overflow-hidden transition-all">
           <Image
             src={src}
             alt={alt}
@@ -56,21 +56,21 @@ export default function SongCard(props) {
             blurDataURL="https://jacobs.blue"
           />
         </div>
-        <div className="flex flex-row items-center lg:items-end w-full lg:space-x-2">
-          <div className="flex flex-col lg:flex-grow flex-grow lg:h-24">
-            <h1 className="text-xl flex-1 md:text-3xl font-medium tracking-tighter leading-tight mb-1">
-              {title}
-            </h1>
-            <div className="flex space-x-1 lg:space-x-0 flex-row lg:flex-col align-middle">
-              {album ? <p className="hidden xl:block">{album}</p> : null}
-              <p className="text-neutral-500 pr-4">
-                {dayjs(date).format('YYYY')}
+        <div className="flex flex-row items-center w-full font-jbd font-normal text-lg lg:text-lg tracking-normal truncate">
+          <div className="flex flex-col justify-between md:h-24 lg:h-24 w-full sm:space-y-2 md:space-y-0">
+            <h2 className="text-2xl font-medium tracking-tight">{title}</h2>
+            <div className="flex flex-col text-black/50 lg:flex-col w-full align-middle sm:space-y-0">
+              {album ? (
+                <p className="hidden sm:flex truncate">{album}</p>
+              ) : null}
+              <p className="text-neutral-500 whitespace-nowrap">
+                {dayjs(date).format('MMM YYYY')}
               </p>
             </div>
           </div>
-          <div className="flex-col flex flex-shrink items-center lg:items-end">
-            <span className="material-icons text-3xl">east</span>
-          </div>
+          {/* <div className="flex-col flex flex-shrink items-center lg:items-end">
+            <span className="material-icons ">east</span>
+          </div> */}
         </div>
       </div>
     </Link>

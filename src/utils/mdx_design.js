@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import readingTime from 'reading-time';
 import { sync } from 'glob';
 
-const articlesPath = path.join(process.cwd(), '/data/design');
+const articlesPath = path.join(process.cwd(), '/data/designs');
 
 // get unique article, when it is clicked on, by the user
 // on the blog page
@@ -32,15 +32,12 @@ export async function getArticleFromSlug(slug) {
     content,
     frontmatter: {
       slug,
-      description: data.description,
       title: data.title,
       image: data.image,
       alt: data.alt,
       date: data.date,
-      lastEdited: data.lastEdited,
+      updated: data.updated,
       readingTime: readingTime(source).text,
-      // color: data.color,
-      tile: data.tile,
       ...data,
     },
   };
@@ -48,12 +45,12 @@ export async function getArticleFromSlug(slug) {
 
 // get the path that stores all the articles or blog post
 export async function getAllArticles() {
-  const articles = fs.readdirSync(path.join(process.cwd(), '/data/design'));
+  const articles = fs.readdirSync(path.join(process.cwd(), '/data/designs'));
 
   return articles.reduce((allArticles, articleSlug) => {
     // get parsed data from mdx files in the "articles" dir
     const source = fs.readFileSync(
-      path.join(process.cwd(), '/data/design', articleSlug),
+      path.join(process.cwd(), '/data/designs', articleSlug),
       'utf-8'
     );
     const { data } = matter(source);

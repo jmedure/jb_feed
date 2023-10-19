@@ -1,15 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import Head from 'next/head';
-import Image from 'next/legacy/image';
 import MainHeader from '../components/MainHeader';
 import { Post } from '../components/Post';
 import useSWR from 'swr';
-import MainNav from '../components/MainNav';
 import Footer from '../components/Footer';
-import HeadSeo from '../components/HeadSEO';
-import siteMetadata from '../data/siteMetadata';
 import BlogSEO from '../components/BlogSEO';
-import { motion } from 'framer-motion';
+import MasonryWrapper from '../components/wrappers/MasonryWrapper';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -42,20 +37,15 @@ export default function Home() {
     // let allPosts = data.filter(post,index)
     return (
       <main className="">
-        <div className="flex-wrap  to-white/80 from-white/90 bg-gradient-to-t backdrop-blur-sm sticky top-0 z-30">
-          <MainHeader />
-        </div>
-        <div className="container-fg columns-1 sm:columns-2 lg:columns-3 row-auto gap-4 pt-2 pb-8">
+        <MainHeader />
+        <MasonryWrapper>
           {data.map(function (post, index) {
             if (post.published == 'true')
               return <Post key={index} post={post} />;
           })}
-        </div>
-
+          {/* </MainGridWrapper> */}
+        </MasonryWrapper>
         <Footer />
-
-        {/* </div>
-        </div> */}
       </main>
     );
   };

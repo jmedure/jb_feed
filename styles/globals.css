@@ -72,15 +72,14 @@ a.dark:hover, a.dark:active {
   font-weight: 300;
 }
 
-.display{
-  /* text-transform:; */
+/* .display{
   font-size: calc(80px + 3vw);
   border: 1px solid red;
-}
+} */
 
-.article-container {
+/* .article-container {
   font-family: neue;
-}
+} */
 
 /* .breadcrumbs{
   display: flex;

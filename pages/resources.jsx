@@ -1,23 +1,26 @@
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Resource from '/components/Resource.js';
 
 export default function Resources() {
   return (
     <div className="container">
       <div className="flex sticky top-0 p-4 align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
-        <Link href="/" passHref legacyBehavior>
-          <div className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer">
-            <div className="border-white border-2 border-solid rounded-full relative p-5 cursor-pointer">
-              <Image
-                alt="blue gradient"
-                src="/logo.png"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover"
-                }} />
-            </div>
+        <Link
+          href="/"
+          passHref
+          className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer"
+        >
+          <div className="border-white border-2 border-solid rounded-full relative w-full h-full cursor-pointer">
+            <Image
+              alt="blue gradient"
+              src="/logo.png"
+              width={48}
+              height={48}
+              style={{
+                objectFit: 'cover',
+              }}
+            />
           </div>
         </Link>
       </div>
@@ -81,10 +84,12 @@ export default function Resources() {
                     alt="patreon logo"
                     src="/icons/patreon.svg"
                     fill
-                    sizes="100vw"
+                    width={80}
+                    height={80}
                     style={{
-                      objectFit: "cover"
-                    }} />
+                      objectFit: 'cover',
+                    }}
+                  />
                 </div>
               </div>
               <div className="flex-block font-mont w-full space-y-1 sm:space-y-0 leading-4">

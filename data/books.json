@@ -1,0 +1,122 @@
+[
+    {
+        "title": "The Lessons of History",
+        "author": "Will and Ariel Durant",
+        "link": "https://www.google.com/books/edition/The_Lessons_of_History/LWNQ2_4wkocC?hl=en&gbpv=0",
+        "cover":"/books/loh.jpg",
+        "segment": 1,
+        "rank": 1
+    },
+    {
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "link": "https://www.google.com/books/edition/Atomic_Habits/XfFvDwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/ah.jpeg",
+        "segment": 1,
+        "rank": 2
+    },
+    {
+        "title": "The Pschology of Money",
+        "author": "Morgan Housel",
+        "link": "https://www.google.com/books/edition/The_Psychology_of_Money/TnrrDwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/pom.jpg",
+        "segment": 1,
+        "rank": 4
+    },
+    {
+        "title": "Built to Move",
+        "author": "Kelly and Juliett Starrett",
+        "link": "https://www.google.com/books/edition/Built_to_Move/cpiOEAAAQBAJ?hl=en",
+        "cover":"/books/btm.jpg",
+        "segment": 1,
+        "rank": 3
+    },
+    {
+        "title": "Four Thousand Weeks",
+        "author": "Oliver Burkeman",
+        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/ftw.jpg",
+        "segment": 1,
+        "rank":"100"
+    },
+    {
+        "title": "Free Will",
+        "author": "Sam Harris",
+        "link": "https://www.google.com/books/edition/Free_Will/lvsiwZFucKoC?hl=en&gbpv=0",
+        "cover":"/books/fw.jpg",
+        "segment": 1,
+        "rank":"100"
+    },
+    {
+        "title": "Outlive",
+        "author": "Peter Attia",
+        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/ol.jpg",
+        "segment": 1,
+        "rank":"100"
+    },
+    {
+        "title": "The Obstacle is The Way",
+        "author": "Ryan Holiday",
+        "link": "https://www.google.com/books/edition/The_Obstacle_Is_the_Way/jWqJDQAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/toitw.jpg",
+        "segment": 1,
+        "rank":"100"
+    },
+    {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "link": "https://www.google.com/books/edition/Sapiens/FmyBAwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/s.jpg",
+        "segment": 1,
+        "rank":"100"
+    },
+    {
+        "title": "The War of Art",
+        "author": "Stephen Pressfield",
+        "link": "https://www.google.com/books/edition/The_War_of_Art/sR3hAAAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/twoa.jpg",
+        "segment": 2,
+        "rank":"1"
+    },
+    {
+        "title": "The Alchemist",
+        "author": "Paolo Coehlo",
+        "link": "https://books.google.com/books?id=FzVjBgAAQBAJ&newbks=0&printsec=frontcover&dq=the+alchemist&hl=en#v=onepage&q=the%20alchemist&f=false",
+        "cover":"/books/ta.jpg",
+        "segment": 2,
+        "rank":"2"
+    },
+    {
+        "title": "Discipline is Destiny",
+        "author": "Ryan Holiday",
+        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/btm.jpg",
+        "segment": 2,
+        "rank":"3"
+    },
+    {
+        "title": "The 4hr Work Week",
+        "author": "Tim Ferriss",
+        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/btm.jpg",
+        "segment": 2,
+        "rank":"4"
+    },
+    {
+        "title": "Mastery",
+        "author": "Robert Greene",
+        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/btm.jpg",
+        "segment": 2,
+        "rank":"5"
+    },
+    {
+        "title": "Steal like an Artist",
+        "author": "Austin Kleon",
+        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/btm.jpg",
+        "segment": 2,
+        "rank":"6"
+    }
+]

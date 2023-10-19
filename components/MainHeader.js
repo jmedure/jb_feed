@@ -3,40 +3,71 @@ import Link from 'next/link';
 import Subheader from './Subheader';
 import { motion } from 'framer-motion';
 
-export default function MainHeader() {
+export default function MainHeader(props) {
+  const title = props.title;
+
   return (
-    <div
-      style={
-        {
-          // transform: `translateY(${scrollDirection === 'down' ? 0 : '100%'})`,
-          // transform: `translateY(${scrollDirection === 'down' ? 0 : '10px'})`
-        }
-      }
-      className="container-fg py-2 w-full"
-    >
-      <div className="text-xl font-normal font-jbd flex justify-between w-full items-center ">
-        <div className="flex items-center space-x-1 w-auto">
+    <div className="flex-wrap bg-white sticky top-0 z-30">
+      <div className="container-fg py-3 w-full flex-row space-y-2 sm:space-y-0">
+        <div className="flex items-center justify-between w-full text-lg font-medium font-jbd">
+          {title ? (
+            <motion.div
+              initial={{ opacity: 0, translateY: 10 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{
+                type: 'spring',
+                delay: 0.25,
+                stiffness: 200,
+                duration: 0.5,
+              }}
+              href="/"
+              className="flex text-center space-x-1 capitalize"
+            >
+              <Link
+                href="/"
+                className="font-normal underline text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
+              >
+                index
+              </Link>
+              <p className="text-black/20">/</p>
+              <p>{props.title}</p>
+            </motion.div>
+          ) : (
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:space-x-1 w-auto">
+              <Link
+                href="/"
+                className="text-xl flex cursor-pointer group transition-all space-x-1 items-center tracking-tight"
+              >
+                <h1 className="">
+                  Jacob&#39;s{' '}
+                  <span className="sm:group-hover:text-blue-500 transition-all">
+                    Blue
+                  </span>
+                </h1>
+              </Link>
+              <Subheader />
+            </div>
+          )}
+
           <Link
-            href="/"
-            className="flex cursor-pointer group transition-all space-x-1 items-center tracking-tight"
-          >
-            <p className="">Jacob&#39;s</p>
-            <p className="group-hover:text-sky-600 transition-all ">Blue</p>
-          </Link>
-          <Subheader />
-        </div>
-        <MainNav />
-        {/* <Link
             href="#footer"
-            className="text-blue-500 underline underline-offset-2 decoration-neutral-500 hover:decoration-black font-medium cursor-pointer pl-2 py-2 z-20"
+            className="text-lg  underline underline-offset-2 sm:hover:underline-offset-4 decoration-neutral-200 transition-all sm:hover:decoration-black font-medium cursor-pointer px-1 py-2"
           >
-            Explore
-          </Link> */}
-        <Link href="#footer" className="">
+            More
+          </Link>
+        </div>
+        {!title ? <MainNav /> : null}
+      </div>
+    </div>
+  );
+}
+
+{
+  /* <Link href="#footer" className="">
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ ease: 'linear', duration: 0.01 }}
-            className="fill-black p-2 rounded-full bg-black/5  hover:bg-white transition-all border border-black/20 hover:drop-shadow"
+            className="fill-blue-600 hover:fill-blue-700 p-2 rounded-full bg-blue-50 hover:bg-blue-100 transition-all border border-blue-200 ring-1 ring-white hover:ring-blue-400 hover:drop-shadow-sm"
           >
             <svg
               width="24"
@@ -52,11 +83,10 @@ export default function MainHeader() {
               <path d="M23.7192 11.9999C23.7192 13.8494 22.2199 15.3487 20.3704 15.3487C18.5209 15.3487 17.0215 13.8494 17.0215 11.9999C17.0215 10.1504 18.5209 8.65106 20.3704 8.65106C22.2199 8.65106 23.7192 10.1504 23.7192 11.9999Z" />
             </svg>
           </motion.button>
-        </Link>
-        {/* </>
+        </Link> */
+}
+{
+  /* </>
             );
-          })} */}
-      </div>
-    </div>
-  );
+          })} */
 }

@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head';
-import JBHeader from '../components/MainHeader';
+import MainHeader from '../components/MainHeader';
 import { Post } from '../components/Post';
 import useSWR from 'swr';
 import MainNav from '../components/MainNav';
 import Footer from '../components/Footer';
+import MasonryWrapper from '../components/wrappers/MasonryWrapper';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -20,12 +21,9 @@ export default function Home() {
     }
     // let allPosts = data.filter(post,index)
     return (
-      <main className="container-fg">
-        <div className="flex-wrap bg-white/90 backdrop-blur-sm z-40 sticky top-0">
-          <JBHeader />
-          <MainNav />
-        </div>
-        <div className="columns-1 sm:columns-2 lg:columns-3 row-auto gap-4 pt-2 pb-8">
+      <main className="">
+        <MainHeader />
+        <MasonryWrapper>
           {data
             .filter(function (posts) {
               return posts.kind === 'writing' && posts.published == 'true';
@@ -33,10 +31,8 @@ export default function Home() {
             .map(function (post, index) {
               return <Post key={index} post={post} />;
             })}
-        </div>
+        </MasonryWrapper>
         <Footer />
-        {/* </div>
-        </div> */}
       </main>
     );
   };

@@ -4,25 +4,29 @@ import { getAllArticles } from '../../src/utils/mdx_songs';
 import SongCard from '../../components/SongCard';
 import Footer from '../../components/Footer';
 import AlbumCard from '../../components/AlbumCard';
-import JBHeader from '../../components/MainHeader';
+import MainHeader from '../../components/MainHeader';
 
 export default function Blog({ posts }) {
+  const title = 'Discography';
+
   return (
     <React.Fragment>
       <Head>
-        <title>Jacob&#39;s Blue | Discography</title>
+        <title>Jacob&#39;s Blue | {title}</title>
       </Head>
 
-      <div className="container-fg">
-        <JBHeader />
+      <div className="">
+        {/* <JBHeader /> */}
+        <div className="w-full bg-white top-0 sticky z-10">
+          <MainHeader title={title} />
+        </div>
+        <div className="mb-12 font-jbd font-normal">
+          {/* <div className="my-20 container-fg space-y-1">
+            <h1 className="text-3xl tracking-tight">Discography</h1>
+            <p className="text-lg text-black/70">Lyrics, credits and more.</p>
+          </div> */}
 
-        <div className="mb-12">
-          <div className="mt-14 mb-20">
-            <h1 className="text-5xl font-mont tracking-tight">Discography</h1>
-            {/* <p className='text-xl pt-2'>Lyrics, credits, and more.</p> */}
-          </div>
-
-          <div className="my-8 space-y-2 md:space-y-4 lg:space-y-2 lg:rounded-[3em] lg:gap-y-4 lg:grid lg:grid-flow-row md:grid-cols-2  lg:grid-cols-4 gap-x-4">
+          <div className="container-fg my-1 flex flex-col sm:grid sm:grid-cols-2 md:grid-cols- sm:space-y-0 lg:rounded-[3em] sm:gap-y-4 lg:grid lg:grid-flow-row lg:grid-cols-4 gap-4">
             {posts.map((frontMatter, index) => {
               if (
                 frontMatter.published == 'true' &&
@@ -49,7 +53,7 @@ export default function Blog({ posts }) {
               }
             })}
           </div>
-          <div className="my-4">
+          <div className="my-4 container-fg">
             <div className="flex justify-between items-center">
               <h3 className="text-2xl my-2 pt-2 tracking-tight">Albums</h3>
               <div className="flex items-center space-x-2">

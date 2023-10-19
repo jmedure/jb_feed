@@ -1,212 +1,184 @@
 [
     {
+        "title": "Creating w/ care",
+        "date": "2023-10-20",
+        "kind": "design",
+        "published": "true",
+        "image": "/design/cwcbig.gif",
+        "aspect": "video",
+        "cta": "Learn how it was done",
+        "link": "/designs/creating-w-care"
+    },
+    {
         "title": "Born in the Sunset: Thoughts to Oasis - B-SIDES",
-        "date": "10.13.23",
+        "date": "2023-06-23",
         "kind": "music",
-        "link": "/songs/b-sides",
+        "link": "/discography/b-sides",
         "published": "true",
         "image": "/cover-art/bsides.jpg",
-        "spotify": "https://open.spotify.com/album/5MYgZeMu69v9StCqweAlep?si=2Vl6cKCdTO66VP8ehpFG7Q",
-        "apple": "https://music.apple.com/us/album/give-and-take/1673782943?i=1673782945",
-        "youtube": "https://www.youtube.com/watch?v=UVi66iTeqw4&list=OLAK5uy_kFue7wQ8gEXis1qV7uEAn8suRh9TNFuOI",
-        "tidal": "https://tidal.com/browse/track/278318697",
-        "soundcloud": "https://soundcloud.com/jacobsblue/give-and-take?si=79ba80e5012f403d9c030b558ebbed76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-        "amazon": "https://music.amazon.com/albums/B0BWKBP2XY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_W2MpLCvxqZR2NEeRhTJEi6HWh",
-        "cta": "watch now"
+        "cta": "Stream and sing along"
     },
     {
         "title": "B-SIDES IS COMING SOON!!!",
+        "date": "2023-06-09",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=FZkZtbpiDNU",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "FZkZtbpiDNU"
+        "youtubeEmbed": "FZkZtbpiDNU",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep. 10 - making guitar samples",
+        "date": "2023-03-19",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=jVNScqPRDFY",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "jVNScqPRDFY"
+        "youtubeEmbed": "jVNScqPRDFY",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep. 9 - cookin up an absolute vibe",
+        "date": "2023-03-12",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=MySVm0fwVfY&t=93s",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "MySVm0fwVfY"
+        "youtubeEmbed": "MySVm0fwVfY",
+        "cta": "Watch now"
     },
     {
         "title": "Give and take - single",
+        "date": "2023-03-10",
         "kind": "music",
-        "link": "/songs/give-and-take",
+        "link": "/discography/give-and-take",
         "published": "true",
-        "image": "/gat.jpg",
-        "spotify": "https://open.spotify.com/album/5MYgZeMu69v9StCqweAlep?si=2Vl6cKCdTO66VP8ehpFG7Q",
-        "apple": "https://music.apple.com/us/album/give-and-take/1673782943?i=1673782945",
-        "youtube": "https://www.youtube.com/watch?v=UVi66iTeqw4&list=OLAK5uy_kFue7wQ8gEXis1qV7uEAn8suRh9TNFuOI",
-        "tidal": "https://tidal.com/browse/track/278318697",
-        "soundcloud": "https://soundcloud.com/jacobsblue/give-and-take?si=79ba80e5012f403d9c030b558ebbed76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-        "amazon": "https://music.amazon.com/albums/B0BWKBP2XY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_W2MpLCvxqZR2NEeRhTJEi6HWh"
+        "image": "/cover-art/gat.jpg",
+        "cta": "Stream and sing along"
     },
     {
         "title": "behind the music - how i made a vintage sample",
+        "date": "2023-03-5",
         "kind": "video",
         "link": "https://youtu.be/wbJSOnEigMQ",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "wbJSOnEigMQ"
+        "youtubeEmbed": "wbJSOnEigMQ",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep 8 - chasing simplicity",
+        "date": "2023-02-26",
         "kind": "video",
         "link": "https://youtu.be/yWMF0aC3mFI",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "yWMF0aC3mFI"
+        "youtubeEmbed": "yWMF0aC3mFI",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep 7 - making beats like monte",
+        "date": "2023-02-19",
         "kind": "video",
         "link": "https://youtu.be/2WHYBQrnuTs",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "2WHYBQrnuTs"
+        "youtubeEmbed": "2WHYBQrnuTs",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep 6 - early morning beats for breakfast",
+        "date": "2023-02-12",
         "kind": "video",
         "link": "https://youtu.be/0X_vcC91GSM",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "0X_vcC91GSM"
+        "youtubeEmbed": "0X_vcC91GSM",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep 5 - making a a late night song sketch",
+        "date": "2023-02-05",
         "kind": "video",
         "link": "https://youtu.be/0CvMTZifjSs",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "0CvMTZifjSs"
+        "youtubeEmbed": "0CvMTZifjSs",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep 4 - a cold night in brooklyn",
+        "date": "2023-01-29",
         "kind": "video",
         "link": "https://youtu.be/aJxFFgiqT08",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "aJxFFgiqT08"
+        "youtubeEmbed": "aJxFFgiqT08",
+        "cta": "Watch now"
     },
     {
         "title": "just cookin ep 3 - making a sample before work",
+        "date": "2023-01-22",
         "kind": "video",
         "link": "https://youtu.be/8Pu-aEPAKgg",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "8Pu-aEPAKgg"
+        "youtubeEmbed": "8Pu-aEPAKgg",
+        "cta": "Watch now"
     },
     {
         "title": "Maybe I give up.",
+        "date": "2022-11-07",
         "kind": "music",
-        "link": "/songs/maybe-i-give-up",
+        "link": "/discography/maybe-i-give-up",
         "published": "true",
-        "image": "/migu.jpg",
-        "spotify": "https://open.spotify.com/album/3uVdTPnjj6XZOIOdsDOVbj",
-        "apple": "https://music.apple.com/us/album/maybe-i-give-up-single/1650241425",
-        "youtube": "https://www.youtube.com/watch?v=-YRv-ewXaTE&list=OLAK5uy_nBVFxCpmNUZ9FDGh-P2F5COn150QxsRak",
-        "tidal": "https://tidal.com/browse/album/254556437",
-        "soundcloud": "https://soundcloud.com/jacobsblue/maybe-i-give-up?si=7add3e54c5c444d38812e0e241a7e118&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-        "amazon": "https://music.amazon.com/albums/B0BJFKV3W5?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_zkIb3EAjrNLNEyxy7fNXVMajQ&trackAsin=B0BJFLQKK8"
+        "image": "/cover-art/migu.jpg",
+        "cta": "Stream and sing along"
     },
     {
         "title": "Maybe I give up.",
+        "date": "2022-11-07",
         "kind": "writing",
-        "description": "",
+        "aspect": "video",
         "image": "/miguThumb.png",
-        "link": "/meditations/maybe-i-give-up",
-        "published": "true"
+        "link": "/journal/maybe-i-give-up",
+        "published": "true",
+        "cta": "Read now"
     },
     {
         "title": "Jacob's Blue Live | LIVE from Starr St. 8.13.22 Full Set (7 Unreleased Songs)",
+        "date": "2022-08-15",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=j0VNVoFz3c0&t=1s",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "j0VNVoFz3c0"
+        "youtubeEmbed": "j0VNVoFz3c0",
+        "cta": "Watch now"
     },
     {
         "title": "JB and Ash Max LIVE in NYC",
+        "date": "2022-07-31",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=gvDZIf0BqL0",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "gvDZIf0BqL0"
-    },
-    {
-        "title": "\"Where do we go from here?\", out now!",
-        "kind": "music",
-        "link": "/songs/hard-of-hearing",
-        "published": "",
-        "image": "/1.gif",
-        "spotify": "https://spotify.com",
-        "apple": "https://applemusic.com",
-        "youtube": "https://youtube.com",
-        "tidal": "https://tidal.com",
-        "soundcloud": "https://soundcloud.com",
-        "amazon": "https://amazonmusic.com"
+        "youtubeEmbed": "gvDZIf0BqL0",
+        "cta": "Watch now"
     },
     {
         "title": "Just Cookin Vol.1 - making samples ~(Remembering Tomorrow)~",
+        "date": "2022-01-17",
         "link": "https://www.youtube.com/watch?v=eDlB01vRrrM",
         "kind": "video",
-        "description": " ",
         "youtubeEmbed": "eDlB01vRrrM",
         "published": "true"
     },
     {
-        "title": "New Merch out now",
-        "kind": "merch",
-        "image": "https://cdn.shopify.com/s/files/1/0584/3848/4134/products/Blue1.jpg?v=1638881013",
-        "link": "https://shopify.com",
-        "published": "false"
-    },
-    {
-        "title": "Merch Post",
-        "kind": "merch",
-        "link": "https://notion.so",
-        "published": "false"
-    },
-    {
-        "title": "Video Post",
-        "link": "https://www.youtube.com/watch?v=NHr1HduGz08",
-        "kind": "video",
-        "description": "Fancy description",
-        "youtubeEmbed": "NHr1HduGz08",
-        "published": "false"
-    },
-    {
         "title": "DO IT AGAIN. - Born in the Sunset: Thoughts to Oasis Visual Performance",
+        "date": "2021-03-07",
         "kind": "video",
         "link": "https://www.youtube.com/watch?v=s6UFctjY1e0",
         "published": "true",
-        "description": " ",
-        "youtubeEmbed": "s6UFctjY1e0"
+        "youtubeEmbed": "s6UFctjY1e0",
+        "cta": "Watch now"
     },
     {
-        "title": "My debut album, Born in the Sunset: Thoughts to Oaisis",
+        "title": "My debut album, Born in the Sunset: Thoughts to Oasis",
+        "date": "2021-03-07",
         "kind": "music",
-        "link": "/songs/born-in-the-sunset-thoughts-to-oasis",
+        "link": "/discography/born-in-the-sunset-thoughts-to-oasis",
         "published": "true",
-        "image": "https://notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faa8782a2-7db7-447e-adee-8bfa273e5607%2FBITSCover1-scaled_(1).jpeg?table=block&id=8e18b7a8-a3d1-4371-b3c5-ee544cf9567c&spaceId=2afffdaa-a1f9-48fc-8af5-a4f4e2aaefbf&width=2000&userId=eb892e74-d964-49ba-9ea8-d5261359b5e6&cache=v2",
-        "spotify": "https://open.spotify.com/album/3nAER17uMf2QOuJwSCIOJB?si=hS-He9BwRomfBTJPv9FKww&nd=1",
-        "apple": "https://music.apple.com/us/album/born-in-the-sunset-thoughts-to-oasis/1546646373",
-        "youtube": "https://www.youtube.com/watch?v=Ewko6noMLCU&list=OLAK5uy_nryvazk8OLLzaongCwezLMDuJ4lvK4mec",
-        "tidal": "https://listen.tidal.com/album/167571026",
-        "soundcloud": "https://soundcloud.com/jacobsblue/sets/born-in-the-sunset-thoughts-to-oasis",
-        "amazon": "https://music.amazon.com/albums/B08RGD1X5Q",
-        "site archive": "https://web.archive.org/web/20220730230234/https://jacobs.blue/"
+        "image": "/cover-art/bits.jpg",
+        "cta": "Stream and sing along"
     }
 ]
             

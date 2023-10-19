@@ -8,10 +8,12 @@ export default function Button(props) {
     return (
       <a
         href={props.href}
-        className="flex mr-auto cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize"
+        className="flex group flex-shrink w-min whitespace-nowrap cursor-pointer transition-all text-blue-500 sm:hover:text-gray-900 sm:hover:underline  items-baseline capitalize decoration-[1.5px] underline-offset-1"
       >
-        <div className="">{props.copy}</div>
-        <span className="material-icons text-xs">{props.icon}</span>
+        <p>{props.copy}</p>
+        <span className="flex material-icons text-sm">{props.icon}</span>
+
+        {/* &#8599; */}
       </a>
     );
   }
@@ -19,7 +21,7 @@ export default function Button(props) {
   if (propType == 'left') {
     return (
       <Link href={props.href} legacyBehavior>
-        <div className="flex mr-auto cursor-pointer border text-neutral-500 hover:text-gray-900 hover:underline items-center capitalize">
+        <div className="flex mr-auto w-min cursor-pointer border text-neutral-500 sm:hover:text-gray-900 sm:hover:underline items-center capitalize">
           <span className="material-icons text-xs">{props.icon}</span>
           <div className="">{props.copy}</div>
         </div>
@@ -29,17 +31,18 @@ export default function Button(props) {
 
   if (propType == 'null') {
     return (
-      <Link href={props.href} legacyBehavior>
-        <div className="flex mr-auto cursor-pointer text-blue-500 hover:text-gray-900 hover:underline items-center capitalize">
-          <div className="">{props.copy}</div>
-        </div>
+      <Link
+        href={props.href}
+        className="flex mr-auto w-min whitespace-nowrap transition-all cursor-pointer text-blue-500 sm:hover:text-gray-900 sm:hover:underline items-center capitalize"
+      >
+        {props.copy}
       </Link>
     );
   }
 
   return (
     <Link href={props.href} legacyBehavior>
-      <div className="flex cursor-pointer text-neutral-500 hover:text-gray-900 items-center capitalize">
+      <div className="flex cursor-pointer text-neutral-500 sm:hover:text-gray-900 items-center capitalize">
         <span className="material-icons text-base">
           subdirectory_arrow_right
         </span>

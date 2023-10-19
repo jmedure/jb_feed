@@ -8,8 +8,9 @@ export default function LinkCard(props) {
       passHref
       href={props.href}
       className="hover:cursor-pointer"
-      legacyBehavior>
-      <div className="py-4 pl-4 pr-4 w-full flex-grow text-2xl overflow-auto flex group hover:cursor-pointer bg-white/20 backdrop-blur hover:bg-white/90 justify-between">
+      legacyBehavior
+    >
+      <div className="py-4 pl-4 pr-4 w-full flex-grow text-2xl overflow-auto flex group hover:cursor-pointer bg-white backdrop-blur hover:bg-white/90 justify-between">
         <div className="flex items-center">
           <div className="">
             {/* <FontAwesomeIcon icon={props.fai} className="text-3xl"/> */}
@@ -26,4 +27,4 @@ export default function LinkCard(props) {
       </div>
     </Link>
   );
-  }
+}

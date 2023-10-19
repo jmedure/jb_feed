@@ -26,6 +26,12 @@ export default function Blog({ posts }) {
   //   transition: { duration: 3 },
   // };
 
+  // const image = frontmatter.image;
+  // const youtube = frontmatter.youtube;
+  // const description = frontmatter.description;
+  // const toc = frontmatter.toc;
+  // const slug = frontmatter.slug;
+
   return (
     <React.Fragment>
       <Head>

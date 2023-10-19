@@ -4,7 +4,7 @@ import styles from '../styles/Subheader.module.css';
 
 function Subheader() {
   return (
-    <div className="-m-1 font-jbd text-xl text-neutral-600 w-[400px] tracking-tight text-left">
+    <div className="hidden sm:flex -m-1 font-jbd text-xl font-normal text-neutral-600 w-[200px] sm:w-[400px] whitespace-nowrap tracking-tight text-left">
       <Typewriter
         options={{
           strings: [
