@@ -21,6 +21,8 @@ import MainHeader from '../../components/MainHeader';
 import { useRouter } from 'next/router';
 import BlogHeroBanner from '../../components/mdx/BlogHeroBanner';
 import Footer from '../../components/Footer';
+import BlogWrapper from '../../components/wrappers/BlogWrapper';
+import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -78,23 +80,14 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                 </div>
               </div>
             ) : null}
-            <div className="selection:bg-sky-100 scroll-smooth max-w-[640px] mb-4">
-              <div className="not-prose flex-block flex space-y-2 pb-8">
-                <div className="font-jbd space-y-3">
-                  <h1 className="tracking-tight font-medium text-3xl ">
-                    {frontmatter.title}
-                  </h1>
-                  <div className="flex md:flex md:flex-nowrap items-center text-lg font-normal pt-1 space-x-4 text-neutral-500 font-jbd tracking-tight md:space-y-0 ">
-                    <p className="text-left flex-nowrap">
-                      {frontmatter.readingTime}
-                    </p>
-                    <p className="">Posted {published}</p>
-                    {updated ? (
-                      <p className="">Last tended to {lastTendedTo}</p>
-                    ) : null}
-                  </div>
-                </div>
-              </div>
+            <BlogWrapper>
+              <BlogMetaHeader
+                title={frontmatter.title}
+                readingTime={frontmatter.readingTime}
+                published={published}
+                updated={updated}
+                lastTendedTo={lastTendedTo}
+              />
               <ProseWrapper>
                 <MDXRemote
                   {...source}
@@ -107,15 +100,9 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                   }}
                 />
               </ProseWrapper>
-            </div>
+            </BlogWrapper>
           </div>
         </div>
-        {/* <div className="w-full border-t text-black/50 border-">
-          <div className="container-fg w-full py-4 flex justify-between">
-            <Link href={currentRoute}>Back to top</Link>
-            <p>by Jacob&#39;s blue</p>
-          </div>
-        </div> */}
         <Footer href={currentRoute} />
       </div>
     </React.Fragment>
