@@ -5,14 +5,17 @@ import { getAllArticles } from '../../src/utils/mdx_med';
 import Link from 'next/link';
 import BlogEntryJournal from '../../components/BlogEntryJournal';
 import Image from 'next/legacy/image';
+import MainHeader from '../../components/MainHeader';
 
 export default function Blog({ posts }) {
+  const title = 'journal';
+
   return (
     <React.Fragment>
       <Head>
-        <title>Meditations of a Rockstar | Jacob&#39;s Blue</title>
+        <title>Jacob&#39;s Blue | {title}</title>
       </Head>
-
+      <MainHeader title={title} />
       <div className="max-w-[640px] mx-auto">
         <div className="flex sticky top-0 p-4 bg-white align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
           <Link href="/" passHref legacyBehavior>

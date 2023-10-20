@@ -16,7 +16,7 @@
         "rank": 2
     },
     {
-        "title": "The Pschology of Money",
+        "title": "The Psychology of Money",
         "author": "Morgan Housel",
         "link": "https://www.google.com/books/edition/The_Psychology_of_Money/TnrrDwAAQBAJ?hl=en&gbpv=0",
         "cover":"/books/pom.jpg",
@@ -72,11 +72,59 @@
         "rank":"100"
     },
     {
+        "title": "Stillness is Key",
+        "author": "Ryan Holiday",
+        "link": "https://www.google.com/books/edition/Stillness_Is_the_Key/4BmtDwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/sik.jpg",
+        "segment": 1,
+        "rank":"100"
+    },
+    {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "link": "https://www.google.com/books/edition/Meditations/LVXvzgEACAAJ?hl=en",
+        "cover":"/books/meditations.jpg",
+        "segment": 2,
+        "rank":"1"
+    },
+    {
+        "title": "The Daily Stoic",
+        "author": "Ryan Holiday",
+        "link": "https://www.google.com/books/edition/The_Daily_Stoic/TR2MDAAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/tds.jpg",
+        "segment": 2,
+        "rank":"100"
+    },
+    {
+        "title": "The Daily Dad",
+        "author": "Ryan Holiday",
+        "link": "https://www.google.com/books/edition/The_Daily_Dad/N8_5zgEACAAJ?hl=en",
+        "cover":"/books/tdd.jpg",
+        "segment": 2,
+        "rank":"100"
+    },
+    {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "link": "https://www.google.com/books/edition/Brave_New_World/EQlhCgAAQBAJ?hl=en",
+        "cover":"/books/bnw.jpg",
+        "segment": 1,
+        "rank":"100"
+    },
+    {
+        "title": "The Old Man and the Sea",
+        "author": "Ernest Hemmingway",
+        "link": "https://www.google.com/books/edition/The_Old_Man_And_The_Sea/m3-34J_9ZZgC?hl=en&gbpv=0",
+        "cover":"/books/tomats.jpg",
+        "segment": 4,
+        "rank":"100"
+    },
+    {
         "title": "The War of Art",
         "author": "Stephen Pressfield",
         "link": "https://www.google.com/books/edition/The_War_of_Art/sR3hAAAAQBAJ?hl=en&gbpv=0",
         "cover":"/books/twoa.jpg",
-        "segment": 2,
+        "segment": 3,
         "rank":"1"
     },
     {
@@ -84,39 +132,215 @@
         "author": "Paolo Coehlo",
         "link": "https://books.google.com/books?id=FzVjBgAAQBAJ&newbks=0&printsec=frontcover&dq=the+alchemist&hl=en#v=onepage&q=the%20alchemist&f=false",
         "cover":"/books/ta.jpg",
-        "segment": 2,
+        "segment": 3,
         "rank":"2"
     },
     {
         "title": "Discipline is Destiny",
         "author": "Ryan Holiday",
-        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
-        "cover":"/books/btm.jpg",
-        "segment": 2,
+        "link": "https://www.google.com/books/edition/Discipline_Is_Destiny/u_JXEAAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/did1.jpg",
+        "segment": 3,
         "rank":"3"
     },
     {
-        "title": "The 4hr Work Week",
+        "title": "The 4-Hour Work Week",
         "author": "Tim Ferriss",
-        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
-        "cover":"/books/btm.jpg",
-        "segment": 2,
+        "link": "https://www.google.com/books/edition/The_4_Hour_Work_Week/E3HVzZQh88wC?hl=en&gbpv=0",
+        "cover":"/books/t4hww.jpg",
+        "segment": 3,
         "rank":"4"
     },
     {
         "title": "Mastery",
         "author": "Robert Greene",
-        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
-        "cover":"/books/btm.jpg",
-        "segment": 2,
+        "link": "https://www.google.com/books/edition/Mastery/8auMEAAAQBAJ?hl=en",
+        "cover":"/books/m.jpg",
+        "segment": 3,
         "rank":"5"
     },
     {
         "title": "Steal like an Artist",
         "author": "Austin Kleon",
-        "link": "https://www.google.com/books/edition/Four_Thousand_Weeks/WFP2DwAAQBAJ?hl=en&gbpv=0",
-        "cover":"/books/btm.jpg",
-        "segment": 2,
+        "link": "https://https://www.google.com/books/edition/Steal_Like_an_Artist/K6AYaA-mTk0C?hl=en&gbpv=0",
+        "cover":"/books/slaa.jpg",
+        "segment": 3,
         "rank":"6"
+    },
+    {
+        "title": "Turning Pro",
+        "author": "Stephen Pressfield",
+        "link": "https://www.google.com/books/edition/Turning_Pro/FR7hAAAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/tp.jpg",
+        "segment": 3,
+        "rank":"100"
+    },
+    {
+        "title": "Keep Going",
+        "author": "Austin Kleon",
+        "link": "https://www.google.com/books/edition/Keep_Going/PNh7DwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/kg.jpg",
+        "segment": 3,
+        "rank":"100"
+    },
+    {
+        "title": "The Creative Act",
+        "author": "Rick Rubin",
+        "link": "https://www.google.com/books/edition/The_Creative_Act/l3dtEAAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/tca.jpg",
+        "segment": 3,
+        "rank":"100"
+    },
+    {
+        "title": "Musashi",
+        "author": "Eiji Yoshikawa",
+        "link": "https://www.google.com/books/edition/Musashi/kl4qDwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/musashi.jpg",
+        "segment": 3,
+        "rank":"100"
+    },
+    {
+        "title": "The Timeless Way of Building",
+        "author": "Christopher Alexander",
+        "link": "https://www.google.com/books/edition/Musashi/kl4qDwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/ttwob.jpg",
+        "segment": 3,
+        "rank":"100"
+    },
+    {
+        "title": "Red Rising",
+        "author": "Pierce Brown",
+        "link": "https://www.google.com/books/edition/Red_Rising/nPF9n0SwstMC?hl=en&gbpv=0",
+        "cover":"/books/rr.jpg",
+        "segment": 4,
+        "rank":"100"
+    },
+    {
+        "title": "Siddhartha",
+        "author": "Herman Hesse",
+        "link": "https://www.google.com/books/edition/Siddhartha/-L3PDwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/siddhartha.jpg",
+        "segment": 4,
+        "rank":"100"
+    },
+    {
+        "title": "The Way of Kings",
+        "author": "Brandon Sanderson",
+        "link": "https://www.google.com/books/edition/The_Way_of_Kings/QVn-CgAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/wok.jpg",
+        "segment": 4,
+        "rank":"100"
+    },
+    {
+        "title": "Mistborn",
+        "author": "Brandon Sanderson",
+        "link": "https://www.google.com/books/edition/Mistborn/t_ZYYXZq4RgC?hl=en&gbpv=0",
+        "cover":"/books/mistborn.jpg",
+        "segment": 4,
+        "rank":"100"
+    },
+    {
+        "title": "All the Pretty Horses",
+        "author": "Cormac McCarthy",
+        "link": "https://www.google.com/books/edition/All_the_Pretty_Horses/AbBKZvRo5S8C?hl=en&gbpv=0",
+        "cover":"/books/atph.jpg",
+        "segment": 4,
+        "rank":"100"
+    },
+    {
+        "title": "Ultralearning",
+        "author": "Scott Young",
+        "link": "https://www.google.com/books/edition/Ultralearning/d0IdvgEACAAJ?hl=en",
+        "cover":"/books/u.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "The World of Three Zeros",
+        "author": "Muhammad Yunus",
+        "link": "https://www.google.com/books/edition/A_World_of_Three_Zeros/xpWYDgAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/twotz.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Zero to One",
+        "author": "Peter Thiel",
+        "link": "https://books.google.com/books?id=POOJDQAAQBAJ&printsec=frontcover#v=onepage&q&f=false",
+        "cover":"/books/zto.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Breath",
+        "author": "James Nestor",
+        "link": "https://www.google.com/books/edition/Breath/6lS9DwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/breath.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Interaction of Color",
+        "author": "Joseph Albers",
+        "link": "https://books.google.com/books?id=A_MYU_XDXfcC&newbks=0&printsec=frontcover&dq=the+interaction+of+color&hl=en#v=onepage&q=the%20interaction%20of%20color&f=false",
+        "cover":"/books/ioc.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Thinking Fast and Slow",
+        "author": "Daniel Kahneman",
+        "link": "https://www.google.com/books/edition/Thinking_Fast_and_Slow/ZuKTvERuPG8C?hl=en&gbpv=0",
+        "cover":"/books/tfas.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Homo Deus",
+        "author": "Yuval Noah Harari",
+        "link": "https://www.google.com/books/edition/Homo_Deus/H2t_CwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/hd.png",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Essentialism",
+        "author": "Greg McKeown",
+        "link": "https://www.google.com/books/edition/Essentialism/q-QdEAAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/essentialism.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Deep Work",
+        "author": "Cal Newport",
+        "link": "https://www.google.com/books/edition/Deep_Work/B_L8CAAAQBAJ?hl=en",
+        "cover":"/books/dw.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Digital Minimalism",
+        "author": "Cal Newport",
+        "link": "https://www.google.com/books/edition/Digital_Minimalism/1eGCDwAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/dm.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "Fatherhood",
+        "author": "Fatherly",
+        "link": "https://www.google.com/books/edition/Fatherhood/1_YIEAAAQBAJ?hl=en&gbpv=0",
+        "cover":"/books/fatherhood.jpg",
+        "segment": 5,
+        "rank":"100"
+    },
+    {
+        "title": "100 Things",
+        "author": "Susan Weinshenck",
+        "link": "https://books.google.com/books?id=yODWdMUhkFwC&newbks=0&printsec=frontcover&dq=100+things&hl=en#v=onepage&q=100%20things&f=false",
+        "cover":"/books/100things.jpg",
+        "segment": 5,
+        "rank":"100"
     }
 ]

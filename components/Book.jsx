@@ -19,7 +19,7 @@ export const Book = ({ book }) => {
               {rank}
             </p>
           ) : null}
-          <div className="relative items-center align-middle border m-2 w-full h-96 min-h-[228px] sm:group-hover:drop-shadow-xl transition-all">
+          <div className="relative items-center align-middle m-2 w-full h-96 min-h-[228px] rounded-xl sm:group-hover:drop-shadow-xl transition-all">
             <Image src={cover} alt="book" fill objectFit="contain" />
           </div>
         </div>

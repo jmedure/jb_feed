@@ -2,36 +2,27 @@ import MainNav from './MainNav';
 import Link from 'next/link';
 import Subheader from './Subheader';
 import { motion } from 'framer-motion';
+import Breadcrumbs from './Breadcrumbs';
 
 export default function MainHeader(props) {
   const title = props.title;
+  const type = props.type;
 
+  if (type === 'blog') {
+    return (
+      <div className="w-full py-3 flex-row space-y-2 sm:space-y-0 fixed left-0 top-0 z-30 bg-white to-white">
+        <div className="flex container-fg items-center justify-between w-full text-lg font-medium font-jbd">
+          <Breadcrumbs />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="flex-wrap bg-white sticky top-0 z-30">
       <div className="container-fg py-3 w-full flex-row space-y-2 sm:space-y-0">
         <div className="flex items-center justify-between w-full text-lg font-medium font-jbd">
           {title ? (
-            <motion.div
-              initial={{ opacity: 0, translateY: 10 }}
-              animate={{ opacity: 1, translateY: 0 }}
-              transition={{
-                type: 'spring',
-                delay: 0.25,
-                stiffness: 200,
-                duration: 0.5,
-              }}
-              href="/"
-              className="flex text-center space-x-1 capitalize"
-            >
-              <Link
-                href="/"
-                className="font-normal underline text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
-              >
-                index
-              </Link>
-              <p className="text-black/20">/</p>
-              <p>{props.title}</p>
-            </motion.div>
+            <Breadcrumbs />
           ) : (
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:space-x-1 w-auto">
               <Link
@@ -55,6 +46,9 @@ export default function MainHeader(props) {
           >
             More
           </Link>
+
+          {/* {path}
+          </NextBreadcrumbs> */}
         </div>
         {!title ? <MainNav /> : null}
       </div>

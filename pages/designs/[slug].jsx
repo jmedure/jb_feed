@@ -18,6 +18,7 @@ import YoutubeEmbed from '../../components/YoutubeEmbed';
 import Link from 'next/link';
 import Breadcrumbs from '@marketsystems/nextjs13-appdir-breadcrumbs';
 import ProseWrapper from '../../components/mdx/ProseWrapper';
+import MainHeader from '../../components/MainHeader';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -26,7 +27,6 @@ export default function BlogPost({ post: { source, frontmatter } }) {
   const toc = frontmatter.toc;
   const slug = frontmatter.slug;
   const updated = frontmatter.updated;
-
   const lastTendedTo = dayjs().to(dayjs(updated));
   const published = dayjs().to(dayjs(frontmatter.date));
 
@@ -40,30 +40,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       />
       {/* <MHeaderRound title={frontmatter.title} rt={frontmatter.readingTime} /> */}
       <div className="flex flex-col w-full mx-auto">
-        <div className="flex pt-8 container-fg pb-6 flex-row w-full z-20 items-center space-x-1">
-          {/* <Link
-            href="/"
-            passHref
-            className="flex items-center hover:drop-shadow-lg border-white border-2 rounded-full transition-all duration-200 cursor-pointer"
-          >
-            <Image
-              alt="blue gradient"
-              src="/logo.png"
-              width={32}
-              height={32}
-              priority
-            />
-          </Link> */}
-          <Breadcrumbs
-            // replaceCharacterList={[{ from: '-', to: '  ' }]}
-            rootLabel="index"
-            transformLabel={(label) => ' / ' + label + ' '}
-            listClassName="flex space-x-1 capitalize font-jbd font-normal tracking-tight"
-            activeItemClassName="text-black"
-            inactiveItemClassName="text-black/50 hover:decoration-black hover:text-black transition-all"
-          />
-        </div>
-
+        <MainHeader type="blog" />
         <div className="w-full fixed left-0 top-0 p-10 z-10 bg-gradient-to-t from-white/0 backdrop-blur-[1px] to-white"></div>
         <div className="flex w-[98%] mb-8 space-x-4 sm:space-x-0 mx-auto py-2 z-20">
           {youtube ? (

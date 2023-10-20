@@ -1,13 +1,26 @@
 import Link from 'next/link';
 import Button from './Button';
 import Subscribe from './Subscribe';
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import siteMetaData from '../data/siteMetadata';
-import Image from 'next/image';
 import LiveVisitors from './LiveVistors';
 
 export default function Footer(props) {
+  if (props.href) {
+    return (
+      <div id="footer" className="w-full border-t text-black/50 border-">
+        <div className="container-fg grid-col-1 sm:grid-col-3 w-full py-4 flex justify-between font-jbd tracking-tight font-normal">
+          <Link
+            href={props.href}
+            className="col-span-1 underline text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
+          >
+            Back to top
+          </Link>
+          <p className="col-span-1">® 2022 - ∞</p>
+          <p className="col-span-1">from Jacob&#39;s Blue</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div id="footer" className="container-fg">
       <div className="font-jbd text-lg font-normal tracking-tight border-blue-200 border-solid border rounded-xl">
@@ -32,12 +45,6 @@ export default function Footer(props) {
                   copy="Library"
                 />
                 <Button
-                  href="/archive"
-                  type="null"
-                  icon="east"
-                  copy="Archive"
-                />
-                <Button
                   href="/personal-bests"
                   type="null"
                   icon="east"
@@ -50,10 +57,16 @@ export default function Footer(props) {
                   copy="Thank you"
                 />
                 <Button
+                  href="/archive"
+                  type="null"
+                  icon="east"
+                  copy="Archive"
+                />
+                <Button
                   href="https://freegame.notion.site/Jacob-s-Blue-Press-Kit-79b4480312224328954dea767579cd5a"
                   type="right"
                   icon="north_east "
-                  copy="Press"
+                  copy="Press kit"
                 />
               </div>
             </div>
