@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import YoutubeEmbed from './YoutubeEmbed';
-import BubbleLink from './BubbleLink';
+import YoutubeEmbed from '../YoutubeEmbed';
+import BubbleLink from '../BubbleLink';
 import { motion } from 'framer-motion';
 import dayjs from 'dayjs';
 

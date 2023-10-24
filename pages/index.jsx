@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import MainHeader from '../components/MainHeader';
-import { Post } from '../components/Post';
+import { Post } from '../components/cards/Post';
 import useSWR from 'swr';
 import Footer from '../components/Footer';
 import BlogSEO from '../components/BlogSEO';

@@ -57,7 +57,7 @@ const Breadcrumbs = () => {
         <li>
           <Link
             href="/"
-            className="font-normal underline text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
+            className="font-normal truncate max-w-2 border whitespace-nowrap underline text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
           >
             Index
           </Link>
@@ -70,8 +70,8 @@ const Breadcrumbs = () => {
                 href={breadcrumb.href}
                 className={
                   (i == breadcrumbs.length - 1
-                    ? ''
-                    : 'font-normal underline text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all ') +
+                    ? 'w-full whitespace-nowrap'
+                    : 'font-normal truncate w-6 sm:w-full underline whitespace-nowrap text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all ') +
                   ''
                 }
               >

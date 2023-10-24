@@ -14,38 +14,60 @@ import Link from 'next/link';
 import StreamLink from '../../components/StreamLink';
 import MoreLinkBlog from '../../components/MoreLinkBlog';
 import BlogSEO from '../../components/BlogSEO';
+import MainHeader from '../../components/MainHeader';
+import ProseWrapper from '../../components/mdx/ProseWrapper';
+import BlogWrapper from '../../components/wrappers/BlogWrapper';
+import { link } from 'fs';
+import Footer from '../../components/Footer';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
+  const links = frontmatter.links;
+
   const songType = () => {
-    if (frontmatter.type == 'album') {
+    if (frontmatter.type === 'album') {
       return (
-        <div className="py-8 flex flex-col">
-          <p className="flex flex-center items-center px-2 justify-start mr-auto py-1 my-2 text-xs uppercase border border-solid border-white rounded-full">
-            {frontmatter.type}
-          </p>
-          <h1 className="text-5xl font-medium md:text-6xl tracking-tighter">
-            {frontmatter.title}
-          </h1>
-          <p className="text-xl md:py-4 py-2">by {frontmatter.artist}</p>
+        <div className="flex font-medium tracking-tighter flex-col text-2xl">
+          <div className="flex-wrap space-y-4">
+            <h1 className="flex items-center space-x-2">
+              {frontmatter.title}
+
+              {/* <span className="flex text-xs w-5 h-5 bg-black/10 border px-[6px] py-[2.5px] rounded">
+                {frontmatter.explicit}
+              </span> */}
+              {frontmatter.explicit ? (
+                <span className="text-xs w-5 h-5 bg-black/10 flex ml-2 px-[6px] py-[2.5px] rounded">
+                  E
+                </span>
+              ) : null}
+            </h1>
+          </div>
+          <p className="text-black/50">by {frontmatter.artist}</p>
         </div>
       );
     }
     if (frontmatter.type == 'song') {
       return (
-        <div className="py-8 flex flex-col ">
-          <p className="flex flex-center px-2 items-center justify-start mr-auto py-1 my-2 text-xs uppercase border border-solid border-white rounded-full">
-            {frontmatter.type}
-          </p>
-          <h1 className="text-5xl md:text-6xl font-medium tracking-tighter">
-            {frontmatter.title}
-          </h1>
-          <p className="text-xl md:py-4 py-2">by {frontmatter.artist}</p>
-          <p className="text-neutral-300 pt-2">
+        <div className="flex font-medium tracking-tighter flex-col text-2xl space-y-4">
+          <div className="flex-wrap">
+            <h1 className="flex items-center space-x-2">
+              {frontmatter.title}
+              {/* <span className="flex text-xs w-5 h-5 bg-black/10 border px-[6px] py-[2.5px] rounded">
+                {frontmatter.explicit}
+              </span> */}
+              {frontmatter.explicit ? (
+                <span className="text-xs w-5 h-5 bg-black/10 flex ml-2 px-[6px] py-[2.5px] rounded">
+                  E
+                </span>
+              ) : null}
+            </h1>
+            <p className="text-black/50">by {frontmatter.artist}</p>
+          </div>
+
+          <p className="text-black/80 pt-2 text-xl">
             Track {frontmatter.track} from{' '}
             <Link
-              href={`/songs/${frontmatter.albumLink}`}
-              className="dark"
-              legacyBehavior
+              href={`/discography/${frontmatter.albumLink}`}
+              className="font-normal tracking-tight truncate w-6 sm:w-full underline whitespace-nowrap text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
             >
               {frontmatter.album}
             </Link>
@@ -54,125 +76,134 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       );
     } else {
       return (
-        <div className="py-8 flex flex-col space-y-2">
-          <p className="flex flex-center px-2 items-center justify-start mr-auto py-1 my-2 text-xs uppercase border border-solid border-white rounded-full">
-            {frontmatter.type}
-          </p>
-          <h1 className="text-5xl md:text-6xl font-medium tracking-tighter">
-            {frontmatter.title}
-          </h1>
-          <p className="text-xl md:py-4 py-2">by {frontmatter.artist}</p>
+        <div className="flex font-medium tracking-tighter flex-col text-2xl">
+          <div className="flex-wrap space-y-4">
+            <h1 className="flex items-center space-x-2">
+              {frontmatter.title}
+              {/* <span className="flex text-xs w-5 h-5 bg-black/10 border px-[6px] py-[2.5px] rounded">
+                {frontmatter.explicit}
+              </span> */}
+              {frontmatter.explicit ? (
+                <span className="text-xs w-5 h-5 bg-black/10 flex ml-2 px-[6px] py-[2.5px] rounded">
+                  E
+                </span>
+              ) : null}
+            </h1>
+          </div>
+          <p className="text-black/50">by {frontmatter.artist}</p>
         </div>
       );
     }
   };
 
+  // const hey = frontmatter.links1;
+  // const StreamLinks = () => (
+  //   <div>
+  //     <ul>
+  //       {hey.map((link) => (
+  //         <li key={link}> {link} </li>
+  //       ))}
+  //     </ul>
+  //   </div>
+  // );
+
+  // {
+  //   Object.keys(frontmatter.links1).map((key) => {
+  //     // return <li key={key}>{frontmatter.links[key]}</li>;
+  //     return console.log(toString(frontmatter.links1));
+  //   });
+  // }
+
   return (
     <React.Fragment>
-      {/* <Head>
-        <title>{frontmatter.title} by Jacob&#39;s Blue</title>
-      </Head>  */}
       <BlogSEO
         title={frontmatter.title + " by Jacob's Blue"}
         description="Lyrics, credits, and all streaming links"
         canonical={frontmatter.slug}
         image={frontmatter.artwork}
       />
-      <div className="bg-neutral-900 text-white relative">
+      <MainHeader type="blog" />
+
+      {/* NEW */}
+
+      <div className="container-fg pt-14 pb-4 text-lg font-jbd font-normal md:flex space-y-6 sm:space-y-0 md:space-x-6">
         <div
-          className="bg-cover lg:bg-cover bg-scroll bg-center not-prose flex-block "
-          style={{ backgroundImage: `url(${frontmatter.artwork})` }}
+          id="links"
+          className="flex-1 w-full bg-neutral-100 rounded-md py-6 px-4 space-y-6 md:py-20 mx-auto  justify-center align-middle "
         >
-          <div className="bg-gradient-to-t from-neutral-900">
-            <div className="container pt-10 pb-8">
-              <div className="flex">
-                <Link href="./" legacyBehavior>
-                  <div className="flex cursor-pointer mb-10 py-1 bg-black/20 rounded-full backdrop-blur-sm pl-2 pr-3 hover:bg-black/50 items-center">
-                    <span className="material-icons text-xs">west</span>
-                    <div className=""> all songs</div>
-                  </div>
-                </Link>
-              </div>
+          <div className="bordermax-auto justify-center align-middle max-w-xl mx-auto space-y-6 flex-col w-full h-min md:sticky md:mx-auto md:top-16 ">
+            <div className="flex max-w-xs sm:max-w-md relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border drop-shadow-md">
+              <Image
+                src={frontmatter.artwork}
+                alt={frontmatter.alt}
+                placeholder="blur"
+                blurDataURL="https://jacobs.blue"
+                // sizes="100vw"
+                layout="fill"
+              />
+            </div>
+            <div
+              id="meta"
+              className="font-medium text-center mx-auto flex-wrap"
+            >
+              <p className="text-2xl tracking-tighter">{frontmatter.title}</p>
 
-              <div className="flex items-center h-full w-full">
-                <div className="relative invisible rounded-xl drop-shadow-2xl overflow-hidden hidden sm:flex sm:visible sm:w-80 md:w-96 h-full aspect-square ">
-                  <Image
-                    src={frontmatter.artwork}
-                    alt={frontmatter.alt}
-                    placeholder="blur"
-                    blurDataURL="https://jacobs.blue"
-                    sizes="100vw"
-                    layout="fill"
-                  />
-                </div>
-
-                <div className="flex-col flex-1 h-full justify-between pr-4 flex-block sm:ml-8">
-                  {songType()}
-
-                  {/* <div className="flex py-6 items-center cursor-pointer">
-                                <p>Track {frontmatter.track} from {frontmatter.album}</p>
-                        </div> */}
-                  <div className="flex space-x-auto justify-between columns-3">
-                    <div className="">
-                      <h3 className="text-xs text-neutral-300 font-medium uppercase">
-                        Released
-                      </h3>
-                      <p className="pt-1">
-                        {dayjs(frontmatter.released).format('MMM D, YYYY')}
-                      </p>
-                    </div>
-                    <div className="">
-                      <h3 className="text-xs text-neutral-300 font-medium uppercase">
-                        Written
-                      </h3>
-                      <p className="pt-1">{frontmatter.written}</p>
-                    </div>
-                    <div className="">
-                      <h3 className="text-xs text-neutral-300 font-medium uppercase">
-                        Produced
-                      </h3>
-                      <p className="pt-1">{frontmatter.produced}</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="text-black/50 tracking-tight">
+                {frontmatter.track ? (
+                  <Link href={frontmatter.albumLink} className="underline">
+                    <p>{frontmatter.album}</p>
+                  </Link>
+                ) : null}
+                <p>by {frontmatter.artist}</p>
               </div>
             </div>
+            <ol id="links" className="flex flex-col space-y-2 w-full mx-auto">
+              {links.map((link, i) => {
+                return <StreamLink key={i} href={link} />;
+              })}
+            </ol>
           </div>
         </div>
 
-        <div className="container flex flex-col md:flex-row-reverse col-span-2">
-          <div className="flex-block border-solid border border-white rounded-xl p-4 md:bg-neutral-900 md:m-0 md:ml-auto md:p-4 m-0 md:sticky md:top-8 md:z-10 md:right-0 h-full">
-            <div className="">
-              <p className="uppercase font-medium text-neutral-300 text-xs pb-2">
-                Stream now
-              </p>
-            </div>
-            <div className="flex text-lg flex-wrap w-full md:flex-nowrap md:block">
-              <StreamLink href={frontmatter.links[0]} label="Spotify" />
-              <StreamLink href={frontmatter.links[1]} label="Apple" />
-              <StreamLink href={frontmatter.links[2]} label="Youtube" />
-              <StreamLink href={frontmatter.links[3]} label="Amazon" />
-              <StreamLink href={frontmatter.links[4]} label="Tidal" />
-              {/* <StreamLink href={frontmatter.links[5]} label="Even More" /> */}
+        <BlogWrapper>
+          <div className="flex-col sm:max-w-[640px] sm:flex-none justify-between">
+            {songType()}
+            <div className="flex space-x-auto justify-between columns-3">
+              <div className="">
+                <h3 className="text-base text-neutral-600">Released</h3>
+                <p className="pt-1">
+                  {dayjs(frontmatter.released).format('MMM D, YYYY')}
+                </p>
+              </div>
+              <div className="">
+                <h3 className="text-base text-neutral-600">Written</h3>
+                <p className="pt-1">{frontmatter.written}</p>
+              </div>
+              <div className="">
+                <h3 className="text-base text-neutral-600">Produced</h3>
+                <p className="pt-1">{frontmatter.produced}</p>
+              </div>
             </div>
           </div>
 
-          <div className="prose-base md:prose-lg flex-shrink w-full md:w-[32rem] lg:w-[38rem] pt-8 md:pt-0 static prose-invert prose-headings:tracking-tighter prose-headings:font-sans prose-headings:font-light prose-ul:list-none prose-ul:list">
+          <ProseWrapper>
             <MDXRemote
               {...source}
               components={{ Image, Button, Link, MoreLinkBlog }}
             />
-          </div>
-        </div>
-        <div className="flex container justify-center sticky z-30 bottom-8 drop-shadow-lg pt-12">
-          <iframe
-            className="h-20 w-full backdrop-blur-sm border border-black border-solid overflow-clip rounded-xl "
-            src={`https://open.spotify.com/embed/${frontmatter.spotifyEmbed}?utm_source=generator&theme=1`}
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          ></iframe>
-        </div>
+          </ProseWrapper>
+        </BlogWrapper>
+
+        {/* <div className="flex container justify-center sticky z-30 bottom-8 drop-shadow-lg pt-12">
+        <iframe
+          className="h-20 w-full backdrop-blur-sm border border-black border-solid overflow-clip rounded-xl "
+          src={`https://open.spotify.com/embed/${frontmatter.spotifyEmbed}?utm_source=generator&theme=1`}
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        ></iframe>
+      </div> */}
       </div>
+      <Footer />
     </React.Fragment>
   );
 }

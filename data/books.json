@@ -68,7 +68,7 @@
         "author": "Yuval Noah Harari",
         "link": "https://www.google.com/books/edition/Sapiens/FmyBAwAAQBAJ?hl=en&gbpv=0",
         "cover":"/books/s.jpg",
-        "segment": 1,
+        "segment": 5,
         "rank":"100"
     },
     {
@@ -76,6 +76,14 @@
         "author": "Ryan Holiday",
         "link": "https://www.google.com/books/edition/Stillness_Is_the_Key/4BmtDwAAQBAJ?hl=en&gbpv=0",
         "cover":"/books/sik.jpg",
+        "segment": 1,
+        "rank":"100"
+    },
+    {
+        "title": "Jonathan Livingston Seagull",
+        "author": "Richard Bach",
+        "link": "https://www.google.com/books/edition/Jonathan_Livingston_Seagull/VmuWQ0vdpmQC?hl=en&gbpv=0",
+        "cover":"/books/jls.jpg",
         "segment": 1,
         "rank":"100"
     },
@@ -248,6 +256,22 @@
         "rank":"100"
     },
     {
+        "title": "The Jungle Book",
+        "author": "Rudyard Kipling",
+        "link": "https://en.wikipedia.org/wiki/The_Jungle_Book",
+        "cover":"/books/tjb.jpg",
+        "segment": 4,
+        "rank":"100"
+    },
+    {
+        "title": "DUNE",
+        "author": "Frank Herbert",
+        "link": "https://www.google.com/books/edition/Dune/B1hSG45JCX4C?hl=en&gbpv=0k",
+        "cover":"/books/dune.jpg",
+        "segment": 4,
+        "rank":"1"
+    },
+    {
         "title": "Ultralearning",
         "author": "Scott Young",
         "link": "https://www.google.com/books/edition/Ultralearning/d0IdvgEACAAJ?hl=en",
@@ -291,7 +315,7 @@
         "title": "Thinking Fast and Slow",
         "author": "Daniel Kahneman",
         "link": "https://www.google.com/books/edition/Thinking_Fast_and_Slow/ZuKTvERuPG8C?hl=en&gbpv=0",
-        "cover":"/books/tfas.jpg",
+        "cover":"/books/tfas1.jpg",
         "segment": 5,
         "rank":"100"
     },

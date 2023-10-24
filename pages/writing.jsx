@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head';
 import MainHeader from '../components/MainHeader';
-import { Post } from '../components/Post';
+import { Post } from '../components/cards/Post';
 import useSWR from 'swr';
-import MainNav from '../components/MainNav';
 import Footer from '../components/Footer';
 import MasonryWrapper from '../components/wrappers/MasonryWrapper';
 

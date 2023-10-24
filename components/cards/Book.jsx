@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import YoutubeEmbed from './YoutubeEmbed';
+import YoutubeEmbed from '../YoutubeEmbed';
 import { motion } from 'framer-motion';
 
 export const Book = ({ book }) => {

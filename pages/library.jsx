@@ -3,7 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 import MainHeader from '../components/MainHeader';
 import useSWR from 'swr';
-import { Book } from '../components/Book';
+import { Book } from '../components/cards/Book';
 import MainGridWrapper from '../components/wrappers/MainGridWrapper';
 import SectionHeader from '../components/SectionHeader';
 
@@ -12,10 +12,6 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 export default function Library() {
   const title = 'Library';
   const { data, error } = useSWR('/api/books', fetcher);
-
-  // const rank = data.length;
-  // console.log(rank);
-
   const main = () => {
     if (error) {
       return <main>error: failed to load</main>;
