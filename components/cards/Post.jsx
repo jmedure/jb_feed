@@ -72,28 +72,15 @@ export const Post = ({ post }) => {
     }
   };
 
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
-  };
-
   return (
     <a
       href={link}
       className="flex-block flex-wrap group no-underline font-jbd font-normal h-min cursor-pointer"
     >
-      <motion.div
-        variants={item}
-        // initial="hidden"
-        // animate="show"
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        transition={{ type: 'spring', stiffness: 100 }}
-        className="break-inside-avoid p-3 space-y-4 border-2 border-solid border-blue-100 sm:hover:outline-blue-400 sm:hover:outline outline outline-white  sm:hover:bg-blue-100 mb-4 bg-blue-50 rounded-xl text-black transition-all"
-      >
+      <div className="break-inside-avoid p-3 space-y-4 border-2 border-solid border-blue-100 sm:hover:outline-blue-400 sm:hover:outline outline outline-white  sm:hover:bg-blue-100 mb-4 bg-blue-50 rounded-xl text-black transition-all">
         {frame()}
         {youtubeEmbed ? (
-          <div className="w-full mb-4 relative h-full aspect-square rounded-xl overflow-hidden sm:aspect-video">
+          <div className="w-full mb-4 relative h-full  rounded-xl overflow-hidden aspect-video">
             <YoutubeEmbed embedId={youtubeEmbed} />
           </div>
         ) : null}
@@ -104,7 +91,7 @@ export const Post = ({ post }) => {
           </p>
         </div>
         {cta ? <BubbleLink href={link} label={cta} mui={mui} /> : null}
-      </motion.div>
+      </div>
     </a>
   );
 };

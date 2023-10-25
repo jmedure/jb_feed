@@ -21,6 +21,8 @@ import { link } from 'fs';
 import Footer from '../../components/Footer';
 import { motion } from 'framer-motion';
 import Tracklist from '../../components/mdx/Tracklist';
+import ArchiveEntry from '../../components/cards/ArchiveEntry';
+import ExplicitTag from '../../components/tags/ExplicitTag';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const links = frontmatter.links;
@@ -37,9 +39,10 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                 {frontmatter.explicit}
               </span> */}
               {frontmatter.explicit ? (
-                <span className="text-xs w-5 h-5 bg-black/10 flex ml-2 px-[6px] py-[2.5px] rounded">
-                  E
-                </span>
+                // <span className="text-xs w-5 h-5 bg-black/10 flex ml-2 px-[6px] py-[2.5px] rounded">
+                //   E
+                // </span>
+                <ExplicitTag />
               ) : null}
             </h1>
           </div>
@@ -56,11 +59,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               {/* <span className="flex text-xs w-5 h-5 bg-black/10 border px-[6px] py-[2.5px] rounded">
                 {frontmatter.explicit}
               </span> */}
-              {frontmatter.explicit ? (
-                <span className="text-xs w-5 h-5 bg-black/10 flex ml-2 px-[6px] py-[2.5px] rounded">
-                  E
-                </span>
-              ) : null}
+              {frontmatter.explicit ? <ExplicitTag /> : null}
             </h1>
             <p className="text-black/50">by {frontmatter.artist}</p>
           </div>
@@ -85,11 +84,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               {/* <span className="flex text-xs w-5 h-5 bg-black/10 border px-[6px] py-[2.5px] rounded">
                 {frontmatter.explicit}
               </span> */}
-              {frontmatter.explicit ? (
-                <span className="text-xs w-5 h-5 bg-black/10 flex ml-2 px-[6px] py-[2.5px] rounded">
-                  E
-                </span>
-              ) : null}
+              {frontmatter.explicit ? <ExplicitTag /> : null}
             </h1>
           </div>
           <p className="text-black/50">by {frontmatter.artist}</p>
@@ -97,24 +92,6 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       );
     }
   };
-
-  // const hey = frontmatter.links1;
-  // const StreamLinks = () => (
-  //   <div>
-  //     <ul>
-  //       {hey.map((link) => (
-  //         <li key={link}> {link} </li>
-  //       ))}
-  //     </ul>
-  //   </div>
-  // );
-
-  // {
-  //   Object.keys(frontmatter.links1).map((key) => {
-  //     // return <li key={key}>{frontmatter.links[key]}</li>;
-  //     return console.log(toString(frontmatter.links1));
-  //   });
-  // }
 
   return (
     <React.Fragment>
@@ -128,19 +105,29 @@ export default function BlogPost({ post: { source, frontmatter } }) {
 
       {/* NEW */}
 
-      <div className="container-fg pt-14 pb-4 text-lg font-jbd font-normal md:flex space-y-6 sm:space-y-0 md:space-x-6">
+      <motion.div
+        initial={{ opacity: 0, translateY: 10 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          when: 'afterChildren',
+          delay: 0.1,
+          duration: 0.2,
+          type: 'spring',
+          stiffness: 200,
+        }}
+        className="container-fg pt-14 pb-4 text-lg font-jbd font-normal lg:flex space-y-6 lg:space-y-0 lg:space-x-6"
+      >
         <div
           id="links"
-          className="flex-1 w-full bg-neutral-100 rounded-lg py-6 px-4 space-y-6 md:py-20 mx-auto  justify-center align-middle "
+          className="flex-1 flex bg-neutral-100 w-full rounded-lg py-6 px-4 space-y-6 md:py-20 md:px-full mx-auto justify-center align-middle "
         >
-          <div className="justify-center align-middle max-w-lg mx-auto space-y-6 flex-col w-full h-min md:sticky md:mx-auto md:top-16 ">
-            <div className="flex max-w-xs sm:max-w-sm relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border drop-shadow-md">
+          <div className="justify-center align-middle max-w-lg mx-auto md:sticky top-24 space-y-8 flex-col w-full h-min  ">
+            <div className="flex max-w-xs sm:max-w-xs relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border drop-shadow-md">
               <Image
                 src={frontmatter.artwork}
                 alt={frontmatter.alt}
                 placeholder="blur"
                 blurDataURL="https://jacobs.blue"
-                // sizes="100vw"
                 layout="fill"
               />
             </div>
@@ -188,30 +175,21 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         <BlogWrapper>
           <div className="flex-col sm:max-w-[640px] sm:flex-none justify-between">
             {songType()}
-            {/* <div className="flex space-x-auto justify-between columns-3">
-              <div className="">
-                <h3 className="text-base text-neutral-600">Released</h3>
-                <p className="pt-1">
-                  {dayjs(frontmatter.released).format('MMM D, YYYY')}
-                </p>
-              </div>
-              <div className="">
-                <h3 className="text-base text-neutral-600">Written</h3>
-                <p className="pt-1">{frontmatter.written}</p>
-              </div>
-              <div className="">
-                <h3 className="text-base text-neutral-600">Produced</h3>
-                <p className="pt-1">{frontmatter.produced}</p>
-              </div>
-            </div> */}
-          </div>
 
-          <ProseWrapperSongs>
-            <MDXRemote
-              {...source}
-              components={{ Image, Button, Link, MoreLinkBlog, Tracklist }}
-            />
-          </ProseWrapperSongs>
+            <ProseWrapperSongs>
+              <MDXRemote
+                {...source}
+                components={{
+                  Image,
+                  Button,
+                  Link,
+                  MoreLinkBlog,
+                  Tracklist,
+                  ArchiveEntry,
+                }}
+              />
+            </ProseWrapperSongs>
+          </div>
         </BlogWrapper>
 
         {/* <div className="flex container justify-center sticky z-30 bottom-8 drop-shadow-lg pt-12">
@@ -222,7 +200,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         ></iframe>
       </div> */}
-      </div>
+      </motion.div>
       <Footer />
     </React.Fragment>
   );

@@ -72,9 +72,11 @@ export default function SongCard(props) {
             blurDataURL="https://jacobs.blue"
           />
         </div>
-        <div className="flex flex-row items-center w-full font-jbd font-normal text-lg lg:text-lg tracking-normal truncate">
+        <div className="flex flex-row items-center w-full font-jbd font-normal text-lg lg:text-lg tracking-normal">
           <div className="flex flex-col justify-between md:h-24 lg:h-24 w-full space-y-2">
-            <h2 className="text-xl sm:text-2xl tracking-tight">{title}</h2>
+            <h2 className="text-xl sm:text-2xl tracking-tight flex-wrap">
+              {title}
+            </h2>
             <div className="flex flex-col text-black/50 lg:flex-col w-full align-middle sm:space-y-0">
               <p className="text-black/50 whitespace-nowrap">
                 {dayjs(date).format('MMM YYYY')}

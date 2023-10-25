@@ -24,6 +24,7 @@ import { useRouter } from 'next/router';
 import Footer from '../../components/Footer';
 import BlogWrapper from '../../components/wrappers/BlogWrapper';
 import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
+import { motion } from 'framer-motion';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -45,7 +46,18 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         image={frontmatter.thumbnail}
       />
       <MainHeader type="blog" />
-      <div className="flex flex-col w-full mx-auto">
+      <motion.div
+        initial={{ opacity: 0, translateY: 10 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          when: 'afterChildren',
+          delay: 0.1,
+          duration: 0.2,
+          type: 'spring',
+          stiffness: 100,
+        }}
+        className="flex flex-col w-full mx-auto"
+      >
         <BlogHeroBanner
           youtube={youtube}
           embedID={frontmatter.youtube}
@@ -104,8 +116,8 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             </BlogWrapper>
           </div>
         </div>
-        <Footer href={currentRoute} />
-      </div>
+      </motion.div>
+      <Footer />
     </React.Fragment>
   );
 }

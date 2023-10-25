@@ -45,7 +45,6 @@ export async function getArticleFromSlug(slug) {
       released: data.date,
       albumLink: data.albumLink,
       track: data.trackNumber,
-      spotifyEmbed: data.spotifyEmbed,
       links: data.links,
       // links1: data.links,
       explicit: data.explicit,

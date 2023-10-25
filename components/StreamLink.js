@@ -27,7 +27,12 @@ export default function StreamLink(props) {
   } else if (link.includes('tidal')) {
     return (
       <a href={props.href} className="">
-        <StreamLinkWrapper icon="tidal" label="Tidal" bg="bg-black/05" />
+        <StreamLinkWrapper
+          icon="tidal"
+          label="Tidal"
+          bg="bg-black"
+          fill="fill-white"
+        />
       </a>
     );
   } else if (link.includes('soundcloud')) {

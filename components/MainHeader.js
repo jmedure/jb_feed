@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Subheader from './Subheader';
 import { motion } from 'framer-motion';
 import Breadcrumbs from './Breadcrumbs';
+import CopyLink from './CopyLink';
 
 export default function MainHeader(props) {
   const title = props.title;
@@ -11,15 +12,36 @@ export default function MainHeader(props) {
   if (type === 'blog') {
     return (
       <div className="w-full py-3 flex-row space-y-2 sm:space-y-0 fixed left-0 top-0 z-30 bg-white to-white">
-        <div className="flex container-fg items-center justify-between w-full text-lg font-medium font-jbd">
+        <motion.div
+          initial={{ opacity: 0, translateY: 10 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{
+            type: 'spring',
+            delay: 0.1,
+            stiffness: 200,
+            duration: 0.5,
+          }}
+          className="flex container-fg items-center justify-between w-full text-lg font-medium font-jbd"
+        >
           <Breadcrumbs />
-        </div>
+          <CopyLink />
+        </motion.div>
       </div>
     );
   }
   return (
     <div className="flex-wrap bg-white sticky top-0 z-30">
-      <div className="container-fg py-3 w-full flex-row space-y-2 sm:space-y-0">
+      <motion.div
+        initial={{ opacity: 0, translateY: 10 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          type: 'spring',
+          delay: 0.1,
+          stiffness: 200,
+          duration: 0.5,
+        }}
+        className="container-fg py-3 w-full flex-row"
+      >
         <div className="flex items-center justify-between w-full text-lg font-medium font-jbd">
           {title ? (
             <Breadcrumbs />
@@ -39,19 +61,15 @@ export default function MainHeader(props) {
               <Subheader />
             </div>
           )}
-
           <Link
             href="#footer"
             className="text-lg  underline underline-offset-2 sm:hover:underline-offset-4 decoration-neutral-200 transition-all sm:hover:decoration-black font-medium cursor-pointer px-1 py-2"
           >
             More
           </Link>
-
-          {/* {path}
-          </NextBreadcrumbs> */}
         </div>
         {!title ? <MainNav /> : null}
-      </div>
+      </motion.div>
     </div>
   );
 }

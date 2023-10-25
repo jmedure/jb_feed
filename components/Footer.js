@@ -5,12 +5,15 @@ import siteMetaData from '../data/siteMetadata';
 import LiveVisitors from './LiveVistors';
 
 export default function Footer(props) {
-  if (props.href) {
+  if (props.btp) {
     return (
-      <div id="footer" className="w-full border-t text-black/50 border-">
+      <div
+        id="footer"
+        className="w-full border-t text-black/50 bottom-0 fixed bg-white"
+      >
         <div className="container-fg grid-col-1 sm:grid-col-3 w-full py-4 flex justify-between font-jbd tracking-tight font-normal">
           <Link
-            href={props.href}
+            href={props.btp}
             className="col-span-1 underline text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
           >
             Back to top
@@ -258,7 +261,7 @@ export default function Footer(props) {
         </div>
         <div className="p-4 lg:mt-3 mt-4 flex w-full justify-between items-center border-blue-200 border-t border-solid">
           <Link
-            href="/journal/about-jacobs-blue"
+            href="/designs/colophon"
             className="text-base tracking-tight text-gray-500 underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
           >
             About jacobs.blue
@@ -266,7 +269,7 @@ export default function Footer(props) {
           <LiveVisitors />
         </div>
       </div>
-      <div className="py-12">
+      <div className="pb-12">
         <div className="flex py-6 justify-center items-center align-middle space-x-4">
           <a href="https://createwcare.com">
             <svg

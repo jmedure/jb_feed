@@ -103,8 +103,8 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             </BlogWrapper>
           </div>
         </div>
-        <Footer href={currentRoute} />
       </div>
+      <Footer btp={currentRoute} />
     </React.Fragment>
   );
 }

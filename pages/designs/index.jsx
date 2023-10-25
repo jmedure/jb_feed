@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import DesignProjectCard from '../../components/DesignProjectCard';
 import { motion } from 'framer-motion';
+import MotionListWrapper from '../../components/wrappers/MotionListWrapper';
 
 export default function Blog({ posts }) {
   // const list = {
@@ -54,48 +55,47 @@ export default function Blog({ posts }) {
             </div>
           </Link>
         </div>
-        <div className="">
-          <div className="py-24 md:py-48 h-full">
-            <div className="font-mono font-light text-sm tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
-              <ul className="w-full space-y-2 justify-between ">
-                {posts.map((frontMatter, index) => {
-                  if (frontMatter.isPublished == 'true') {
-                    return (
-                      <motion.li
-                        initial={{ opacity: 0, translateY: 5 }}
-                        animate={{ opacity: 1, translateY: 0 }}
-                        transition={{
-                          when: 'afterChildren',
-                          delay: index * 0.1,
-                          duration: 0.2,
-                          type: 'tween',
-                          ease: 'linear',
-                        }}
-                        key={index}
-                      >
-                        <DesignProjectCard
-                          slug={frontMatter.slug}
-                          passHref
-                          src={frontMatter.image}
-                          alt={frontMatter.alt}
-                          title={frontMatter.title}
-                          description={frontMatter.description}
-                          date={frontMatter.date}
-                          lastEdited={frontMatter.lastEdited}
-                          readingTime={frontMatter.readingTime}
-                          isPublished={frontMatter.isPublished}
-                          tile={frontMatter.tile}
-                        />
-                      </motion.li>
-                    );
-                  }
-                })}
-              </ul>
-            </div>
+        <div className="py-24 md:py-48 h-full">
+          <div className="font-jbd text-lg font-normal tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
+            <ul className="w-full space-y-2 justify-between ">
+              {posts.map((frontMatter, index) => {
+                if (frontMatter.isPublished == 'true') {
+                  return (
+                    <motion.li
+                      initial={{ opacity: 0, translateY: 10 }}
+                      animate={{ opacity: 1, translateY: 0 }}
+                      transition={{
+                        when: 'afterChildren',
+                        delay: index * 0.05,
+                        duration: 0.2,
+                        type: 'spring',
+                        stiffness: 200,
+                      }}
+                      key={index}
+                    >
+                      <DesignProjectCard
+                        slug={frontMatter.slug}
+                        passHref
+                        src={frontMatter.image}
+                        alt={frontMatter.alt}
+                        title={frontMatter.title}
+                        description={frontMatter.description}
+                        date={frontMatter.date}
+                        lastEdited={frontMatter.lastEdited}
+                        readingTime={frontMatter.readingTime}
+                        isPublished={frontMatter.isPublished}
+                        tile={frontMatter.tile}
+                      />
+                    </motion.li>
+                  );
+                }
+              })}
+            </ul>
           </div>
         </div>
       </div>
-      <div className="flex text-neutral-500 bg-white text-xs mx-auto space-x-2 w-full align-middle justify-center sticky bottom-0 font-mono p-4">
+
+      <div className="flex text-neutral-500 bg-white text-xs mx-auto space-x-2 w-full align-middle justify-center sticky bottom-0 p-4">
         <p>by</p>
         <Link href="/">Jacob&#39;s Blue</Link>
       </div>

@@ -1,4 +1,4 @@
-import ArchiveEntry from '../../components/ArchiveEntry';
+import ArchiveEntry from '../../components/cards/ArchiveEntry';
 import Footer from '../../components/Footer';
 import Head from 'next/head';
 import React from 'react';

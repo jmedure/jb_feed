@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import MainHeader from '../../components/MainHeader';
 import SectionHeader from '../../components/SectionHeader';
 import MainGridWrapper from '../../components/wrappers/MainGridWrapper';
+import { Suspense } from 'react';
 
 export default function Blog({ posts }) {
   const title = 'Discography';
@@ -79,6 +80,7 @@ export default function Blog({ posts }) {
             </MainGridWrapper>
           </div>
         </div>
+
         <Footer />
       </div>
     </React.Fragment>
