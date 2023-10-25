@@ -15,10 +15,12 @@ import StreamLink from '../../components/StreamLink';
 import MoreLinkBlog from '../../components/MoreLinkBlog';
 import BlogSEO from '../../components/BlogSEO';
 import MainHeader from '../../components/MainHeader';
-import ProseWrapper from '../../components/mdx/ProseWrapper';
+import ProseWrapperSongs from '../../components/mdx/ProseWrapperSongs';
 import BlogWrapper from '../../components/wrappers/BlogWrapper';
 import { link } from 'fs';
 import Footer from '../../components/Footer';
+import { motion } from 'framer-motion';
+import Tracklist from '../../components/mdx/Tracklist';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const links = frontmatter.links;
@@ -63,11 +65,11 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             <p className="text-black/50">by {frontmatter.artist}</p>
           </div>
 
-          <p className="text-black/80 pt-2 text-xl">
+          <p className="text-black/70 font-normal pt-2 text-lg">
             Track {frontmatter.track} from{' '}
             <Link
-              href={`/discography/${frontmatter.albumLink}`}
-              className="font-normal tracking-tight truncate w-6 sm:w-full underline whitespace-nowrap text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
+              href={`./${frontmatter.albumLink}`}
+              className="font-normal tracking-tight sm:w-full underline whitespace-nowrap sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
             >
               {frontmatter.album}
             </Link>
@@ -129,10 +131,10 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       <div className="container-fg pt-14 pb-4 text-lg font-jbd font-normal md:flex space-y-6 sm:space-y-0 md:space-x-6">
         <div
           id="links"
-          className="flex-1 w-full bg-neutral-100 rounded-md py-6 px-4 space-y-6 md:py-20 mx-auto  justify-center align-middle "
+          className="flex-1 w-full bg-neutral-100 rounded-lg py-6 px-4 space-y-6 md:py-20 mx-auto  justify-center align-middle "
         >
-          <div className="bordermax-auto justify-center align-middle max-w-xl mx-auto space-y-6 flex-col w-full h-min md:sticky md:mx-auto md:top-16 ">
-            <div className="flex max-w-xs sm:max-w-md relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border drop-shadow-md">
+          <div className="justify-center align-middle max-w-lg mx-auto space-y-6 flex-col w-full h-min md:sticky md:mx-auto md:top-16 ">
+            <div className="flex max-w-xs sm:max-w-sm relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border drop-shadow-md">
               <Image
                 src={frontmatter.artwork}
                 alt={frontmatter.alt}
@@ -146,20 +148,38 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               id="meta"
               className="font-medium text-center mx-auto flex-wrap"
             >
-              <p className="text-2xl tracking-tighter">{frontmatter.title}</p>
+              <p className="text-2xl tracking-tight">{frontmatter.title}</p>
 
               <div className="text-black/50 tracking-tight">
                 {frontmatter.track ? (
-                  <Link href={frontmatter.albumLink} className="underline">
+                  <Link
+                    href={frontmatter.albumLink}
+                    className="font-normal tracking-tight sm:w-full underline whitespace-nowrap sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
+                  >
                     <p>{frontmatter.album}</p>
                   </Link>
                 ) : null}
-                <p>by {frontmatter.artist}</p>
+                <p className="font-normal">by {frontmatter.artist}</p>
               </div>
             </div>
-            <ol id="links" className="flex flex-col space-y-2 w-full mx-auto">
+            <ol id="links" className="flex flex-col space-y-3 w-full mx-auto">
               {links.map((link, i) => {
-                return <StreamLink key={i} href={link} />;
+                return (
+                  <motion.li
+                    initial={{ opacity: 0, translateY: 5 }}
+                    animate={{ opacity: 1, translateY: 0 }}
+                    transition={{
+                      when: 'afterChildren',
+                      delay: i * 0.1,
+                      duration: 0.2,
+                      type: 'spring',
+                      stiffness: '200',
+                    }}
+                    key={i}
+                  >
+                    <StreamLink href={link} />
+                  </motion.li>
+                );
               })}
             </ol>
           </div>
@@ -168,7 +188,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         <BlogWrapper>
           <div className="flex-col sm:max-w-[640px] sm:flex-none justify-between">
             {songType()}
-            <div className="flex space-x-auto justify-between columns-3">
+            {/* <div className="flex space-x-auto justify-between columns-3">
               <div className="">
                 <h3 className="text-base text-neutral-600">Released</h3>
                 <p className="pt-1">
@@ -183,15 +203,15 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                 <h3 className="text-base text-neutral-600">Produced</h3>
                 <p className="pt-1">{frontmatter.produced}</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <ProseWrapper>
+          <ProseWrapperSongs>
             <MDXRemote
               {...source}
-              components={{ Image, Button, Link, MoreLinkBlog }}
+              components={{ Image, Button, Link, MoreLinkBlog, Tracklist }}
             />
-          </ProseWrapper>
+          </ProseWrapperSongs>
         </BlogWrapper>
 
         {/* <div className="flex container justify-center sticky z-30 bottom-8 drop-shadow-lg pt-12">
