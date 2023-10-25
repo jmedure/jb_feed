@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { useScrollDirection } from '../src/utils/useScrollDirection';
-import useReadingProgress from '../src/utils/useReadingProgress';
+// import { useScrollDirection } from '../src/utils/useScrollDirection';
+// import useReadingProgress from '../src/utils/useReadingProgress';
 
 export default function MHeader(props) {
   const completion = useReadingProgress();
-  // const docHeight = useReadingProgress(docHeight);
-  const scrollDirection = useScrollDirection;
-  // console.log(completion)
+  const docHeight = useReadingProgress(docHeight);
+  // const scrollDirection = useScrollDirection;
+  // // console.log(completion)
 
   return (
     <div className="py-4 md:py-5 w-full bg-white/90 backdrop-blur-sm z-40 sticky top-0 mt-0 border-b border-neutral-200 border-solid">
