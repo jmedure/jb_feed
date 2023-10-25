@@ -4,7 +4,8 @@ import StreamLinkWrapper from './wrappers/StreamLinkWrapper';
 
 export default function StreamLink(props) {
   const link = props.href;
-  const isIncluded = link.includes('spotify');
+  // isIncluded;
+  // const isIncluded = link.includes('spotify');
 
   if (link.includes('spotify')) {
     return (
