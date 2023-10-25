@@ -7,25 +7,25 @@ export default function StreamLink(props) {
   // isIncluded;
   // const isIncluded = link.includes('spotify');
 
-  if (link.includes('spotify')) {
+  if (String(link).includes('spotify')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper icon="spotify" label="Spotify" bg="bg-green-100" />
       </a>
     );
-  } else if (link.includes('apple')) {
+  } else if (String(link).includes('apple')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper icon="apple" label="Apple Music" bg="bg-red-100" />
       </a>
     );
-  } else if (link.includes('amazon')) {
+  } else if (String(link).includes('amazon')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper icon="amazon" label="Amazon Music" bg="bg-blue-50" />
       </a>
     );
-  } else if (link.includes('tidal')) {
+  } else if (String(link).includes('tidal')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper
@@ -36,7 +36,7 @@ export default function StreamLink(props) {
         />
       </a>
     );
-  } else if (link.includes('soundcloud')) {
+  } else if (String(link).includes('soundcloud')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper
@@ -46,13 +46,13 @@ export default function StreamLink(props) {
         />
       </a>
     );
-  } else if (link.includes('youtube')) {
+  } else if (String(link).includes('youtube')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper icon="youtube" label="Youtube" bg="bg-red-50" />
       </a>
     );
-  } else if (link.includes('audiomack')) {
+  } else if (String(link).includes('audiomack')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper
@@ -62,7 +62,7 @@ export default function StreamLink(props) {
         />
       </a>
     );
-  } else if (link.includes('gumroad')) {
+  } else if (String(link).includes('gumroad')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper
