@@ -53,8 +53,8 @@ export default function Home() {
                     type: 'spring',
                     stiffness: 200,
                   }}
-                  className="list-none"
                   key={index}
+                  className="list-none"
                 >
                   <Post post={post} />
                 </motion.li>

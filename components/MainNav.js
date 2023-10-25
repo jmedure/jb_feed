@@ -8,15 +8,15 @@ export default function MainNav() {
   return (
     <div className="flex font-jbd font-normal font">
       <motion.div
-        initial={{ opacity: 0, translateY: 10 }}
-        animate={{ opacity: 1, translateY: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          type: 'spring',
-          delay: 0.25,
-          stiffness: 200,
-          duration: 0.5,
-        }}
+        // initial={{ opacity: 0, translateY: 10 }}
+        // animate={{ opacity: 1, translateY: 0 }}
+        // viewport={{ once: true }}
+        // transition={{
+        //   type: 'spring',
+        //   delay: 0.25,
+        //   stiffness: 200,
+        //   duration: 0.5,
+        // }}
         className="w-full justify-between sm:absolute sm:w-[360px] sm:top-2 sm:left-[calc(50%-180px)] sm:space-x-2 items-center text-lg z-10"
       >
         {/* <p className="flex-grow flex uppercase">Filters</p> */}
