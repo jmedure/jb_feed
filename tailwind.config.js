@@ -19,7 +19,7 @@ module.exports = {
         fruit: ['CardinalFruit', ...defaultTheme.fontFamily.serif],
         mont: ['NeueMontreal', ...defaultTheme.fontFamily.sans],
         mono: ['Space Mono', 'monospace', ...defaultTheme.fontFamily.mono],
-        jbd: ['JBSansDisplay', 'sans'],
+        jbd: ['NeueMontreal', ...defaultTheme.fontFamily.sans],
         jbt: ['JBSansText', 'sans'],
       },
     },
