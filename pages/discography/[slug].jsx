@@ -115,14 +115,14 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           type: 'spring',
           stiffness: 200,
         }}
-        className="container-fg pt-14 pb-4 text-lg font-jbd font-normal lg:flex space-y-6 lg:space-y-0 lg:space-x-6"
+        className="container-fg pt-16 pb-4 text-lg font-jbd font-normal lg:flex space-y-6 lg:space-y-0 lg:space-x-6"
       >
         <div
           id="links"
           className="flex-1 flex bg-neutral-100 w-full rounded-lg py-6 px-4 space-y-6 md:py-20 md:px-full mx-auto justify-center align-middle "
         >
           <div className="justify-center align-middle max-w-lg mx-auto md:sticky top-24 space-y-8 flex-col w-full h-min  ">
-            <div className="flex max-w-xs sm:max-w-xs relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border drop-shadow-md">
+            <div className="flex max-w-xs sm:max-w-sm relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border drop-shadow-md">
               <Image
                 src={frontmatter.artwork}
                 alt={frontmatter.alt}

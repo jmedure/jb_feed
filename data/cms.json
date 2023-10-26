@@ -25,7 +25,10 @@
         "link": "https://www.youtube.com/watch?v=FZkZtbpiDNU",
         "published": "true",
         "youtubeEmbed": "FZkZtbpiDNU",
-        "cta": "Watch now"
+        "image": "/thumbnails/bsidescomingsoon.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "just cookin ep. 10 - making guitar samples",
@@ -34,7 +37,10 @@
         "link": "https://www.youtube.com/watch?v=jVNScqPRDFY",
         "published": "true",
         "youtubeEmbed": "jVNScqPRDFY",
-        "cta": "Watch now"
+        "image": "/thumbnails/jc10.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "just cookin ep. 9 - cookin up an absolute vibe",
@@ -43,7 +49,10 @@
         "link": "https://www.youtube.com/watch?v=MySVm0fwVfY&t=93s",
         "published": "true",
         "youtubeEmbed": "MySVm0fwVfY",
-        "cta": "Watch now"
+        "image": "/thumbnails/jc9.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "Give and take - single",
@@ -53,6 +62,7 @@
         "published": "true",
         "image": "/cover-art/gat.jpg",
         "cta": "Stream and sing along"
+        
     },
     {
         "title": "behind the music - how i made a vintage sample",
@@ -61,7 +71,10 @@
         "link": "https://youtu.be/wbJSOnEigMQ",
         "published": "true",
         "youtubeEmbed": "wbJSOnEigMQ",
-        "cta": "Watch now"
+        "image": "/thumbnails/btm1.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "just cookin ep 8 - chasing simplicity",
@@ -70,7 +83,10 @@
         "link": "https://youtu.be/yWMF0aC3mFI",
         "published": "true",
         "youtubeEmbed": "yWMF0aC3mFI",
-        "cta": "Watch now"
+        "image": "/thumbnails/jc8.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "just cookin ep 7 - making beats like monte",
@@ -79,7 +95,10 @@
         "link": "https://youtu.be/2WHYBQrnuTs",
         "published": "true",
         "youtubeEmbed": "2WHYBQrnuTs",
-        "cta": "Watch now"
+        "image": "/thumbnails/jc7.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "just cookin ep 6 - early morning beats for breakfast",
@@ -88,7 +107,10 @@
         "link": "https://youtu.be/0X_vcC91GSM",
         "published": "true",
         "youtubeEmbed": "0X_vcC91GSM",
-        "cta": "Watch now"
+        "image": "/thumbnails/jc6.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "just cookin ep 5 - making a a late night song sketch",
@@ -97,7 +119,10 @@
         "link": "https://youtu.be/0CvMTZifjSs",
         "published": "true",
         "youtubeEmbed": "0CvMTZifjSs",
-        "cta": "Watch now"
+        "image": "/thumbnails/jc5.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "just cookin ep 4 - a cold night in brooklyn",
@@ -106,7 +131,10 @@
         "link": "https://youtu.be/aJxFFgiqT08",
         "published": "true",
         "youtubeEmbed": "aJxFFgiqT08",
-        "cta": "Watch now"
+        "image": "/thumbnails/jc4.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "just cookin ep 3 - making a sample before work",
@@ -115,7 +143,10 @@
         "link": "https://youtu.be/8Pu-aEPAKgg",
         "published": "true",
         "youtubeEmbed": "8Pu-aEPAKgg",
-        "cta": "Watch now"
+        "image": "/thumbnails/jc3.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "Maybe I give up.",
@@ -143,7 +174,10 @@
         "link": "https://www.youtube.com/watch?v=j0VNVoFz3c0&t=1s",
         "published": "true",
         "youtubeEmbed": "j0VNVoFz3c0",
-        "cta": "Watch now"
+        "image": "/thumbnails/jblivestarr.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "JB and Ash Max LIVE in NYC",
@@ -152,7 +186,10 @@
         "link": "https://www.youtube.com/watch?v=gvDZIf0BqL0",
         "published": "true",
         "youtubeEmbed": "gvDZIf0BqL0",
-        "cta": "Watch now"
+        "image": "/thumbnails/youready.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "Just Cookin Vol.1 - making samples ~(Remembering Tomorrow)~",
@@ -160,7 +197,11 @@
         "link": "https://www.youtube.com/watch?v=eDlB01vRrrM",
         "kind": "video",
         "youtubeEmbed": "eDlB01vRrrM",
-        "published": "true"
+        "published": "true",
+        "image": "/thumbnails/jc1.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "DO IT AGAIN. - Born in the Sunset: Thoughts to Oasis Visual Performance",
@@ -169,7 +210,10 @@
         "link": "https://www.youtube.com/watch?v=s6UFctjY1e0",
         "published": "true",
         "youtubeEmbed": "s6UFctjY1e0",
-        "cta": "Watch now"
+        "image": "/thumbnails/dia.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "mui": "north_east"
     },
     {
         "title": "My debut album, Born in the Sunset: Thoughts to Oasis",

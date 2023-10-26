@@ -67,13 +67,13 @@ export default function StreamLink(props) {
       <a href={props.href} className="">
         <StreamLinkWrapper
           icon="gumroad"
-          label="Support me directly on Gumroad"
+          label="Buy directly on Gumroad"
           bg="bg-pink-50"
         />
       </a>
     );
   }
-  return <p className="absolute h-0 w-0 top-0"></p>;
+  return <p className="absolute h-0 w-0 top-0">not working</p>;
 }
 // <Link
 //   href={props.href}

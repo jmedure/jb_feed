@@ -17,7 +17,7 @@ export default function MainNav() {
         //   stiffness: 200,
         //   duration: 0.5,
         // }}
-        className="w-full justify-between sm:absolute sm:w-[360px] sm:top-2 sm:left-[calc(50%-180px)] sm:space-x-2 items-center text-lg z-10"
+        className="w-full justify-between sm:absolute sm:w-[360px] sm:top-2 pt-2 sm:pt-0 sm:left-[calc(50%-180px)] sm:space-x-2 items-center text-lg z-10"
       >
         {/* <p className="flex-grow flex uppercase">Filters</p> */}
 

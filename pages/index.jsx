@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import BlogSEO from '../components/BlogSEO';
 import MasonryWrapper from '../components/wrappers/MasonryWrapper';
 import { motion } from 'framer-motion';
+import Subheader from '../components/Subheader';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -31,14 +32,15 @@ export default function Home() {
     if (!data) {
       return (
         <main className="container w-full mx-auto flex flex-col justify-center items-center align-middle h-screen">
-          <p className="text-xl">Loading...</p>
+          {/* <p className="text-xl"> */}
+          <Subheader />
+          {/* </p> */}
         </main>
       );
     }
     // let allPosts = data.filter(post,index)
     return (
       <main className="">
-        <MainHeader />
         <MasonryWrapper>
           {data.map(function (post, index) {
             if (post.published == 'true')
@@ -77,6 +79,7 @@ export default function Home() {
         image="/siteThumb.png"
         canonical="/index"
       />
+      <MainHeader />
       {main()}
     </>
   );

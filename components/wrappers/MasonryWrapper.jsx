@@ -11,7 +11,7 @@ export default function MasonryWrapper({
 }) {
   return (
     <Masonry
-      className="container-fg w-full flex space-x-4 my-1 bg-clip-padding"
+      className="container-fg w-full flex space-x-4 my-1 bg-clip-padding items-start"
       breakpointCols={breakpointColumnsObj}
       columnClassName="masonry_grid_column"
       {...props}

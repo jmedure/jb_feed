@@ -56,9 +56,28 @@ export const Post = ({ post }) => {
         </div>
       );
     }
+    if (youtubeEmbed && aspect === 'video') {
+      return (
+        <div className="relative ">
+          <div className="relative border sm:group-hover:opacity-0 select-none sm:group-hover:hidden opacity-100 transition-opacity border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-20 ">
+            <Image
+              src={image}
+              alt="alt"
+              fill="true"
+              style={{ objectFit: 'cover' }}
+              placeholder="blur"
+              blurDataURL="https://images.unsplash.com/photo-1631200472313-ad91fd825080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2375&q=80"
+            />
+          </div>
+          <div className="w-full absolute sm:group-hover:relative top-0 h-full rounded-xl overflow-hidden aspect-video">
+            <YoutubeEmbed embedId={youtubeEmbed} />
+          </div>
+        </div>
+      );
+    }
     if (aspect === 'video') {
       return (
-        <div className="relative border border-blue-100 h-full overflow-hidden aspect-video rounded-lg">
+        <div className="relative border border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-10">
           <Image
             src={image}
             alt="alt"
@@ -79,11 +98,6 @@ export const Post = ({ post }) => {
     >
       <div className="break-inside-avoid p-3 space-y-4 border-2 border-solid border-blue-100 sm:hover:outline-blue-400 sm:hover:outline outline outline-white  sm:hover:bg-blue-100 mb-4 bg-blue-50 rounded-xl text-black transition-all">
         {frame()}
-        {youtubeEmbed ? (
-          <div className="w-full mb-4 relative h-full  rounded-xl overflow-hidden aspect-video">
-            <YoutubeEmbed embedId={youtubeEmbed} />
-          </div>
-        ) : null}
         <div className="flex justify-between items-start space-x-4">
           <h2 className="text-2xl leading-none tracking-tight">{title}</h2>
           <p className="text-black/50 font-jbd whitespace-nowrap text-lg">

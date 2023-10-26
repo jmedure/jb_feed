@@ -141,14 +141,14 @@ export default function Footer(props) {
                   passHref={true}
                   target="_blank"
                 />
-                {/* <Button
-                  href={siteMetaData.patreon}
+                <Button
+                  href={siteMetaData.gumroad}
                   type="right"
                   icon="north_east"
-                  copy="patreon"
+                  copy="gumroad"
                   passHref={true}
                   target="_blank"
-                /> */}
+                />
                 {/* <Button
                   href="/links"
                   type="null"
@@ -384,12 +384,12 @@ export default function Footer(props) {
             .
           </p>
           <p>
-            Font: JB Sans Display via{' '}
+            Font:{' '}
             <a
-              href="https://universalsans.com/#v2.0.0.50.25.40.50.1111111111111111111.01.01.450"
+              href="https://pangrampangram.com/products/neue-montreal"
               className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
             >
-              Universal Sans
+              Neue Montreal
             </a>
           </p>
           <p className="">Jacob&#39;s Blue. Copyright ® 2022 - ∞</p>

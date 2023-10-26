@@ -8,7 +8,7 @@ export default function Button(props) {
     return (
       <a
         href={props.href}
-        className="flex group flex-shrink w-min whitespace-nowrap cursor-pointer transition-all text-blue-500 sm:hover:text-gray-900 sm:hover:underline  items-baseline capitalize decoration-[1.5px] underline-offset-1"
+        className="flex group flex-shrink w-min whitespace-nowrap cursor-pointer transition-all text-blue-500 sm:hover:text-gray-900 sm:hover:underline items-baseline capitalize decoration-[1.5px] underline-offset-1"
       >
         <p>{props.copy}</p>
         <span className="flex material-icons text-sm">{props.icon}</span>

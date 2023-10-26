@@ -18,6 +18,7 @@ const siteMetadata = {
   discord: 'https://discord.gg/7FFkBbEA4a',
   figma: 'https://www.figma.com/@jacobs_blue',
   area: 'https://invite.area.cx/OkFUIwm8',
+  gumroad: 'https://shop.jacobs.blue/',
 };
 
 export default siteMetadata;

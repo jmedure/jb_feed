@@ -16,7 +16,6 @@ import OneBlank from '../../components/OneBlank';
 import BlogSEO from '../../components/BlogSEO';
 import YoutubeEmbed from '../../components/YoutubeEmbed';
 import Link from 'next/link';
-import Breadcrumbs from '@marketsystems/nextjs13-appdir-breadcrumbs';
 import ProseWrapper from '../../components/mdx/ProseWrapper';
 import MainHeader from '../../components/MainHeader';
 import BlogHeroBanner from '../../components/mdx/BlogHeroBanner';
@@ -56,7 +55,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           type: 'spring',
           stiffness: 100,
         }}
-        className="flex flex-col w-full mx-auto"
+        className="flex flex-col w-full mx-auto py-3"
       >
         <BlogHeroBanner
           youtube={youtube}
@@ -100,6 +99,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                 published={published}
                 updated={updated}
                 lastTendedTo={lastTendedTo}
+                status={frontmatter.status}
               />
               <ProseWrapper>
                 <MDXRemote

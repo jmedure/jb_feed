@@ -23,7 +23,7 @@
 @font-face {
     font-family: "NeueMontreal";
     src: url("/fonts/PPNeueMontreal-Italic.otf") format("opentype");
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
 }
 
@@ -31,7 +31,7 @@
     font-family: "NeueMontreal";
     src: url("/fonts/PPNeueMontreal-Book.otf") format("opentype");
     font-weight: 300;
-    font-style: medium;
+    font-style: normal;
 }
 
 @font-face {

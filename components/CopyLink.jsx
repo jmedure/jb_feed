@@ -12,11 +12,13 @@ export default function CopyLink() {
       whileTap={{ scale: 1 }}
       whileHover={{ scale: 1.1, rotate: [0, 45, 0] }}
       transition={{ ease: 'linear', duration: 0.01 }}
-      className="fill-black/50 stroke-black/50 stroke-[.5px] sm:hover:fill-black sm:hover:stroke-black sm:hover:bg-white align-middle items-center p-2 rounded-full bg-white/80 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow"
+      className="group fill-black/50 flex  sm:hover:bg-white align-middle items-center p-2 rounded-full bg-white/80 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow"
     >
+      <p className="pr-1 text-sm md:hidden">Copy link</p>
       <svg
-        width="16"
-        height="16"
+        className="stroke-black/50 stroke-[.5px] sm:group-hover:fill-black sm:group-hover:stroke-black"
+        width="18"
+        height="18"
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"
       >

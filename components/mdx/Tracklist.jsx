@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ExplicitTag from '../tags/ExplicitTag';
 
 export default function Tracklist(props) {
   return (
@@ -10,11 +11,7 @@ export default function Tracklist(props) {
         <p className="text-black/70">{props.order}</p>
         <div className="flex items-center">
           <p>{props.label}</p>
-          {props.explicit ? (
-            <span className="text-xs w-5 h-5 bg-black/10 flex ml-2 px-[6px] py-[2.5px] rounded">
-              E
-            </span>
-          ) : null}
+          {props.explicit ? <ExplicitTag /> : null}
         </div>
       </div>
       <p className="text-black/50">{props.time}</p>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import styles from '../styles/Subheader.module.css';
 
 function Subheader() {
   return (

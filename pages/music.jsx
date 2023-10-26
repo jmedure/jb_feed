@@ -10,6 +10,7 @@ import siteMetadata from '../data/siteMetadata';
 import BlogSEO from '../components/BlogSEO';
 import { motion } from 'framer-motion';
 import MasonryWrapper from '../components/wrappers/MasonryWrapper';
+import Subheader from '../components/Subheader';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -21,12 +22,16 @@ export default function Home() {
       return <main>error: failed to load</main>;
     }
     if (!data) {
-      return <main>loading...</main>;
+      return (
+        <main>
+          <Subheader />
+        </main>
+      );
     }
     // let allPosts = data.filter(post,index)
     return (
       <main className="">
-        <MainHeader />
+        {/* <MainHeader /> */}
         <MasonryWrapper>
           {data
             .filter(function (posts) {
@@ -62,6 +67,7 @@ export default function Home() {
       <Head>
         <title>Jacob's Blue</title>
       </Head>
+      <MainHeader />
       {main()}
     </>
   );
