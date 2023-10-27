@@ -27,6 +27,7 @@ export default function Home() {
     // let allPosts = data.filter(post,index)
     return (
       <main className="">
+        <MainHeader />
         <MasonryWrapper>
           {data
             .filter(function (posts) {
@@ -62,7 +63,7 @@ export default function Home() {
       <Head>
         <title>Jacob's Blue</title>
       </Head>
-      <MainHeader />
+
       {main()}
     </>
   );

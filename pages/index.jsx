@@ -40,6 +40,7 @@ export default function Home() {
     // let allPosts = data.filter(post,index)
     return (
       <main className="">
+        <MainHeader />
         <MasonryWrapper>
           {data.map(function (post, index) {
             if (post.published == 'true')
@@ -78,7 +79,7 @@ export default function Home() {
         image="/siteThumb.png"
         canonical="/index"
       />
-      <MainHeader />
+
       {main()}
     </>
   );
