@@ -6,6 +6,8 @@ import useSWR from 'swr';
 import { Book } from '../components/cards/Book';
 import MainGridWrapper from '../components/wrappers/MainGridWrapper';
 import SectionHeader from '../components/SectionHeader';
+import Subheader from '../components/Subheader';
+import { motion } from 'framer-motion';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -19,7 +21,9 @@ export default function Library() {
     if (!data) {
       return (
         <main className="container w-full mx-auto flex flex-col justify-center items-center align-middle h-screen">
-          <p className="text-xl">Loading...</p>
+          <p className="text-xl">
+            <Subheader />
+          </p>
         </main>
       );
     }
@@ -59,7 +63,23 @@ export default function Library() {
                 <SectionHeader title="Prerequisites for a good life" />
                 <MainGridWrapper>
                   {seg1.map(function (book, index) {
-                    return <Book key={index} book={book} />;
+                    return (
+                      <motion.li
+                        initial={{ opacity: 0, translateY: 10 }}
+                        animate={{ opacity: 1, translateY: 0 }}
+                        transition={{
+                          when: 'afterChildren',
+                          delay: index * 0.1,
+                          duration: 0.2,
+                          type: 'spring',
+                          stiffness: 200,
+                        }}
+                        key={index}
+                        className="list-none"
+                      >
+                        <Book key={index} book={book} />
+                      </motion.li>
+                    );
                   })}
                 </MainGridWrapper>
               </div>

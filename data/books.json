@@ -4,7 +4,6 @@
         "author": "Will and Ariel Durant",
         "link": "https://www.google.com/books/edition/The_Lessons_of_History/LWNQ2_4wkocC?hl=en&gbpv=0",
         "cover":"/books/loh.jpg",
-        "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCADeAJMDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQACA//EABYQAQEBAAAAAAAAAAAAAAAAAAABEf/EABkBAQEBAQEBAAAAAAAAAAAAAAIBAAMEBf/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwASTwR9ckE4FRSKBUiiAApGZFaFRWazWqKJMs1qisrKIVkklZ3KTk6IonBqKRxzqRSiA0EYM1tmorNZrdZqEzWa3WWZlFMrKKZndFOboiicGoonHOpFKIRxYyM4LGsGCrFgsbsZsQmLBW7GbGVhNYGVlFMzsUgdCRGoUCoonAqKKgMWFYzM4LGsGIrFgsbsZsFWLGbG7BWJgNBmCKZXQog6KGKGHAphUMKOdRRIQsaSIyLGhUViwWN1miUYrNbrNYmKGqGUIpmbKQOhjUEMOBTGoIYcc6SiopJIgFaFRWazW6zUKMVmt1moTFDVCKEUzNEEXQwwRqHApjUZjUOOdJBUSkkRCkIrNFarNEoxWa3WahMg0MoSTM0QRdDGozDDgVqNRmNQoFMIKgUkzIEVFFZrVZolGazWqzUVmg0MqSTKUCLo1DGYYcCtwxmGFHOtEQqJQLIgkJCs00VFjNFNZqEKFQypJMxQIujUMZhhQK1GoxGjCtFkqJLKRChoQlRVaKiis01moSoQZkkmUoETJjJKDW4WSQVpaFqi0gmY6NGjRU2s2rRaiqs01msSCCMUErNIIHRoskoNaLJMKTrJUStCRjo0aNRToAtQlaEEZBJlSCVmiEBkglBpLJIaUConQgzEICqCCEggzJIMxQSs2kgMoEolKSIKUkopIIqBCKEhUUJJlCQZkklZ/9k=",
         "segment": 1,
         "rank": 1
     },
@@ -238,7 +237,7 @@
         "link": "https://www.google.com/books/edition/The_Way_of_Kings/QVn-CgAAQBAJ?hl=en&gbpv=0",
         "cover":"/books/wok.jpg",
         "segment": 4,
-        "rank":"100"
+        "rank": "100"
     },
     {
         "title": "Mistborn",
@@ -246,7 +245,7 @@
         "link": "https://www.google.com/books/edition/Mistborn/t_ZYYXZq4RgC?hl=en&gbpv=0",
         "cover":"/books/mistborn.jpg",
         "segment": 4,
-        "rank":"100"
+        "rank": "100"
     },
     {
         "title": "All the Pretty Horses",
@@ -254,7 +253,7 @@
         "link": "https://www.google.com/books/edition/All_the_Pretty_Horses/AbBKZvRo5S8C?hl=en&gbpv=0",
         "cover":"/books/atph.jpg",
         "segment": 4,
-        "rank":"100"
+        "rank": "100"
     },
     {
         "title": "The Jungle Book",
@@ -262,7 +261,7 @@
         "link": "https://en.wikipedia.org/wiki/The_Jungle_Book",
         "cover":"/books/tjb.jpg",
         "segment": 4,
-        "rank":"100"
+        "rank": "100"
     },
     {
         "title": "DUNE",
@@ -270,7 +269,7 @@
         "link": "https://www.google.com/books/edition/Dune/B1hSG45JCX4C?hl=en&gbpv=0k",
         "cover":"/books/dune.jpg",
         "segment": 4,
-        "rank":"1"
+        "rank": "1"
     },
     {
         "title": "Ultralearning",

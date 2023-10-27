@@ -5,21 +5,21 @@ import siteMetaData from '../data/siteMetadata';
 import LiveVisitors from './LiveVistors';
 
 export default function Footer(props) {
-  if (props.btp) {
+  if (props.btt) {
     return (
-      <div
-        id="footer"
-        className="w-full border-t text-black/50 bottom-0 fixed bg-white"
-      >
-        <div className="container-fg grid-col-1 sm:grid-col-3 w-full py-4 flex justify-between font-jbd tracking-tight font-normal">
-          <Link
-            href={props.btp}
-            className="col-span-1 underline text-neutral-400 sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
-          >
-            Back to top
-          </Link>
-          <p className="col-span-1">® 2022 - ∞</p>
-          <p className="col-span-1">from Jacob&#39;s Blue</p>
+      <div id="footer" className="w-full text-neutral-700 bottom-0  bg-white">
+        <div className="container-fg w-full py-4 font-jbd tracking-tight font-normal">
+          <div className="flex items-center mx-auto gap-2 w-full align-middle justify-center">
+            <span>Thanks for reading ❤️</span>
+            <Link
+              href={props.btt}
+              className="underline sm:hover:text-black underline-offset-2 sm:hover:underline-offset-4 transition-all"
+            >
+              Back to top?
+            </Link>
+          </div>
+          {/* <p className="col-span-1">® 2022 - ∞</p>
+          <p className="col-span-1">from Jacob&#39;s Blue</p> */}
         </div>
       </div>
     );

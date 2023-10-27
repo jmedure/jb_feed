@@ -16,12 +16,12 @@ import OneBlank from '../../components/OneBlank';
 import BlogSEO from '../../components/BlogSEO';
 import YoutubeEmbed from '../../components/YoutubeEmbed';
 import Link from 'next/link';
-import ProseWrapper from '../../components/mdx/ProseWrapper';
+import ProseWrapperDesign from '../../components/mdx/ProseWrapperDesign';
 import MainHeader from '../../components/MainHeader';
 import BlogHeroBanner from '../../components/mdx/BlogHeroBanner';
 import { useRouter } from 'next/router';
 import Footer from '../../components/Footer';
-import BlogWrapper from '../../components/wrappers/BlogWrapper';
+import DesignsWrapper from '../../components/wrappers/DesignsWrapper';
 import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
 import { motion } from 'framer-motion';
 
@@ -44,7 +44,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         canonical={frontmatter.slug}
         image={frontmatter.thumbnail}
       />
-      <MainHeader type="blog" />
+      <MainHeader type="design" />
       <motion.div
         initial={{ opacity: 0, translateY: 10 }}
         animate={{ opacity: 1, translateY: 0 }}
@@ -70,54 +70,58 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             ''
           }
         >
-          <div
+          {/* <div
             id="toc"
-            className="flex w-full lg:space-x-48 sm:space-x-12 md:space-x-24"
-          >
+            className="flex w-full border lg:space-x-48 sm:space-x-12 md:space-x-24"
+          > */}
+
+          <DesignsWrapper>
             {toc.length ? (
-              <div className="hidden sm:flex whitespace-nowrap h-min top-32 sticky">
-                <div className="flex flex-col w-full">
-                  {toc.map((heading, index) => {
-                    const clean = heading.replace(/-/g, ' ');
-                    return (
-                      <Link
-                        href={slug + '#' + heading}
-                        key={index}
-                        className="font-normal tracking-tight py-1 text-lg font-jbd capitalize text-neutral-400 hover:text-neutral-800 transition-all"
-                      >
-                        {clean}
-                      </Link>
-                    );
-                  })}
+              <div className="hidden lg:flex sticky top-0 h-0">
+                <div className="relative -left-40 top-12 xl:-left-60 whitespace-nowrap h-min w-min">
+                  <div className="flex flex-col w-full">
+                    {toc.map((heading, index) => {
+                      const clean = heading.replace(/-/g, ' ');
+                      return (
+                        <Link
+                          href={slug + '#' + heading}
+                          key={index}
+                          className="font-normal tracking-tight py-1 text-base font-jbd capitalize text-neutral-400 hover:text-neutral-800 transition-all"
+                        >
+                          {clean}
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             ) : null}
-            <BlogWrapper>
-              <BlogMetaHeader
-                title={frontmatter.title}
-                readingTime={frontmatter.readingTime}
-                published={published}
-                updated={updated}
-                lastTendedTo={lastTendedTo}
-                status={frontmatter.status}
+            <BlogMetaHeader
+              title={frontmatter.title}
+              readingTime={frontmatter.readingTime}
+              published={published}
+              updated={updated}
+              lastTendedTo={lastTendedTo}
+              status={frontmatter.status}
+              version={frontmatter.version}
+            />
+            <ProseWrapperDesign>
+              <MDXRemote
+                {...source}
+                components={{
+                  Image,
+                  Button,
+                  BlogEntry,
+                  OneBlank,
+                  YoutubeEmbed,
+                }}
               />
-              <ProseWrapper>
-                <MDXRemote
-                  {...source}
-                  components={{
-                    Image,
-                    Button,
-                    BlogEntry,
-                    OneBlank,
-                    YoutubeEmbed,
-                  }}
-                />
-              </ProseWrapper>
-            </BlogWrapper>
-          </div>
+            </ProseWrapperDesign>
+          </DesignsWrapper>
+          {/* </div> */}
         </div>
       </motion.div>
-      <Footer />
+      <Footer btt={slug} />
     </React.Fragment>
   );
 }

@@ -38,6 +38,7 @@ export async function getArticleFromSlug(slug) {
       date: data.date,
       updated: data.updated,
       status: data.status,
+      version: data.version,
       readingTime: readingTime(source).text,
       ...data,
     },

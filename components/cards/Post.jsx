@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
@@ -6,6 +6,7 @@ import YoutubeEmbed from '../YoutubeEmbed';
 import BubbleLink from '../BubbleLink';
 import { motion } from 'framer-motion';
 import dayjs from 'dayjs';
+import Skeleton from '../Skeleton';
 
 export const Post = ({ post }) => {
   const { title, link, kind, date, cta, image, youtubeEmbed, aspect, mui } =
@@ -58,21 +59,23 @@ export const Post = ({ post }) => {
     }
     if (youtubeEmbed && aspect === 'video') {
       return (
-        <div className="relative ">
-          <div className="relative border sm:group-hover:opacity-0 select-none sm:group-hover:hidden opacity-100 transition-opacity border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-20 ">
-            <Image
-              src={image}
-              alt="alt"
-              fill="true"
-              style={{ objectFit: 'cover' }}
-              placeholder="blur"
-              blurDataURL="https://images.unsplash.com/photo-1631200472313-ad91fd825080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2375&q=80"
-            />
+        <Suspense fallback={<Skeleton />}>
+          <div className="relative ">
+            <div className="relative border sm:group-hover:opacity-0 select-none sm:group-hover:hidden opacity-100 transition-opacity border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-20 ">
+              <Image
+                src={image}
+                alt="alt"
+                fill="true"
+                style={{ objectFit: 'cover' }}
+                placeholder="blur"
+                blurDataURL="https://images.unsplash.com/photo-1631200472313-ad91fd825080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2375&q=80"
+              />
+            </div>
+            <div className="w-full absolute sm:group-hover:relative top-0 h-full rounded-xl overflow-hidden aspect-video">
+              <YoutubeEmbed embedId={youtubeEmbed} />
+            </div>
           </div>
-          <div className="w-full absolute sm:group-hover:relative top-0 h-full rounded-xl overflow-hidden aspect-video">
-            <YoutubeEmbed embedId={youtubeEmbed} />
-          </div>
-        </div>
+        </Suspense>
       );
     }
     if (aspect === 'video') {
@@ -97,7 +100,7 @@ export const Post = ({ post }) => {
       className="flex-block flex-wrap group no-underline font-jbd font-normal h-min cursor-pointer"
     >
       <div className="break-inside-avoid p-3 space-y-4 border-2 border-solid border-blue-100 sm:hover:outline-blue-400 sm:hover:outline outline outline-white  sm:hover:bg-blue-100 mb-4 bg-blue-50 rounded-xl text-black transition-all">
-        {frame()}
+        <Suspense fallback={<Skeleton />}>{frame()}</Suspense>
         <div className="flex justify-between items-start space-x-4">
           <h2 className="text-2xl leading-none tracking-tight">{title}</h2>
           <p className="text-black/50 font-jbd whitespace-nowrap text-lg">

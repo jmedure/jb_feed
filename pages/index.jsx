@@ -24,7 +24,6 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
   const { data, error } = useSWR('/api/posts', fetcher);
-
   const main = () => {
     if (error) {
       return <main>error: failed to load</main>;
@@ -50,7 +49,7 @@ export default function Home() {
                   animate={{ opacity: 1, translateY: 0 }}
                   transition={{
                     when: 'afterChildren',
-                    delay: index * 0.02,
+                    delay: index * 0.1,
                     duration: 0.2,
                     type: 'spring',
                     stiffness: 200,

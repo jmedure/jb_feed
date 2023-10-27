@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Logo from './Logo';
 
 const convertBreadcrumb = (string) => {
   return (
@@ -48,20 +49,7 @@ const Breadcrumbs = () => {
     <nav className="">
       <ol className="flex gap-x-1 tracking-tight capitalize">
         <li className="flex md:hidden">
-          <Link
-            href="/"
-            passHref
-            className="col-span-1 items-center cursor-pointer"
-          >
-            <div className="border-white border-2 rounded-full relative p-4 md:p-0 cursor-pointer hover:drop-shadow-lg">
-              <Image
-                alt="blue gradient"
-                src="/logo.png"
-                objectFit="cover"
-                layout="fill"
-              />
-            </div>
-          </Link>
+          <Logo />
         </li>
         <li className="hidden md:flex">
           <Link
