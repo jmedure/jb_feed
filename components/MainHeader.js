@@ -7,6 +7,7 @@ import CopyLink from './CopyLink';
 import Logo from './Logo';
 import { useScrollDirection } from '../src/utils/useScrollDirection';
 import useReadingProgress from '../src/utils/useReadingProgress';
+import BackArrow from './BackArrow';
 
 export default function MainHeader(props) {
   const title = props.title;
@@ -36,7 +37,7 @@ export default function MainHeader(props) {
   }
   if (type === 'design') {
     return (
-      <div className="w-full py-3 flex-row space-y-2 sm:space-y-0 fixed left-0 top-0 z-30">
+      <div className="w-full py-8 flex-row space-y-2 sm:space-y-0 fixed left-0 top-0 z-30">
         <motion.div
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
@@ -49,15 +50,14 @@ export default function MainHeader(props) {
           className="flex container-fg justify-between w-full text-lg font-medium font-jbd"
         >
           <div
-            // id="scroller"
             className={
               (completion > 2
                 ? 'flex transition-all gap-2 items-center px-2 py-1 mx-auto bg-white rounded-full drop-shadow-lg'
                 : 'flex transition-all gap-2 items-center px-2 py-1 mx-auto bg-white rounded-full ') +
               ''
             }
-            // className="flex gap-2 items-center px-2 py-1 mx-auto bg-white rounded-full"
           >
+            <BackArrow />
             <Logo />
             <CopyLink />
           </div>

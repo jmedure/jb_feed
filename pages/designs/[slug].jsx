@@ -24,6 +24,7 @@ import Footer from '../../components/Footer';
 import DesignsWrapper from '../../components/wrappers/DesignsWrapper';
 import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
 import { motion } from 'framer-motion';
+import TableOfContents from '../../components/TableOfContents';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -50,10 +51,10 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         animate={{ opacity: 1, translateY: 0 }}
         transition={{
           when: 'afterChildren',
-          delay: 0.1,
-          duration: 0.2,
-          type: 'spring',
-          stiffness: 100,
+          delay: 0.3,
+          duration: 0.3,
+          type: 'ease',
+          stiffness: 200,
         }}
         className="flex flex-col w-full mx-auto py-3"
       >
@@ -77,24 +78,40 @@ export default function BlogPost({ post: { source, frontmatter } }) {
 
           <DesignsWrapper>
             {toc.length ? (
-              <div className="hidden lg:flex sticky top-0 h-0">
-                <div className="relative -left-40 top-12 xl:-left-60 whitespace-nowrap h-min w-min">
-                  <div className="flex flex-col w-full">
-                    {toc.map((heading, index) => {
-                      const clean = heading.replace(/-/g, ' ');
-                      return (
-                        <Link
-                          href={slug + '#' + heading}
-                          key={index}
-                          className="font-normal tracking-tight py-1 text-base font-jbd capitalize text-neutral-400 hover:text-neutral-800 transition-all"
-                        >
-                          {clean}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
+              // <motion.div
+              //   initial={{ opacity: 0, translateY: 10 }}
+              //   animate={{ opacity: 1, translateY: 0 }}
+              //   transition={{
+              //     when: 'afterChildren',
+              //     delay: 0.5,
+              //     duration: 0.5,
+              //     type: 'ease',
+              //     // stiffness: 100,
+              //   }}
+              //   className="hidden lg:flex sticky top-36 h-0"
+              // >
+              //   <div className="relative -left-40 top-4 xl:-left-60 whitespace-nowrap h-min w-min">
+              //     <div className="flex flex-col w-full">
+              //       {toc.map((heading, index) => {
+              //         const clean = heading.replace(/-/g, ' ');
+              //         return (
+              //           <Link
+              //             href={slug + '#' + heading}
+              //             key={index}
+              //             className="font-normal tracking-tight py-1 text-base font-jbd capitalize text-neutral-400 hover:text-neutral-800 transition-all"
+              //           >
+              //             {clean}
+              //           </Link>
+              //         );
+              //       })}
+              //     </div>
+              //   </div>
+              // </motion.div>
+              <TableOfContents
+                toc={frontmatter.toc}
+                slug={frontmatter.slug}
+                title={frontmatter.title}
+              />
             ) : null}
             <BlogMetaHeader
               title={frontmatter.title}
