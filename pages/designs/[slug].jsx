@@ -67,46 +67,12 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         />
         <div
           className={
-            (image ? 'w-full container-fg py-4' : 'w-full container-fg py-16') +
+            (image ? 'w-full container-fg py-6' : 'w-full container-fg py-16') +
             ''
           }
         >
-          {/* <div
-            id="toc"
-            className="flex w-full border lg:space-x-48 sm:space-x-12 md:space-x-24"
-          > */}
-
           <DesignsWrapper>
             {toc.length ? (
-              // <motion.div
-              //   initial={{ opacity: 0, translateY: 10 }}
-              //   animate={{ opacity: 1, translateY: 0 }}
-              //   transition={{
-              //     when: 'afterChildren',
-              //     delay: 0.5,
-              //     duration: 0.5,
-              //     type: 'ease',
-              //     // stiffness: 100,
-              //   }}
-              //   className="hidden lg:flex sticky top-36 h-0"
-              // >
-              //   <div className="relative -left-40 top-4 xl:-left-60 whitespace-nowrap h-min w-min">
-              //     <div className="flex flex-col w-full">
-              //       {toc.map((heading, index) => {
-              //         const clean = heading.replace(/-/g, ' ');
-              //         return (
-              //           <Link
-              //             href={slug + '#' + heading}
-              //             key={index}
-              //             className="font-normal tracking-tight py-1 text-base font-jbd capitalize text-neutral-400 hover:text-neutral-800 transition-all"
-              //           >
-              //             {clean}
-              //           </Link>
-              //         );
-              //       })}
-              //     </div>
-              //   </div>
-              // </motion.div>
               <TableOfContents
                 toc={frontmatter.toc}
                 slug={frontmatter.slug}
