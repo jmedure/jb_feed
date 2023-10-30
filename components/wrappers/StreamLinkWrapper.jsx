@@ -15,6 +15,7 @@ export default function StreamLinkWrapper(props) {
           alt="icon"
           width={32}
           height={32}
+          className={`${props.fill}'fill-red-800'`}
         />
       </div>
       <p>{props.label}</p>

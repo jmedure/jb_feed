@@ -20,7 +20,7 @@ export default function TableOfContents(props) {
       }}
       className="hidden lg:flex sticky top-40 h-0"
     >
-      <div className="relative -left-40 top-4 xl:-left-64 h-min w-min">
+      <div className="relative xl:left-[calc(50%-600px)] top-2 h-min w-min">
         <div className="flex flex-col w-full">
           <Link
             href={sluggy}
@@ -49,7 +49,7 @@ export default function TableOfContents(props) {
               <Link
                 href={sluggy + '#' + heading}
                 key={index}
-                className="font-normal whitespace-nowrap tracking-tight py-1 text-base font-jbd capitalize text-neutral-400 hover:text-neutral-800 transition-all"
+                className="font-normal whitespace-nowrap tracking py-1 text-base font-jbd capitalize text-neutral-400 hover:text-neutral-800 transition-all"
               >
                 {clean}
               </Link>

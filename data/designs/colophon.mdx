@@ -9,61 +9,114 @@ image: ''
 youtube: ''
 alt: ''
 isPublished: 'true'
-toc: [how-to, project-status, next]
-status: 'Essay'
+toc: [technologies, typography, how-to, project-status, inspirations, next]
+status: 'WIP'
 version: 1
 ---
 
-[jacobs.blue 1.0](https://jacobs.blue/archive) served as my debut album release landing page. The UX was dedicated to quickly getting inbound users to their streaming preference of choice then secondarily allow users to explore the story telling experience dedicated to Born in the Sunset. It was built with vanilla html css and javascript in 2020.1
+Like myself, jacobs.blue is a constant work in progress. It's an attempt at being the best representation of my work, my art, my interests and thoughts at any given time.
 
-[jacobs.blue 2.0](https://jacobs.blue/archive) went live in 2022 and established the anti-feed, to which many resonated.
+With the exception of many rounds of feedback from many great designers and a cheeky JSON CMS made by my good friend, I designed and built this site myself. All of it is open source and can be found on [github](https://github.com/jmedure).
 
-Like myself, Jacobs.Blue is a constant work in progress.
+In 2020 [jacobs.blue 1.0](https://jacobs.blue/archive) was built with vanilla HTML, CSS and Javascript in order to promote and showcase my debut album. The UX was simple, direct and optimized for getting inbound users (mainly from instagram) to their preferred streaming service quickly. This was an awesome site but didn’t age beyond my next release. It was more of landing page and I wanted more of a home for jacobs.blue.
 
-In hopes to carve out my own representative corner of the internet. Over two years ago I set out to build a space
+In hopes to carve out my own representative corner of the internet. Over two years ago I set out to build that home. What you see now is a culmination of that work.
 
-- where I could make anything and quickly share it.
-- that was a fluid enough to support any creative format yet robust enough for a person to intuitively navigate.
-- that was to my UX preferences and experiments.
-- that not only considers a user's time and privacy but actively takes an anti-predatory stance towards both ends.
+I intended to make a space that met the following criteria
+
+- It supported my ability to make anything and quickly share it.
+- It was fluid enough to house any creative format yet robust enough for a person to intuitively navigate.
+- It could showcase my UX preferences and experiments.
+- It not only considers a user's time and privacy but actively takes an anti-predatory stance towards both ends.
 
 Some principles that guide how this site came to be
 
 **Bias towards action**
 
-The vast majority of my output has been seen by very few people. In effort to confront my perfectionist tendencies
+Post early and often. Perfectionism is actually a crutch of mine and we’re not doing that here.
 
 **Zero downtime**
 
-No “under construction” or “we’ll be back later” sign means friends, family, listeners, fellow interneters, prospective collaborators, and future employers always have access to an up to date version of my work. Staying up-to-date leads me to my next principle.
+No “under construction” or “we’ll be back later” sign means friends, family, listeners, fellow interneters, prospective collaborators, and future employers always have access to an up to date version of my work.
 
 **Easily managed**
 
-The site’s content is built with Next.js using a couple JSON files and many MDX files. It’s easy for me to write content directly in VS Code, and push changes directly to main in very little time.
+Make it as easy as possible to update and ship changes quickly - everything from content to components.
 
-## How to
+Lastly, most importantly…
 
-Jacobs.blue was designed primarily as an [anti-feed](https://jacobs.blue/design/anti-feed)
+**Have fun**
+
+When play infuses the work everyone feels it. You get to enjoy the process of making and users get to enjoy a delightful experience.
+
+This translates into simple decisions like making the main content card have a blue bg color. Every part of my programmed UI brain says that it should be grey for easier transferability over to dark mode and a simpler color system. But the Jacob’s Blue site at jacobs.blue ought to have some blue got-da\*\*\*t. Fun.
+
+### Technologies
+
+This site uses [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and a bit of [React](https://react.org). I host on [Vercel](https://vercel.com) and use privacy first analytics provider, [Simple Analytics](https://simpleanalytics.com). Content is managed using a couple JSON files and many MDX files. It’s easy for me to write content directly in VS Code, and push changes directly to main in very little time. Animations, for the most part are built leveraging [Framer Motion](https://www.framer.com/motion/).
+
+These days I’m in between Figma and designing directly in-browser as I code.
+
+### Typography
+
+Both header and body copy is set in [Neue Montreal](https://pangrampangram.com/products/neue-montreal) from Pangram Pangram foundry. I have plans to upgrade to my own font in the future.
+
+### How to
+
+The primary function of jacobs.blue is a feed of work. As a user, I should be able to browse this feed and see any meaningful work ever published by Jacob's Blue. As of now users can filter by medium/function.
+
+\*\*\*Image of main feed then now page
+
+You’ll notice a typewriter effect subheader on the main page. This component is my version of a [Now page](https://nownownow.com/about), streamlined for my own uses. I regularly update this component with what I’m up-to, including but not limited to training for a marathon and recently becoming a father - woohoo!
+
+Beyond the main feed pages this site is designed to be explored via the footer. I’m the type of video game player that plays all the side quests and tries to explore 100% of the map. The UX intentionally rewards the explorer. This is a behavior I want to champion over the typical kite-lite social media users (myself included) that blows whichever way the algorithmic wind blows them.
+
+Other than the blog parts of my site where I’m regularly writing, the footer contains many regularly updated indexes of, [every song I’ve ever released](/discography), [past versions of the website](/archive) and what I deem to be, [valuable book recommendations](/library). These pages are fun to make and hopefully fun for you to look through.
+
+At the beginning I spoke to the many specific needs of jacobs.blue. The original use case for my site and one of the most regularly utilized is the song page. Song pages are really cool. I’ve never seen an artist with one like mine. Song pages are also turn-around points but there’s a lot you can do there. You can find all streaming links but you can also sing along with lyrics, read through the credits and _one day soon_ play the music directly in-browser. [Check it out!](/discography)
+
+I spent entirely too much on “blog” parts of my site. These pages are really cool to me but also represent turnaround points for the user. Just like all detail pages, I’m not necessarily trying to connect you to the next thing. I want you to go back the way you came. This coincides with the principle of valuing user time.
 
 ### Project status
 
-Yet another work in progress biased towards action...
+Similar to [Maggie Appleton](https://maggieappleton.com/colophon#growth-stages), despite regularly updating this site I'm also bad at finishing things. In the name of biasing towards action I came up with a taxonomy for a written works “doneness” so-to-speak, in order to push un-refined thoughts worth-sharing.
 
-<div className="flex w-full aspect-video rounded-lg bg-neutral-50 overflow-clip border border-black/10 items-center">
-  <div className="relative mx-auto mb-12 w-96 items-center aspect-square">
-    <Image
-      src="/design/status.svg"
-      alt="status symbols for jacobs.blue 3 symbols denoting idea draft and polished"
-      style={{ objectFit: 'cover' }}
-      fill
-    />
+<div className="p-8">
+  <div className="rounded-lg aspect-video  bg-neutral-50 overflow-clip border border-black/10 justify-center border-solid items-center">
+    <div className="flex items-center align-middle justify-center w-full h-full bg-red-200 z-10">
+      <Image
+        src="/design/status.svg"
+        alt="status symbols for jacobs.blue 3 symbols denoting idea draft and polished"
+        width={400}
+        height={400}
+        blur
+      />
+    </div>
   </div>
 </div>
 
-## Next
+Essays start as WIPs, become Drafts, and finish as Essays.
 
-Jacobs.Blue evolves as I do.
+Note: perfectly reflecting why this is important, I’ve changed the naming conventions of the project status 3 times just since starting this essay.
 
 ## Inspirations
 
 I would be remissed if I didn't mention all the exceptional designers sharing their work that helped shaped this project. Ranging from small to very large sources of inspiration, Jacobs.Blue would not exist in it's current from without the following. Thank you for your work [Maggie Appleton](https://maggieappleton.com/), [Jordan Singer](https://ibuildmyideas.com/), [Eike Drescher](https://www.eikedrescher.com/) [Marco Cornacchia](https://www.marco.fyi/), [Paco Coursey](https://paco.me/), [Rauno Freiberg](https://rauno.me/), [Rikitesh Nighot](https://nighot.com/), [Brian Lovin](https://brianlovin.com/), [Joseph Zhang](https://www.josephz.me/), [Ethan](https://area.cx), [Sebastian](https://www.carlhauser.com/).
+
+## Next
+
+Making this site has made me more comfortable being all the things I am under one umbrella. Social media has made me feel like I'm _only_ a musician, but in the real world I am many things. Jacobs.blue is not only a good representation of this but helped me own it. Like myself, jacobs.blue is a constant work in progress. Expect jacobs.blue to evolve and change shape as much as I do.
+
+If you’ve made it this far please share some feedback either on [twitter](https://twitter.com/jacobs__blue) or [email me](mailto:jake@jacobs.blue?subject=Wus%20cracking%20big%20dawg?) directly.
+
+**WIP (Work in progress.)**
+
+I’m gathering my thoughts. It may not even be coherent.
+
+**Draft**
+
+I’ve collected my thoughts and taken a shot at coherence. I’m usually rewriting for clarity, so expect many draft versions.
+
+**Essay**
+
+I’m officially sharing this one and not just for feedback. I stand on what I say here but I’m also always willing to have my mind changed. When I do, I’ll note the version.

@@ -37,7 +37,7 @@ export default function MainHeader(props) {
   }
   if (type === 'design') {
     return (
-      <div className="w-full py-8 flex-row space-y-2 sm:space-y-0 fixed left-0 top-0 z-30">
+      <div className="w-full py-4 sm:py-8 flex-row space-y-2 sm:space-y-0 fixed left-0 top-0 z-20">
         <motion.div
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
@@ -51,8 +51,8 @@ export default function MainHeader(props) {
         >
           <div
             className={
-              (completion > 2
-                ? 'flex transition-all gap-2 items-center px-2 py-1 mx-auto bg-white rounded-full drop-shadow-lg'
+              (completion > 1
+                ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white rounded-full drop-shadow-lg'
                 : 'flex transition-all gap-2 items-center px-2 py-1 mx-auto bg-white rounded-full ') +
               ''
             }

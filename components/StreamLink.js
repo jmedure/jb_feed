@@ -22,17 +22,22 @@ export default function StreamLink(props) {
   } else if (String(link).includes('amazon')) {
     return (
       <a href={props.href} className="">
-        <StreamLinkWrapper icon="amazon" label="Amazon Music" bg="bg-blue-50" />
+        <StreamLinkWrapper
+          icon="amazon"
+          fill="fill-white"
+          label="Amazon Music"
+          bg="bg-blue-50"
+        />
       </a>
     );
   } else if (String(link).includes('tidal')) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper
-          icon="tidal"
+          icon="tidal-white"
           label="Tidal"
-          bg="bg-black"
-          fill="fill-white"
+          bg="bg-black/90"
+          fill="fill-white/90"
         />
       </a>
     );

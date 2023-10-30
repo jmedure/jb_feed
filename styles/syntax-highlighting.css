@@ -8,13 +8,22 @@
 .rehype-code-title {
     font-family: monospace;
     font-size: 12px;
-    padding: .5em 0px;
+    padding: 1em 1em;
     margin: 0px;
-    color: #00000080
+    color: #00000090;
+    margin: 0 auto ;
+    max-width: 600px;
+    background: #0b5faa10;
+    border-radius:.5em .5em 0 0;
+    overflow: auto;
+    border-top: 1px solid #0b5faa20;
+    border-left: 1px solid #0b5faa20;
+    border-right: 1px solid #0b5faa20;
 }
 
  code[class*="language-"],
  pre[class*="language-"] {
+    
      color: #00000090;
      font-size: 13px;
      background: none;
@@ -31,20 +40,23 @@
      -moz-hyphens: none;
      -ms-hyphens: none;
      hyphens: none;
+     max-width: 600px;  
  }
  
  /* Code blocks */
  pre[class*="language-"] {
      padding: 1.5em 1.5em;
      margin: .5em 0;
-     overflow: auto;
-     border-radius: 1em;
-     border: 1px solid #eef7ff;
+     margin: 0 auto ; 
+     border-radius: 0 0 1em 1em;
+     border-bottom: 1px solid #0b5faa20;
+     border-left: 1px solid #0b5faa20;
+     border-right: 1px solid #0b5faa20;
  }
  
  :not(pre) > code[class*="language-"],
  pre[class*="language-"] {
-     background: #fafcff;
+     background: #1793ff05;
  }
  
  /* Inline code */
@@ -52,6 +64,7 @@
      padding: .1em;
      border-radius: .3em;
      white-space: normal;
+     margin: 0 auto ;
  }
  
  .token.comment,

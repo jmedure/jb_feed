@@ -11,7 +11,7 @@ export default function BackArrow() {
           <motion.button
             whileTap={{ scale: 0.9 }}
             transition={{ ease: 'linear', duration: 0.01 }}
-            className="group fill-black/50 flex sm:hover:bg-white align-middle items-center p-1 md:p-2 w-9 max-h-9 max-w-9 rounded-full bg-white/80 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2"
+            className="group fill-black/50 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-white/80 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0 }}

@@ -47,18 +47,18 @@ export default function Footer(props) {
                   icon="east"
                   copy="Library"
                 />
-                <Button
+                {/* <Button
                   href="/personal-bests"
                   type="null"
                   icon="east"
                   copy="Pesonal Bests"
-                />
-                <Button
+                /> */}
+                {/* <Button
                   href="/thank-you"
                   type="null"
                   icon="east"
                   copy="Thank you"
-                />
+                /> */}
                 <Button
                   href="/archive"
                   type="null"
