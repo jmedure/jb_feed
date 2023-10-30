@@ -65,9 +65,24 @@ Both header and body copy is set in [Neue Montreal](https://pangrampangram.com/p
 
 The primary function of jacobs.blue is a feed of work. As a user, I should be able to browse this feed and see any meaningful work ever published by Jacob's Blue. As of now users can filter by medium/function.
 
-\*\*\*Image of main feed then now page
-
 You’ll notice a typewriter effect subheader on the main page. This component is my version of a [Now page](https://nownownow.com/about), streamlined for my own uses. I regularly update this component with what I’m up-to, including but not limited to training for a marathon and recently becoming a father - woohoo!
+
+<div className="pt-8 pb-4">
+  <div className="relative rounded-lg w-full aspect-video bg-neutral-50 overflow-clip border border-black/10 justify-end border-solid items-end">
+    <div className="flex items-center align-right justify-end w-full h-full z-10">
+      <Image
+        src="/design/subheader.png"
+        alt="Probably cooking something demonstration of streamlined subheader. Mocked up over desktop"
+        objectFit="cover"
+        fill
+        blur
+      />
+    </div>
+  </div>
+  <figcaption className="w-full align-middle text-center text-neutral-400 font-jbd">
+    Subheader located top left on index
+  </figcaption>
+</div>
 
 Beyond the main feed pages this site is designed to be explored via the footer. I’m the type of video game player that plays all the side quests and tries to explore 100% of the map. The UX intentionally rewards the explorer. This is a behavior I want to champion over the typical kite-lite social media users (myself included) that blows whichever way the algorithmic wind blows them.
 
@@ -81,9 +96,9 @@ I spent entirely too much on “blog” parts of my site. These pages are really
 
 Similar to [Maggie Appleton](https://maggieappleton.com/colophon#growth-stages), despite regularly updating this site I'm also bad at finishing things. In the name of biasing towards action I came up with a taxonomy for a written works “doneness” so-to-speak, in order to push un-refined thoughts worth-sharing.
 
-<div className="p-8">
+<div className="pt-8 pb-4">
   <div className="rounded-lg aspect-video  bg-neutral-50 overflow-clip border border-black/10 justify-center border-solid items-center">
-    <div className="flex items-center align-middle justify-center w-full h-full bg-red-200 z-10">
+    <div className="flex items-center align-middle justify-center w-full h-full z-10">
       <Image
         src="/design/status.svg"
         alt="status symbols for jacobs.blue 3 symbols denoting idea draft and polished"
@@ -93,6 +108,9 @@ Similar to [Maggie Appleton](https://maggieappleton.com/colophon#growth-stages),
       />
     </div>
   </div>
+  <figcaption className="w-full align-middle text-center text-neutral-400 font-jbd">
+    I designed these myself using Material UI
+  </figcaption>
 </div>
 
 Essays start as WIPs, become Drafts, and finish as Essays.

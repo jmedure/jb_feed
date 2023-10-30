@@ -67,8 +67,9 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         />
         <div
           className={
-            (image ? 'w-full container-fg py-6' : 'w-full container-fg py-16') +
-            ''
+            (image
+              ? 'w-full container-fg py-4'
+              : 'w-full container-fg sm:py-20') + ''
           }
         >
           <DesignsWrapper>
