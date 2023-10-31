@@ -65,12 +65,12 @@ export default function CopyLink() {
             onClick={copylink}
             whileTap={{ scale: 0.9 }}
             transition={{ ease: 'linear', duration: 0.01 }}
-            className="group fill-black/50 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-white/80 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2"
+            className="group fill-black/50 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-white/80 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2 select-none"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className=" fill-inherit stroke-inherit"
+              className=" fill-inherit stroke-inherit select-none"
             >
               <svg
                 className="stroke-black/50 stroke-[.5px] sm:group-hover:fill-black sm:group-hover:stroke-black"

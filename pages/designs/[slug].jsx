@@ -25,6 +25,7 @@ import DesignsWrapper from '../../components/wrappers/DesignsWrapper';
 import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
 import { motion } from 'framer-motion';
 import TableOfContents from '../../components/TableOfContents';
+import BlogImage from '../../components/mdx/BlogImage';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -56,7 +57,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           type: 'ease',
           stiffness: 200,
         }}
-        className="flex flex-col w-full mx-auto py-3"
+        className="flex flex-col w-full mx-auto py-16 sm:py-12"
       >
         <BlogHeroBanner
           youtube={youtube}
@@ -69,7 +70,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           className={
             (image
               ? 'w-full container-fg py-4'
-              : 'w-full container-fg sm:py-20') + ''
+              : 'w-full container-fg py-12 sm:py-20') + ''
           }
         >
           <DesignsWrapper>
@@ -98,6 +99,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                   BlogEntry,
                   OneBlank,
                   YoutubeEmbed,
+                  BlogImage,
                 }}
               />
             </ProseWrapperDesign>

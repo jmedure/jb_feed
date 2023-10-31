@@ -37,7 +37,7 @@ export default function MainHeader(props) {
   }
   if (type === 'design') {
     return (
-      <div className="fixed w-full py-4 sm:py-8 flex-row space-y-2 sm:space-y-0 left-0 top-0 z-40">
+      <div className="fixed w-full py-4 sm:py-8 flex-row left-0 top-0 z-40">
         <motion.div
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
@@ -47,13 +47,13 @@ export default function MainHeader(props) {
             stiffness: 200,
             duration: 0.5,
           }}
-          className="flex container-fg justify-between w-full text-lg font-medium font-jbd z-40"
+          className="flex container-fg justify-between w-full text-lg font-medium gap-1 font-jbd"
         >
           <div
             className={
-              (completion > 1
-                ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white rounded-full drop-shadow-lg'
-                : 'flex transition-all gap-2 items-center px-1 py-1 mx-auto bg-white rounded-full ') +
+              (completion > 2
+                ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white border-black/5 border rounded-full drop-shadow-lg'
+                : 'flex transition-all gap-2 items-center px-1 py-1 mx-auto bg-white border border-black/0 rounded-full ') +
               ''
             }
           >

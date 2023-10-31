@@ -16,7 +16,7 @@ export default function BackArrow() {
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className=" fill-inherit stroke-inherit"
+              className=" fill-inherit stroke-inherit select-none"
             >
               <svg
                 width="18"
