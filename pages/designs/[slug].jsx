@@ -26,6 +26,8 @@ import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
 import { motion } from 'framer-motion';
 import TableOfContents from '../../components/TableOfContents';
 import BlogImage from '../../components/mdx/BlogImage';
+import Footnote from '../../components/mdx/Footnote';
+import Video from '../../components/mdx/Video';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -53,7 +55,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         transition={{
           when: 'afterChildren',
           delay: 0.3,
-          duration: 0.3,
+          duration: 0.2,
           type: 'ease',
           stiffness: 200,
         }}
@@ -100,6 +102,8 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                   OneBlank,
                   YoutubeEmbed,
                   BlogImage,
+                  Footnote,
+                  Video,
                 }}
               />
             </ProseWrapperDesign>

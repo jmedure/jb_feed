@@ -7,7 +7,7 @@ import { Book } from '../components/cards/Book';
 import MainGridWrapper from '../components/wrappers/MainGridWrapper';
 import SectionHeader from '../components/SectionHeader';
 import Subheader from '../components/Subheader';
-import { motion } from 'framer-motion';
+import { easeOut, motion } from 'framer-motion';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -21,9 +21,7 @@ export default function Library() {
     if (!data) {
       return (
         <main className="container w-full mx-auto flex flex-col justify-center items-center align-middle h-screen">
-          <p className="text-xl">
-            <Subheader />
-          </p>
+          <Subheader />
         </main>
       );
     }
@@ -71,8 +69,9 @@ export default function Library() {
                           when: 'afterChildren',
                           delay: index * 0.1,
                           duration: 0.2,
-                          type: 'spring',
-                          stiffness: 200,
+                          type: 'ease',
+                          // type: 'spring',
+                          // stiffness: 200,
                         }}
                         key={index}
                         className="list-none"

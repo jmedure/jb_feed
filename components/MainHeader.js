@@ -52,7 +52,7 @@ export default function MainHeader(props) {
           <div
             className={
               (completion > 2
-                ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white border-black/5 border rounded-full drop-shadow-lg'
+                ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white border-black/5 border rounded-full drop-shadow-xl'
                 : 'flex transition-all gap-2 items-center px-1 py-1 mx-auto bg-white border border-black/0 rounded-full ') +
               ''
             }

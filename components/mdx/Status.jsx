@@ -111,3 +111,29 @@ export default function Status(props) {
     </Link>
   );
 }
+
+// # Kilt babies
+
+// Designing is something I get paid to do, developing is a budding hobby of mine. All versions of jacobs.blue are also a reflection of my dev skill. Knowing that I wanted
+
+// **WIP (Work in progress.)**
+
+// I’m gathering my thoughts. It may not even be coherent.
+
+// **Draft**
+
+// I’ve collected my thoughts and taken a shot at coherence. I’m usually rewriting for clarity, so expect many draft versions.
+
+// **Essay**
+
+// I’m officially sharing this one and not just for feedback. I stand on what I say here but I’m also always willing to have my mind changed. When I do, I’ll note the version.
+
+// <ol className=" h-0 w-min decoration-red-800 list-decimal  relative mx-auto">
+//   <Footnote id="1" number="1">
+//     This translates into simple decisions like making the main content card have
+//     a blue bg color. Every part of my programmed UI brain says that it should be
+//     grey for easier transferability over to dark mode and a simpler color
+//     system. But the Jacob’s Blue site at jacobs.blue ought to have some blue
+//     got-da***t. Fun.
+//   </Footnote>
+// </ol>

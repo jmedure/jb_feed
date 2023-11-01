@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import YoutubeEmbed from '../YoutubeEmbed';
-import { motion } from 'framer-motion';
+// import YoutubeEmbed from '../YoutubeEmbed';
+// import { motion } from 'framer-motion';
 
 export const Book = ({ book }) => {
   const { title, cover, author, link, rank } = book;
@@ -15,6 +15,8 @@ export const Book = ({ book }) => {
     .replace(/ue/g, 'ü');
 
   console.log(id);
+
+  //
 
   return (
     <a

@@ -34,8 +34,8 @@ export default function Blog({ posts }) {
                       animate={{ opacity: 1, translateY: 0 }}
                       transition={{
                         type: 'spring',
-                        delay: index * 0.1,
                         stiffness: 200,
+                        delay: index * 0.08,
                         duration: 0.5,
                       }}
                       key={index}

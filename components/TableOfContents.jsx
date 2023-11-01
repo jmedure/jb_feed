@@ -30,6 +30,7 @@ export default function TableOfContents(props) {
               <motion.div
                 initial={{ opacity: 0, translateY: -10 }}
                 whileInView={{ opacity: 1, transalateY: 0 }}
+                exit={{ opacity: 0, translateY: 10 }}
                 transition={{
                   type: 'spring',
                   duration: 0.2,

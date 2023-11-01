@@ -22,9 +22,9 @@ export default function Toast({ text, children }) {
         initial={{ opacity: 0, translateY: 5 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{
-          duration: 0.5,
+          duration: 0.2,
           type: 'ease',
-          duration: 0.3,
+          // duration: 0.2,
           stiffness: 100,
         }}
         className="hidden sm:flex flex-row -left-6 whitespace-nowrap overflow-visible drop-shadow-lg text-center justify-center mx-auto -top-8 text-sm px-2 py-1 rounded-lg absolute bg-neutral-800 text-white  z-50"

@@ -1,6 +1,6 @@
 ---
 date: '2023-10-25'
-updated: '2023-10-27'
+updated: '2023-11-01'
 title: 'About jacobs.blue (Colophon)'
 description: 'How to'
 thumbnail: ''
@@ -9,53 +9,58 @@ image: ''
 youtube: ''
 alt: ''
 isPublished: 'true'
-toc: [technologies, typography, how-to, project-status, inspirations, next]
+toc:
+  [
+    approach,
+    technologies,
+    typography,
+    how-to,
+    project-status,
+    inspirations,
+    next,
+  ]
 status: 'WIP'
 version: 1
 ---
 
-Like myself, jacobs.blue is a constant work in progress. It's an attempt at being the best representation of my work, my art, my interests and thoughts at any given time.
+jacobs.blue is an attempt at being the best representation of my work, art, interests and thoughts at any given time. Like myself, jacobs.blue is a constant work in progress.
 
-Without the feedback of many great designers and the cheeky JSON CMS my good friend built and hooked up for me, jacobs.blue would not exist. Other than these contributions I designed and built this site myself. All of it is open source and can be found on [github](https://github.com/jmedure).
+Without the feedback of many great designers and the JSON CMS my good friend built and hooked up for me, jacobs.blue would not exist. Other than these contributions I designed and built this site myself. All of it is open source and can be found on [github](https://github.com/jmedure).
 
-In 2020 [jacobs.blue 1.0](https://jacobs.blue/archive) was built with vanilla HTML, CSS and Javascript in order to promote and showcase my debut album. The UX was simple, direct and optimized for getting inbound users (mainly from instagram) to their preferred streaming service quickly. This was an awesome site but didn’t age beyond my next release. It was more of landing page and I wanted more of a home for jacobs.blue.
+In 2020 [jacobs.blue 1.0](https://jacobs.blue/archive) was built with vanilla HTML, CSS and Javascript. It's goal was to promote and showcase my debut album. The UX was simple, direct and optimized for getting inbound users (mainly from instagram) to their preferred streaming service quickly. This was an awesome site but didn’t age beyond my next release. The more things I made and the more disenfranchised I grew with traditional sharing mediums, the more it became apparent I needed my own true home for Jacob's Blue.
 
-In hopes to carve out my own representative corner of the internet, _and greatly test my dev skills_, over two years ago I set out to build that home. What you see now is a culmination of that work.
+In hopes to carve out a representative corner of the internet, _and greatly test my dev skills_, over two years ago I set out to build that home.
 
-I intended to make a space that met the following criteria
+Many iterations and 500+ working hours later I've reached a version I'm happy with. What you see now is a culmination of that work.
 
-- It supported my ability to make anything and quickly share it.
-- It was fluid enough to house any creative format yet robust enough for a person to intuitively navigate.
-- It could showcase my UX preferences and experiments.
-- It not only considers a user's time and privacy but actively takes an anti-predatory stance towards both ends.
+## Approach
 
-Some principles that guide how this site came to be
+My approach is to [create with care](https://createwcare.com), every time. In order to meet that standard I developed a few criteria and principles meant to guide my work.
 
-**Bias towards action**
+jacobs.blue needed to:
 
-Post early and often. Perfectionism is actually a crutch of mine and we’re not doing that here.
+- support my ability to make anything and quickly share it
+- be fluid enough to house any creative format yet robust enough for a person to intuitively navigate.
+- showcase my UX preferences and experiments.
+- consider a user's time and privacy
 
-**Zero downtime**
+Guiding principles:
 
-No “under construction” or “we’ll be back later” sign means friends, family, listeners, fellow interneters, prospective collaborators, and future employers always have access to an up to date version of my work.
+**Bias towards action**: Post early and often. Perfectionism is actually a crutch of mine and we’re not doing that here.
 
-**Easily managed**
+**Zero downtime**: No “under construction” or “we’ll be back later” sign means friends, family, listeners, fellow interneters, prospective collaborators, and future employers always have access to an up to date version of my work.
 
-Make it as easy as possible to update and ship changes quickly - everything from content to components.
+**Easily managed**: Make it as easy as possible to update and ship changes quickly - everything from content to components.
 
-Lastly, most importantly…
+_Lastly, most importantly…_
 
-**Have fun**
-
-When play infuses the work everyone feels it. You get to enjoy the process of making and users get to enjoy a delightful experience.
-
-This translates into simple decisions like making the main content card have a blue bg color. Every part of my programmed UI brain says that it should be grey for easier transferability over to dark mode and a simpler color system. But the Jacob’s Blue site at jacobs.blue ought to have some blue got-da\*\*\*t. Fun.
+**Have fun**: When play is infused into the work everyone feels it. I get to enjoy the process of making and users get to enjoy a delightful experience.
 
 ### Technologies
 
-This site uses [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and a bit of [React](https://react.org). I host on [Vercel](https://vercel.com) and use privacy first analytics provider, [Simple Analytics](https://simpleanalytics.com). Content is managed using a couple JSON files and many MDX files. It’s easy for me to write content directly in VS Code, and push changes directly to main in very little time. Animations, for the most part are built leveraging [Framer Motion](https://www.framer.com/motion/).
+This site uses [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and a bit of [React](https://react.dev). I host on [Vercel](https://vercel.com) and use privacy first analytics provider, [Simple Analytics](https://simpleanalytics.com). Content is managed using a couple JSON files and many MDX files. It’s easy for me to write content directly in VS Code, and push changes to main in little time. For the most part, animations are built leveraging [Framer Motion](https://www.framer.com/motion/).
 
-These days I’m in between Figma and designing directly in-browser as I code.
+These days splitting time between using Figma and designing in-browser as I code.
 
 ### Typography
 
@@ -63,7 +68,7 @@ Both header and body copy is set in [Neue Montreal](https://pangrampangram.com/p
 
 ### How to
 
-The primary function of jacobs.blue is a feed of work. As a user, I should be able to browse this feed and see any meaningful work ever published by Jacob's Blue. As of now users can filter by medium/function.
+The primary function of jacobs.blue is a feed of work. As a user, I should be able to browse this feed and see any meaningful work ever published by Jacob's Blue. As of now users can filter my work by medium.
 
 You’ll notice a typewriter effect subheader on the main page. This component is my version of a [Now page](https://nownownow.com/about), streamlined for my own uses. I regularly update this component with what I’m up-to, including but not limited to training for a marathon and recently becoming a father - woohoo!
 
@@ -81,13 +86,19 @@ You’ll notice a typewriter effect subheader on the main page. This component i
   </figcaption>
 </div>
 
+<Video src="subheader.mp4" />
+
 Beyond the main feed pages this site is designed to be explored via the footer. I’m the type of video game player that plays all the side quests and tries to explore 100% of the map. The UX intentionally rewards the explorer. This is a behavior I want to champion over the typical kite-lite social media users (myself included) that blows whichever way the algorithmic wind blows them.
 
-Other than the blog parts of my site where I’m regularly writing, the footer contains many regularly updated indexes of, [every song I’ve ever released](/discography), [past versions of the website](/archive) and what I deem to be, [valuable book recommendations](/library). These pages are fun to make and hopefully fun for you to look through.
+Other than the "blog" parts of my site - where I’m regularly writing and spending entirely too much time rewriting css- the footer contains many regularly updated indexes. These indexes break down into detail pages that signal turn-around points for the user. Some cool indexes include, [every song I’ve ever released](/discography), [past versions of the website](/archive) and, what I deem to be, [valuable, book recommendations](/library). These pages are a lot of fun to make and hopefully fun for you to look through.
 
-At the beginning I spoke to the many specific needs of jacobs.blue. The original use case for my site and one of the most regularly utilized is the song page. Song pages are really cool. I’ve never seen an artist with one like mine. Song pages are also turn-around points but there’s a lot you can do there. You can find all streaming links but you can also sing along with lyrics, read through the credits and _one day soon_ play the music directly in-browser. [Check it out!](/discography)
+<BlogImage
+  src="/design/index.svg"
+  alt="status symbols for jacobs.blue 3 symbols denoting idea draft and polished"
+  fig=" I designed these using icons from Material UI"
+/>
 
-I spent entirely too much on “blog” parts of my site. These pages are really cool to me but also represent turnaround points for the user. Just like all detail pages, I’m not necessarily trying to connect you to the next thing. I want you to go back the way you came. This coincides with the principle of valuing user time.
+Of several specific use cases, the original use case for my site and one of the most regularly utilized is the song page. Song pages are really cool. I’ve never seen an artist with one like mine. On the song page a user can primarily find all streaming links but they can also sing along with lyrics, read through the credits and _one day soon_ play the music in-browser. [Check it out!](/discography)
 
 ### Project status
 
@@ -96,7 +107,7 @@ Similar to [Maggie Appleton](https://maggieappleton.com/colophon#growth-stages),
 <BlogImage
   src="/design/status.svg"
   alt="status symbols for jacobs.blue 3 symbols denoting idea draft and polished"
-  fig=" I designed these myself using Material UI"
+  fig=" I designed these using icons from Material UI"
 />
 
 Essays start as WIPs, become Drafts, and finish as Essays.
@@ -105,26 +116,10 @@ Note: perfectly reflecting why this is important, I’ve changed the naming conv
 
 ## Inspirations
 
-I would be remissed if I didn't mention all the exceptional designers sharing their work that helped shaped this project. Ranging from small to very large sources of inspiration, Jacobs.Blue would not exist in it's current from without the following. Thank you for your work [Maggie Appleton](https://maggieappleton.com/), [Jordan Singer](https://ibuildmyideas.com/), [Eike Drescher](https://www.eikedrescher.com/) [Marco Cornacchia](https://www.marco.fyi/), [Paco Coursey](https://paco.me/), [Rauno Freiberg](https://rauno.me/), [Rikitesh Nighot](https://nighot.com/), [Brian Lovin](https://brianlovin.com/), [Joseph Zhang](https://www.josephz.me/), [Ethan](https://area.cx), [Sebastian](https://www.carlhauser.com/).
+There are many exceptional designers sharing their work on the internet that helped shaped this project. Ranging from small to very large sources of inspiration, jacobs.blue would not exist in it's current form without the following: [Maggie Appleton](https://maggieappleton.com/), [Jordan Singer](https://ibuildmyideas.com/), [Eike Drescher](https://www.eikedrescher.com/) [Marco Cornacchia](https://www.marco.fyi/), [Paco Coursey](https://paco.me/), [Rauno Freiberg](https://rauno.me/), [Rikitesh Nighot](https://nighot.com/), [Brian Lovin](https://brianlovin.com/), [Joseph Zhang](https://www.josephz.me/), [Ethan](https://area.cx), [Sebastian](https://www.carlhauser.com/). Thank you for your work!
 
 ## Next
 
-Making this site has made me more comfortable being all the things I am under one umbrella. Social media has made me feel like I'm _only_ a musician, but in the real world I am many things. Jacobs.blue is not only a good representation of this but helped me own it. Like myself, jacobs.blue is a constant work in progress. Expect jacobs.blue to evolve and change shape as much as I do.
+Althought corny, making this site has made me more comfortable being all the things I am under one umbrella. Social media has made me feel like I'm _only_ a musician, but in the real world I am many things. Jacobs.blue is not only a good representation of this but helped me own it. I used to keep to websites, one for my design work, one for music. Now I'm comfortable with them in the same space. Like myself, jacobs.blue is a constant work in progress. Expect jacobs.blue to evolve and change shape as much as I do.
 
 If you’ve made it this far please share some feedback either on [twitter](https://twitter.com/jacobs__blue) or [email me](mailto:jake@jacobs.blue?subject=Wus%20cracking%20big%20dawg?) directly.
-
-# Kilt babies
-
-Designing is something I get paid to do, developing is a budding hobby of mine. All versions of jacobs.blue are also a reflection of my dev skill. Knowing that I wanted
-
-**WIP (Work in progress.)**
-
-I’m gathering my thoughts. It may not even be coherent.
-
-**Draft**
-
-I’ve collected my thoughts and taken a shot at coherence. I’m usually rewriting for clarity, so expect many draft versions.
-
-**Essay**
-
-I’m officially sharing this one and not just for feedback. I stand on what I say here but I’m also always willing to have my mind changed. When I do, I’ll note the version.
