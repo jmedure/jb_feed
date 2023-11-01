@@ -28,6 +28,7 @@ import TableOfContents from '../../components/TableOfContents';
 import BlogImage from '../../components/mdx/BlogImage';
 import Footnote from '../../components/mdx/Footnote';
 import Video from '../../components/mdx/Video';
+import ComingSoon from '../../components/mdx/ComingSoon';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -104,6 +105,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                   BlogImage,
                   Footnote,
                   Video,
+                  ComingSoon,
                 }}
               />
             </ProseWrapperDesign>

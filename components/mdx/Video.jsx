@@ -57,6 +57,7 @@ export default function Video(props) {
           loop
           muted
           playsInline
+          preload="none"
         >
           <source
             src={`https://dguat50fsbc3q.cloudfront.net/${props.src}`}
