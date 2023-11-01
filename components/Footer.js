@@ -7,10 +7,10 @@ import LiveVisitors from './LiveVistors';
 export default function Footer(props) {
   if (props.btt) {
     return (
-      <div id="footer" className="w-full text-neutral-700 bottom-0  bg-white">
-        <div className="container-fg w-full py-4 font-jbd tracking-tight font-normal">
+      <div id="footer" className="w-full text-neutral-500 bottom-0  bg-white">
+        <div className="container-fg w-full pb-8 font-jbd tracking-tight font-normal">
           <div className="flex items-center mx-auto gap-2 w-full align-middle justify-center">
-            <span>Thanks for reading ❤️</span>
+            <span>Thank you for reading ❤️</span>
             <Link
               href={props.btt}
               className="underline sm:hover:text-black underline-offset-2 sm:hover:underline-offset-4 transition-all"

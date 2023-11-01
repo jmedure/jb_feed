@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { current } from 'tailwindcss/colors';
-import { VideoPlayerControls } from '../VideoPlayerControls';
+import VideoPlayerControls from '../VideoPlayerControls';
 
 export default function Video(props) {
   const [isPaused, setIsPaused] = useState(false);
@@ -43,7 +42,7 @@ export default function Video(props) {
 
   return (
     <div className="pt-6 pb-2">
-      <div className="relative mx-auto w-full h-full border aspect-video rounded-lg bg-neutral-50 border-black/10 overflow-hidden">
+      <div className="relative group  mx-auto w-full h-full border aspect-video rounded-lg bg-neutral-50 border-black/10 overflow-hidden">
         <div className="absolute top-4 right-4 z-10">
           <VideoPlayerControls
             progress={videoProgress}
@@ -65,6 +64,9 @@ export default function Video(props) {
           />
         </video>
       </div>
+      <figcaption className="w-full align-middle text-center">
+        {props.caption}
+      </figcaption>
     </div>
   );
 }
