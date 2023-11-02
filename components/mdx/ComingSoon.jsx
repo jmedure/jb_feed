@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function ComingSoon() {
   return (
-    <div className="mt-24 -mb-32 -translate-y-52 z-20 py-8 ">
-      <div className="relative h-52  bg-gradient-to-t blur-sm from-white to-white/0 z-10"></div>
-      <div className="flex-row p-24 mx-auto shadow-lg border-black/10 rounded-xl max-w-[600px]  text-black not-prose space-y-6 text-lg font-jbd text-center">
+    <div className="-mb-32 mt-16 -translate-y-52 z-10 py-8 ">
+      <div className="relative h-48  bg-gradient-to-t blur-sm from-white to-white/0 z-10"></div>
+      <div className="flex-row p-24 mx-auto drop-shadow-xl border-black/10 rounded-xl max-w-[600px] text-black bg-white not-prose space-y-6 text-lg font-jbd text-center">
         <div className="flex border justify-center items-center rounded-lg fill-black/80 border-black/10 bg-white w-12 h-12 p-3 mx-auto">
           <svg
             width="24"

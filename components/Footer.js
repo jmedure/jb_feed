@@ -7,15 +7,19 @@ import LiveVisitors from './LiveVistors';
 export default function Footer(props) {
   if (props.btt) {
     return (
-      <div id="footer" className="w-full text-neutral-500 bottom-0  bg-white">
+      <div
+        id="footer"
+        className="w-full text-neutral-500 bottom-0 z-30  bg-white"
+      >
         <div className="container-fg w-full pb-8 font-jbd tracking-tight font-normal">
           <div className="flex items-center mx-auto gap-2 w-full align-middle justify-center">
-            <span>Thank you for reading ❤️</span>
+            <span>Thank you for reading </span>
+            <span>❤️</span>
             <Link
               href={props.btt}
               className="underline sm:hover:text-black underline-offset-2 sm:hover:underline-offset-4 transition-all"
             >
-              Back to top?
+              Back to top
             </Link>
           </div>
           {/* <p className="col-span-1">® 2022 - ∞</p>
