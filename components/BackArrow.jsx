@@ -25,12 +25,10 @@ export default function BackArrow() {
                 fill="inherit"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g mask="url(#mask0_2522_18468)">
-                  <path
-                    d="M5.29843 9.59998L9.85536 14.1569L9 15L3 9L9 3L9.85536 3.84306L5.29843 8.40002H15V9.59998H5.29843Z"
-                    fill="black"
-                  />
-                </g>
+                <path
+                  d="M5.29843 9.59998L9.85536 14.1569L9 15L3 9L9 3L9.85536 3.84306L5.29843 8.40002H15V9.59998H5.29843Z"
+                  fill="black"
+                />
               </svg>
             </motion.div>
           </motion.button>

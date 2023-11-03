@@ -49,7 +49,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         canonical={frontmatter.slug}
         image={frontmatter.thumbnail}
       />
-      <MainHeader type="design" />
+      <MainHeader type="design" buttons="2" />
       <motion.div
         initial={{ opacity: 0, translateY: 10 }}
         animate={{ opacity: 1, translateY: 0 }}
@@ -72,8 +72,8 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         <div
           className={
             (image
-              ? 'w-full container-fg py-4'
-              : 'w-full container-fg py-12 sm:py-20') + ''
+              ? 'w-full container-fg py-8'
+              : 'w-full container-fg py-12 sm:py-8') + ''
           }
         >
           <DesignsWrapper>

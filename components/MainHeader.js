@@ -30,7 +30,7 @@ export default function MainHeader(props) {
           className="flex container-fg items-center justify-between w-full text-lg font-medium font-jbd"
         >
           <Breadcrumbs />
-          <CopyLink />
+          <CopyLink type="text" />
         </motion.div>
       </div>
     );
@@ -49,18 +49,31 @@ export default function MainHeader(props) {
           }}
           className="flex container-fg justify-between w-full text-lg font-medium gap-1 font-jbd"
         >
-          <div
-            className={
-              (completion > 2
-                ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white border-black/5 border rounded-full drop-shadow-xl'
-                : 'flex transition-all gap-2 items-center px-1 py-1 mx-auto bg-white border border-black/0 rounded-full ') +
-              ''
-            }
-          >
-            <BackArrow />
-            <Logo />
-            <CopyLink />
-          </div>
+          {props.buttons ? (
+            <div
+              className={
+                (completion > 2
+                  ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white border-black/5 border rounded-full drop-shadow-xl'
+                  : 'flex transition-all gap-2 items-center px-1 py-1 mx-auto bg-white border border-black/0 rounded-full ') +
+                ''
+              }
+            >
+              <BackArrow />
+              <Logo />
+              <CopyLink />
+            </div>
+          ) : (
+            <div
+              className={
+                (completion > 2
+                  ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white border-black/5 border rounded-full drop-shadow-xl'
+                  : 'flex transition-all gap-2 items-center px-1 py-1 mx-auto bg-white border border-black/0 rounded-full ') +
+                ''
+              }
+            >
+              <Logo />
+            </div>
+          )}
         </motion.div>
       </div>
     );

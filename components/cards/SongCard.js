@@ -42,7 +42,7 @@ export default function SongCard(props) {
             <h2 className="text-xl sm:text-2xl tracking-tight">{title}</h2>
             <div className="flex flex-col text-black/50 lg:flex-col w-full align-middle sm:space-y-0">
               {album ? (
-                <p className="hidden sm:flex truncate space-x-1">
+                <p className="hidden sm:flex truncate space-x-1 tracking-tighter items-baseline font-jbd font-normal text-baseline">
                   <span>from </span> <i> {album}</i>
                 </p>
               ) : null}

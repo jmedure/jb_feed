@@ -7,6 +7,7 @@ import Image from 'next/image';
 import DesignProjectCard from '../../components/DesignProjectCard';
 import { motion } from 'framer-motion';
 import MotionListWrapper from '../../components/wrappers/MotionListWrapper';
+import MainHeader from '../../components/MainHeader';
 
 export default function Blog({ posts }) {
   // const list = {
@@ -38,9 +39,9 @@ export default function Blog({ posts }) {
       <Head>
         <title>/design by Jacob&#39;s Blue</title>
       </Head>
-
+      <MainHeader type="design" />
       <div className="container-blog">
-        <div className="flex sticky top-0 p-4 bg-white align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
+        {/* <div className="flex sticky top-0 p-4 bg-white align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
           <Link href="/" passHref legacyBehavior>
             <div className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer">
               <div className="border-white border-2 rounded-full relative p-5 cursor-pointer">
@@ -54,10 +55,10 @@ export default function Blog({ posts }) {
               </div>
             </div>
           </Link>
-        </div>
+        </div> */}
         <div className="py-24 md:py-48 h-full">
           <div className="font-jbd text-lg font-normal tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
-            <ul className="w-full space-y-2 justify-between ">
+            <ul className="flex-col w-full space-y-3 justify-between ">
               {posts.map((frontMatter, index) => {
                 if (frontMatter.isPublished == 'true') {
                   return (
@@ -94,10 +95,11 @@ export default function Blog({ posts }) {
           </div>
         </div>
       </div>
-
-      <div className="flex text-neutral-500 bg-white text-xs mx-auto space-x-2 w-full align-middle justify-center sticky bottom-0 p-4">
-        <p>by</p>
-        <Link href="/">Jacob&#39;s Blue</Link>
+      <div className="bottom-0 absolute w-full font-jbd">
+        <div className="flex text-neutral-500 bg-white text-sm mx-auto space-x-1 w-full align-middle justify-center sticky bottom-0 p-8">
+          <p>by</p>
+          <Link href="/">Jacob&#39;s Blue</Link>
+        </div>
       </div>
     </React.Fragment>
   );

@@ -32,15 +32,15 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
       <button onClick={onPlayPause} className='group cursor-pointer flex justify-center items-center'>
         <div className='transition-colors duration-200 sm:hover:fill-black fill-neutral-600 ease-in-out'>
           {isPaused ? <svg width="18" height="18" viewBox="0 0 18 18" fill="current" xmlns="http://www.w3.org/2000/svg">
-                        <g mask="url(#mask0_2589_16567)">
+                        
                           <path d="M6.375 13.5719V4.42773L13.5576 8.99981L6.375 13.5719Z"/>
-                        </g>
+                   
                       </svg>
                       : 
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="current" xmlns="http://www.w3.org/2000/svg">
-                        <g mask="url(#mask0_2589_16579)">
+                       
                           <path d="M10.5 13.875V4.125H13.3125V13.875H10.5ZM4.6875 13.875V4.125H7.49998V13.875H4.6875Z"/>
-                        </g>
+                       
                       </svg>
                       }
         </div>

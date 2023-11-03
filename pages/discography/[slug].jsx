@@ -30,7 +30,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
   const songType = () => {
     if (frontmatter.type === 'album') {
       return (
-        <div className="flex font-medium tracking-tighter flex-col text-2xl">
+        <div className="flex font-medium tracking-tight flex-col text-2xl">
           <div className="flex-wrap space-y-4">
             <h1 className="flex items-center space-x-2">
               {frontmatter.title}
@@ -111,7 +111,6 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         transition={{
           when: 'afterChildren',
           delay: 0.1,
-          duration: 0.2,
           type: 'spring',
           stiffness: 200,
         }}
@@ -137,11 +136,11 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             >
               <p className="text-2xl tracking-tight">{frontmatter.title}</p>
 
-              <div className="text-black/50 tracking-tight">
+              <div className="text-black/50 tracking-normal">
                 {frontmatter.track ? (
                   <Link
                     href={frontmatter.albumLink}
-                    className="font-normal tracking-tight sm:w-full underline whitespace-nowrap sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
+                    className="font-normal sm:w-full tracking-normal underline whitespace-nowrap sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
                   >
                     <p>{frontmatter.album}</p>
                   </Link>
@@ -173,7 +172,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         </div>
 
         <BlogWrapper>
-          <div className="flex-col sm:max-w-[640px] sm:flex-none justify-between">
+          <div className="flex-col sm:max-w-[600px] sm:flex-none justify-between">
             {songType()}
 
             <ProseWrapperSongs>

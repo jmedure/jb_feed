@@ -61,7 +61,7 @@ export const Post = ({ post }) => {
       return (
         <Suspense fallback={<Skeleton />}>
           <div className="relative ">
-            <div className="relative border sm:group-hover:opacity-0 select-none sm:group-hover:hidden opacity-100 transition-opacity border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-20 ">
+            <div className="relative border select-none transition-opacity border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-20 ">
               <Image
                 src={image}
                 alt="alt"
@@ -71,9 +71,9 @@ export const Post = ({ post }) => {
                 blurDataURL="https://images.unsplash.com/photo-1631200472313-ad91fd825080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2375&q=80"
               />
             </div>
-            <div className="w-full absolute sm:group-hover:relative top-0 h-full rounded-xl overflow-hidden aspect-video">
+            {/* <div className="w-full absolute sm:group-hover:relative top-0 h-full rounded-xl overflow-hidden aspect-video">
               <YoutubeEmbed embedId={youtubeEmbed} />
-            </div>
+            </div> */}
           </div>
         </Suspense>
       );

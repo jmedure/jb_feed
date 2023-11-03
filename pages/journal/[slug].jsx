@@ -23,6 +23,7 @@ import BlogHeroBanner from '../../components/mdx/BlogHeroBanner';
 import Footer from '../../components/Footer';
 import BlogWrapper from '../../components/wrappers/BlogWrapper';
 import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
+import ComingSoon from '../../components/mdx/ComingSoon';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -54,7 +55,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         />
         <div
           className={
-            (image ? 'w-full container-fg py-4' : 'w-full container-fg py-16') +
+            (image ? 'w-full container-fg py-4' : 'w-full container-fg py-12') +
             ''
           }
         >
@@ -82,6 +83,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             ) : null}
             <BlogWrapper>
               <BlogMetaHeader
+                type={'journal'}
                 title={frontmatter.title}
                 readingTime={frontmatter.readingTime}
                 published={published}
@@ -97,6 +99,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                     BlogEntry,
                     OneBlank,
                     YoutubeEmbed,
+                    ComingSoon,
                   }}
                 />
               </ProseWrapper>
@@ -104,7 +107,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           </div>
         </div>
       </div>
-      <Footer btp={currentRoute} />
+      <Footer btt={currentRoute} />
     </React.Fragment>
   );
 }

@@ -50,10 +50,9 @@ export default function Home() {
                   animate={{ opacity: 1, translateY: 0 }}
                   transition={{
                     when: 'afterChildren',
-                    delay: index * 0.1,
-                    duration: 0.2,
+                    delay: index * 0.05,
                     type: 'spring',
-                    stiffness: 200,
+                    stiffness: 100,
                   }}
                   key={index}
                   className="list-none"

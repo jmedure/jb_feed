@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export default function BlogHeroBanner(props) {
   return (
-    <div className="flex container-fg w-full border-10 border-red-500 max-h-[640px] my-3 space-x-0 mx-auto not-prose z-10 rounded-xl overflow-clip">
+    <div className="flex container-fg w-full h-full max-h-[640px] mt-16 border-black/10 space-x-0 mx-auto not-prose z-10 rounded-xl overflow-clip">
       {props.youtube ? (
-        <div className="flex-grow w-full h-full aspect-video -z-40">
+        <div className="flex-grow aspect-video">
           <YoutubeEmbed embedId={props.embedID} />
         </div>
       ) : null}

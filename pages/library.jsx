@@ -67,11 +67,9 @@ export default function Library() {
                         animate={{ opacity: 1, translateY: 0 }}
                         transition={{
                           when: 'afterChildren',
-                          delay: index * 0.1,
-                          duration: 0.2,
-                          type: 'ease',
-                          // type: 'spring',
-                          // stiffness: 200,
+                          delay: index * 0.05,
+                          type: 'spring',
+                          stiffness: 100,
                         }}
                         key={index}
                         className="list-none"

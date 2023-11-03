@@ -23,7 +23,7 @@ export default function StreamLink(props) {
     return (
       <a href={props.href} className="">
         <StreamLinkWrapper
-          icon="amazon"
+          icon="amazon1"
           fill="fill-white"
           label="Amazon Music"
           bg="bg-blue-50"
