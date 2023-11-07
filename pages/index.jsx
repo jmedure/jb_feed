@@ -32,7 +32,7 @@ export default function Home() {
       return (
         <main className="container w-full mx-auto flex flex-col justify-center items-center align-middle h-screen">
           {/* <p className="text-xl"> */}
-          <Subheader />
+          <Subheader type="center" />
           {/* </p> */}
         </main>
       );
