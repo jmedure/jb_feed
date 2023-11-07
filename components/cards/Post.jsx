@@ -19,6 +19,7 @@ export const Post = ({ post }) => {
       return (
         <div className="relative border border-blue-100 h-full overflow-hidden aspect-square rounded-lg">
           <Image
+            legacy
             src={image}
             alt="alt"
             fill="true"
@@ -33,6 +34,7 @@ export const Post = ({ post }) => {
       return (
         <div className="relative border border-blue-100 h-full overflow-hidden aspect-square rounded-lg">
           <Image
+            legacy
             src={image}
             alt="alt"
             fill="true"
@@ -47,6 +49,7 @@ export const Post = ({ post }) => {
       return (
         <div className="relative border border-blue-100 h-full overflow-hidden aspect-[4/3] rounded-lg">
           <Image
+            legacy
             src={image}
             alt="alt"
             fill="true"
@@ -63,6 +66,7 @@ export const Post = ({ post }) => {
           <div className="relative ">
             <div className="relative border select-none transition-opacity border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-20 ">
               <Image
+                legacy
                 src={image}
                 alt="alt"
                 fill="true"
@@ -82,6 +86,7 @@ export const Post = ({ post }) => {
       return (
         <div className="relative border border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-10">
           <Image
+            legacy
             src={image}
             alt="alt"
             fill="true"
