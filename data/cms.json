@@ -1,5 +1,25 @@
 [
     {
+        "title": "Design Log: Zip Experiments and Wins",
+        "date": "2023-11-02",
+        "kind": "design",
+        "published": "true",
+        "image": "/design/zip-white.jpg",
+        "aspect": "video",
+        "cta": "Read the work in progress",
+        "link": "/designs/zip-experiments"
+    },
+    {
+        "title": "About jacobs.blue",
+        "date": "2023-10-25",
+        "kind": "design",
+        "published": "true",
+        "image": "/design/colophon.jpg",
+        "aspect": "4x3",
+        "cta": "Read now",
+        "link": "/designs/colophon"
+    },
+    {
         "title": "Creating w/ care",
         "date": "2023-10-20",
         "kind": "design",
