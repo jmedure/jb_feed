@@ -5,7 +5,7 @@ export default function BlogImage(props) {
 
   if (props.type === 2) {
     return (
-      <div className="">
+      <div className="not-prose text-base">
         <div
           className={
             props.bg
@@ -17,14 +17,14 @@ export default function BlogImage(props) {
             <Image src={props.src} alt={props.alt} objectFit="cover" fill />
           </div>
         </div>
-        <figcaption className="w-full align-middle text-center text-neutral-400 font-jbd">
+        <figcaption className="w-full pt-4 align-middle text-center text-neutral-400 font-jbd">
           {props.fig}
         </figcaption>
       </div>
     );
   }
   return (
-    <div className="pt-6 pb-6">
+    <div className="pt-6 pb-6 text-base not-prose">
       <div
         className={
           props.bg
@@ -41,7 +41,7 @@ export default function BlogImage(props) {
           />
         </div>
       </div>
-      <figcaption className="w-full align-middle text-center text-neutral-400 font-jbd">
+      <figcaption className="w-full pt-4 align-middle text-center text-neutral-400 font-jbd">
         {props.fig}
       </figcaption>
     </div>
