@@ -18,7 +18,7 @@ I've worked full-time at [Zip](https://zip.co) since Novemeber, 2021. During tha
 
 This translates to my being responsible for all flows a user may interact with on their journey to complete a purchase. This includes onboarding, browsing, paying, then paying again. As far as touchpoints, I spend the vast majority of my time in the mobile iOS app but my work touches our website, browser extension, and checkout integration as well.
 
-This page stands a running and often updated log of the many tests, experiments, and net-new features I've shipped in the last two years. I'll go into some further context for those interested but feel free to skip ahead to [the work](#categories).
+This page stands a running and often updated log of the many tests, experiments, and net-new features I've shipped during my time at Zip. All design work on this page is lead, designed and delivered by myself unless otherwise stated. I'll go into some further context for those interested but feel free to skip ahead to [the work](#categories).
 
 **What is Zip?**
 
@@ -30,12 +30,14 @@ Zip's design team is small and scrappy. The 5 of us cover our entire US product 
 
 In practice we aim to be embedded on different agile squads that work on various parts of our product ecosystem. However, given the size of our team we often jump in and out of other squads in order to deliver work.
 
+We also crit twice a week. Every project is at least slightly impacted by every person on this team.
+
 <div className="pt-3 pb-6">
   <BlogImage
     src="/design/zip-team.svg"
     alt="Zip team structure"
     fig="Our otherwise flat design team is lead by our director, Clay."
-    bg="bg-[#EBE6FD]"
+    bg="bg-purple-100"
   />
 </div>
 
@@ -84,21 +86,21 @@ Zip is a valuable tool for our users. As an organization, we take this seriously
 ## Categories
 
 <CaseStudyMeta
-  role="Product Design Lead"
+  role="Product Design Lead + IC"
   impact="+8% New-User Activation"
   timeline="~6 wks, design-production"
   team="Emily, PM - Clay, Design Director - Kathryn, Affiliate - Manu, Data
-          Shopping Squad Engineering Team - Kibi, QA"
+        David, EM - Kibi,QA - Mike, Engineer - Chris, Engineer"
 />
 
-The categories UI experiment was a design emergent initiative that we were able to slate into our team roadmap because of some extra capacity. The design team came together to generate ideas around what might be easy wins in case we had the opportunity to put some engineering capacity towards design led intiatives. One of the initiatives we brainstormed was showing some love to our categories experience.
+The categories UI experiment was a design emergent initiative that we were able to slate into our team roadmap because of some extra eng capacity. The design team came together to generate ideas around what might be easy wins in case we had the opportunity to put some engineering capacity towards design led intiatives. One of the initiatives we brainstormed was showing some love to our categories experience.
 
-<div className="">
+<div className="py-4">
   <BlogImage
     src="/design/zip-categories-hero.svg"
     alt="Zip app Categories demonstration"
     fig="Final categories UI - Blur is for demonstration only"
-    bg="bg-[#EBE6FD]"
+    bg="bg-purple-100"
     type={2}
   />
 </div>
@@ -117,5 +119,15 @@ However, because of constant competition for homepage real-estate - affilate pla
   src="old-categories-demo.mp4"
   caption="Categories module before the experiment"
 />
+
+Thus, I hypothesized that by surfacing categories higher on the home page, we could boost conversion rates through the implicit communication of our value prop - paying anywhere. We assumed this would be particuliarly effective for new users.
+
+**Process**
+
+My arrival at this pattern is not heroic. This was the first design I put forward and it just worked. It's a fairly safe pattern becasue of it's ubiquity.
+
+During the design process I was able to pull forward many different instaces of apps using simmilar patterns for search. Categorical filters and/or search are even a key part of this site's homepage.
+
+I knew I wanted categories to be near our search input but they needed to take a different shape. One consideration to keep in mind while designing was how these category components might impact affiliate revenue by pushing merchants down the page. Thus it was important for each category component to be as streamlined as possible whilst to the point that they still maintained clear accessbility.
 
 <ComingSoon />

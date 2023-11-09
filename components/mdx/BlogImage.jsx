@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
 export default function BlogImage(props) {
-  const bg = props.bg;
+  // const bg = props.bg;
 
   if (props.type === 2) {
     return (
       <div className="">
         <div
           className={
-            bg
-              ? `${bg} rounded-lg aspect-square sm:aspect-video overflow-clip border border-black/10 justify-center border-solid items-center`
+            props.bg
+              ? `${props.bg} rounded-lg aspect-square sm:aspect-video overflow-clip border border-black/10 justify-center border-solid items-center`
               : 'rounded-lg aspect-square sm:aspect-video bg-neutral-50 overflow-clip border border-black/10 justify-center border-solid items-center'
           }
         >
@@ -27,8 +27,8 @@ export default function BlogImage(props) {
     <div className="pt-6 pb-6">
       <div
         className={
-          bg
-            ? `${bg} rounded-lg aspect-square sm:aspect-video overflow-clip border border-black/10 justify-center border-solid items-center`
+          props.bg
+            ? `${props.bg} rounded-lg aspect-square sm:aspect-video overflow-clip border border-black/10 justify-center border-solid items-center`
             : 'rounded-lg aspect-square sm:aspect-video bg-neutral-50 overflow-clip border border-black/10 justify-center border-solid items-center'
         }
       >
