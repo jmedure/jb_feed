@@ -1,6 +1,6 @@
 ---
 date: '2023-11-02'
-updated: ''
+updated: '2023-11-08'
 title: 'Design Log: Zip Experiments and Wins'
 description: "An often updated log of the many tests, experiments and net-new features I've shipped while working at Zip"
 thumbnail: ''
@@ -9,7 +9,7 @@ image: ''
 youtube: ''
 alt: ''
 isPublished: 'true'
-toc: []
+toc: [categories]
 status: 'WIP'
 version: 1
 ---
@@ -18,9 +18,13 @@ I've worked full-time at [Zip](https://zip.co) since Novemeber, 2021. During tha
 
 This translates to my being responsible for all flows a user may interact with on their journey to complete a purchase. This includes onboarding, browsing, paying, then paying again. As far as touchpoints, I spend the vast majority of my time in the mobile iOS app but my work touches our website, browser extension, and checkout integration as well.
 
-This page stands a running and often updated log of the many tests, experiments, and net-new features I've shipped in the last two years. I'll go into some further context for those interested but feel free to skip ahead to the work.
+This page stands a running and often updated log of the many tests, experiments, and net-new features I've shipped in the last two years. I'll go into some further context for those interested but feel free to skip ahead to [the work](#categories).
 
-**Our Zip team**
+**What is Zip?**
+
+Zip is a leading international BNPL based out of Australia. Following the 2020 aquisition of Quadpay, Zip embarked on it's US journey. Zip's US product helps users split any purchase into 4 <i className="tracking-tight">and now 8</i> installments.
+
+**Design at Zip**
 
 Zip's design team is small and scrappy. The 5 of us cover our entire US product ecosystem.
 
@@ -28,10 +32,10 @@ In practice we aim to be embedded on different agile squads that work on various
 
 <div className="pt-3 pb-6">
   <BlogImage
-    src="/design/team1.png"
+    src="/design/zip-team.svg"
     alt="Zip team structure"
     fig="Our otherwise flat design team is lead by our director, Clay."
-    type={2}
+    bg="bg-[#EBE6FD]"
   />
 </div>
 
@@ -40,5 +44,78 @@ In practice we aim to be embedded on different agile squads that work on various
 At Zip, we have several tools to help us understand our users. We often leverage [UserTesting.com](https://UserTesting.com) to regularly run both moderated and un-moderated remote users tests, we use [Fullstory](https://fullstory.com) to view active user sessions, and we use [Amplitude](https://Amplitude.com) to run A/B tests. Additionally, we have a general research team that runs in-person deep-dives.
 
 The effects of these tools are greater than anticipated. Not only do they help us form a clear picture of our user, these tools help validate our team's design decisions internally.
+
+Zip users are purchase-aware shoppers. They're are often female, age 22-45, and live in a metropolitan area. They're using Zip for large planned purchased and frequent online shopping, this includes everything from groceries to the monthly household item restock. Zip users have goals. They want to ugpgrade their home appliances, and plan family vacations.
+
+<div className="py-8">
+  <div
+    id="testimonial"
+    className="flex mx-auto w-full not-prose p-6 text-base sm:space-x-4 space-y-4 sm:space-y-0 rounded-xl justify-center flex-col sm:flex-row columns-3"
+  >
+    <div className="p-8 bg-neutral-100 border space-y-2 rounded-xl not-prose  w-auto flex-1 flex-col flex">
+      <span className="font-bold text-3xl italic">"</span>
+      <span>
+        I am currently expecting my first baby in 8 weeks and I was really
+        stressing over how I was going to buy everything I needed...
+      </span>
+      <span>
+        This has been a lifesaver for me and now I have everything I need for
+        this little bundle of joy! I&#39;m so happy with this app, plus I like
+        how I can pay ahead of time if I wanted to.
+      </span>
+      <span className="text-black/50 text-sm pt-2">- Real Zip User</span>
+    </div>
+    <div className="p-8 bg-neutral-100 border space-y-2 rounded-xl not-prose w-auto flex-1 flex-col flex">
+      <span className="font-bold text-3xl italic">"</span>
+      <span>
+        Zip has helped me purchase food at a grocery store with a low payment
+        plan. I’m so happy.
+      </span>
+      <span>You helped me feed my family. Thank you, Zip!</span>
+      <span className="text-black/50 text-sm pt-2">- Real Zip User</span>
+    </div>
+  </div>
+</div>
+
+Zip is a valuable tool for our users. As an organization, we take this seriously. All of the work below keeps these users in mind throughout the entirety of the design process.
+
+<PageBreak />
+
+## Categories
+
+<CaseStudyMeta
+  role="Product Design Lead"
+  impact="+8% New-User Activation"
+  timeline="~6 wks, design-production"
+  team="Emily, PM - Clay, Design Director - Kathryn, Affiliate - Manu, Data
+          Shopping Squad Engineering Team - Kibi, QA"
+/>
+
+The categories UI experiment was a design emergent initiative that we were able to slate into our team roadmap because of some extra capacity. The design team came together to generate ideas around what might be easy wins in case we had the opportunity to put some engineering capacity towards design led intiatives. One of the initiatives we brainstormed was showing some love to our categories experience.
+
+<div className="">
+  <BlogImage
+    src="/design/zip-categories-hero.svg"
+    alt="Zip app Categories demonstration"
+    fig="Final categories UI - Blur is for demonstration only"
+    bg="bg-[#EBE6FD]"
+    type={2}
+  />
+</div>
+
+At Zip, one of our largest user challenges is communicating our "pay anywhere" value prop. Zip's main product is a one-time virtual card that can be used anywhere that excepts Visa. But due to legal and compliance restrictions we can't actually use the term <i>anywhere</i>.
+
+Naturally, we have a hard time communicating this aspect to users.
+
+This is further muddied by the fact that our homepage is more or less a list of merchants. Affiliate revenue from the merchants in our app drive a lot of our bottom line. But, simply by listing where one can shop, a user might already perceive a fixed number of places to shop, which negatively impacts the user mental-model of anywhere.
+
+One weapon in our arsenel to help communicate the concept of paying anywhere implicitlly is categories.
+
+However, because of constant competition for homepage real-estate - affilate placement, user communications, and new features - over time the categories component has become buried further and further down the page.
+
+<Video
+  src="old-categories-demo.mp4"
+  caption="Categories module before the experiment"
+/>
 
 <ComingSoon />

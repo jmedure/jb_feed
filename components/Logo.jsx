@@ -14,6 +14,7 @@ export default function Logo() {
         >
           <div className="border-black/10 sm:hover:border-black/30 border-2 rounded-full relative p-4 cursor-pointer transition-all m:hover:drop-shadow-md">
             <Image
+              priority
               alt="blue gradient"
               src="/logo.png"
               objectFit="cover"

@@ -29,6 +29,8 @@ import BlogImage from '../../components/mdx/BlogImage';
 import Footnote from '../../components/mdx/Footnote';
 import Video from '../../components/mdx/Video';
 import ComingSoon from '../../components/mdx/ComingSoon';
+import PageBreak from '../../components/mdx/PageBreak';
+import CaseStudyMeta from '../../components/mdx/CaseStudyMeta';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -106,6 +108,8 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                   Footnote,
                   Video,
                   ComingSoon,
+                  PageBreak,
+                  CaseStudyMeta,
                 }}
               />
             </ProseWrapperDesign>
