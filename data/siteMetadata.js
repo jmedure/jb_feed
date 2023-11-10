@@ -19,6 +19,8 @@ const siteMetadata = {
   figma: 'https://www.figma.com/@jacobs_blue',
   area: 'https://invite.area.cx/OkFUIwm8',
   gumroad: 'https://shop.jacobs.blue/',
+  readCV: 'https://read.cv/jacobs_blue',
+  linkedIn: 'https://www.linkedin.com/in/jacob-medure/',
 };
 
 export default siteMetadata;

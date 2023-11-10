@@ -43,7 +43,7 @@ export default function CopyLink(props) {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ ease: 'linear', duration: 0.01 }}
-            className="font-normal md:w-full text-right underline whitespace-nowrap text-neutral-400 md:hover:text-neutral-900 underline-offset-2 md:hover:underline-offset-4 transition-all"
+            className="font-normal md:w-full text-right underline whitespace-nowrap text-neutral-700 decoration-neutral-400 md:hover:text-neutral-900 md:hover:decoration-neutral-900 underline-offset-2 md:hover:underline-offset-4 transition-all"
           >
             {isCopied ? null : 'Copy URL'}
           </motion.button>

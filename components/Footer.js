@@ -81,16 +81,16 @@ export default function Footer(props) {
               <p className="text-black/50 text-sm tracking-normal">Writing</p>
               <div>
                 <Button
+                  href="/designs"
+                  type="null"
+                  icon="north_east"
+                  copy="designs"
+                />
+                <Button
                   href="/journal"
                   type="null"
                   icon="north_east"
                   copy="Journal"
-                />
-                <Button
-                  href="/designs"
-                  type="null"
-                  icon="north_east"
-                  copy="design"
                 />
               </div>
             </div>
@@ -165,34 +165,40 @@ export default function Footer(props) {
               <p className="text-black/50 text-sm tracking-normal">Work</p>
               <div className="">
                 <Button
-                  href="https://read.cv/jacobs_blue"
+                  href={siteMetaData.readCV}
                   type="right"
                   icon="north_east"
                   copy="Read.cv"
                 />
                 <Button
-                  href="https://read.cv/jacobs_blue"
+                  href={siteMetaData.figma}
                   type="right"
                   icon="north_east"
                   copy="Figma"
                 />
                 <Button
-                  href="https://read.cv/jacobs_blue"
+                  href={siteMetaData.github}
                   type="right"
                   icon="north_east"
                   copy="Github"
+                />
+                <Button
+                  href={siteMetaData.linkedIn}
+                  type="right"
+                  icon="north_east"
+                  copy="LinkedIn"
                 />
               </div>
             </div>
             <div className="flex flex-col space-y-2 flex-grow align-top justify-items-start">
               <p className="text-black/50 text-sm tracking-normal">Projects</p>
               <div className="">
-                <Button
+                {/* <Button
                   href="https://read.cv/jacobs_blue"
                   type="right"
                   icon="north_east"
                   copy="Song Seeds"
-                />
+                /> */}
                 <Button
                   href="https://createwcare.com"
                   type="right"
@@ -263,10 +269,10 @@ export default function Footer(props) {
             </div>
           </div>
         </div>
-        <div className="px-4 py-2 lg:mt-3 mt-4 flex w-full justify-between items-center border-blue-200 border-t border-solid">
+        <div className="px-4 py-3  lg:mt-3 mt-4 flex w-full col-span-3 justify-between items-center border-blue-200 border-t border-solid">
           <Link
             href="/designs/colophon"
-            className="text-base font-jbd flex space-x-1 items-center tracking-tight text-gray-500 "
+            className="text-base font-jbd flex space-x-1 flex-1 items-center tracking-tight text-gray-500 "
           >
             <p className="underline underline-offset-2 sm:hover:underline-offset-4 transition-all hover:text-black">
               About jacobs.blue
@@ -275,7 +281,7 @@ export default function Footer(props) {
               v. 2.1.0
             </p>
           </Link>
-          <div className="flex justify-center items-center align-middle space-x-4">
+          <div className="flex justify-center items-center align-middle space-x-2 flex-1">
             <a href="https://createwcare.com">
               <svg
                 width="98.7"
@@ -363,7 +369,9 @@ export default function Footer(props) {
               </svg>
             </Link>
           </div>
-          <LiveVisitors />
+          <div className="flex flex-1 justify-end">
+            <LiveVisitors />
+          </div>
         </div>
       </div>
       <div className="">

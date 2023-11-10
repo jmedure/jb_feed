@@ -2,7 +2,7 @@ import YoutubeEmbed from '../YoutubeEmbed';
 import Image from 'next/image';
 
 export default function BlogHeroBanner(props) {
-  if (props.image || props.YoutubeEmbed) {
+  if (props.image || props.youtube) {
     return (
       <div className="flex container-fg w-full h-full max-h-[640px] mt-16 border border-black/10 aspect-video space-x-0 mx-auto not-prose z-10 rounded-xl overflow-clip">
         {props.youtube ? (

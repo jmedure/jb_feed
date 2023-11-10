@@ -23,9 +23,15 @@ export default function LiveVisitors() {
       className="flex items-center space-x-2 text-base"
     >
       <div className="p-[3px] rounded-full animate-pulse duration-1000 bg-blue-800"></div>
-      <p>
-        {visitors} <span className="text-neutral-500">live visitor(s) </span>
-      </p>
+      {visitors ? (
+        <p>
+          0 <span className="text-neutral-500">live visitor(s) </span>
+        </p>
+      ) : (
+        <p>
+          {visitors} <span className="text-neutral-500">live visitor(s) </span>
+        </p>
+      )}
     </a>
   );
 }
