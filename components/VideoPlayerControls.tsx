@@ -23,10 +23,10 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
   const dashOffset = dashArray * (1 - progress);
 
   return (
-  <div className='group relative flex justify-center items-center   transition-all duration-200'>
+  <div className='group relative flex justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-200'>
     <svg width={size} height={size} style={{transform: "rotate(-90deg)"}}>
-      <circle cx={center} cy={center} r={radius} fill='transparent' stroke='#00000020' strokeWidth={width} />
-      <circle cx={center} cy={center} r={radius} fill='transparent' stroke='#00000050' strokeWidth={width} strokeDasharray={dashArray} strokeDashoffset={dashOffset} />
+      <circle cx={center} cy={center} r={radius} fill='transparent'  className='stroke-black/10' strokeWidth={width} />
+      <circle cx={center} cy={center} r={radius} fill='transparent'  className='stroke-black/50' strokeWidth={width} strokeDasharray={dashArray} strokeDashoffset={dashOffset} />
     </svg>
     <div className='absolute'>
       <button onClick={onPlayPause} className='group cursor-pointer flex justify-center items-center'>
