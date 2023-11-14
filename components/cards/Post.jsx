@@ -75,9 +75,6 @@ export const Post = ({ post }) => {
                 blurDataURL="https://jacobs.blue"
               />
             </div>
-            {/* <div className="w-full absolute sm:group-hover:relative top-0 h-full rounded-xl overflow-hidden aspect-video">
-              <YoutubeEmbed embedId={youtubeEmbed} />
-            </div> */}
           </div>
         </Suspense>
       );
