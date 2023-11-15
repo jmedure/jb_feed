@@ -37,7 +37,7 @@ export default function DesignProjectCard(props) {
           </div>
         </div>
         <div className="space-x-8 flex-grow w-24 justify-end text-right tracking-normal flex-nowrap">
-          <p className="text-sm">{dayjs(date).format('MMM YY')}'</p>
+          <p className="text-sm">{dayjs(date).format('MMM YY')}&#39;</p>
         </div>
       </div>
     </Link>
