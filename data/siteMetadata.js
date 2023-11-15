@@ -1,9 +1,9 @@
 const siteMetadata = {
   siteUrl: 'https://jacobs.blue',
-  siteLogo: '/logo.png',
-  email: 'yourName@example.com',
+  siteLogo: '../public/logo.png',
+  email: 'jake@jacobs.blue',
   twitter: 'https://twitter.com/jacobs__blue',
-  twitterHandle: '@jacobs__Blue',
+  twitterHandle: '@jacobs__blue',
   instagram: 'https://www.instagram.com/jacobs_blue',
   github: 'https://github.com/jmedure',
   patreon: 'https://www.patreon.com/jacobsblue?fan_landing=true',

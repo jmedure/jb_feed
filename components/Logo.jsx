@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Tooltip from './Tooltip';
+import logo from '../public/logo.png';
 
 export default function Logo() {
   return (
@@ -16,9 +17,9 @@ export default function Logo() {
             <Image
               priority
               alt="blue gradient"
-              src="/logo.png"
-              objectFit="cover"
-              layout="fill"
+              src={logo}
+              fill
+              placeholder="blur"
             />
           </div>
         </Link>

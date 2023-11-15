@@ -15,7 +15,7 @@ import BlogEntry from '../../components/BlogEntry';
 import OneBlank from '../../components/OneBlank';
 import BlogSEO from '../../components/BlogSEO';
 import YoutubeEmbed from '../../components/YoutubeEmbed';
-import Link from 'next/link';
+// import Link from 'next/link';
 import ProseWrapperDesign from '../../components/mdx/ProseWrapperDesign';
 import MainHeader from '../../components/MainHeader';
 import BlogHeroBanner from '../../components/mdx/BlogHeroBanner';

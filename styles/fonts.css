@@ -34,12 +34,12 @@
     font-style: medium;
 }
 
-@font-face {
+/* @font-face {
     font-family: "NeueMontreal";
     src: url("/fonts/PPNeueMontreal-SemiBoldItalic.otf") format("opentype");
     font-weight: 500;
     font-style: italic;
-}
+} */
 
 @font-face {
     font-family: "NeueMontreal";

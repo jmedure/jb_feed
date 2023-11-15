@@ -17,7 +17,7 @@ export default function Video(props) {
   useEffect(() => {
     if (isPaused) return;
     const currentTime = videoRef.current?.currentTime;
-    if (videoDuration != null && currentTime != null) {
+    if (videoDuration != undefined && currentTime != undefined) {
       let loadingTimeout = setTimeout(() => {
         if (videoProgress == currentTime / videoDuration) {
           setVideoProgress((prev) => prev + 0.0000001);

@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
+// import plaiceholder from '@plaiceholder/tailwindcss';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {

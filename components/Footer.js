@@ -9,9 +9,9 @@ export default function Footer(props) {
     return (
       <div
         id="footer"
-        className="w-full text-neutral-500 bottom-0 z-30  bg-white"
+        className="w-full flex text-neutral-500 bottom-0 z-40  bg-white"
       >
-        <div className="container-fg w-full pb-8 font-jbd tracking-tight font-normal">
+        <div className="container-fg w-full pb-8 font-jbd tracking-tight z-50 font-normal">
           <div className="flex items-center mx-auto gap-2 w-full align-middle justify-center">
             <span>Thank you for reading </span>
             <span>❤️</span>

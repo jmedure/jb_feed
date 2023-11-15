@@ -11,10 +11,13 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <link rel="shortcut icon" type="image/png" href="logo.png" />
+          <link rel="shortcut icon" type="image/png" href="../../logo.ico" />
+          <link rel="icon" type="image/png" href="../../logo.png" />
+
+          <meta name="application-name" content="jacobs.blue" />
           <meta name="robots" content="index, follow" />
-          <link rel="stylesheet" href="https://use.typekit.net/wzt4vsj.css" />
-          <link
+          {/* <link rel="stylesheet" href="https://use.typekit.net/wzt4vsj.css" /> */}
+          {/* <link
             rel="preload"
             href="/fonts/cardinalfruit-italic.otf"
             as="font"
@@ -27,7 +30,7 @@ class MyDocument extends Document {
             as="font"
             type="font/otf"
             crossOrigin="anonymous"
-          />
+          /> */}
           <link
             rel="preload"
             href="/fonts/PPNeueMontreal-Book.otf"
@@ -42,7 +45,7 @@ class MyDocument extends Document {
             type="font/otf"
             crossOrigin="anonymous"
           />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          {/* <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
             rel="stylesheet"
@@ -55,7 +58,7 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
-          />
+          /> */}
         </Head>
         <body>
           <Main />
