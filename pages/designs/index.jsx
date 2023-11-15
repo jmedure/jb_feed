@@ -41,21 +41,6 @@ export default function Blog({ posts }) {
       </Head>
       <MainHeader type="design" />
       <div className="container-blog">
-        {/* <div className="flex sticky top-0 p-4 bg-white align-middle justify-center mt-16 md:mt-8 transition-all hover:text-blue-500">
-          <Link href="/" passHref legacyBehavior>
-            <div className="flex col-span-1 py-2 justify-end space-x-1 items-center hover:drop-shadow-xl transition-all duration-200 cursor-pointer">
-              <div className="border-white border-2 rounded-full relative p-5 cursor-pointer">
-                <Image
-                  alt="blue gradient"
-                  src="/logo.png"
-                  sizes="100"
-                  fill
-                  priority
-                />
-              </div>
-            </div>
-          </Link>
-        </div> */}
         <div className="py-24 md:py-48 h-full">
           <div className="font-jbd text-lg font-normal tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
             <ul className="flex-col w-full space-y-3 justify-between ">
