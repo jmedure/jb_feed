@@ -13,7 +13,6 @@ class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <link rel="shortcut icon" type="image/png" href="../../logo.ico" />
           <link rel="icon" type="image/png" href="../../logo.png" />
-
           <meta name="application-name" content="jacobs.blue" />
           <meta name="robots" content="index, follow" />
           {/* <link rel="stylesheet" href="https://use.typekit.net/wzt4vsj.css" /> */}
@@ -63,10 +62,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* <Script
-            src="https://scripts.simpleanalyticscdn.com/latest.js"
-            strategy="afterInteractive"
-          /> */}
         </body>
       </Html>
     );

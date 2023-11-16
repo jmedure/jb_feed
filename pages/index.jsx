@@ -71,10 +71,8 @@ export default function Home() {
   return (
     <>
       <BlogSEO
-        title={
-          "Jacob's Blue | Musician, Product Designer, Father, Forever Learner"
-        }
-        description="Pursuing mastery in music...probably cooking something."
+        title={"Jacob's Blue"}
+        description="Pursuing mastery in music...probably cooking something. Musician, Product Designer, Father, Forever Learner. Jacob's Blue is Jacob Medure"
         image="/siteThumb.png"
         canonical="/index"
       />

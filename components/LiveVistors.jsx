@@ -16,7 +16,7 @@ export default function LiveVisitors() {
     getData();
   }, []);
 
-  // console.log(visitors.pageviews);
+  console.log(visitors.pageviews);
   return (
     <a
       href="https://simpleanalytics.com/jacobs.blue"
