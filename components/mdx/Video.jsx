@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import VideoPlayerControls from '../VideoPlayerControls';
+import React from 'react';
+// import VideoPlayerControls from '../VideoPlayerControls';
 
 export default function Video(props) {
   const [isPaused, setIsPaused] = useState(false);
@@ -44,11 +45,11 @@ export default function Video(props) {
     <div className="pt-6 pb-2">
       <div className="relative group mx-auto w-full h-full border aspect-video rounded-lg bg-neutral-50 border-black/10 overflow-hidden">
         <div className="absolute top-4 right-4 z-10">
-          <VideoPlayerControls
+          {/* <VideoPlayerControls
             progress={videoProgress}
             isPaused={isPaused}
             onPlayPause={togglePlayPause}
-          />
+          /> */}
         </div>
         <video
           ref={videoRef}
