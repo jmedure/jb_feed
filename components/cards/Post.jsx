@@ -22,6 +22,7 @@ export const Post = ({ post }) => {
             src={image}
             alt="alt"
             fill="true"
+            width={576}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
             loading="lazy"
@@ -37,6 +38,7 @@ export const Post = ({ post }) => {
             src={image}
             alt="alt"
             fill="true"
+            width={576}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
             loading="lazy"
@@ -52,6 +54,7 @@ export const Post = ({ post }) => {
             src={image}
             alt="alt"
             fill="true"
+            width={576}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
             loading="lazy"
@@ -69,6 +72,7 @@ export const Post = ({ post }) => {
                 src={image}
                 alt="alt"
                 fill="true"
+                width={576}
                 style={{ objectFit: 'cover' }}
                 placeholder="blur"
                 loading="lazy"
@@ -86,6 +90,7 @@ export const Post = ({ post }) => {
             src={image}
             alt="alt"
             fill="true"
+            width={576}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
             loading="lazy"
