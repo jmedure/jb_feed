@@ -5,15 +5,17 @@ import { motion } from 'framer-motion';
 import Breadcrumbs from './Breadcrumbs';
 import CopyLink from './CopyLink';
 import Logo from './Logo';
-import { useScrollDirection } from '../src/utils/useScrollDirection';
 import useReadingProgress from '../src/utils/useReadingProgress';
 import BackArrow from './BackArrow';
+import useScreenSize from '../src/utils/useScreenSize';
 
 export default function MainHeader(props) {
   const title = props.title;
   const type = props.type;
   const completion = useReadingProgress();
-  // const scrollDirection = useScrollDirection;
+  const screenWidth = useScreenSize().width;
+
+  console.log(screenWidth);
 
   if (type === 'blog') {
     return (
@@ -79,7 +81,13 @@ export default function MainHeader(props) {
     );
   }
   return (
-    <div className="flex-wrap bg-white sticky top-0 z-40">
+    <div
+      className={
+        screenWidth > 600
+          ? 'flex-wrap bg-white top-0 z-40'
+          : 'flex-wrap bg-white sticky top-0 z-40'
+      }
+    >
       <motion.div
         // initial={{ opacity: 0, translateY: 10 }}
         // animate={{ opacity: 1, translateY: 0 }}

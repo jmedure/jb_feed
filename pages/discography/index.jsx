@@ -14,9 +14,9 @@ export default function Blog({ posts }) {
 
   return (
     <React.Fragment>
-      <Head>
+      {/* <Head>
         <title>Jacob&#39;s Blue | {title}</title>
-      </Head>
+      </Head> */}
       <div className="font-jbd font-medium text-xl leading-tight tracking-tight">
         <MainHeader title={title} />
         <div className="pb-4 space-y-8">

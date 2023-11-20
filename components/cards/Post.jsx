@@ -11,13 +11,16 @@ import Skeleton from '../Skeleton';
 export const Post = ({ post }) => {
   const { title, link, kind, date, cta, image, youtubeEmbed, aspect, mui } =
     post;
+
+  const blurDataURL =
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
   var relativeTime = require('dayjs/plugin/relativeTime');
   dayjs.extend(relativeTime);
 
   const frame = () => {
     if (kind === 'music') {
       return (
-        <div className="relative border border-neutral-100 h-full overflow-hidden aspect-square rounded-lg">
+        <div className="relative border border-black/10 h-full overflow-hidden aspect-square rounded-lg">
           <Image
             src={image}
             alt="alt"
@@ -26,15 +29,14 @@ export const Post = ({ post }) => {
             height={580}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
-            loading="lazy"
-            blurDataURL="https://jacobs.blue"
+            blurDataURL={blurDataURL}
           />
         </div>
       );
     }
     if (aspect === 'square') {
       return (
-        <div className="relative border border-neutral-100 h-full overflow-hidden aspect-square rounded-lg">
+        <div className="relative border border-black/10 h-full overflow-hidden aspect-square rounded-lg">
           <Image
             src={image}
             alt="alt"
@@ -43,15 +45,14 @@ export const Post = ({ post }) => {
             height={585}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
-            loading="lazy"
-            blurDataURL="https://jacobs.blue"
+            blurDataURL={blurDataURL}
           />
         </div>
       );
     }
     if (aspect === '4x3') {
       return (
-        <div className="relative border border-neutral-100 h-full overflow-hidden aspect-[4/3] rounded-lg">
+        <div className="relative border border-black/10 h-full overflow-hidden aspect-[4/3] rounded-lg">
           <Image
             src={image}
             alt="alt"
@@ -60,15 +61,14 @@ export const Post = ({ post }) => {
             // height={580}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
-            loading="lazy"
-            blurDataURL="https://jacobs.blue"
+            blurDataURL={blurDataURL}
           />
         </div>
       );
     }
     if (youtubeEmbed && aspect === 'video') {
       return (
-        <div className="relative border select-none transition-opacity border-neutral-100 w-full overflow-hidden aspect-video h-full rounded-lg z-20 ">
+        <div className="relative border select-none transition-opacity border-black/10 w-full overflow-hidden aspect-video h-full rounded-lg z-20 ">
           <Image
             src={image}
             alt="alt"
@@ -78,15 +78,14 @@ export const Post = ({ post }) => {
             // style={{ objectFit: 'cover', objectPosition: 'center' }}
             className="object-cover "
             placeholder="blur"
-            loading="lazy"
-            blurDataURL="https://jacobs.blue"
+            blurDataURL={blurDataURL}
           />
         </div>
       );
     }
     if (aspect === 'video') {
       return (
-        <div className="relative border border-neutral-100 h-full overflow-hidden aspect-video w-full rounded-lg z-10">
+        <div className="relative border border-black/10 h-full overflow-hidden aspect-video w-full rounded-lg z-10">
           <Image
             src={image}
             alt="alt"
@@ -95,9 +94,8 @@ export const Post = ({ post }) => {
             // height={400}
             className="object-cover"
             placeholder="blur"
-            loading="lazy"
             sizes="(min-width: 390px), 50vw, 100vw"
-            blurDataURL="https://jacobs.blue"
+            blurDataURL={blurDataURL}
           />
         </div>
       );
@@ -109,7 +107,7 @@ export const Post = ({ post }) => {
       href={link}
       className="flex-block flex-wrap group no-underline font-jbd font-normal h-min cursor-pointer"
     >
-      <div className="break-inside-avoid p-3 space-y-4 border-2 border-solid border-neutral-100 sm:hover:outline-blue-400 sm:hover:outline outline outline-white sm:hover:bg-blue-100 mb-4 bg-neutral-50 rounded-xl text-black transition-all duration-50">
+      <div className="break-inside-avoid p-3 space-y-4 border-2 border-solid border-black/10 sm:hover:outline-blue-400 sm:hover:outline outline outline-white sm:hover:bg-blue-100 sm:hover:border-blue-100 mb-4 bg-neutral-50 rounded-xl text-black transition-all duration-50">
         {frame()}
         <div className="flex justify-between items-start space-x-4">
           <h2 className="text-2xl leading-none tracking-tight">{title}</h2>

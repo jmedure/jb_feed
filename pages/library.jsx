@@ -8,11 +8,12 @@ import MainGridWrapper from '../components/wrappers/MainGridWrapper';
 import SectionHeader from '../components/SectionHeader';
 import Subheader from '../components/Subheader';
 import { easeOut, motion } from 'framer-motion';
+import BlogSEO from '../components/BlogSEO';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Library() {
-  const title = 'Library';
+  const title = 'library';
   const { data, error } = useSWR('/api/books', fetcher);
   const main = () => {
     if (error) {
@@ -35,9 +36,9 @@ export default function Library() {
 
     return (
       <>
-        <Head>
+        {/* <Head>
           <title>Jacob&#39;s Blue | {title}</title>
-        </Head>
+        </Head> */}
         <main className="">
           <MainHeader title={title} />
           <div className="space-y-8">
@@ -123,5 +124,13 @@ export default function Library() {
     );
   };
 
-  return <>{main()}</>;
+  return (
+    <>
+      <BlogSEO
+        title="Jacob's Blue | Library"
+        description="The best books I've ever read"
+      />
+      {main()}
+    </>
+  );
 }

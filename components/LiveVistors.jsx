@@ -9,13 +9,12 @@ export default function LiveVisitors() {
         'https://simpleanalytics.com/jacobs.blue.json?version=5&fields=visitors&start=yesterday&end=today&timezone=UTC'
       );
       const response = await query.json();
-      // console.log(response.visitors);
       setVisitors(response.visitors);
     };
     getData();
   }, []);
 
-  console.log(visitors.pageviews);
+  // console.log(visitors.pageviews);
   return (
     <a
       href="https://simpleanalytics.com/jacobs.blue"

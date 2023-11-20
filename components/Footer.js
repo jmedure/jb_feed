@@ -234,7 +234,7 @@ export default function Footer(props) {
                 copy="Get started in music 101"
               />
             </div> */}
-            <div className="flex flex-grow flex-col align-top space-y-8 justify-between">
+            <div className="flex flex-grow flex-col align-top  justify-between">
               <Subscribe />
               <div className="flex flex-col space-y-1">
                 {/* <Link href={siteMetaData.discord}>
