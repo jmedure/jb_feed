@@ -5,7 +5,7 @@
         "kind": "design",
         "published": "true",
         "image": "/design/zipDark.jpg",
-        "aspect": "video",
+        "aspect": "4x3",
         "cta": "Read the work in progress",
         "link": "/designs/zip-experiments"
     },
