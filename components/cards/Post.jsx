@@ -21,8 +21,9 @@ export const Post = ({ post }) => {
           <Image
             src={image}
             alt="alt"
-            fill="true"
+            // fill="true"
             width={576}
+            height={576}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
             loading="lazy"
@@ -37,8 +38,9 @@ export const Post = ({ post }) => {
           <Image
             src={image}
             alt="alt"
-            fill="true"
+            // fill="true"
             width={576}
+            height={576}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
             loading="lazy"
@@ -53,8 +55,9 @@ export const Post = ({ post }) => {
           <Image
             src={image}
             alt="alt"
-            fill="true"
+            // fill="true"
             width={576}
+            height={576}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
             loading="lazy"
@@ -65,22 +68,20 @@ export const Post = ({ post }) => {
     }
     if (youtubeEmbed && aspect === 'video') {
       return (
-        <Suspense fallback={<Skeleton />}>
-          <div className="relative ">
-            <div className="relative border select-none transition-opacity border-blue-100 h-full overflow-hidden aspect-video rounded-lg z-20 ">
-              <Image
-                src={image}
-                alt="alt"
-                fill="true"
-                width={576}
-                style={{ objectFit: 'cover' }}
-                placeholder="blur"
-                loading="lazy"
-                blurDataURL="https://jacobs.blue"
-              />
-            </div>
-          </div>
-        </Suspense>
+        <div className="relative border select-none transition-opacity border-blue-100 w-full overflow-hidden aspect-video object rounded-lg z-20 ">
+          <Image
+            src={image}
+            alt="alt"
+            // fill="true"
+            width={576}
+            height={576}
+            // style={{ objectFit: 'cover', objectPosition: 'center' }}
+            className="cover object-cover object-center"
+            placeholder="blur"
+            loading="lazy"
+            blurDataURL="https://jacobs.blue"
+          />
+        </div>
       );
     }
     if (aspect === 'video') {
@@ -89,8 +90,9 @@ export const Post = ({ post }) => {
           <Image
             src={image}
             alt="alt"
-            fill="true"
+            // fill="true"
             width={576}
+            height={576}
             style={{ objectFit: 'cover' }}
             placeholder="blur"
             loading="lazy"
