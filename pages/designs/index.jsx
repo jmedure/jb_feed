@@ -8,37 +8,19 @@ import DesignProjectCard from '../../components/DesignProjectCard';
 import { motion } from 'framer-motion';
 import MotionListWrapper from '../../components/wrappers/MotionListWrapper';
 import MainHeader from '../../components/MainHeader';
+import BlogSEO from '../../components/BlogSEO';
 
 export default function Blog({ posts }) {
-  // const list = {
-  //   hidden: { opacity: 0 },
-  //   show: {
-  //     opacity: 1,
-  //     transition: {
-  //       when: 'afterChildren',
-  //       delayChildren: 0.5,
-  //       staggerChildren: 1,
-  //     },
-  //   },
-  // };
-
-  // const item = {
-  //   hidden: { opacity: 0 },
-  //   show: { opacity: 1 },
-  //   transition: { duration: 3 },
-  // };
-
-  // const image = frontmatter.image;
-  // const youtube = frontmatter.youtube;
-  // const description = frontmatter.description;
-  // const toc = frontmatter.toc;
-  // const slug = frontmatter.slug;
-
   return (
     <React.Fragment>
-      <Head>
-        <title>/design by Jacob&#39;s Blue</title>
-      </Head>
+      <BlogSEO
+        title="Design by Jacob Medure, Senior Product Designer"
+        desciption="
+          5+ years shipping bespoke solutions for consumer facing products
+          across iOS, android and responsive web. First-principles thinker
+          hoping to make less but better and a positive impact in the lives of
+          real people."
+      />
       <MainHeader type="design" />
       <div className="container-blog">
         <div className="py-24 md:py-48 h-full">

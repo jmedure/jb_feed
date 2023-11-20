@@ -96,6 +96,7 @@ export const Post = ({ post }) => {
             className="object-cover"
             placeholder="blur"
             loading="lazy"
+            sizes="(min-width: 390px), 50vw, 100vw"
             blurDataURL="https://jacobs.blue"
           />
         </div>
