@@ -12,7 +12,7 @@ export default function Tooltip({ text, children }) {
     <div
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
-      className="flex transition-all overflow-visible relative z-40 bg-transparent"
+      className="flex transition-all overflow-visible rounded-full relative z-40 bg-transparent"
     >
       {children}
       {IsVisible && (
