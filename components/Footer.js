@@ -32,7 +32,7 @@ export default function Footer(props) {
     <div id="footer" className="">
       <div className="font-jbd container-fg text-lg font-normal tracking-tight border-blue-200 border-solid border rounded-xl">
         <div className="p-4 lg:p-4">
-          <div className="flex flex-col space-y-6 md:flex-row md:space-y-0  items-stretch ">
+          <div className="flex flex-col space-y-6 lg:flex-row lg:space-y-0 items-stretch ">
             <div className="flex flex-col space-y-2 flex-grow align-top justify-items-start">
               <p className="text-black/50 text-sm tracking-normal">
                 Navigation

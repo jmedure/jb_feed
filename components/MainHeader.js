@@ -13,9 +13,9 @@ export default function MainHeader(props) {
   const title = props.title;
   const type = props.type;
   const completion = useReadingProgress();
-  const screenWidth = useScreenSize().width;
+  const screen = useScreenSize();
 
-  console.log(screenWidth);
+  // console.log(screen.width);
 
   if (type === 'blog') {
     return (
@@ -83,8 +83,8 @@ export default function MainHeader(props) {
   return (
     <div
       className={
-        screenWidth > 600
-          ? 'flex-wrap bg-white top-0 z-40'
+        screen.width > 600 && !title
+          ? 'flex-wrap bg-white z-40'
           : 'flex-wrap bg-white sticky top-0 z-40'
       }
     >
