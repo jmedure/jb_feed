@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <Component {...pageProps} />
       <Analytics />
-      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
+      {/* <Script src="https://scripts.simpleanalyticscdn.com/latest.js" /> */}
       <Script
         async
         src="https://scripts.simpleanalyticscdn.com/auto-events.js"

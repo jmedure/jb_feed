@@ -12,7 +12,7 @@ export default function Tooltip({ text, children }) {
     <div
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
-      className="flex transition-all overflow-visible rounded-full relative z-40 bg-transparent"
+      className="flex transition-all overflow-visible rounded-full relative z-40 bg-transparent select-none"
     >
       {children}
       {IsVisible && (
@@ -26,7 +26,7 @@ export default function Tooltip({ text, children }) {
             stiffness: 200,
           }}
           id={text}
-          className="absolute  -translate-y-[250%] top-full left-1/2 -translate-x-1/2 whitespace-nowrap drop-shadow-lg text-center items-center justify-center text-sm px-2 py-1 rounded-lg bg-neutral-900 text-white z-20"
+          className="absolute -translate-y-[250%]  select-none top-full left-1/2 -translate-x-1/2 whitespace-nowrap drop-shadow-lg text-center items-center justify-center text-sm px-2 py-1 rounded-full bg-neutral-900 text-white z-20"
         >
           {text}
         </motion.div>

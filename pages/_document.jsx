@@ -16,23 +16,16 @@ class MyDocument extends Document {
           <meta name="application-name" content="jacobs.blue" />
           <meta name="robots" content="index, follow" />
           {/* <link rel="stylesheet" href="https://use.typekit.net/wzt4vsj.css" /> */}
-          {/* <link
+          <link
             rel="preload"
-            href="/fonts/cardinalfruit-italic.otf"
+            href="/fonts/PPNeueMontreal-Book.otf"
             as="font"
             type="font/otf"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/cardinalfruit-regular.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin="anonymous"
-          /> */}
-          <link
-            rel="preload"
-            href="/fonts/PPNeueMontreal-Book.otf"
+            href="/fonts/PPNeueMontreal-Medium.otf"
             as="font"
             type="font/otf"
             crossOrigin="anonymous"

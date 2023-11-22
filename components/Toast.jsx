@@ -14,7 +14,7 @@ export default function Toast({ text, children }) {
     <div
       // onMouseEnter={() => setIsVisible(true)}
       // onMouseLeave={() => setIsVisible(false)}
-      className="flex h-full w-full transition-all relative overflow-visible"
+      className="flex h-full w-full transition-all relative overflow-visible select-none"
     >
       {children}
       {/* {IsVisible && ( */}

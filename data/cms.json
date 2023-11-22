@@ -4,10 +4,11 @@
         "date": "2023-11-02",
         "kind": "design",
         "published": "true",
-        "image": "/design/zipDark.jpg",
+        "image": "/thumbnails/zip-experiments-thumb.png",
         "aspect": "4x3",
         "cta": "Read the work in progress",
-        "link": "/designs/zip-experiments"
+        "link": "/designs/zip-experiments",
+        "videoSrc": "new-user-hero-demo.mp4"
     },
     {
         "title": "About jacobs.blue",
@@ -24,10 +25,11 @@
         "date": "2023-10-20",
         "kind": "design",
         "published": "true",
-        "image": "/design/cwcbig.gif",
+        "image": "/thumbnails/favicon-change-theme-thumb.png",
         "aspect": "video",
         "cta": "Learn how it was done",
-        "link": "/designs/creating-w-care"
+        "link": "/designs/creating-w-care",
+        "videoSrc": "favicon-change-on-theme.mp4"
     },
     {
         "title": "Born in the Sunset: Thoughts to Oasis - B-SIDES",
