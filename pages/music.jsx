@@ -5,7 +5,6 @@ import MainHeader from '../components/MainHeader';
 import { Post } from '../components/cards/Post';
 import useSWR from 'swr';
 import Footer from '../components/Footer';
-import HeadSeo from '../components/HeadSEO';
 import siteMetadata from '../data/siteMetadata';
 import BlogSEO from '../components/BlogSEO';
 import { motion } from 'framer-motion';

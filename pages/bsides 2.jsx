@@ -51,7 +51,6 @@ export default function Bsides() {
           }
           description="Pre-save BSIDES today"
           image="cover-art/bsides.jpg"
-          canonical="/index"
         />
       </Head>
       <div className="container bsides">

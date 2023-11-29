@@ -41,7 +41,6 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       <BlogSEO
         title={frontmatter.title + " | Jacob's Blue"}
         description={frontmatter.description}
-        canonical={frontmatter.slug}
         image={frontmatter.thumbnail}
       />
       <MainHeader type="blog" />
