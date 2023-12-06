@@ -31,6 +31,7 @@ import Video from '../../components/mdx/Video';
 import ComingSoon from '../../components/mdx/ComingSoon';
 import PageBreak from '../../components/mdx/PageBreak';
 import CaseStudyMeta from '../../components/mdx/CaseStudyMeta';
+import ImpactCard from '../../components/mdx/ImpactCard';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -109,6 +110,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                   ComingSoon,
                   PageBreak,
                   CaseStudyMeta,
+                  ImpactCard,
                 }}
               />
             </ProseWrapperDesign>
