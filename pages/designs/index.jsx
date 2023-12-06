@@ -41,20 +41,14 @@ export default function Blog({ posts }) {
             className="space-y-16"
           >
             <div className="p-4 rounded-3xl text-lg max-w-full mx-auto space-y-4">
-              {/* <p className="">JAcob</p> */}
               <div className=" text-neutral-800 transition-all">
-                {/* <p>Hey there 👋🏼</p> */}
-
                 <p className="">
                   Among{' '}
-                  <InlineLinkWrapper href="/">other things</InlineLinkWrapper>{' '}
+                  <InlineLinkWrapper href="/">other things</InlineLinkWrapper>,{' '}
                   I&#39;m a senior product designer with{' '}
-                  <a
-                    href="https://read.cv/jacobs_blue"
-                    className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
-                  >
+                  <InlineLinkWrapper href="https://read.cv/jacobs_blue">
                     5+ years of experience
-                  </a>{' '}
+                  </InlineLinkWrapper>{' '}
                   based in <s className="text-black/30">Brookyln, NY</s>{' '}
                   Ventura, CA. I&#39;m a{' '}
                   <InlineLinkWrapper href="https://fs.blog/first-principles/">
