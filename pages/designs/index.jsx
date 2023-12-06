@@ -138,7 +138,7 @@ export default function Blog({ posts }) {
             </a>
           </div>
           <p className="text-black/50 whitespace-nowrap">
-            © 2023 Jacob&#39; Blue
+            © 2023 Jacob&#39;s Blue
           </p>
         </div>
       </div>

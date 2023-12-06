@@ -21,9 +21,7 @@ export default function DesignProjectCard(props) {
       >
         <div className="flex space-x-4 items-center relative">
           <div className="flex-col space-y-1">
-            <p className="font-normal text-base sm:hover:text-black md:not-italic leading-tight">
-              {title}
-            </p>
+            <p className="font-normal text-base leading-tight">{title}</p>
           </div>
         </div>
         <div className="space-x-8 justify-end text-center tracking-normal flex-nowrap">
