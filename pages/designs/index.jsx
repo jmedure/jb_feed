@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { getAllArticles } from '../../src/utils/mdx_design';
 // import Footer from '../../components/Footer';
@@ -9,8 +9,12 @@ import { motion } from 'framer-motion';
 import MotionListWrapper from '../../components/wrappers/MotionListWrapper';
 import MainHeader from '../../components/MainHeader';
 import BlogSEO from '../../components/BlogSEO';
+import siteMetadata from '../../data/siteMetadata';
+import InlineLinkWrapper from '../../components/wrappers/InlineLinkWrapper';
 
 export default function Blog({ posts }) {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <React.Fragment>
       <BlogSEO
@@ -22,45 +26,54 @@ export default function Blog({ posts }) {
           real people."
       />
       <MainHeader type="design" />
-      <div className="container-blog">
-        <div className="py-24 md:py-48 h-full">
-          <div className="px-4 space-y-10">
-            <p>
-              Hi there. Looks like you&#39;ve stumbled upon my design index.
-            </p>
-            <p>
-              My name is Jacob and among{' '}
-              <Link
-                href="/"
-                className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
-              >
-                other things
-              </Link>{' '}
-              I&#39;m a senior product designer with{' '}
-              <a
-                href="https://read.cv/jacobs_blue"
-                className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
-              >
-                5+ years of experience
-              </a>{' '}
-              based in <s>Brookyln</s> Ventura, CA. I'm a first-principles
-              thinker hoping to{' '}
-              <a
-                href="https://www.google.com/books/edition/Less_but_better/eN6doAEACAAJ?hl=en"
-                className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
-              >
-                make less but better
-              </a>{' '}
-              and a positive impact in the lives of real people. I believe in{' '}
-              <a
-                href="https://createwcare.com"
-                className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
-              >
-                creating with care
-              </a>{' '}
-              every time.
-            </p>
-          </div>
+      <div className="container-blog ">
+        <div className="py-24 md:py-40 space-y-12 h-screen">
+          <motion.div
+            initial={{ opacity: 0, translateY: 20 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{
+              when: 'afterChildren',
+              delay: 0.05,
+              duration: 0.3,
+              type: 'ease',
+              stiffness: 100,
+            }}
+            className="space-y-16"
+          >
+            <div className="p-4 rounded-3xl text-lg max-w-full mx-auto space-y-4">
+              {/* <p className="">JAcob</p> */}
+              <div className=" text-neutral-800 transition-all">
+                {/* <p>Hey there 👋🏼</p> */}
+
+                <p className="">
+                  Among{' '}
+                  <InlineLinkWrapper href="/">other things</InlineLinkWrapper>{' '}
+                  I&#39;m a senior product designer with{' '}
+                  <a
+                    href="https://read.cv/jacobs_blue"
+                    className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
+                  >
+                    5+ years of experience
+                  </a>{' '}
+                  based in <s className="text-black/30">Brookyln, NY</s>{' '}
+                  Ventura, CA. I&#39;m a{' '}
+                  <InlineLinkWrapper href="https://fs.blog/first-principles/">
+                    first-principles
+                  </InlineLinkWrapper>{' '}
+                  thinker hoping to{' '}
+                  <InlineLinkWrapper href="https://www.google.com/books/edition/Less_but_better/eN6doAEACAAJ?hl=en">
+                    make less but better
+                  </InlineLinkWrapper>{' '}
+                  and a positive impact in the lives of real people. My aim is
+                  to{' '}
+                  <InlineLinkWrapper href="https://createwcare.com">
+                    create with care
+                  </InlineLinkWrapper>{' '}
+                  every time.
+                </p>
+              </div>
+            </div>
+          </motion.div>
           <div className="font-jbd text-lg font-normal tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
             <ul className="flex-col w-full space-y-3 justify-between ">
               {posts.map((frontMatter, index) => {
@@ -71,7 +84,7 @@ export default function Blog({ posts }) {
                       animate={{ opacity: 1, translateY: 0 }}
                       transition={{
                         when: 'afterChildren',
-                        delay: index * 0.05,
+                        delay: 0.2 + index * 0.05,
                         duration: 0.2,
                         type: 'spring',
                         stiffness: 200,
@@ -99,10 +112,40 @@ export default function Blog({ posts }) {
           </div>
         </div>
       </div>
-      <div className="bottom-0 absolute w-full font-jbd">
-        <div className="flex text-neutral-500 bg-white text-sm mx-auto space-x-1 w-full align-middle justify-center sticky bottom-0 p-8">
-          <p>by</p>
-          <Link href="/">Jacob&#39;s Blue</Link>
+      <div className="container-blog mx-auto bottom-0 sticky font-jbd font-medium tracking-tight p-4 pb-12 bg-white">
+        <div className="flex-wrap flex pt-4 text-black/80 border-t justify-between w-full border-black/20 bg-white text-sm space-y-4 sm:space-y-0">
+          <div className="w-full sm:w-min flex-row flex sm:justify-start sm:space-x-4 justify-between">
+            <Link href="../" className=" whitespace-nowrap">
+              Home
+            </Link>
+            <Link href="../library" className="whitespace-nowrap">
+              Library
+            </Link>
+            <a
+              href="mailto:jake@jacobs.blue?subject=Hi%20Jacob!%20Let's%20work"
+              className="whitespace-nowrap
+            "
+            >
+              Contact
+            </a>
+            <a
+              href={siteMetadata.readCV}
+              className="whitespace-nowrap
+            "
+            >
+              Read.cv
+            </a>
+            <a
+              href={siteMetadata.linkedIn}
+              className="whitespace-nowrap
+            "
+            >
+              Linked In
+            </a>
+          </div>
+          <p className="text-black/50 whitespace-nowrap">
+            © 2023 Jacob&#39; Blue
+          </p>
         </div>
       </div>
     </React.Fragment>
