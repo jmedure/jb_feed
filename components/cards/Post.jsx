@@ -33,14 +33,16 @@ export const Post = ({ post }) => {
     return (
       <div
         className={`
-          relative border border-black/10 rounded-lg h-full overflow-hidden object-cover
+          relative border border-solid border-black/10 transition-all rounded-xl h-full overflow-hidden object-cover
           ${aspect === '4x3' ? 'aspect-[4/3]' : ''}
           ${aspect === 'video' ? 'aspect-video' : ''}
           ${aspect === 'square' || kind === 'music' ? 'aspect-square' : ''} 
         `}
       >
         {videoSrc ? (
-          <VideoBasic src={videoSrc} image={image} />
+          <div className="group-hover:scale-105 transition-all h-full">
+            <VideoBasic src={videoSrc} image={image} />
+          </div>
         ) : (
           <Image
             src={image}
@@ -48,7 +50,7 @@ export const Post = ({ post }) => {
             // width={500}
             // height={500}
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-105 transition-all"
             placeholder="blur"
             sizes="(min-width: 390px), 50vw, 100vw"
             blurDataURL={blurDataURL}
@@ -63,15 +65,18 @@ export const Post = ({ post }) => {
       href={link}
       className="flex-block flex-wrap group no-underline font-jbd font-normal h-min cursor-pointer"
     >
-      <div className="break-inside-avoid p-3 space-y-4 border-2 border-solid border-black/10 sm:hover:outline-blue-400 sm:hover:outline outline outline-white sm:hover:bg-blue-100 sm:hover:border-blue-100 mb-4 bg-neutral-50 rounded-xl text-black transition-all duration-50">
+      {/* <div className="break-inside-avoid space-y-4 p-3 border-2 border-solid border-black/10 sm:hover:outline-blue-400 sm:hover:outline outline outline-white sm:hover:bg-blue-100 sm:hover:border-blue-100 mb-4 bg-neutral-50 rounded-xl text-black transition-all duration-50"> */}
+      <div className="break-inside-avoid space-y-4 mb-6 rounded-xl text-black transition-all duration-50">
         {frame()}
-        <div className="flex justify-between items-start space-x-4">
-          <h2 className="text-2xl leading-none tracking-tight">{title}</h2>
-          <p className="text-black/50 font-jbd whitespace-nowrap text-lg">
+        <div className="flex justify-between items-start space-x-4 tracking-tight">
+          <h2 className="text-xl text-black sm:text-black/50 sm:group-hover:text-black transition">
+            {title}
+          </h2>
+          <p className="text-black/50 font-jbd whitespace-nowrap text-lg ">
             {dayjs().to(dayjs(date))}
           </p>
         </div>
-        {cta ? <BubbleLink href={link} label={cta} mui={mui} /> : null}
+        {/* {cta ? <BubbleLink href={link} label={cta} mui={mui} /> : null} */}
       </div>
     </Link>
   );

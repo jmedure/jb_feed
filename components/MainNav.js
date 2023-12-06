@@ -21,9 +21,9 @@ export default function MainNav() {
         // }}
         className={
           (completion > 0
-            ? 'sm:drop-shadow-2xl sm:bg-white/90 sm:border-neutral-100 sm:border backdrop-blur-sm w-full'
-            : 'bg-white drop-shadow-none') +
-          'w-full rounded-full transition-all duration-75 sm:fixed justify-between sm:w-[380px] sm:top-2 pt-2 sm:pt-0 sm:left-[calc(50%-190px)] sm:space-x-2 items-center text-lg z-50 '
+            ? 'sm:drop-shadow-2xl sm:bg-white/95 sm:border-black/10 sm:border backdrop-blur-sm w-full'
+            : 'bg-white border-white border drop-shadow-none') +
+          'w-full rounded-full transition-all duration-75 border-white border  sm:fixed justify-between sm:w-[380px] sm:top-2 pt-2 sm:pt-0 sm:left-[calc(50%-190px)] sm:space-x-2 items-center text-lg z-50 '
         }
       >
         {/* <p className="flex-grow flex uppercase">Filters</p> */}

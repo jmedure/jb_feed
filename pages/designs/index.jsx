@@ -24,10 +24,47 @@ export default function Blog({ posts }) {
       <MainHeader type="design" />
       <div className="container-blog">
         <div className="py-24 md:py-48 h-full">
+          <div className="px-4 space-y-10">
+            <p>
+              Hi there. Looks like you&#39;ve stumbled upon my design index.
+            </p>
+            <p>
+              My name is Jacob and among{' '}
+              <Link
+                href="/"
+                className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
+              >
+                other things
+              </Link>{' '}
+              I&#39;m a senior product designer with{' '}
+              <a
+                href="https://read.cv/jacobs_blue"
+                className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
+              >
+                5+ years of experience
+              </a>{' '}
+              based in <s>Brookyln</s> Ventura, CA. I'm a first-principles
+              thinker hoping to{' '}
+              <a
+                href="https://www.google.com/books/edition/Less_but_better/eN6doAEACAAJ?hl=en"
+                className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
+              >
+                make less but better
+              </a>{' '}
+              and a positive impact in the lives of real people. I believe in{' '}
+              <a
+                href="https://createwcare.com"
+                className="underline text-black/70 underline-offset-2 decoration-[1px] hover:underline-offset-4 transition-all hover:text-black decoration-black/20 hover:decoration-black"
+              >
+                creating with care
+              </a>{' '}
+              every time.
+            </p>
+          </div>
           <div className="font-jbd text-lg font-normal tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
             <ul className="flex-col w-full space-y-3 justify-between ">
               {posts.map((frontMatter, index) => {
-                if (frontMatter.isPublished == 'true') {
+                if (frontMatter.isPublished != 'false') {
                   return (
                     <motion.li
                       initial={{ opacity: 0, translateY: 10 }}
