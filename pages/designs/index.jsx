@@ -47,7 +47,7 @@ export default function Blog({ posts }) {
                   <InlineLinkWrapper href="/">other things</InlineLinkWrapper>,{' '}
                   I&#39;m a senior product designer with{' '}
                   <InlineLinkWrapper href="https://read.cv/jacobs_blue">
-                    5+ years of experience
+                    ~6 years of experience
                   </InlineLinkWrapper>{' '}
                   based in <s className="text-black/30">Brooklyn, NY</s>{' '}
                   Ventura, CA. I&#39;m a{' '}
