@@ -49,7 +49,7 @@ export default function Blog({ posts }) {
                   <InlineLinkWrapper href="https://read.cv/jacobs_blue">
                     5+ years of experience
                   </InlineLinkWrapper>{' '}
-                  based in <s className="text-black/30">Brookyln, NY</s>{' '}
+                  based in <s className="text-black/30">Brooklyn, NY</s>{' '}
                   Ventura, CA. I&#39;m a{' '}
                   <InlineLinkWrapper href="https://fs.blog/first-principles/">
                     first-principles
