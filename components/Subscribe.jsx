@@ -36,14 +36,14 @@ function Subscribe() {
             placeholder="Subscribe for email updates"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex p-2 w-full bg-neutral-100 border border-black/10 rounded-l-lg"
+            className="flex p-2 w-full bg-neutral-100 border rounded-none border-black/10 rounded-l-lg"
           />
 
           <button
             disabled={state === 'Loading'}
             type="submit"
             onClick={subscribe}
-            className="flex font-jbd  font-medium text-white py-4 px-4 sm:py-3 rounded-r-lg group-focus-within:bg-black border-black/10 tracking-tight capitalize transition-all bg-neutral-700 after:bg-black hover:bg-black"
+            className="flex font-jbd font-medium text-white py-4 px-4 sm:py-3 rounded-r-lg group-focus-within:bg-black border-black/10 tracking-tight capitalize transition-all bg-neutral-700 after:bg-black hover:bg-black"
           >
             {/* Subscribe */}
             subscribe
