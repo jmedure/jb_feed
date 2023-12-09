@@ -27,7 +27,7 @@ export default function Blog({ posts }) {
       />
       <MainHeader type="design" />
       <div className="container-blog ">
-        <div className="py-24 md:py-40 space-y-12 h-screen">
+        <div className="py-24 md:pt-40 h-screen space-y-12">
           <motion.div
             initial={{ opacity: 0, translateY: 20 }}
             animate={{ opacity: 1, translateY: 0 }}
@@ -69,7 +69,7 @@ export default function Blog({ posts }) {
             </div>
           </motion.div>
           <div className="font-jbd text-lg font-normal tracking-tight py-8 flex sm:space-x-24 space-y-8 overflow-hidden sm:space-y-0 flex-col sm:flex-row sm:items-start sm:justify-between">
-            <ul className="flex-col w-full space-y-3 justify-between ">
+            <ul className="flex-col w-full space-y-3">
               {posts.map((frontMatter, index) => {
                 if (frontMatter.isPublished != 'false') {
                   return (
@@ -106,7 +106,7 @@ export default function Blog({ posts }) {
           </div>
         </div>
       </div>
-      <div className="container-blog mx-auto bottom-0 sticky font-jbd font-medium tracking-tight p-4 pb-12 bg-white">
+      <div className="container-blog pt-2 mx-auto sticky bottom-0 font-jbd font-medium tracking-tight p-4 pb-12 bg-white">
         <div className="flex-wrap flex pt-4 text-black/80 border-t justify-between w-full border-black/20 bg-white text-sm space-y-4 sm:space-y-0">
           <div className="w-full sm:w-min flex-row flex sm:justify-start sm:space-x-4 justify-between">
             <Link href="../" className=" whitespace-nowrap">
@@ -135,6 +135,13 @@ export default function Blog({ posts }) {
             "
             >
               Linked In
+            </a>
+            <a
+              href={siteMetadata.github}
+              className="whitespace-nowrap
+            "
+            >
+              Github
             </a>
           </div>
           <p className="text-black/50 whitespace-nowrap">
