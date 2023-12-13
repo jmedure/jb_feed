@@ -5,7 +5,7 @@ title: 'Design Log: Zip Experiments and Wins'
 description: "An often updated log of the many tests, experiments and net-new features I've shipped while working at Zip"
 thumbnail: ''
 tags: []
-image: ''
+image: '/design/zip-hero16:91.png'
 youtube: ''
 alt: ''
 isPublished: 'true'
@@ -22,7 +22,7 @@ This page stands a running and often updated log of the many tests, experiments,
 
 **What is Zip?**
 
-Zip is a leading international BNPL based out of Australia. Following the 2020 aquisition of Quadpay, Zip embarked on it's US journey. Zip's US product helps users split any purchase into 4 <i className="tracking-tight">and now 8</i> installments.
+Zip is a leading international buy-now, pay-later (BNPL) based out of Australia. Following the 2020 aquisition of Quadpay, Zip embarked on it's US journey. Zip's US product helps users split any purchase into 4 and [now 8](#pay-in-8) installments.
 
 **Design at Zip**
 
@@ -164,15 +164,10 @@ We had an essential question to answer: "How will users be able to purchase with
 
 The categories UI experiment was a design emergent initiative that we were able to slate into our team roadmap because of some extra eng capacity. The design team came together to generate ideas around what might be easy wins in case we had the opportunity to put some engineering capacity towards design led intiatives. One of the initiatives we brainstormed was showing some love to our categories experience.
 
-<div className="py-4">
-  <BlogImage
-    src="/design/zip-categories-hero.svg"
-    alt="Zip app Categories demonstration"
-    fig="Final categories UI - Blur is for demonstration only"
-    bg="bg-purple-100"
-    type={2}
-  />
-</div>
+<Video
+  src="ba-categories.mp4"
+  caption="Categories module before vs after"
+/>
 
 At Zip, one of our largest user challenges is communicating our "pay anywhere" value prop. Zip's main product is a one-time virtual card that can be used anywhere that excepts Visa. But due to legal and compliance restrictions we can't actually use the term <i>anywhere</i>.
 
@@ -184,10 +179,6 @@ One weapon in our arsenel to help communicate the concept of paying anywhere imp
 
 However, because of constant competition for homepage real-estate - affiliate placement, user communications, and new features - over time the categories component has become buried further and further down the page.
 
-<Video
-  src="old-categories-demo.mp4"
-  caption="Categories module before the experiment"
-/>
 
 Thus, I hypothesized that by surfacing categories higher on the home page, we could boost conversion rates through the implicit communication of our value prop - paying anywhere. We assumed this would be particuliarly effective for new users.
 
