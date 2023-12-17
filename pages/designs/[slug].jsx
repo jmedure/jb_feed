@@ -62,7 +62,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           type: 'ease',
           stiffness: 200,
         }}
-        className="flex flex-col w-full mx-auto py-16 sm:py-12"
+        className="flex flex-col w-full mx-auto py-16 sm:py-8"
       >
         <BlogHeroBanner
           youtube={youtube}
@@ -71,13 +71,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           src={frontmatter.image}
           alt={frontmatter.alt}
         />
-        <div
-          className={
-            (image
-              ? 'w-full container-fg py-8'
-              : 'w-full container-fg py-12 sm:py-8') + ''
-          }
-        >
+        <div className={image || youtube ? 'w-full py-2' : 'py-12 sm:py-12'}>
           <DesignsWrapper>
             {toc.length ? (
               <TableOfContents

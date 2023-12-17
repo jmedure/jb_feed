@@ -1,7 +1,7 @@
 import MainNav from './MainNav';
 import Link from 'next/link';
 import Subheader from './Subheader';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import Breadcrumbs from './Breadcrumbs';
 import CopyLink from './CopyLink';
 import Logo from './Logo';
@@ -14,6 +14,7 @@ export default function MainHeader(props) {
   const type = props.type;
   const completion = useReadingProgress();
   const screen = useScreenSize();
+  const { scrollYProgress } = useScroll();
 
   // console.log(screen.width);
 
@@ -39,7 +40,7 @@ export default function MainHeader(props) {
   }
   if (type === 'design') {
     return (
-      <div className="fixed w-full py-4 sm:py-8 flex-row left-0 top-0 z-40">
+      <div className="fixed w-full py-6 sm:py-8 flex-row left-0 top-0 z-40 to-white bg-gradient-to-t from-transparent">
         <motion.div
           initial={{ opacity: 0, translateY: 10 }}
           animate={{ opacity: 1, translateY: 0 }}
@@ -53,12 +54,13 @@ export default function MainHeader(props) {
         >
           {props.buttons ? (
             <div
-              className={
-                (completion > 2
-                  ? 'flex transition-all gap-1 items-center px-1 py-1 mx-auto bg-white border-black/5 border rounded-full drop-shadow-xl'
-                  : 'flex transition-all gap-2 items-center px-1 py-1 mx-auto bg-white border border-black/0 rounded-full ') +
-                ''
-              }
+              className={`flex transition-all items-center p-1 mx-auto rounded-full 
+                ${
+                  completion >= 0.01
+                    ? 'gap-1 border-black/5 drop-shadow-xl'
+                    : 'gap-2 border-white'
+                }
+              `}
             >
               <BackArrow />
               <Logo />

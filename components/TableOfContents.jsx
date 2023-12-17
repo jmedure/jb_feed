@@ -1,4 +1,4 @@
-import { easeIn, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import useReadingProgress from '../src/utils/useReadingProgress';
 
@@ -18,44 +18,49 @@ export default function TableOfContents(props) {
         type: 'ease',
         // stiffness: 100,
       }}
-      className="hidden lg:flex sticky top-44 h-0 z-40"
+      className="hidden lg:flex sticky top-[8.2rem] w-auto h-0 z-40"
     >
-      <div className="relative xl:left-[calc(50%-600px)] h-min w-min">
+      <div className="relative xl:left-[calc(50%-600px)] h-min w-min max-w-[140px]">
         <div className="flex flex-col w-full">
           <Link
             href={sluggy}
-            className="flex group transition-all font-bold tracking-tight  text-base font-jbd capitalize text-black"
+            className="flex transition-all tracking-tight text-base font-jbd text-black"
           >
-            {completion > 10 ? (
+            {completion >= 10 ? (
               <motion.div
                 initial={{ opacity: 0, translateY: -10 }}
                 whileInView={{ opacity: 1, transalateY: 0 }}
-                exit={{ opacity: 0, translateY: 10 }}
                 transition={{
                   type: 'spring',
                   duration: 0.2,
                   stiffness: 200,
-                  when: 'afterChildren',
                 }}
-                className="absolute -top-[62px]"
+                className="absolute -top-[32px]"
               >
-                <p className="w-40">{props.title}</p>
-                <div className="mt-3 w-6 h-[2px] rounded-full bg-black/20"></div>
+                <p className="w-36 text-left align-bottom truncate overflow-hidden flex-wrap">
+                  {/* {props.title} */}
+                  Back to top ↑
+                </p>
+                {/* <div className="py-4">
+                  <div className="w-6 h-[2px] rounded-full bg-black/20"></div>
+                </div> */}
               </motion.div>
             ) : null}
           </Link>
-          {toc.map((heading, index) => {
-            const clean = heading.replace(/-/g, ' ');
-            return (
-              <Link
-                href={sluggy + '#' + heading}
-                key={index}
-                className="font-normal whitespace-nowrap tracking py-1 text-base font-jbd capitalize text-neutral-400 hover:text-neutral-900 transition-all"
-              >
-                {clean}
-              </Link>
-            );
-          })}
+          <div className="flex flex-col w-full z-10  capitalize">
+            {toc.map((heading, index) => {
+              const clean = heading.replace(/-/g, ' ');
+              return (
+                <Link
+                  href={sluggy + '#' + heading}
+                  key={index}
+                  className="font-normal whitespace-nowrap tracking py-1 text-base font-jbd capitalize text-neutral-400 hover:text-neutral-900 transition-all"
+                >
+                  {clean}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </motion.div>

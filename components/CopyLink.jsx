@@ -43,7 +43,7 @@ export default function CopyLink(props) {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ ease: 'linear', duration: 0.01 }}
-            className="font-normal md:w-full text-right underline whitespace-nowrap text-neutral-700 decoration-neutral-400 md:hover:text-neutral-900 md:hover:decoration-neutral-900 underline-offset-2 md:hover:underline-offset-4 transition-all"
+            className="font-normal md:w-full text-right underline whitespace-nowrap text-neutral-700 decoration-neutral-400 md:hover:text-neutral-900 stroke-transparent md:hover:decoration-neutral-900 underline-offset-2 md:hover:underline-offset-4 transition-all"
           >
             {isCopied ? null : 'Copy URL'}
           </motion.button>
@@ -65,12 +65,12 @@ export default function CopyLink(props) {
               onClick={copylink}
               whileTap={{ scale: 0.9 }}
               transition={{ ease: 'linear', duration: 0.01 }}
-              className="group fill-black/80 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-white/80 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2"
+              className="group fill-black/80 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-neutral-50 stroke-transparent transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className=" fill-inherit stroke-inherit"
+                className=" fill-inherit stroke-none"
               >
                 <svg
                   width="18"
@@ -94,7 +94,7 @@ export default function CopyLink(props) {
               onClick={copylink}
               whileTap={{ scale: 0.9 }}
               transition={{ ease: 'linear', duration: 0.01 }}
-              className="group fill-black/50 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-white/80 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2 select-none"
+              className="group fill-black/50 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-neutral-50 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2 select-none"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}

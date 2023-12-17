@@ -43,11 +43,11 @@ export default function VideoBasic(props) {
   }, [videoProgress, videoDuration, isPaused]);
 
   return (
-    <div className="object-cover bg-black h-full overflow-hidden">
+    <div className="object-cover h-full overflow-hidden">
       {isLoaded ? (
         <video
           ref={videoRef}
-          className="m-0 p-0 h-full w-full object-cover"
+          className="m-0 p-0 h-full w-full object-cover border-none"
           autoPlay
           loop
           muted
@@ -69,6 +69,7 @@ export default function VideoBasic(props) {
           placeholder="blur"
           blurDataURL={blurDataURL}
           onLoadingComplete={replaceImage()}
+          className="overflow-hidden border-none"
         />
       )}
     </div>

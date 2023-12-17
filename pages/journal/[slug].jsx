@@ -16,14 +16,18 @@ import OneBlank from '../../components/OneBlank';
 import BlogSEO from '../../components/BlogSEO';
 import YoutubeEmbed from '../../components/YoutubeEmbed';
 import Link from 'next/link';
-import ProseWrapper from '../../components/mdx/ProseWrapper';
+// import ProseWrapper from '../../components/mdx/ProseWrapper';
 import MainHeader from '../../components/MainHeader';
 import { useRouter } from 'next/router';
 import BlogHeroBanner from '../../components/mdx/BlogHeroBanner';
 import Footer from '../../components/Footer';
-import BlogWrapper from '../../components/wrappers/BlogWrapper';
-import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
+// import BlogWrapper from '../../components/wrappers/BlogWrapper';
 import ComingSoon from '../../components/mdx/ComingSoon';
+import { motion } from 'framer-motion';
+import DesignsWrapper from '../../components/wrappers/DesignsWrapper';
+import TableOfContents from '../../components/TableOfContents';
+import ProseWrapperDesign from '../../components/mdx/ProseWrapperDesign';
+import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -43,8 +47,19 @@ export default function BlogPost({ post: { source, frontmatter } }) {
         description={frontmatter.description}
         image={frontmatter.thumbnail}
       />
-      <MainHeader type="blog" />
-      <div className="flex flex-col w-full mx-auto">
+      <MainHeader type="design" buttons="2" />
+      <motion.div
+        initial={{ opacity: 0, translateY: 10 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          when: 'afterChildren',
+          delay: 0.3,
+          duration: 0.2,
+          type: 'ease',
+          stiffness: 200,
+        }}
+        className="flex flex-col w-full mx-auto py-16 sm:py-8"
+      >
         <BlogHeroBanner
           youtube={youtube}
           embedID={frontmatter.youtube}
@@ -52,61 +67,41 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           src={frontmatter.image}
           alt={frontmatter.alt}
         />
-        <div
-          className={
-            (image ? 'w-full container-fg py-4' : 'w-full container-fg py-12') +
-            ''
-          }
-        >
-          <div
-            id="toc"
-            className="flex w-full lg:space-x-48 sm:space-x-12 md:space-x-24"
-          >
+        <div className={image || youtube ? 'w-full py-2' : 'py-12 sm:py-12'}>
+          <DesignsWrapper>
             {toc.length ? (
-              <div className="hidden sm:flex whitespace-nowrap h-min top-32 sticky">
-                <div className="flex flex-col w-full">
-                  {toc.map((heading, index) => {
-                    const clean = heading.replace(/-/g, ' ');
-                    return (
-                      <Link
-                        href={slug + '#' + heading}
-                        key={index}
-                        className="font-normal tracking-tight py-1 text-lg font-jbd capitalize text-neutral-400 hover:text-neutral-800 transition-all"
-                      >
-                        {clean}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </div>
-            ) : null}
-            <BlogWrapper>
-              <BlogMetaHeader
-                type={'journal'}
+              <TableOfContents
+                toc={frontmatter.toc}
+                slug={frontmatter.slug}
                 title={frontmatter.title}
-                readingTime={frontmatter.readingTime}
-                published={published}
-                updated={updated}
-                lastTendedTo={lastTendedTo}
               />
-              <ProseWrapper>
-                <MDXRemote
-                  {...source}
-                  components={{
-                    Image,
-                    Button,
-                    BlogEntry,
-                    OneBlank,
-                    YoutubeEmbed,
-                    ComingSoon,
-                  }}
-                />
-              </ProseWrapper>
-            </BlogWrapper>
-          </div>
+            ) : null}
+            <BlogMetaHeader
+              title={frontmatter.title}
+              readingTime={frontmatter.readingTime}
+              published={published}
+              updated={updated}
+              lastTendedTo={lastTendedTo}
+              status={frontmatter.status}
+              version={frontmatter.version}
+            />
+            <ProseWrapperDesign>
+              <MDXRemote
+                {...source}
+                components={{
+                  Image,
+                  Button,
+                  BlogEntry,
+                  OneBlank,
+                  YoutubeEmbed,
+                  ComingSoon,
+                }}
+              />
+            </ProseWrapperDesign>
+          </DesignsWrapper>
         </div>
-      </div>
-      <Footer btt={currentRoute} />
+      </motion.div>
+      <Footer btt={slug} />
     </React.Fragment>
   );
 }

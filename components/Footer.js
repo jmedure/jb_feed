@@ -3,6 +3,7 @@ import Button from './Button';
 import Subscribe from './Subscribe';
 import siteMetaData from '../data/siteMetadata';
 import LiveVisitors from './LiveVistors';
+import InlineLinkWrapper from '../components/wrappers/InlineLinkWrapper';
 
 export default function Footer(props) {
   if (props.btt) {
@@ -13,14 +14,7 @@ export default function Footer(props) {
       >
         <div className="container-fg w-full pb-8 font-jbd tracking-tight z-50 font-normal">
           <div className="flex items-center mx-auto gap-2 w-full align-middle justify-center">
-            <span>Thank you for reading </span>
-            <span>❤️</span>
-            <Link
-              href={props.btt}
-              className="underline sm:hover:text-black underline-offset-2 sm:hover:underline-offset-4 transition-all"
-            >
-              Back to top
-            </Link>
+            <InlineLinkWrapper href={props.btt}>Back to top</InlineLinkWrapper>
           </div>
           {/* <p className="col-span-1">® 2022 - ∞</p>
           <p className="col-span-1">from Jacob&#39;s Blue</p> */}

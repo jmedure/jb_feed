@@ -19,43 +19,45 @@ export default function Blog({ posts }) {
         <title>Jacob&#39;s Blue | {title}</title>
       </Head>
 
-      <MainHeader type="blog" />
-      <div className="container-fg my-16 py-auto flex max-w-[640px]">
-        <ul className="flex list-none flex-wrap py-40 w-full  my-auto  space-y-4">
-          {posts.map((frontMatter, index) => {
-            if (frontMatter.isPublished == 'true') {
-              return (
-                <motion.li
-                  initial={{ opacity: 0, translateY: -10 }}
-                  animate={{ opacity: 1, translateY: 0 }}
-                  transition={{
-                    when: 'afterChildren',
-                    delay: index * 0.05,
-                    duration: 0.2,
-                    type: 'spring',
-                    stiffness: 200,
-                  }}
-                  className="w-full"
-                  key={index}
-                >
-                  <BlogEntryJournal
-                    slug={frontMatter.slug}
+      <MainHeader type="design" />
+      <div className="container-fg py-auto flex py-40 max-w-[600px] text-black/80 ">
+        <div className="group w-full px-3 transition-all">
+          <ul className="flex list-none flex-wrap w-full my-auto gap-y-3 transition-all duration-100 sm:group-hover:text-black/50 ">
+            {posts.map((frontMatter, index) => {
+              if (frontMatter.isPublished == 'true') {
+                return (
+                  <motion.li
+                    initial={{ opacity: 0, translateY: -10 }}
+                    animate={{ opacity: 1, translateY: 0 }}
+                    transition={{
+                      when: 'afterChildren',
+                      delay: index * 0.04,
+                      duration: 0.2,
+                      type: 'spring',
+                      stiffness: 200,
+                    }}
+                    className="w-full "
                     key={index}
-                    passHref
-                    src={frontMatter.image}
-                    alt={frontMatter.alt}
-                    title={frontMatter.title}
-                    description={frontMatter.description}
-                    date={frontMatter.date}
-                    lastEdited={frontMatter.lastEdited}
-                    readingTime={frontMatter.readingTime}
-                    isPublished={frontMatter.isPublished}
-                  />
-                </motion.li>
-              );
-            }
-          })}
-        </ul>
+                  >
+                    <BlogEntryJournal
+                      slug={frontMatter.slug}
+                      key={index}
+                      passHref
+                      src={frontMatter.image}
+                      alt={frontMatter.alt}
+                      title={frontMatter.title}
+                      description={frontMatter.description}
+                      date={frontMatter.date}
+                      lastEdited={frontMatter.lastEdited}
+                      readingTime={frontMatter.readingTime}
+                      isPublished={frontMatter.isPublished}
+                    />
+                  </motion.li>
+                );
+              }
+            })}
+          </ul>
+        </div>
       </div>
     </React.Fragment>
   );

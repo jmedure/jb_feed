@@ -28,17 +28,21 @@ export default function BlogMetaHeader(props) {
   }
 
   return (
-    <div className="w-full not-prose flex-wrap flex space-y-2 pb-4 sm:pb-8 max-w-[600px] mx-auto">
+    <div className="w-full not-prose flex-wrap flex space-y-2 py-4 sm:py-8 max-w-[600px] mx-auto">
       <div className="space-y-4 w-full">
         <div className="md:hidden">
-          <Status status={props.status} version={props.version} />
+          {props.status ? (
+            <Status status={props.status} version={props.version} />
+          ) : null}
         </div>
         <div className="flex items-start gap-4">
           <h1 className="tracking-tight w-full flex-auto font-bold text-2xl">
             {props.title}
           </h1>
           <div className="hidden md:flex">
-            <Status status={props.status} version={props.version} />
+            {props.status ? (
+              <Status status={props.status} version={props.version} />
+            ) : null}
           </div>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 items-center text-base font-normal text-neutral-500 font-jbd tracking-normal ">
