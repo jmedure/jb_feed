@@ -43,7 +43,7 @@ export default function VideoBasic(props) {
   }, [videoProgress, videoDuration, isPaused]);
 
   return (
-    <div className="object-cover h-full overflow-hidden">
+    <div className="object-cover  h-full overflow-hidden">
       {isLoaded ? (
         <video
           ref={videoRef}

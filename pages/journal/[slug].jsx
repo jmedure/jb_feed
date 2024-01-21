@@ -28,6 +28,10 @@ import DesignsWrapper from '../../components/wrappers/DesignsWrapper';
 import TableOfContents from '../../components/TableOfContents';
 import ProseWrapperDesign from '../../components/mdx/ProseWrapperDesign';
 import BlogMetaHeader from '../../components/wrappers/BlogMetaHeader';
+import BlogImage from '../../components/mdx/BlogImage';
+import Footnote from '../../components/mdx/Footnote';
+import Video from '../../components/mdx/Video';
+import PageBreak from '../../components/mdx/PageBreak';
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   const image = frontmatter.image;
@@ -93,6 +97,10 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                   Button,
                   BlogEntry,
                   OneBlank,
+                  BlogImage,
+                  Footnote,
+                  Video,
+                  PageBreak,
                   YoutubeEmbed,
                   ComingSoon,
                 }}

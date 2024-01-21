@@ -6,7 +6,6 @@ export default function TableOfContents(props) {
   const toc = props.toc;
   const sluggy = props.slug;
   const completion = useReadingProgress();
-  //   const title = props.title.toLowerCase
 
   return (
     <motion.div
@@ -16,7 +15,6 @@ export default function TableOfContents(props) {
         delay: 0.5,
         duration: 0.3,
         type: 'ease',
-        // stiffness: 100,
       }}
       className="hidden lg:flex sticky top-[8.2rem] w-auto h-0 z-40"
     >
@@ -41,13 +39,10 @@ export default function TableOfContents(props) {
                   {/* {props.title} */}
                   Back to top ↑
                 </p>
-                {/* <div className="py-4">
-                  <div className="w-6 h-[2px] rounded-full bg-black/20"></div>
-                </div> */}
               </motion.div>
             ) : null}
           </Link>
-          <div className="flex flex-col w-full z-10  capitalize">
+          <div className="flex flex-col w-full z-10 ">
             {toc.map((heading, index) => {
               const clean = heading.replace(/-/g, ' ');
               return (
