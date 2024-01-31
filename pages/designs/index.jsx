@@ -45,7 +45,7 @@ export default function Blog({ posts }) {
                 <p className="">
                   Among{' '}
                   <InlineLinkWrapper href="/">other things</InlineLinkWrapper>,{' '}
-                  I&#39;m a senior product designer with{' '}
+                  I&#39;m a product designer with{' '}
                   <InlineLinkWrapper href="https://read.cv/jacobs_blue">
                     5+ years of experience
                   </InlineLinkWrapper>{' '}
