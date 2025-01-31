@@ -8,7 +8,7 @@ export default function Button(props) {
     return (
       <a
         href={props.href}
-        className="flex group flex-shrink w-min whitespace-nowrap focus:ring-1 cursor-pointer transition-all text-blue-500 sm:hover:text-gray-900 sm:hover:underline items-baseline capitalize decoration-[1.5px] underline-offset-1"
+        className="flex group flex-shrink w-min whitespace-nowrap focus:ring-1 cursor-pointer transition-all text-blue-500 dark:text-white/70 sm:hover:text-gray-900 dark:sm:hover:text-white items-baseline decoration-[1.5px] underline-offset-1"
       >
         <p>{props.copy}</p>
         <span className="flex material-icons text-sm">{props.icon}</span>
@@ -33,7 +33,7 @@ export default function Button(props) {
     return (
       <Link
         href={props.href}
-        className="flex mr-auto w-min whitespace-nowrap transition-all focus:ring-1 cursor-pointer text-blue-500 sm:hover:text-gray-900 sm:hover:underline items-center capitalize"
+        className="flex mr-auto w-min whitespace-nowrap transition-all focus:ring-1 cursor-pointer text-blue-500 dark:text-white/70 sm:hover:text-gray-900 dark:sm:hover:text-white items-center capitalize"
       >
         {props.copy}
       </Link>

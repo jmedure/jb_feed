@@ -42,7 +42,7 @@ export default function Library() {
         <main className="">
           <MainHeader title={title} />
           <div className="space-y-8">
-            <div className="container-fg font-jbd font-normal text-xl leading-tight tracking-tight text-black/80 py-16">
+            <div className="container-fg font-jbd font-normal text-xl leading-tight tracking-tight dark:text-white/90 text-black/80 py-16">
               <p className="text-left justify-start max-w-[500px]">
                 Beyond pure entertainment books give me immense value. In hopes
                 to both share my interests and provide value to you, I’ve

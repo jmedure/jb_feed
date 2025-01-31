@@ -36,7 +36,7 @@ export default function BlogMetaHeader(props) {
           ) : null}
         </div>
         <div className="flex items-start gap-4">
-          <h1 className="tracking-tight w-full flex-auto font-bold text-2xl">
+          <h1 className="tracking-tight w-full flex-auto text-2xl">
             {props.title}
           </h1>
           <div className="hidden md:flex">

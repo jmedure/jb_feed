@@ -22,42 +22,49 @@ function Subscribe() {
   };
 
   return (
-    <div className="flex-col pb-4">
+    <div className="flex-col space-y-2">
       <form
         onSubmit={subscribe}
-        className="group flex after:text-black divide-black transition-all group"
+        className="group flex after:text-black transition-all group"
       >
-        <div className="flex justify-between w-full border-black/10">
+        <div
+          className={`flex justify-between w-full bg-neutral-200 group-focus-within:border-black rounded-lg dark:hover:bg-neutral-600 dark:sm:hover:border-white/20 space-x-3 overflow-hidden dark:bg-neutral-700 dark:group-focus-within:bg-neutral-600 group-hover:bg-neutral-300 group-focus-within:bg-neutral-200 dark:group-focus-within:border-white/90 border-2 transition-all tracking-normal duration-150 group border-black/10 dark:border-white/00 ${
+            state === 'Error'
+              ? 'border-red-500 dark:border-red-400 dark:hover:border-red-500 dark:group-focus-within:border-red-500'
+              : ''
+          }`}
+        >
           <input
             required
             id="email-input"
             name="email"
             type="email"
-            placeholder="Subscribe for email updates"
+            placeholder="ipadparentingrocks97@hotmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex p-2 w-full bg-neutral-100 border rounded-none border-black/10 rounded-l-lg"
+            className="flex-grow dark:placeholder:text-white/40 p-3 placeholder:text-black/40  text-black dark:group-focus-within:bg-neutral-600 transition-all group-hover:bg-neutral-300 group-focus-within:bg-neutral-200 duration-150 bg-neutral-200 dark:bg-neutral-700 dark:group-hover:bg-neutral-600 dark:text-white outline-none dark:peer-autofill:bg-neutral-100"
           />
-
-          <button
-            disabled={state === 'Loading'}
-            type="submit"
-            onClick={subscribe}
-            className="flex font-jbd font-medium text-white py-4 px-4 sm:py-3 rounded-r-lg group-focus-within:bg-black border-black/10 tracking-tight capitalize transition-all bg-neutral-700 after:bg-black hover:bg-black"
-          >
-            {/* Subscribe */}
-            subscribe
-          </button>
+          <div>
+            <button
+              disabled={state === 'Loading'}
+              type="submit"
+              onClick={subscribe}
+              className="relative m-2 border align-middle justify-center text-white dark:text-black dark:after:text-black sm:py-1 px-2 rounded-md group-focus-within:bg-black dark:group-focus-within:bg-white group-hover:bg-black dark:group-hover:bg-white dark:hover:text-black border-black/10 dark:border-white/10 transition-all bg-neutral-700 after:bg-black hover:bg-black dark:bg-white/80 focus:outline-white outline-2 focus-within:bg-black dark:hover:bg-whitedark:hover:text-black "
+            >
+              Subscribe
+            </button>
+          </div>
         </div>
       </form>
       {state === 'Error' && (
-        <p className="error-state text-red-500 pt-2">{errorMsg}.</p>
+        <p className="error-state text-red-500 dark:text-red-400 bg-red-500/10 dark:bg-red-500/20 py-1 px-3 rounded-lg">
+          {errorMsg}.
+        </p>
       )}
       {state === 'Success' && (
-        <p className="success-state">
-          Thanks for subscribing &#128153; I&#39;ll let you know the next time I
-          put something into the world.
-        </p>
+        <div className="success-state dark:text-green-500/95 text-green-500 bg-green-500/10 dark:bg-green-500/10 py-1 px-3 rounded-lg">
+          <p>no way. you actually did it haha. ty ♥️</p>
+        </div>
       )}
     </div>
   );

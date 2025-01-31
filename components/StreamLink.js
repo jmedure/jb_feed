@@ -10,13 +10,21 @@ export default function StreamLink(props) {
   if (String(link).includes('spotify')) {
     return (
       <a href={props.href} className="">
-        <StreamLinkWrapper icon="spotify" label="Spotify" bg="bg-green-100" />
+        <StreamLinkWrapper
+          icon="spotify"
+          label="Spotify"
+          bg="bg-green-500/20"
+        />
       </a>
     );
   } else if (String(link).includes('apple')) {
     return (
       <a href={props.href} className="">
-        <StreamLinkWrapper icon="apple" label="Apple Music" bg="bg-red-100" />
+        <StreamLinkWrapper
+          icon="apple"
+          label="Apple Music"
+          bg="bg-red-500/20"
+        />
       </a>
     );
   } else if (String(link).includes('amazon')) {
@@ -26,7 +34,7 @@ export default function StreamLink(props) {
           icon="amazon1"
           fill="fill-white"
           label="Amazon Music"
-          bg="bg-blue-50"
+          bg="bg-blue-500/20"
         />
       </a>
     );
@@ -36,7 +44,7 @@ export default function StreamLink(props) {
         <StreamLinkWrapper
           icon="tidal-white"
           label="Tidal"
-          bg="bg-black/90"
+          bg="bg-black/50"
           fill="fill-white/90"
         />
       </a>
@@ -47,14 +55,14 @@ export default function StreamLink(props) {
         <StreamLinkWrapper
           icon="soundcloud"
           label="Soundcloud"
-          bg="bg-orange-50"
+          bg="bg-orange-500/20"
         />
       </a>
     );
   } else if (String(link).includes('youtube')) {
     return (
       <a href={props.href} className="">
-        <StreamLinkWrapper icon="youtube" label="Youtube" bg="bg-red-50" />
+        <StreamLinkWrapper icon="youtube" label="Youtube" bg="bg-red-500/20" />
       </a>
     );
   } else if (String(link).includes('audiomack')) {
@@ -63,7 +71,7 @@ export default function StreamLink(props) {
         <StreamLinkWrapper
           icon="audiomack"
           label="Audiomack"
-          bg="bg-orange-50"
+          bg="bg-orange-500/10"
         />
       </a>
     );
@@ -73,7 +81,7 @@ export default function StreamLink(props) {
         <StreamLinkWrapper
           icon="gumroad"
           label="Buy directly on Gumroad"
-          bg="bg-pink-50"
+          bg="bg-pink-500/20"
         />
       </a>
     );

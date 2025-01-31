@@ -27,7 +27,7 @@ export default function Toast({ text, children }) {
           // duration: 0.2,
           stiffness: 100,
         }}
-        className="hidden sm:flex flex-row -left-6 whitespace-nowrap overflow-visible drop-shadow-lg text-center justify-center mx-auto -top-8 text-sm px-2 py-1 rounded-lg absolute bg-neutral-800 text-white  z-50"
+        className="hidden sm:flex flex-row -left-6 whitespace-nowrap overflow-visible drop-shadow-lg text-center justify-center mx-auto -top-8 text-sm px-2 py-1 rounded-lg absolute dark:bg-white bg-neutral-900 dark:text-neutral-900 text-white  z-50"
       >
         {text}
       </motion.div>

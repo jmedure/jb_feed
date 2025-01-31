@@ -24,13 +24,11 @@ export default function Footer(props) {
   }
   return (
     <div id="footer" className="">
-      <div className="font-jbd container-fg text-lg font-normal tracking-tight border-blue-200 border-solid border rounded-xl">
-        <div className="p-4 lg:p-4">
+      <div className="font-jbd container-fg text-lg font-normal tracking-tight border-blue-200 dark:border-white/20 border-solid border rounded-xl">
+        <div className="p-4 lg:p-4 text-black/50 dark:text-white/50">
           <div className="flex flex-col space-y-6 lg:flex-row lg:space-y-0 items-stretch ">
             <div className="flex flex-col space-y-2 flex-grow align-top justify-items-start">
-              <p className="text-black/50 text-sm tracking-normal">
-                Navigation
-              </p>
+              <p className=" text-sm tracking-normal">Navigation</p>
               <div className="">
                 <Button href="/" type="null" icon="north" copy="Home" />
                 <Button
@@ -72,7 +70,7 @@ export default function Footer(props) {
               </div>
             </div>
             <div className="flex flex-col flex-grow space-y-2 align-top justify-items-start">
-              <p className="text-black/50 text-sm tracking-normal">Writing</p>
+              <p className=" text-sm tracking-normal">Writing</p>
               <div>
                 <Button
                   href="/designs"
@@ -89,13 +87,13 @@ export default function Footer(props) {
               </div>
             </div>
             <div className="flex flex-col flex-grow space-y-2 align-top justify-items-start">
-              <p className="text-black/50 text-sm tracking-normal">Music</p>
+              <p className=" text-sm tracking-normal">Music</p>
               <div>
                 <Button
                   href={siteMetaData.spotify}
                   type="right"
                   icon="north_east"
-                  copy="spotify"
+                  copy="Spotify"
                   passHref={true}
                   target="_blank"
                 />
@@ -103,7 +101,7 @@ export default function Footer(props) {
                   href={siteMetaData.apple}
                   type="right"
                   icon="north_east"
-                  copy="apple music"
+                  copy="Apple Music"
                   passHref={true}
                   target="_blank"
                 />
@@ -111,7 +109,7 @@ export default function Footer(props) {
                   href={siteMetaData.tidal}
                   type="right"
                   icon="north_east"
-                  copy="tidal"
+                  copy="Tidal"
                   passHref={true}
                   target="_blank"
                 />
@@ -119,7 +117,7 @@ export default function Footer(props) {
                   href={siteMetaData.youtube}
                   type="right"
                   icon="north_east"
-                  copy="youtube"
+                  copy="Youtube"
                   passHref={true}
                   target="_blank"
                 />
@@ -127,7 +125,7 @@ export default function Footer(props) {
                   href={siteMetaData.soundcloud}
                   type="right"
                   icon="north_east"
-                  copy="soundcloud"
+                  copy="Soundcloud"
                   passHref={true}
                   target="_blank"
                 />
@@ -135,18 +133,18 @@ export default function Footer(props) {
                   href={siteMetaData.instagram}
                   type="right"
                   icon="north_east"
-                  copy="instagram"
+                  copy="Instagram"
                   passHref={true}
                   target="_blank"
                 />
-                <Button
+                {/* <Button
                   href={siteMetaData.gumroad}
                   type="right"
                   icon="north_east"
-                  copy="gumroad"
+                  copy="Gumroad"
                   passHref={true}
                   target="_blank"
-                />
+                /> */}
                 {/* <Button
                   href="/links"
                   type="null"
@@ -156,7 +154,7 @@ export default function Footer(props) {
               </div>
             </div>
             <div className="flex flex-col space-y-2 flex-grow align-top justify-items-start">
-              <p className="text-black/50 text-sm tracking-normal">Work</p>
+              <p className=" text-sm tracking-normal">Work</p>
               <div className="">
                 <Button
                   href={siteMetaData.readCV}
@@ -185,7 +183,7 @@ export default function Footer(props) {
               </div>
             </div>
             <div className="flex flex-col space-y-2 flex-grow align-top justify-items-start">
-              <p className="text-black/50 text-sm tracking-normal">Projects</p>
+              <p className=" text-sm tracking-normal">Projects</p>
               <div className="">
                 {/* <Button
                   href="https://read.cv/jacobs_blue"
@@ -197,77 +195,30 @@ export default function Footer(props) {
                   href="https://createwcare.com"
                   type="right"
                   icon="north_east"
-                  copy="Create W/ Care"
+                  copy="Create w/ Care"
                 />
               </div>
             </div>
-
-            {/* <div className="flex flex-grow flex-col align-top justify-items-start">
-              <Button
-                href="/free-game"
-                type="null"
-                icon="east"
-                copy="Free Game"
-              />
-              <Button
-                href="/shorterm-vs-longterm-fulfillment"
-                type="both"
-                icon="east"
-                copy="Shortterm vs Longterm..."
-              />
-              <Button
-                href="/shorterm-vs-longterm-fulfillment"
-                type="both"
-                icon="east"
-                copy="My gear"
-              />
-              <Button
-                href="/shorterm-vs-longterm-fulfillment"
-                type="both"
-                icon="east"
-                copy="Get started in music 101"
-              />
-            </div> */}
-            <div className="flex flex-grow flex-col align-top  justify-between">
-              <Subscribe />
-              <div className="flex flex-col space-y-1">
-                {/* <Link href={siteMetaData.discord}>
-                            <div className="flex items-center p-3 md:py-2 bg-black text-white justify-center rounded-full flex-nowrap space-x-2 cursor-pointer">
-                                <FontAwesomeIcon icon={faDiscord}/>
-                                <p>Invite me to your discord</p>
-                            </div>
-                        </Link> */}
-                <Link href={siteMetaData.area} legacyBehavior>
-                  <div className="flex group items-center transition-all py-4 md:py-3 cursor-pointer hover:bg-black hover:fill-white hover:text-white border-black border border-solid text-black justify-center rounded-full flex-nowrap space-x-1">
-                    <p>Let&#39;s make something</p>
-                    <svg
-                      className=""
-                      width="24"
-                      height="24"
-                      viewBox="0 0 225 225"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M175.945 52.9634C175.945 64.9553 166.223 74.6767 154.231 74.6767C142.239 74.6767 132.518 64.9553 132.518 52.9634C132.518 40.9714 142.239 31.25 154.231 31.25C166.223 31.25 175.945 40.9714 175.945 52.9634Z" />
-                      <path d="M175.945 171.593C175.945 183.83 166.223 193.75 154.231 193.75C142.239 193.75 132.518 183.83 132.518 171.593C132.518 159.357 142.239 149.437 154.231 149.437C166.223 149.437 175.945 159.357 175.945 171.593Z" />
-                      <path d="M132.518 53.6638H175.945V172.308H132.518V105.688V102.236V102.203V53.6638Z" />
-                      <path d="M86.1222 152.084C77.6426 160.563 63.8945 160.563 55.4149 152.084C46.9353 143.604 46.9353 129.856 55.4149 121.376C63.8945 112.897 77.6426 112.897 86.1222 121.376C94.6018 129.856 94.6018 143.604 86.1222 152.084Z" />
-                      <path d="M167.843 70.3625L137.136 39.6552L54.9196 121.872L85.6269 152.579L117.567 120.639C119.067 119.138 119.91 117.103 119.91 114.982V102.226V102.213C119.91 102.147 119.911 102.082 119.914 102.016C120.021 98.6287 122.801 95.9156 126.214 95.9156C129.628 95.9156 132.408 98.6287 132.515 102.016C132.517 102.078 132.518 102.14 132.518 102.203L132.518 102.219L132.518 102.236V105.688L167.843 70.3625Z" />
-                    </svg>
-                  </div>
-                </Link>
+            <div className="flex flex-col align-top ">
+              <div className="flex flex-col justify-between h-64 max-w-lg dark:bg-white/5 bg-black/5 p-4 rounded-xl ">
+                <p className="text-2xl text-black/80 dark:text-white/80">
+                  I&apos;m thinking about starting a newsletter. Share your
+                  email if that interests you.
+                </p>
+                <Subscribe />
               </div>
             </div>
           </div>
         </div>
-        <div className="px-4 py-3  lg:mt-3 mt-4 flex w-full col-span-3 justify-between items-center border-blue-200 border-t border-solid">
+        <div className="px-4 py-3  lg:mt-3 mt-4 flex w-full col-span-3 justify-between items-center border-blue-200 dark:border-white/20 border-t border-solid">
           <Link
             href="/designs/colophon"
-            className="text-base font-jbd flex space-x-1 flex-1 items-center tracking-tight text-gray-500 "
+            className="text-base font-jbd flex space-x-1 flex-1 items-center tracking-tight text-neutral-500 dark:text-white/80"
           >
-            <p className="underline underline-offset-2  whitespace-nowrap sm:hover:underline-offset-4 transition-all hover:text-black">
+            <p className="underline underline-offset-2 whitespace-nowrap sm:hover:underline-offset-4 transition-all hover:text-black dark:hover:text-white">
               About jacobs.blue
             </p>
-            <p className="bg-neutral-100 whitespace-nowrap text-sm items-center tracking-normal px-[5px] text-neutral-700 rounded-full no-underline">
+            <p className="bg-neutral-100 dark:bg-white/20 whitespace-nowrap text-sm items-center tracking-normal px-[5px] text-neutral-700 dark:text-white/80 rounded-full no-underline">
               v. 2.1.0
             </p>
           </Link>
@@ -409,40 +360,7 @@ export default function Footer(props) {
             </svg>
           </Link>
         </div>
-        <div className="container-fg flex flex-col md:flex-row mx-auto w-full py-6 justify-center md:space-x-1 items-center align-middle space-y-2 md:space-y-0 text-neutral-400 text-xs font-jbd font-normal">
-          {/* <p>
-            Powered by{' '}
-            <a
-              href="https://nextjs.org"
-              className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
-            >
-              Next.js
-            </a>
-            ,{' '}
-            <a
-              href="https://tailwindcss.com"
-              className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
-            >
-              Tailwind CSS
-            </a>
-            , +{' '}
-            <a
-              href="https://simpleanalytics.com/jacobs.blue"
-              className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
-            >
-              Simple Analytics
-            </a>
-            .
-          </p> */}
-          {/* <p>
-            Font:{' '}
-            <a
-              href="https://pangrampangram.com/products/neue-montreal"
-              className="underline underline-offset-1 hover:underline-offset-2 transition-all hover:text-black"
-            >
-              Neue Montreal
-            </a>
-          </p> */}
+        <div className="container-fg flex flex-col md:flex-row mx-auto w-full pb-6 justify-center md:space-x-1 items-center align-middle space-y-2 md:space-y-0 text-neutral-400 dark:text-white/50 text-sm font-jbd font-normal">
           <p className="">
             Jacob Medure aka Jacob&#39;s Blue. Copyright ® 2022 - Forever
           </p>

@@ -5,12 +5,12 @@ export default function ImpactCard(props) {
   const color = props.color;
 
   return (
-    <div className="py-1 flex items-start space-x-3 rounded-lg text-base text-[#00740C]">
+    <div className="py-1 flex items-start space-x-3 rounded-lg text-base text-[#00740C] dark:text-lime-200">
       <div
         className={`justify-center items-center w-8 h-8 align-middle text-center not-prose rounded-md
-        ${color ? color : 'bg-[#EEF6F0]'}`}
+        ${color ? color : 'bg-[#EEF6F0] dark:bg-lime-200/10'}`}
       >
-        <p className="text-center items-center h-full w-full flex justify-center text-[#00740C] text-lg">
+        <p className="text-center items-center h-full w-full flex justify-center text-[#00740C] dark:text-lime-200  text-lg">
           {symbol ? `${symbol}` : '↗'}
         </p>
       </div>

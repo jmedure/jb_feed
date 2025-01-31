@@ -13,6 +13,80 @@ body {
   margin: 0;
 }
 
+:root {
+  --foreground: theme('colors.black');
+  --background: theme('colors.white');
+  --color-text-hover: theme('colors.black');
+  --color-text-dimmed: theme('colors.neutral.500');
+  --color-text-active: theme('colors.black');
+  --color-text-default: theme('colors.neutral.600');
+}
+
+.dark {
+  --foreground: theme('colors.white');
+  --background: theme('colors.neutral.900');
+  --color-text-hover: theme('colors.white');
+  --color-text-dimmed: theme('colors.neutral.400');
+  --color-text-active: theme('colors.white');
+  --color-text-default: theme('colors.neutral.300');
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  transition: color 0.1s, background-color 0.1s;
+}
+
+/* .dark body {
+  color: var(--foreground);
+  background: var(--background);
+  transition: color 0.3s, background-color 0.3s;
+} */
+
+/* Table of Contents Glow Effect */
+.toc-glow-effect {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(
+    circle 200px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  filter: blur(2em);
+}
+
+.toc-glow-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.1;
+  mix-blend-mode: overlay;
+}
+
+.toc-item {
+  position: relative;
+  z-index: 1;
+}
+
+.toc-item-hovered {
+  z-index: 2;
+}
+
+.dark .toc-glow-effect {
+  background: radial-gradient(
+    circle 40px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
 /* a {
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -197,7 +271,7 @@ a.dark:hover, a.dark:active {
 
 
 .rotate {
-  animation: rotation 5s infinite linear;
+  animation: rotation 10s infinite linear;
 }
 
 @keyframes rotation {
@@ -247,3 +321,14 @@ a.dark:hover, a.dark:active {
 /* content{
   background-color:red;
 } */
+
+/* Override Chrome's autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #ffffff00;
+}

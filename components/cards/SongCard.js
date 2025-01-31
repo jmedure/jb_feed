@@ -25,9 +25,9 @@ export default function SongCard(props) {
         href={`/discography/${slug}`}
         key={index}
         passHref
-        className="items-center sm:space-y-4 overflow-clip w-full sm:flex-col flex space-x-4 border-blue-100  sm:space-x-0 align-top cursor-pointer tracking-normal group sm:hover:bg-blue-100 sm:hover:border-blue-300 bg-blue-50 transition-all break-inside-avoid p-3 border-2 rounded-xl"
+        className="items-center group sm:space-y-4 overflow-clip w-full sm:flex-col flex space-x-4 border-blue-100 dark:border-white/20  sm:space-x-0 align-top cursor-pointer tracking-normal group sm:hover:bg-blue-100 dark:sm:hover:bg-neutral-700 sm:hover:border-blue-300 dark:sm:hover:border-white/50 bg-blue-50 dark:bg-neutral-800 transition-all break-inside-avoid p-3 border-2 rounded-xl"
       >
-        <div className="relative aspect-square min-w-24 w-24 sm:w-full rounded-lg border border-solid border-blue-100 overflow-hidden transition-all">
+        <div className="relative aspect-square min-w-24 w-24 sm:w-full rounded-lg border border-solid border-blue-100 dark:border-white/20 group-hover:border-blue-300 dark:group-hover:border-white/50 overflow-hidden transition-all">
           <Image
             src={src}
             alt={alt}
@@ -40,13 +40,13 @@ export default function SongCard(props) {
         <div className="flex flex-row items-center w-full font-jbd font-normal text-lg lg:text-lg tracking-normal truncate">
           <div className="flex flex-col justify-between md:h-24 lg:h-24 w-full sm:space-y-2 md:space-y-0">
             <h2 className="text-xl sm:text-2xl tracking-tight">{title}</h2>
-            <div className="flex flex-col text-black/50 lg:flex-col w-full align-middle sm:space-y-0">
+            <div className="flex flex-col text-black/50 dark:text-white/50 lg:flex-col w-full align-middle sm:space-y-0">
               {album ? (
                 <p className="hidden sm:flex truncate space-x-1 tracking-tighter items-baseline font-jbd font-normal text-baseline">
                   <span>from </span> <i> {album}</i>
                 </p>
               ) : null}
-              <p className="text-black/50 whitespace-nowrap">
+              <p className="text-black/50 dark:text-white/50 whitespace-nowrap">
                 {dayjs(date).format('MMM YYYY')}
               </p>
             </div>
@@ -60,9 +60,9 @@ export default function SongCard(props) {
         href={`/discography/${slug}`}
         key={index}
         passHref
-        className="space-y-4 overflow-clip w-full flex-col flex border-blue-100  sm:space-x-0 align-top cursor-pointer tracking-normal group sm:hover:bg-blue-100 sm:hover:border-blue-300 bg-blue-50 transition-all break-inside-avoid p-3 border-2 rounded-xl"
+        className="space-y-4 overflow-clip w-full flex-col flex border-blue-100 dark:border-white/20  sm:space-x-0 align-top cursor-pointer tracking-normal group sm:hover:bg-blue-100 sm:hover:border-blue-300 dark:sm:hover:border-white/50 dark:sm:hover:bg-neutral-700 bg-blue-50 dark:bg-neutral-800 transition-all break-inside-avoid p-3 border-2 rounded-xl duration-75"
       >
-        <div className="relative aspect-square min-w-24 w-full rounded-lg border border-solid border-blue-100 overflow-hidden transition-all">
+        <div className="relative aspect-square min-w-24 w-full rounded-lg border border-solid border-blue-100 dark:border-white/20 overflow-hidden transition-all">
           <Image
             src={src}
             alt={alt}
@@ -77,8 +77,8 @@ export default function SongCard(props) {
             <h2 className="text-xl sm:text-2xl tracking-tight flex-wrap">
               {title}
             </h2>
-            <div className="flex flex-col text-black/50 lg:flex-col w-full align-middle sm:space-y-0">
-              <p className="text-black/50 whitespace-nowrap">
+            <div className="flex flex-col text-black/50 dark:text-white/50 lg:flex-col w-full align-middle sm:space-y-0">
+              <p className="text-black/50 dark:text-white/50 whitespace-nowrap">
                 {dayjs(date).format('MMM YYYY')}
               </p>
             </div>

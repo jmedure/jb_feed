@@ -3,9 +3,9 @@ import React from 'react';
 export default function ComingSoon() {
   return (
     <div className="-mb-52 mt-2 -translate-y-52 z-10 py-8 ">
-      <div className="relative h-48 bg-gradient-to-t blur-sm from-white to-white/0 z-10"></div>
-      <div className="flex-row px-6 py-12 sm:p-24 mx-auto drop-shadow-xl border border-black/10 rounded-xl max-w-[600px] text-black bg-white not-prose space-y-6 text-lg font-jbd text-center">
-        <div className="flex border justify-center items-center rounded-lg fill-black/80 border-black/10 bg-white w-12 h-12 p-3 mx-auto">
+      <div className="relative h-48 bg-gradient-to-t blur-sm from-white dark:from-neutral-900 to-white/0 dark:to-black/0 z-10"></div>
+      <div className="flex-row px-6 py-12 sm:p-24 mx-auto drop-shadow-xl border border-black/10 dark:border-white/10 rounded-xl max-w-[600px] text-black bg-white dark:bg-neutral-900 dark:text-white not-prose space-y-6 text-lg font-jbd text-center">
+        <div className="flex border justify-center items-center rounded-lg fill-black/80 dark:fill-white/80 border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900 w-12 h-12 p-3 mx-auto">
           <svg
             width="24"
             height="24"

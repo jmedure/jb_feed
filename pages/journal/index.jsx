@@ -20,9 +20,9 @@ export default function Blog({ posts }) {
       </Head>
 
       <MainHeader type="design" />
-      <div className="container-fg py-auto flex py-40 max-w-[600px] text-black/80 ">
+      <div className="container-fg py-auto flex py-40 max-w-[600px] text-black/80 dark:text-white/80 ">
         <div className="group w-full px-3 transition-all">
-          <ul className="flex list-none flex-wrap w-full my-auto gap-y-3 transition-all duration-100 sm:group-hover:text-black/50 ">
+          <ul className="flex list-none flex-wrap w-full my-auto gap-y-3 transition-all duration-100 sm:group-hover:text-black/50 dark:sm:group-hover:text-white/20 ">
             {posts.map((frontMatter, index) => {
               if (frontMatter.isPublished == 'true') {
                 return (

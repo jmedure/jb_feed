@@ -1,5 +1,37 @@
 [
     {
+        "title": "Everything I Made in December (Breaking Through a Creative Rut)",
+        "date": "2025-01-27",
+        "kind": "video",
+        "published": "true",
+        "image": "/thumbnails/mml01.jpg",
+        "aspect": "video",
+        "cta": "Watch now",
+        "link": "https://www.youtube.com/watch?v=U2LTIFoX4mc&t=65s"
+    },
+    {
+        "title": "Life in Seasons",
+        "date": "2024-11-01",
+        "kind": "writing",
+        "published": "true",
+        "image": "/thumbnails/zip-experiments-thumb.png",
+        "aspect": "4x3",
+        "cta": "Read the work in progress",
+        "link": "/journal/life-in-seasons",
+        "videoSrc": "player-traits-hero.mp4"
+    },
+    {
+        "title": "Spotlight Demo",
+        "date": "2024-09-26",
+        "kind": "design",
+        "published": "true",
+        "image": "/thumbnails/zip-experiments-thumb.png",
+        "aspect": "4x3",
+        "cta": "Read the work in progress",
+        "link": null,
+        "videoSrc": "toc-spotlight-demo.mp4"
+    },
+    {
         "title": "Zip Experiments & Wins - design log",
         "date": "2023-11-02",
         "kind": "design",

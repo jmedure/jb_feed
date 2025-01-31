@@ -17,7 +17,7 @@ export default function DesignProjectCard(props) {
     return (
       <div
         key={index}
-        className="flex group px-4 py-4 font-jbd border-black/10 space-x-4 bg-white flex-row w-full items-center justify-between rounded-xl transition-all duration-200 text-base text-neutral-700"
+        className="flex group px-4 py-4 font-jbd border-black/10 dark:border-white/10 space-x-4 bg-white dark:bg-neutral-900 flex-row w-full items-center justify-between rounded-xl transition-all duration-200 text-base text-neutral-700 dark:text-white/80"
       >
         <div className="flex space-x-4 items-center relative">
           <div className="flex-col space-y-1">
@@ -25,7 +25,7 @@ export default function DesignProjectCard(props) {
           </div>
         </div>
         <div className="space-x-8 justify-end text-center tracking-normal flex-nowrap">
-          <p className="text-sm px-1 items-center rounded bg-black/10 text-black/60">
+          <p className="text-sm px-1 items-center rounded bg-black/10 text-black/60 dark:bg-white/10 dark:text-white/60">
             {isPublished}
           </p>
         </div>
@@ -38,10 +38,10 @@ export default function DesignProjectCard(props) {
         key={index}
         passHref // onClick={randomColor()}
       >
-        <div className=" flex group px-4 py-4 font-jbd border-black/10 space-x-4 bg-white flex-row w-full items-center justify-between cursor-pointer rounded-xl transition-all duration-200 text-base text-neutral-700 sm:hover:text-neutral-900 sm:hover:bg-neutral-100">
+        <div className=" flex group px-4 py-4 font-jbd border-black/10 dark:border-white/10 space-x-4 bg-white dark:bg-neutral-900 flex-row w-full items-center justify-between cursor-pointer rounded-xl transition-all duration-200 text-base text-neutral-700 dark:text-white/80 sm:hover:text-neutral-900 sm:hover:bg-neutral-100 dark:sm:hover:text-white dark:sm:hover:bg-neutral-800 ">
           <div className="flex space-x-4 items-center relative">
             <div className="flex-col space-y-1">
-              <p className="font-normal text-base sm:hover:text-black  md:not-italic  leading-tight">
+              <p className="font-normal text-base  md:not-italic  leading-tight">
                 {title}
               </p>
             </div>

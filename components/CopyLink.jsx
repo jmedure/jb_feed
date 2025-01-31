@@ -10,15 +10,13 @@ export default function CopyLink(props) {
   const copylink = async () => {
     await navigator.clipboard.writeText(window.location.toString());
     setIsCopied(true);
-
     setToastVisible(true);
 
     setTimeout(() => {
-      setIsCopied(false) && setToastVisible(false);
+      setIsCopied(false);
+      setToastVisible(false);
     }, 3000);
   };
-
-  // const text = isCopied ? 'copied' : 'copy url';
 
   if (props.type === 'text') {
     return (
@@ -31,7 +29,7 @@ export default function CopyLink(props) {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ ease: 'linear', duration: 0.01 }}
-            className="font-normal text-right md:w-full whitespace-nowrap md:hover:text-neutral-900 underline-offset-2 md:hover:underline-offset-4 transition-all"
+            className="font-normal text-right md:w-full whitespace-nowrap md:hover:text-neutral-900 dark:md:hover:text-white underline-offset-2 md:hover:underline-offset-4 transition-all"
           >
             URL copied!
           </motion.button>
@@ -43,7 +41,7 @@ export default function CopyLink(props) {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ ease: 'linear', duration: 0.01 }}
-            className="font-normal md:w-full text-right underline whitespace-nowrap text-neutral-700 decoration-neutral-400 md:hover:text-neutral-900 stroke-transparent md:hover:decoration-neutral-900 underline-offset-2 md:hover:underline-offset-4 transition-all"
+            className="font-normal md:w-full text-right underline whitespace-nowrap text-neutral-700 dark:text-white/80 decoration-neutral-400 sm:hover:text-neutral-900 dark:sm:hover:text-white sm:hover:decoration-neutral-900 dark:sm:hover:decoration-white stroke-transparent  underline-offset-2 md:hover:underline-offset-4 transition-all"
           >
             {isCopied ? null : 'Copy URL'}
           </motion.button>
@@ -52,37 +50,29 @@ export default function CopyLink(props) {
     );
   } else {
     return (
-      <div className="group flex align-middle ">
-        {/* {isCopied ? null : <Tooltip text={'copy url'}></Tooltip>} */}
-        {/* <Tooltip text={isCopied ? null : 'copy url'}> */}
-        {/* <Tooltip text={'copy url'}> */}
-
+      <div className="group flex align-middle">
         {isCopied && toastVisible ? (
-          // <Tooltip text={'copy url'}>
           <Toast text={'URL copied!'}>
             <motion.button
               disabled={isCopied}
               onClick={copylink}
               whileTap={{ scale: 0.9 }}
               transition={{ ease: 'linear', duration: 0.01 }}
-              className="group fill-black/80 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-neutral-50 stroke-transparent transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2"
+              className="group flex sm:hover:bg-white dark:sm:hover:bg-neutral-800 align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-neutral-50 dark:bg-neutral-700 transition-all duration-100 border border-black/10 dark:border-white/10 sm:hover:border-black/30 dark:sm:hover:border-white/30 sm:hover:drop-shadow gap-2"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className=" fill-inherit stroke-none"
+                className="select-none"
               >
                 <svg
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
-                  fill="inherit"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="fill-black dark:fill-white"
                 >
-                  <path
-                    d="M6.79693 14.1645L2 9.36757L2.96146 8.40614L6.79693 12.2416L15.0385 4L16 4.96144L6.79693 14.1645Z"
-                    fill="black"
-                  />
+                  <path d="M6.79693 14.1645L2 9.36757L2.96146 8.40614L6.79693 12.2416L15.0385 4L16 4.96144L6.79693 14.1645Z" />
                 </svg>
               </motion.div>
             </motion.button>
@@ -94,19 +84,19 @@ export default function CopyLink(props) {
               onClick={copylink}
               whileTap={{ scale: 0.9 }}
               transition={{ ease: 'linear', duration: 0.01 }}
-              className="group fill-black/50 flex sm:hover:bg-white align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-neutral-50 transition-all duration-100 border border-black/10 hover:border-black/30 hover:drop-shadow gap-2 select-none"
+              className="group flex sm:hover:bg-white dark:sm:hover:bg-neutral-800 align-middle items-center p-2 w-9 max-h-9 max-w-9 rounded-full bg-neutral-50 dark:bg-neutral-700 transition-all duration-100 border border-black/10 dark:border-white/10 sm:hover:border-black/30 dark:sm:hover:border-white/30 sm:hover:drop-shadow gap-2 select-none"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className=" fill-inherit stroke-inherit select-none"
+                className="select-none"
               >
                 <svg
-                  className="stroke-black/50 stroke-[.5px] sm:group-hover:fill-black sm:group-hover:stroke-black"
                   width="18"
                   height="18"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="fill-black/50 dark:fill-white/50 stroke-black/50 dark:stroke-white/50 stroke-[0.5] group-hover:fill-black group-hover:stroke-black dark:group-hover:fill-white dark:group-hover:stroke-white"
                 >
                   <path d="M13.5716 2.16401C12.5871 1.17943 11.1504 1.0198 10.3627 1.80746L9.06182 3.10838C8.99748 3.17272 8.90325 3.19917 8.81353 3.18398C8.57364 3.14338 8.44877 2.83006 8.62081 2.65802L9.91705 1.36178C10.9016 0.377207 12.6975 0.576746 13.9282 1.80746C15.1589 3.03818 15.3584 4.83403 14.3739 5.8186L12.2972 7.89523L10.8084 9.38406C10.605 9.58752 10.3668 9.74041 10.1062 9.84409C9.78239 9.97293 9.4238 10.0258 9.05378 10.0052C8.80592 9.9914 8.55292 9.94468 8.30181 9.86579C7.76965 9.69862 7.24592 9.38701 6.79728 8.93837C6.2736 8.41469 5.93662 7.78869 5.79813 7.16641C5.78137 7.0911 5.80629 7.01313 5.86084 6.95858C6.01412 6.8053 6.30387 6.92511 6.34864 7.13721C6.45558 7.64391 6.72729 8.15529 7.15382 8.58183C7.6238 9.05181 8.1968 9.33382 8.75305 9.41455C9.09194 9.46374 9.42462 9.43822 9.724 9.33497C9.96264 9.25267 10.1801 9.12098 10.3627 8.93837L11.7042 7.5969L12.3455 6.95563L13.9282 5.37292C14.7158 4.58526 14.5562 3.14858 13.5716 2.16401Z" />
                   <path d="M12.3516 7.03213C12.3498 7.00665 12.3478 6.98115 12.3455 6.95563M12.3455 6.95563L11.7042 7.5969M12.3455 6.95563L13.9282 5.37292C14.7158 4.58526 14.5562 3.14858 13.5716 2.16401C12.5871 1.17943 11.1504 1.0198 10.3627 1.80746L9.06182 3.10838C8.99748 3.17272 8.90325 3.19917 8.81353 3.18398C8.57364 3.14338 8.44877 2.83006 8.62081 2.65802L9.91705 1.36178C10.9016 0.377207 12.6975 0.576746 13.9282 1.80746C15.1589 3.03818 15.3584 4.83403 14.3739 5.8186L12.2972 7.89523L10.8084 9.38406C10.605 9.58752 10.3668 9.74041 10.1062 9.84409C9.78239 9.97293 9.4238 10.0258 9.05378 10.0052C8.80592 9.9914 8.55292 9.94468 8.30181 9.86579C7.76965 9.69862 7.24592 9.38701 6.79728 8.93837C6.2736 8.41469 5.93662 7.78869 5.79813 7.16641C5.78137 7.0911 5.80629 7.01313 5.86084 6.95858C6.01412 6.8053 6.30387 6.92511 6.34864 7.13721C6.45558 7.64391 6.72729 8.1553 7.15382 8.58183C7.6238 9.05181 8.1968 9.33382 8.75305 9.41455C9.09194 9.46374 9.42462 9.43822 9.724 9.33497C9.96264 9.25267 10.1801 9.12098 10.3627 8.93837L11.7042 7.5969M11.7042 7.5969L11.7036 7.60153" />

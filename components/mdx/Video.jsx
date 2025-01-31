@@ -52,7 +52,7 @@ export default function Video(props) {
 
   return (
     <div className="pt-6 pb-2">
-      <div className="relative group mx-auto w-full h-full border aspect-video rounded-lg bg-neutral-50 border-black/10 overflow-hidden">
+      <div className="relative group mx-auto w-full h-full border dark:border-white/10 rounded-lg bg-neutral-50 dark:bg-neutral-900 border-black/10 overflow-hidden">
         {/* <div className="absolute top-4 right-4 z-10">
           <VideoPlayerControls
             progress={videoProgress}

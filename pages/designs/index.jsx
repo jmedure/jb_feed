@@ -20,7 +20,7 @@ export default function Blog({ posts }) {
       <BlogSEO
         title="Design by Jacob Medure, Senior Product Designer"
         desciption="
-          5+ years shipping bespoke solutions for consumer facing products
+          6 years shipping bespoke solutions for consumer facing products
           across iOS, android and responsive web. First-principles thinker
           hoping to make less but better and a positive impact in the lives of
           real people."
@@ -41,7 +41,7 @@ export default function Blog({ posts }) {
             className="space-y-16"
           >
             <div className="p-4 rounded-3xl text-lg max-w-full mx-auto space-y-4">
-              <div className=" text-neutral-800 transition-all">
+              <div className=" text-neutral-800 dark:text-white/80 transition-all">
                 <p className="">
                   Among{' '}
                   <InlineLinkWrapper href="/">other things</InlineLinkWrapper>,{' '}
@@ -49,7 +49,10 @@ export default function Blog({ posts }) {
                   <InlineLinkWrapper href="https://read.cv/jacobs_blue">
                     5+ years of experience
                   </InlineLinkWrapper>{' '}
-                  based in <s className="text-black/30">Brooklyn, NY</s>{' '}
+                  based in{' '}
+                  <s className="text-black/30 dark:text-neutral-600">
+                    Brooklyn, NY
+                  </s>{' '}
                   Ventura, CA. I&#39;m a{' '}
                   <InlineLinkWrapper href="https://fs.blog/first-principles/">
                     first-principles
@@ -106,8 +109,8 @@ export default function Blog({ posts }) {
           </div>
         </div>
       </div>
-      <div className="container-blog pt-2 mx-auto font-jbd font-medium tracking-tight p-4 pb-12 bg-white">
-        <div className="flex-wrap flex pt-4 text-black/80 border-t justify-between w-full border-black/20 bg-white text-sm space-y-4 sm:space-y-0">
+      <div className="container-blog pt-2 mx-auto font-jbd font-medium tracking-tight p-4 pb-12">
+        <div className="flex-wrap flex pt-4 text-black/80 dark:text-white/80 border-t justify-between w-full border-black/20 dark:border-white/20 bg-white dark:bg-neutral-900 text-sm space-y-4 sm:space-y-0">
           <div className="w-full sm:w-min flex-row flex sm:justify-start sm:space-x-4 justify-between">
             <Link href="../" className=" whitespace-nowrap">
               Home
@@ -144,7 +147,7 @@ export default function Blog({ posts }) {
               Github
             </a>
           </div>
-          <p className="text-black/50 whitespace-nowrap">
+          <p className="text-black/50 dark:text-white/50 whitespace-nowrap">
             © 2023 Jacob&#39;s Blue
           </p>
         </div>

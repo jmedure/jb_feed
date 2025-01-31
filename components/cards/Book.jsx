@@ -25,11 +25,11 @@ export const Book = ({ book }) => {
     >
       <li
         id={`#${id}`}
-        className="p-3 space-y-4 border-2 border-solid border-neutral-100 sm:hover:outline-neutral-400 sm:hover:outline outline duration-100 outline-white sm:hover:bg-neutral-100 bg-neutral-50 h-min rounded-xl text-black transition-all"
+        className="p-3 space-y-4 border-2 border-solid border-neutral-100 dark:border-white/20 sm:hover:outline-neutral-400 sm:hover:outline outline duration-100 outline-white dark:outline-neutral-900 dark:sm:hover:outline-white dark:sm:hover:border-neutral-900 sm:hover:bg-neutral-100 dark:sm:hover:bg-neutral-700 bg-neutral-50 dark:bg-neutral-800 h-min rounded-xl text-black dark:text-white transition-all"
       >
-        <div className="flex w-full bg-neutral-200 border p-8 rounded-lg overflow-clip h-fit">
+        <div className="flex w-full bg-neutral-200 dark:bg-neutral-900 border dark:border-white/10 p-8 rounded-lg overflow-clip h-fit">
           {rank <= 99 ? (
-            <p className="bg-white/80 absolute w-8 h-8 -ml-5 -mt-5 text-center align-middle pt-[2px]  z-10 rounded-full text-lg text-black/50">
+            <p className="bg-white/80 dark:bg-white/10 absolute w-8 h-8 -ml-5 -mt-5 text-center align-middle pt-[2px] z-10 rounded-full text-lg text-black/50 dark:text-white/50">
               {rank}
             </p>
           ) : null}
@@ -39,7 +39,7 @@ export const Book = ({ book }) => {
         </div>
         <div className="flex justify-between flex-col items-start">
           <p className="">{title}</p>
-          <p className="text-black/50">{author}</p>
+          <p className="text-black/50 dark:text-white/50">{author}</p>
         </div>
       </li>
     </a>

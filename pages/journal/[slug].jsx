@@ -62,7 +62,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           type: 'ease',
           stiffness: 200,
         }}
-        className="flex flex-col w-full mx-auto py-16 sm:py-8"
+        className="flex flex-col w-full mx-auto py-16"
       >
         <BlogHeroBanner
           youtube={youtube}
@@ -109,7 +109,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           </DesignsWrapper>
         </div>
       </motion.div>
-      <Footer btt={slug} />
+      {/* <Footer btt={slug} /> */}
     </React.Fragment>
   );
 }

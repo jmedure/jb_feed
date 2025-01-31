@@ -10,7 +10,7 @@ export default function MHeader(props) {
   // // console.log(completion)
 
   return (
-    <div className="py-4 md:py-5 w-full bg-white/90 backdrop-blur-sm z-40 sticky top-0 mt-0 border-b border-neutral-200 border-solid">
+    <div className="py-4 md:py-5 w-full dark:bg-neutral-950/10 bg-white/90 backdrop-blur-sm z-40 sticky top-0 mt-0 border-b border-neutral-200 dark:border-neutral-800 border-solid">
       <div className="w-full container-blog flex justify-between items-center mt-0">
         <Link href="/meditations" passHref legacyBehavior>
           <h1 className="text-2xl md:text-3xl flex font-fruit cursor-pointer hover:italic hover:tracking-tight tracking-tighter">

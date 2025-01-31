@@ -1,26 +1,19 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Tooltip from './Tooltip';
-import logo from '../public/logo.png';
+import AnimatedLogo from './AnimatedLogo';
 
 export default function Logo() {
   return (
     <Tooltip text={'/index'}>
-      <motion.div whileTap={{ scale: 0.9 }} className="select-none">
+      <motion.div whileTap={{ scale: 0.96 }} className="select-none">
         <Link
           href="/"
           passHref
-          className="col-span-1 items-center cursor-pointer select-none rounded-full"
+          className="col-span-1 items-center cursor-pointer rounded-full"
         >
-          <div className="border-black/10 sm:hover:border-black/30 bg-white border rounded-full relative cursor-pointer transition-all sm:hover:drop-shadow">
-            <Image
-              priority
-              alt="blue gradient"
-              src={logo}
-              height={36}
-              width={36}
-            />
+          <div className="border-black/10 sm:hover:border-black/30 p-0 dark:border-white/20 dark:sm:hover:border-white/50 border rounded-full relative cursor-pointer transition-all sm:hover:drop-shadow ease-in-out">
+            <AnimatedLogo />
           </div>
         </Link>
       </motion.div>

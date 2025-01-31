@@ -15,7 +15,7 @@ import StreamLink from '../../components/StreamLink';
 import MoreLinkBlog from '../../components/MoreLinkBlog';
 import BlogSEO from '../../components/BlogSEO';
 import MainHeader from '../../components/MainHeader';
-import ProseWrapperSongs from '../../components/mdx/ProseWrapperSongs';
+import ProseWrapperDesign from '../../components/mdx/ProseWrapperDesign';
 import BlogWrapper from '../../components/wrappers/BlogWrapper';
 import { link } from 'fs';
 import Footer from '../../components/Footer';
@@ -46,7 +46,9 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               ) : null}
             </h1>
           </div>
-          <p className="text-black/50">by {frontmatter.artist}</p>
+          <p className="text-black/50 dark:text-white/50">
+            by {frontmatter.artist}
+          </p>
         </div>
       );
     }
@@ -61,14 +63,16 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               </span> */}
               {frontmatter.explicit ? <ExplicitTag /> : null}
             </h1>
-            <p className="text-black/50">by {frontmatter.artist}</p>
+            <p className="text-black/50 dark:text-white/50">
+              by {frontmatter.artist}
+            </p>
           </div>
 
-          <p className="text-black/70 font-normal pt-2 text-lg">
+          <p className="text-black/70 dark:text-white/70 font-normal pt-2 text-lg">
             Track {frontmatter.track} from{' '}
             <Link
               href={`./${frontmatter.albumLink}`}
-              className="font-normal tracking-tight sm:w-full underline whitespace-nowrap sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
+              className="font-normal tracking-tight sm:w-full underline whitespace-nowrap sm:hover:text-neutral-900 dark:sm:hover:text-white underline-offset-2 sm:hover:underline-offset-4 transition-all"
             >
               {frontmatter.album}
             </Link>
@@ -87,7 +91,9 @@ export default function BlogPost({ post: { source, frontmatter } }) {
               {frontmatter.explicit ? <ExplicitTag /> : null}
             </h1>
           </div>
-          <p className="text-black/50">by {frontmatter.artist}</p>
+          <p className="text-black/50 dark:text-white/50">
+            by {frontmatter.artist}
+          </p>
         </div>
       );
     }
@@ -96,7 +102,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
   return (
     <React.Fragment>
       <BlogSEO
-        title={frontmatter.title + " by Jacob's Blue"}
+        title={frontmatter.title + ' by ' + frontmatter.artist}
         description="Lyrics, credits, and all streaming links"
         image={frontmatter.artwork}
       />
@@ -117,10 +123,10 @@ export default function BlogPost({ post: { source, frontmatter } }) {
       >
         <div
           id="links"
-          className="flex-1 flex bg-neutral-100 w-full rounded-lg py-6 px-4 space-y-6 md:py-20 md:px-full mx-auto justify-center align-middle "
+          className="flex-1 flex bg-neutral-100 dark:bg-neutral-800 w-full rounded-lg py-6 px-4 space-y-6 md:py-20 md:px-full mx-auto justify-center align-middle "
         >
           <div className="justify-center align-middle max-w-lg mx-auto md:sticky top-24 space-y-8 flex-col w-full h-min  ">
-            <div className="flex max-w-xs sm:max-w-sm relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border drop-shadow-md">
+            <div className="flex max-w-xs sm:max-w-sm relative rounded-lg overflow-hidden sm:visible aspect-square mx-auto border dark:border-white/10 drop-shadow-md">
               <Image
                 src={frontmatter.artwork}
                 alt={frontmatter.alt}
@@ -135,11 +141,11 @@ export default function BlogPost({ post: { source, frontmatter } }) {
             >
               <p className="text-2xl tracking-tight">{frontmatter.title}</p>
 
-              <div className="text-black/50 tracking-normal">
+              <div className="text-black/50 dark:text-white/50 tracking-normal">
                 {frontmatter.track ? (
                   <Link
                     href={frontmatter.albumLink}
-                    className="font-normal sm:w-full tracking-normal underline whitespace-nowrap sm:hover:text-neutral-900 underline-offset-2 sm:hover:underline-offset-4 transition-all"
+                    className="font-normal sm:w-full tracking-normal underline whitespace-nowrap sm:hover:text-neutral-900 dark:sm:hover:text-neutral-100 underline-offset-2 sm:hover:underline-offset-4 transition-all"
                   >
                     <p>{frontmatter.album}</p>
                   </Link>
@@ -174,7 +180,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           <div className="flex-col sm:max-w-[600px] sm:flex-none justify-between">
             {songType()}
 
-            <ProseWrapperSongs>
+            <ProseWrapperDesign>
               <MDXRemote
                 {...source}
                 components={{
@@ -186,7 +192,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
                   ArchiveEntry,
                 }}
               />
-            </ProseWrapperSongs>
+            </ProseWrapperDesign>
           </div>
         </BlogWrapper>
 
