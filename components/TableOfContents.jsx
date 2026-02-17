@@ -13,7 +13,6 @@ export default function TableOfContents(props) {
 
   const [activeId, setActiveId] = useState('');
   const [hoveredId, setHoveredId] = useState(null);
-  const observerRef = useRef({});
 
   const [glowStyle, setGlowStyle] = useState({});
   const [isGlowVisible, setIsGlowVisible] = useState(false);
@@ -41,14 +40,10 @@ export default function TableOfContents(props) {
     const observer = new IntersectionObserver(callback, options);
     headings.forEach((heading) => {
       observer.observe(heading);
-      observerRef.current[heading.id] = observer;
     });
 
     return () => {
-      const currentObservers = observerRef.current;
-      Object.values(currentObservers).forEach((observer) =>
-        observer.disconnect()
-      );
+      observer.disconnect();
     };
   }, []);
 

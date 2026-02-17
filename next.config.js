@@ -4,14 +4,14 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'login.lyricallemonade.com',
-      'notion.so',
-      'file.notion.so',
-      'upload.wikimedia.org',
-      'cdn.shopify.com',
-      'is2-ssl.mzstatic.com',
-      'https://images.unsplash.com',
+    remotePatterns: [
+      { protocol: 'https', hostname: 'login.lyricallemonade.com' },
+      { protocol: 'https', hostname: 'notion.so' },
+      { protocol: 'https', hostname: 'file.notion.so' },
+      { protocol: 'https', hostname: 'upload.wikimedia.org' },
+      { protocol: 'https', hostname: 'cdn.shopify.com' },
+      { protocol: 'https', hostname: 'is2-ssl.mzstatic.com' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
 
